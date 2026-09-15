@@ -30,7 +30,7 @@
     <main>
       <section class="intro" aria-labelledby="page-title">
         <h1 id="page-title">Start with a look.</h1>
-        <div><p>Play an example. Choose a style. Tell Codex or Claude Code what you're making, and let it handle the production.</p><p class="small">Previews start muted. New films default to music and effects, without narration.</p></div>
+        <div><p>Play an example. Choose a style. Tell your agent (Codex, Claude, Cursor, Pi, or any MCP host) what you're making, and let it handle the production.</p><p class="small">Previews start muted. New films default to music and effects, without narration. Works on any agent — prompt & gallery need no connection.</p></div>
       </section>
       <div class="browse"><nav id="filters" class="filters" aria-label="Filter motion styles"></nav><span id="count" class="count" aria-live="polite"></span></div>
       <section id="grid" class="grid" aria-label="Motion style examples"></section>
@@ -57,7 +57,7 @@
       <section class="form-panel" aria-labelledby="make-title">
         <h3 id="make-title">Make it yours</h3><p class="sub">Add what you know. Choose your app and add your brief.</p>
         <form id="request-form">
-          <label class="field"><span>Your app</span><select id="host"><option value="codex">Codex</option><option value="claude">Claude Code</option></select></label>
+          <label class="field"><span>Your app</span><select id="host"><option value="codex">Codex — $motion-design</option><option value="claude">Claude Code — /motion-design</option><option value="cursor">Cursor</option><option value="pi">Pi</option><option value="windsurf">Windsurf</option><option value="generic">Any Agent / Other</option></select><small>Universal: any agent that can read SKILL.md works. Video needs Higgsfield MCP.</small></label>
           <label class="field"><span>What are you making?</span><textarea id="brief" placeholder="Example: A launch video for Chase AI's automation course. Keep it confident and clear."></textarea></label>
           <label class="field"><span>Website or reference link <span style="font-weight:400">(optional)</span></span><input id="website" type="text" inputmode="url" placeholder="Your brand, product, or source page"><small>Attach any required photos or footage in the chat.</small></label>
           <div class="row">
@@ -145,7 +145,8 @@
       if(!selected)return '';
       const mode={production:'Create the finished video',prompt:'Draft the complete production prompt only; do not generate media',images:'Create the useful reference images only; do not submit video jobs'}[fields.mode.value];
       const sound={silent:'Fully silent: no music, effects, or speech.',music:'Include music and sound effects; no narration.',narration:'Include narration and supporting music. Draft the narration from my brief; do not imitate a specific person.',source:'Retain the supplied footage\'s original speech and timing; do not clone or replace the voice.'}[fields.audio.value];
-      const invocation=fields.host.value==='claude'?'/motion-design':'$motion-design';
+      const invMap={claude:'/motion-design',codex:'$motion-design',cursor:'motion-design',pi:'motion-design',windsurf:'motion-design',generic:'motion-design'};
+      const invocation=invMap[fields.host.value]||'motion-design';
       const lines=[invocation,'Use the "'+selected.title+'" preset ('+selected.id+').',mode+'.'];
       if(fields.brief.value.trim())lines.push('Project: '+fields.brief.value.trim());
       if(fields.website.value.trim())lines.push('Website or reference: '+fields.website.value.trim());
@@ -155,7 +156,15 @@
       lines.push('Read the exact original prompt at '+selected.source.prompt_path+' and the adaptation guide at '+selected.template+' (version '+selected.template_version+'). Start from the original text and its effective visual and motion techniques. Establish the viewer takeaway, then adapt scenes, sequence, timing and transitions to serve it. Keep useful source detail and briefly record meaningful changes. Use one full-film request, preferring a suitable current Seedance model through Higgsfield MCP. Reference assets are optional; include only what the task needs.');
       lines.push('Use my existing brand context and draft any missing creative copy. Map the product content to the template shots before generating images. Ask only for essential missing information.');
       if(selected.id==='footage-overlays')lines.push('Use my actual source footage. If it is not attached, ask for it before producing the overlays.');
-      if(fields.mode.value!=='prompt')lines.push(fields.host.value==='claude'?'For needed images, use Higgsfield MCP and prefer GPT Image 2 (gpt_image_2), checking its current schema and availability.':'For needed images, prefer built-in image generation when available; otherwise use the connected Higgsfield image route.');
+      const hostImageHint={
+        claude:'For needed images, use Higgsfield MCP and prefer GPT Image 2 (gpt_image_2), checking its current schema.',
+        codex:'For needed images, prefer built-in image generation when available; otherwise use Higgsfield MCP.',
+        cursor:'For needed images, use Higgsfield MCP (GPT Image 2) or Cursor native image tool if available.',
+        pi:'For needed images, use Higgsfield MCP (GPT Image 2) or Pi native image tool if available.',
+        windsurf:'For needed images, use Higgsfield MCP (GPT Image 2).',
+        generic:'For needed images, use the host\'s best available image tool, otherwise Higgsfield MCP (GPT Image 2). See tool-routing.md.'
+      };
+      if(fields.mode.value!=='prompt')lines.push(hostImageHint[fields.host.value]||hostImageHint.generic);
       if(fields.mode.value==='production')lines.push('Generate the complete film through Higgsfield MCP. Inspect it against the template fidelity checks, product content, exact copy, audio and ending; identify any remaining work.');
       return lines.join('\n\n');
     }

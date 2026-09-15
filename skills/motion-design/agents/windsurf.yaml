@@ -1,0 +1,10 @@
+interface:
+  display_name: "Motion Design"
+  short_description: "Browse motion presets and create your own video — Windsurf"
+  default_prompt: "Use motion-design to show me motion-graphics styles with playable examples, then help me adapt one for my project."
+install:
+  hint: "Copy skills/motion-design to your Windsurf skills folder and add MCP server higgsfield at https://mcp.higgsfield.ai/mcp"
+mcp:
+  server: higgsfield
+  transport: http
+  url: https://mcp.higgsfield.ai/mcp

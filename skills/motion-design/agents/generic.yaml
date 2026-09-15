@@ -1,0 +1,12 @@
+interface:
+  display_name: "Motion Design"
+  short_description: "Browse motion presets and create your own video — Any Agent"
+  default_prompt: "Use motion-design to show me motion-graphics styles with playable examples, then help me adapt one for my project."
+install:
+  hint: "Copy skills/motion-design into your agent's skills directory (e.g. ~/.agent/skills/motion-design or ./skills/motion-design). For video generation, add Higgsfield MCP at https://mcp.higgsfield.ai/mcp via HTTP transport. Without MCP, prompt and gallery still work."
+mcp:
+  server: higgsfield
+  transport: http
+  url: https://mcp.higgsfield.ai/mcp
+  docs: https://higgsfield.ai/mcp
+notes: "Universal fallback. Any agent that can read SKILL.md can run prompt/gallery mode. Production requires MCP."

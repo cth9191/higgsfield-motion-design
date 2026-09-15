@@ -1,0 +1,16 @@
+name: Feature Request
+description: اقترح ميزة أو Preset جديد
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: الفكرة
+      placeholder: صف الميزة أو الـ Preset المقترح...
+    validations:
+      required: true
+  - type: input
+    id: use
+    attributes:
+      label: حالة الاستخدام
+      placeholder: متى نحتاجها؟

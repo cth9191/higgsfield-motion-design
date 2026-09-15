@@ -1,0 +1,10 @@
+interface:
+  display_name: "Motion Design"
+  short_description: "Browse motion presets and create your own video — Claude Code"
+  default_prompt: "Use /motion-design to show me motion-graphics styles with playable examples, then help me adapt one for my project."
+install:
+  hint: "Copy skills/motion-design to ~/.claude/skills/motion-design and connect Higgsfield: claude mcp add --transport http --scope user higgsfield https://mcp.higgsfield.ai/mcp"
+mcp:
+  server: higgsfield
+  transport: http
+  url: https://mcp.higgsfield.ai/mcp

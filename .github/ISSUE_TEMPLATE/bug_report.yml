@@ -1,0 +1,27 @@
+name: Bug Report
+description: أبلغ عن مشكلة في الـ Skill أو المعرض
+labels: [bug]
+body:
+  - type: dropdown
+    id: agent
+    attributes:
+      label: الوكيل
+      options: [Claude Code, Codex, Cursor, Pi, Windsurf, Generic, GitHub Pages]
+    validations:
+      required: true
+  - type: input
+    id: preset
+    attributes:
+      label: الـ Preset (إن وجد)
+      placeholder: kinetic-typography
+  - type: textarea
+    id: what
+    attributes:
+      label: ماذا حدث؟
+      placeholder: صف المشكلة...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: المتوقع

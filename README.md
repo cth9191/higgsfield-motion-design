@@ -6,12 +6,12 @@
 </p>
 
 <p align="center">
-  Turn a product, website or idea into a complete motion film.<br />
+  <strong>King-design</strong> — Turn a product, website or idea into a complete motion film.<br />
   Choose a look. Adapt the prompt. Generate with Higgsfield.
 </p>
 
 <p align="center">
-  <strong>Codex + Claude Code</strong> &nbsp; / &nbsp; 10 motion styles &nbsp; / &nbsp; One shared skill
+  <strong>Universal — Any Agent</strong> &nbsp; / &nbsp; 10 motion styles &nbsp; / &nbsp; One shared skill &nbsp; / &nbsp; Higgsfield MCP
 </p>
 
 <p align="center">
@@ -19,6 +19,13 @@
   <a href="#the-motion-library">Explore the looks</a> &nbsp; · &nbsp;
   <a href="docs/setup.md">Setup guide</a> &nbsp; · &nbsp;
   <a href="#how-it-works">How it works</a>
+</p>
+
+<p align="center">
+  <a href="README.ar.md">🇸🇦 العربية</a> &nbsp;·&nbsp;
+  <a href="https://mot1209.github.io/King-design/"><strong>🌐 Live Gallery</strong></a> &nbsp;·&nbsp;
+  <a href="install.sh">⚡ One-liner Install</a> &nbsp;·&nbsp;
+  <a href="LICENSE">MIT License</a>
 </p>
 
 ---
@@ -109,32 +116,38 @@ Choose a look, select Codex or Claude Code, add your brief and copy the request 
 
 </details>
 
-## Quick start
+## Quick start — Universal
 
-Install the same skill in either app, then connect your own Higgsfield account for media generation. Browsing and prompt drafting work before you connect.
+Install the same skill on **any agent** (Codex, Claude Code, Cursor, Pi, Windsurf, Generic), then optionally connect Higgsfield for generation. Browsing and prompt drafting work with **no connection**.
 
-### Codex
+### ⚡ One-liner (recommended)
 
-Paste into Codex:
-
-```text
-$skill-installer
-
-Install the skill from:
-https://github.com/cth9191/motion-design/tree/main/skills/motion-design
+```sh
+curl -fsSL https://raw.githubusercontent.com/MOT1209/King-design/main/install.sh | bash
+# or with agent: curl -fsSL https://raw.githubusercontent.com/MOT1209/King-design/main/install.sh | bash -s -- --agent pi
 ```
 
-### Claude Code
+### Manual — Any Agent
 
-Paste into Claude Code:
-
-```text
-Install the skill from https://github.com/cth9191/motion-design.
-Copy skills/motion-design into ~/.claude/skills/motion-design.
-If it already exists, compare it, back up local customizations, and update it.
+```sh
+git clone https://github.com/MOT1209/King-design.git /tmp/motion-design
+cp -r /tmp/motion-design/skills/motion-design ~/.claude/skills/motion-design  # Claude Code
+cp -r /tmp/motion-design/skills/motion-design ~/.pi/agent/skills/motion-design  # Pi
+cp -r /tmp/motion-design/skills/motion-design .cursor/skills/motion-design       # Cursor
+# or ./skills/motion-design for generic hosts
 ```
 
-**[Connect Higgsfield](docs/setup.md#2-connect-higgsfield)** using the setup guide. It includes Claude Code's MCP command, authentication and a read-only access check. Generation requires model access and credits or an applicable allowance.
+<details><summary>Host-specific commands</summary>
+
+**Codex:** `$skill-installer` → `https://github.com/cth9191/motion-design/tree/main/skills/motion-design` then `$motion-design`
+
+**Claude Code:** `Install the skill from https://github.com/cth9191/motion-design. Copy skills/motion-design into ~/.claude/skills/motion-design` then `/motion-design`
+
+**Pi / Cursor / Windsurf:** Copy to their `skills/` folder (see [Universal Setup](docs/setup-universal.md)) then `motion-design`
+
+</details>
+
+**[Connect Higgsfield](docs/setup-universal.md#2-connect-higgsfield)** — universal MCP guide (all hosts). Includes read-only access check. Generation requires model access and credits. Without MCP you can still export the full prompt for Higgsfield web.
 
 ### Make your first film
 
@@ -198,11 +211,11 @@ The skill starts from the closest example's **complete original prompt** and the
 
 References are optional. A product photo can help preserve identity; a style frame can clarify appearance. Typography or abstract motion may need no images. After generation, the assistant checks the actual motion, product relevance, exact copy, audio and ending, then identifies any corrections needed.
 
-| | Codex | Claude Code |
-| --- | --- | --- |
-| **Reference images** | Built-in image generation when available; Higgsfield fallback | Higgsfield MCP, preferring **GPT Image 2** |
-| **Complete film** | Higgsfield MCP, suitable current **Seedance** preferred | Same |
-| **Prompt-only work** | No generation connection required | Same |
+| | Any Agent (capability-detected) |
+| --- | --- |
+| **Reference images** | Host-native when available → else **Higgsfield MCP `GPT Image 2`** |
+| **Complete film** | **Higgsfield MCP — Seedance** (any host with MCP) · prompt export without MCP |
+| **Prompt-only work** | No connection required — works everywhere |
 
 New campaigns generally target **15 seconds · 16:9 · music + effects**, without narration, and a 30fps delivery. Native fps and supported durations depend on the model. Portrait product and supplied-footage presets have their own starting settings; your choices take precedence. See [tool routing](skills/motion-design/references/tool-routing.md) for live model checks and asset handoff.
 

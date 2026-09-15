@@ -1,0 +1,13 @@
+{
+  "name": "@mot1209/king-design",
+  "version": "5.0.0",
+  "description": "King-design — Universal motion design skill — 10 presets, any agent, Higgsfield MCP",
+  "keywords": ["king-design", "motion-design", "king-design", "higgsfield", "skill", "claude-code", "codex", "cursor", "pi"],
+  "license": "MIT",
+  "repository": "https://github.com/MOT1209/King-design",
+  "homepage": "https://mot1209.github.io/King-design",
+  "files": ["skills/", "docs/", "install.sh", "LICENSE", "README.md", "README.ar.md"],
+  "bin": {
+    "motion-design": "./scripts/install-universal.sh"
+  }
+}

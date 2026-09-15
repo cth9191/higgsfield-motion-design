@@ -12,11 +12,17 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7.0.1
-      - uses: actions/setup-python@v7.0.0
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
       - name: Validate sources, templates and gallery
         run: python skills/motion-design/scripts/build_gallery.py
       - name: Check generated files are current
         run: git diff --exit-code -- skills/motion-design/assets/gallery.html skills/motion-design/references/preset-index.md
+      - name: Check universal agents
+        run: |
+          ls skills/motion-design/agents/*.yaml
+          echo "Agents found: $(ls skills/motion-design/agents/*.yaml | wc -l)"
+          test -f LICENSE
+          test -f docs/setup-universal.md

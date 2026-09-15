@@ -1,0 +1,44 @@
+name: Deploy Gallery to Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Validate and build gallery
+        run: python skills/motion-design/scripts/build_gallery.py
+      - name: Build static site
+        run: |
+          mkdir -p _site
+          cp -r skills/motion-design/assets/* _site/
+          cp -r docs/images _site/images 2>/dev/null || true
+          cp _site/gallery.html _site/index.html
+          echo "motion-design gallery — $(date -u +%Y-%m-%d)" > _site/README.txt
+          ls -lh _site/
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages
+          force_orphan: true
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_message: "deploy: gallery ${{ github.sha }}"
