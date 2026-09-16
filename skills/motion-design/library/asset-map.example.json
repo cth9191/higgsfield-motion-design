@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "roots": {
+    "study-workspace": "/path/to/shot-studio"
+  },
+  "bindings": {
+    "infinex-reference": {
+      "root": "study-workspace",
+      "path": "research/references/yb-2099185156099874852/reference.mp4"
+    },
+    "infinex-phone-cards-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-PHONE-CARDS.mp4"
+    },
+    "infinex-defocus-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/DETAIL-INF-DEFOCUS.mp4"
+    },
+    "infinex-copper-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/LIGHT-INF-COPPER.mp4"
+    },
+    "infinex-v05-aep": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v05/Infinex-Scenes03-05-v05.aep"
+    },
+    "infinex-v05-blend": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v05/blender/Infinex-Scenes03-05-v05.blend"
+    },
+    "infinex-phone-curves": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v05/fit_phone_curves.py"
+    },
+    "infinex-native-build": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v05/blender/build_extension.py"
+    },
+    "infinex-v05-ae-script": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v05/revise_existing.jsx"
+    },
+    "infinex-light-rig": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/blender/build_scene.py"
+    },
+    "infinex-v05-review": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v05/REVIEW.md"
+    },
+    "infinex-phone-study": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/timing-study/phone-chain/PHONE-CHAIN-STUDY.md"
+    },
+    "infinex-blur-failure": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v06/review/blur-boundary-evidence.jpg"
+    },
+    "infinex-v06-status": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v06/README.md"
+    },
+    "infinex-v05-comparison": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v05/renders/Infinex-Scenes03-05-v05-Focused-Comparison.mp4"
+    }
+  }
+}

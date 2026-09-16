@@ -74,7 +74,7 @@ def build():
     compact = json.dumps(catalog, ensure_ascii=True, separators=(',', ':')).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
     before, rest = html.split(START, 1)
     _, after = rest.split(END, 1)
-    gallery.write_text(before + START + '\n<script type="application/json" id="preset-data">' + compact + '</script>\n' + END + after, encoding='utf-8')
+    gallery.write_text(before + START + '\n<script type="application/json" id="preset-data">' + compact + '</script>\n' + END + after, encoding='utf-8', newline='\n')
 
     index = [
         '# Preset index', '',
@@ -93,7 +93,7 @@ def build():
         f"[Source article]({catalog['source_url']}). Source mapping observed 2026-09-03. Version 4 archives the exact original prompts with verified hashes and keeps separate adaptation guides. Start from the original text and its effective visual and motion techniques, adapting the sequence and timing to the viewer takeaway. Prefer a suitable current Seedance model; record a different source route as provenance. See [template-adaptation.md](template-adaptation.md).", '',
         'To extend the library, follow [preset-workflow.md](preset-workflow.md), update the catalog, preset and full template, and rerun `scripts/build_gallery.py`.', '',
     ]
-    (ROOT / 'references/preset-index.md').write_text('\n'.join(index), encoding='utf-8')
+    (ROOT / 'references/preset-index.md').write_text('\n'.join(index), encoding='utf-8', newline='\n')
     print(f'Validated {len(presets)} presets; refreshed gallery and index.')
 
 

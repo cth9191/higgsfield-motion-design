@@ -1,0 +1,190 @@
+{
+  "id": "LIGHT-INF-COPPER",
+  "clip": {
+    "asset_id": "infinex-copper-preview",
+    "source_frames": [
+      288,
+      384
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Global 4.80–6.40s. “Warm copper field” is a descriptive label, not a recovered source preset."
+  },
+  "inspiration": {
+    "purpose": "Give a moving product composition depth and separation while retaining a warm, restrained environment.",
+    "beats": [
+      "A broad dark warm field supports the incoming phone.",
+      "Graphic discs expand independently behind the hero and captions.",
+      "Shaped reflections define edges and surfaces while the composition changes."
+    ],
+    "use_when": [
+      "Reflective product materials need clear form against a restrained field.",
+      "Light and environment motion can support the same attention target as typography."
+    ],
+    "attention": "Keep the hero silhouette and reading lanes clear; let the background support them.",
+    "meta": [
+      {
+        "label": "Separate systems",
+        "value": "Object illumination, environment field, text glow and graphic discs"
+      },
+      {
+        "label": "Original setup",
+        "value": "Unknown; local reconstruction settings are linked"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "disc",
+      "label": "Source graphic field",
+      "events": [
+        {
+          "label": "Outer disc expansion",
+          "frames": [
+            300,
+            339
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "Inner disc expansion",
+          "frames": [
+            312,
+            339
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "label": "Source copy",
+      "events": [
+        {
+          "label": "Readable wallet phrase",
+          "frames": [
+            324,
+            342
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "hero",
+      "label": "Hero role change",
+      "events": [
+        {
+          "label": "Phone turns into card layout",
+          "frames": [
+            342,
+            357
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source appearance and exact local Blender/AE construction. Original light types, powers and environment are unknown.",
+    "sections": [
+      {
+        "title": "Object light versus background",
+        "items": [
+          "Local Blender area lights shape the phone and metal reflections. AE blurred ellipse layers create the background field. Graphic discs are separate shapes.",
+          "Text color and glow have their own lifetimes. Do not treat glow, physical illumination and an expanding disc as interchangeable."
+        ]
+      },
+      {
+        "title": "Local light recipe",
+        "items": [
+          "The scene script specifies light positions, rectangular dimensions, colors and aim targets. Keep scene scale, geometry, exposure and lights together when adapting.",
+          "Selected local values below are reproduction evidence, not recovered source settings. The complete setup also includes a 170W quiet front fill and 700W rear rim."
+        ]
+      },
+      {
+        "title": "Bounds and inspection",
+        "items": [
+          "Opening field precomps were padded to 2560×2160 for 1280×720 output to remove visible rectangular edges. Recheck the largest blur and transform after adaptation.",
+          "Inspect glancing phone poses and reflective edges, not only a frontal settled frame. Compare new lighting with the action and camera held fixed."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Gold reflection strip",
+        "value": {
+          "energy": 650,
+          "size": 0.65,
+          "size_y": 7
+        },
+        "unit": "W; dimensions in Blender scene units",
+        "basis": "local-implementation"
+      },
+      {
+        "name": "Long overhead reflection",
+        "value": {
+          "energy": 850,
+          "size": 7,
+          "size_y": 0.75
+        },
+        "unit": "W; dimensions in Blender scene units",
+        "basis": "local-implementation"
+      },
+      {
+        "name": "Soft copper flank",
+        "value": {
+          "energy": 800,
+          "size": 4,
+          "size_y": 5
+        },
+        "unit": "W; dimensions in Blender scene units",
+        "basis": "local-implementation"
+      },
+      {
+        "name": "Cool phone edge key",
+        "value": 750,
+        "unit": "W",
+        "basis": "local-implementation"
+      },
+      {
+        "name": "Local opening light precomp",
+        "value": [
+          2560,
+          2160
+        ],
+        "unit": "pixels",
+        "basis": "local-implementation"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Independent native studio-light construction",
+        "tool": "Blender",
+        "status": "rendered",
+        "asset_ids": [
+          "infinex-light-rig",
+          "infinex-v05-blend"
+        ]
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "inspection": "Dense reference and encoded frame samples; no new continuous playback or audio review is claimed by this library integration.",
+    "state": "mixed",
+    "scope": "Local asset finish received positive feedback. This does not approve every light setting or a new lighting variant.",
+    "limitations": [
+      "Descriptive look label only; original source setup unknown.",
+      "Light energy depends on scene scale and exposure.",
+      "Alternative lighting variants remain untested."
+    ]
+  },
+  "evidence_assets": [
+    "infinex-v05-review",
+    "infinex-phone-study"
+  ],
+  "related_ids": [
+    "SHOT-INF-PHONE-CARDS"
+  ]
+}

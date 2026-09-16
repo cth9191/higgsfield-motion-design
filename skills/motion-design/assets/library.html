@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motion library — shots & techniques</title>
+  <link rel="stylesheet" href="library.css">
+  <script src="library-index.js" defer></script>
+  <script src="library.js" defer></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="library.html" aria-label="Motion library home"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true"><path d="M3 23V7L11 15L19 7V23M26 7V23" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></svg>Motion library</a>
+      <nav class="navigation" aria-label="Library sections"><a href="gallery.html">Film presets</a><a href="library.html" aria-current="page">Shots & techniques</a></nav>
+    </header>
+    <main>
+      <section id="browse-view">
+        <div class="intro"><div><p class="eyebrow">Reference → understanding → construction</p><h1>See the idea.<br>Understand the details.</h1></div><div><p class="intro-copy">Explore a shot, follow its timing, and open the construction behind it.</p><p class="small">Starting with Infinex. Reference observations and our implementation are labeled separately.</p></div></div>
+        <form class="filters" id="filter-form" role="search">
+          <label class="search-label">Search the library<input id="search" type="search" placeholder="Try persistent hero, blur, or lighting" autocomplete="off"></label>
+          <label>Video type<select id="video-type"><option value="">All video types</option></select></label>
+          <label>Entry type<select id="kind"><option value="">All entry types</option><option value="shot">Shot</option><option value="technique">Technique</option><option value="lighting">Lighting</option></select></label>
+          <label>Implementation<select id="tool"><option value="">All tools</option></select></label>
+          <button class="text-button" type="reset">Clear filters</button>
+        </form>
+        <div class="list-heading"><p id="result-count" role="status"></p><span id="catalog-count" class="small"></span></div>
+        <div id="grid" class="grid"></div>
+        <p id="empty-state" class="empty" hidden>No matching entries. Try fewer terms or clear a filter.</p>
+        <div class="study-strip"><div><p class="eyebrow">Go deeper</p><h2>The complete Infinex study</h2><p>Story, shot families, pacing, construction and the limits of the current reconstruction.</p></div><a class="button secondary" href="../library/studies/infinex.md">Read the study ↗</a></div>
+      </section>
+      <section id="detail-view" hidden aria-labelledby="entry-title">
+        <button id="back" class="text-button back" type="button">← All shots & techniques</button>
+        <div class="detail-heading"><div><p id="entry-kind" class="eyebrow"></p><h1 id="entry-title" tabindex="-1"></h1></div><span id="entry-review" class="badge"></span></div>
+        <div class="detail-layout">
+          <aside class="preview-column"><div id="detail-media" class="detail-media"></div><p id="clip-caption" class="small"></p><a id="source-link" class="source-link" target="_blank" rel="noopener noreferrer">View original source ↗</a><p id="media-note" class="small"></p><div id="meta" class="meta"></div></aside>
+          <div class="content-column">
+            <div class="tabs" role="tablist" aria-label="Entry view"><button id="tab-inspiration" type="button" role="tab" aria-selected="true" aria-controls="panel-inspiration">Inspiration</button><button id="tab-technical" type="button" role="tab" aria-selected="false" aria-controls="panel-technical" tabindex="-1">Technical breakdown</button></div>
+            <section id="panel-inspiration" role="tabpanel" aria-labelledby="tab-inspiration"></section>
+            <section id="panel-technical" role="tabpanel" aria-labelledby="tab-technical" hidden></section>
+          </div>
+        </div>
+        <section class="timeline-section"><div class="section-heading"><div><p class="eyebrow">Timing relationships</p><h2>What overlaps</h2></div><div class="legend"><span>● Reference observation</span><span>● Local implementation</span></div></div><p class="small">Source time in seconds. Bars describe observed or authored intervals, not recovered source keyframes. Overlaps are intentional.</p><div id="timeline" class="timeline"></div></section>
+        <section class="review-section"><p class="eyebrow">Keep the evidence with the idea</p><h2>Review & limitations</h2><div id="review-content"></div><div id="evidence" class="asset-links"></div></section>
+        <section class="related-section"><h2>Connected entries</h2><div id="related" class="related"></div></section>
+      </section>
+      <p id="app-error" role="alert" class="notice" hidden></p>
+    </main>
+    <footer><span>Source observations · local recipes · honest review history</span><a href="../references/library-workflow.md">Library guide</a></footer>
+  </div>
+</body>
+</html>

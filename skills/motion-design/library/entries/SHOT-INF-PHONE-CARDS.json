@@ -1,0 +1,278 @@
+{
+  "id": "SHOT-INF-PHONE-CARDS",
+  "clip": {
+    "asset_id": "infinex-phone-cards-preview",
+    "source_frames": [
+      263,
+      438
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Excerpt starts at global 4.3833s; player time starts at zero. Source exposure times are observations, not recovered keys."
+  },
+  "inspiration": {
+    "purpose": "Keep a recognizable product object present while the explanation changes from wallets to separate chains.",
+    "beats": [
+      "The phone rises large from the foreground and reduces into a readable view.",
+      "Wallet words and expanding background discs arrive during the phone settle.",
+      "The caption retires as the same phone turns into the left anchor.",
+      "Four chain cards emerge behind it; supporting words keep arriving after card four.",
+      "The group retreats and softens as the next phrase gains attention."
+    ],
+    "use_when": [
+      "A persistent hero can connect two product concepts.",
+      "Options, accounts or components should feel related to one object."
+    ],
+    "attention": "Phone → wallet phrase → phone/card relationship → incoming confirmation copy.",
+    "meta": [
+      {
+        "label": "Core mechanism",
+        "value": "One persistent hero; independent explanatory layers"
+      },
+      {
+        "label": "Repeated instances",
+        "value": "Four cards; exposure samples roughly 0.10s apart"
+      },
+      {
+        "label": "Counting note",
+        "value": "Visible jobs and instances, not original source-layer counts"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "hero",
+      "label": "Phone",
+      "events": [
+        {
+          "label": "Foreground arrival",
+          "frames": [
+            263,
+            294
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "Turn into next role",
+          "frames": [
+            342,
+            357
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "Shared retreat",
+          "frames": [
+            384,
+            429
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "copy",
+      "label": "Copy",
+      "events": [
+        {
+          "label": "Wallet reading interval",
+          "frames": [
+            324,
+            342
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "Wallet caption retirement",
+          "frames": [
+            342,
+            352
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "Chain heading",
+          "frames": [
+            356,
+            414
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "cards",
+      "label": "Card exposure",
+      "events": [
+        {
+          "label": "ETH exposed",
+          "frames": [
+            356,
+            357
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "SOL exposed",
+          "frames": [
+            362,
+            363
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "POL exposed",
+          "frames": [
+            368,
+            369
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "BNB exposed",
+          "frames": [
+            374,
+            375
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "label": "Next phrase",
+      "events": [
+        {
+          "label": "Endless arrival",
+          "frames": [
+            413,
+            429
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "Confirmation begins",
+          "frames": [
+            431,
+            438
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Measured reference behavior plus our independently authored AE/Blender reconstruction. Original software, rig and curves are unknown.",
+    "sections": [
+      {
+        "title": "Native hierarchy",
+        "items": [
+          "One Blender phone persists across both concepts. Four card objects share the outgoing depth retreat. Native AE text stays independent of the phone perspective.",
+          "The Blender pass already contains recession. Do not apply another shared scale retreat to the full composite."
+        ]
+      },
+      {
+        "title": "Path and rotation",
+        "items": [
+          "V05 removes an apparent width reversal and downward dip from the earlier candidate. Sparse cubic controls shape the projected pose.",
+          "Construct the upright turn and shot-horizontal tilt in ZXY order, then convert to native XYZ keys. There is no additional independent roll.",
+          "Spatial path and temporal speed are separate controls. Smooth curve derivatives alone do not establish smooth perceived motion."
+        ]
+      },
+      {
+        "title": "Reproduce the local candidate",
+        "items": [
+          "Open the V05 Blender scene and inspect the fitted curve script before adapting geometry or timing. The scene build script documents the source hierarchy and shared retreat.",
+          "Use the final rendered sequence in sequence-03-05-v05/blender/renders-final, frames 263–437 inclusive. The sibling renders directory is an older iteration.",
+          "In AE, use comp “03-05 | Exit blur and confirmation pullback | V05”. Text, opacity and focus timing are documented in the AE construction script. Do not rerun that one-time V04-to-V05 script blindly on V05.",
+          "Review the entire joined 4.3–8.8s passage, with a camera-fixed geometry check when diagnosing object paths."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Card exposure samples",
+        "value": [
+          356,
+          362,
+          368,
+          374
+        ],
+        "unit": "source frames at 60fps",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Native final footage",
+        "value": [
+          263,
+          437
+        ],
+        "unit": "inclusive global frames at 60fps",
+        "basis": "local-implementation"
+      },
+      {
+        "name": "Composite size",
+        "value": [
+          1280,
+          720
+        ],
+        "unit": "pixels",
+        "basis": "local-implementation"
+      },
+      {
+        "name": "Footage alpha",
+        "value": "RGBA, straight",
+        "unit": "PNG interpretation",
+        "basis": "local-implementation"
+      },
+      {
+        "name": "Asset AE motion blur",
+        "value": "off; rendered blur retained",
+        "unit": "layer switch",
+        "basis": "local-implementation"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Phone/card candidate V05",
+        "tool": "Blender",
+        "status": "rendered",
+        "asset_ids": [
+          "infinex-v05-blend",
+          "infinex-phone-curves",
+          "infinex-native-build"
+        ]
+      },
+      {
+        "label": "Joined composition V05",
+        "tool": "After Effects",
+        "status": "rendered",
+        "asset_ids": [
+          "infinex-v05-aep",
+          "infinex-v05-ae-script",
+          "infinex-v05-comparison"
+        ]
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "inspection": "Dense reference and encoded frame samples; no new continuous playback or audio review is claimed by this library integration.",
+    "state": "mixed",
+    "scope": "Asset finish received positive feedback. V05 phone/type motion remains under review; outgoing blur was explicitly rejected.",
+    "limitations": [
+      "Original rig, font and exact source curves are unavailable.",
+      "V05 type blur clips at rectangular layer bounds.",
+      "The revised film ends at 8.8s; it is not a full 25s reconstruction."
+    ]
+  },
+  "evidence_assets": [
+    "infinex-phone-study",
+    "infinex-v05-review",
+    "infinex-blur-failure"
+  ],
+  "related_ids": [
+    "DETAIL-INF-DEFOCUS",
+    "LIGHT-INF-COPPER"
+  ]
+}

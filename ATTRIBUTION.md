@@ -14,6 +14,8 @@ Original prompts retain their source wording, including fictional brands and his
 
 ## Added workflow material
 
+The separate shot library begins with an [Infinex reference attributed to yb_visualz](https://x.com/yb_visualz/status/2099185156099874852). Its [study record](skills/motion-design/library/studies/infinex.md) separates observed behavior from an independently authored local AE/Blender reconstruction. The original project and prompt are unavailable. Reference videos, extracted excerpts and native evidence remain outside this repository and connect through optional private asset bindings. Attribution does not grant redistribution rights for those assets.
+
 The skill entrypoint, adaptation guides, preset navigation, gallery tooling, and workflow instructions were assembled to make these examples usable as a shared Codex and Claude Code skill. Adaptations are labeled separately from their originals.
 
 Attribution does not establish a license for third-party material. No repository-wide license has been applied to the combined package.

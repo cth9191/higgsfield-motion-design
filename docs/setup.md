@@ -1,6 +1,6 @@
 # Set up Codex or Claude Code
 
-Install the same `skills/motion-design/` folder in either app. It includes the prompt library, adaptation guides and gallery. App-specific image routes live in [tool-routing.md](../skills/motion-design/references/tool-routing.md).
+Install the same complete `skills/motion-design/` folder in either app. It includes film presets, shot studies, technical breakdowns and both galleries. App-specific image routes live in [tool-routing.md](../skills/motion-design/references/tool-routing.md). Higgsfield setup is only needed for generation; skip to section 5 for reference studies and native construction.
 
 ## Updating an earlier installation
 
@@ -100,6 +100,8 @@ Visit [the local gallery](http://127.0.0.1:8765/assets/gallery.html), choose a l
 
 ## Common fixes
 
+See [section 5](#5-browse-shots-and-technical-breakdowns) for the shot library and local media connection.
+
 | Symptom | Check |
 |---|---|
 | The skill is missing | Confirm the full folder and `SKILL.md` are at the correct discovery path; start a new session if necessary. |
@@ -109,3 +111,34 @@ Visit [the local gallery](http://127.0.0.1:8765/assets/gallery.html), choose a l
 | A preview is unavailable | Use its source article link. A failed preview does not remove the archived prompt or prove generation is unavailable. |
 | The gallery shows HTML source on GitHub | Open the downloaded file locally or use the loopback server above. |
 | Exact type or charts are wrong in the film | Inspect the output and use the supported correction/finishing route; a reference image cannot guarantee exact pixels. |
+
+## 5. Browse shots and technical breakdowns
+
+From a repository checkout, run:
+
+```sh
+python skills/motion-design/scripts/serve_library.py
+```
+
+Visit [the shot library](http://127.0.0.1:8766/assets/library.html). Search by story purpose, subject or technique, then switch between **Inspiration** and **Technical breakdown**. Event bars use source-frame timing and seek the corresponding excerpt when connected. Native links download evidence files; opening the gallery does not execute construction scripts or change an AE/Blender project.
+
+The packaged records work without local media. To connect existing source clips and native evidence:
+
+1. Copy `skills/motion-design/library/asset-map.example.json` to the ignored `work/library-assets.local.json` file; create `work/` if needed.
+2. Change the `study-workspace` root to your local study workspace. The example's relative paths describe the original Shot Studio workspace; adjust or remove bindings when your files differ. Use forward slashes in JSON paths.
+3. Start the server with that manifest:
+
+```sh
+python skills/motion-design/scripts/serve_library.py --assets-file work/library-assets.local.json
+```
+
+Only explicit asset IDs are served. Missing files are labeled disconnected, and the breakdown stays readable. Keep private manifests and media outside the shared skill; do not commit machine-specific paths. In an installed skill, run `python scripts/serve_library.py` from the skill folder and pass an absolute path to your private manifest. Stop the server with Ctrl+C.
+
+To retrieve evidence without a browser, run from the skill folder:
+
+```sh
+python scripts/build_library.py search "blur bounds" --tool "After Effects"
+python scripts/build_library.py show DETAIL-INF-DEFOCUS
+```
+
+The [library workflow](../skills/motion-design/references/library-workflow.md) explains native reuse and adding studies. Code validation and creative approval are separate: inspect the entry's review state before reusing a recipe.

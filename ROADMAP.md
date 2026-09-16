@@ -10,6 +10,10 @@ The shared workflow is implemented for Codex and Claude Code. This page separate
 - [x] Before/after production review using each preset's existing fidelity requirements, with observed timestamps and pass/fail/not-inspected status. See [quality-review.md](skills/motion-design/references/quality-review.md).
 - [x] Separate correction guidance for motion, identity, exact text/data, audio and export problems, with bounded retries.
 - [x] README source-preview stills and links, setup walkthrough and source attribution.
+- [x] One Infinex pilot with three linked shot/technique/lighting records, inspiration and technical views, overlapping timelines, native evidence bindings and separate creative review states. See [pilot validation](docs/library-validation.md).
+- [x] Explicit study/native/generation routing, portable retrieval data, local video seeking and catalog/server checks in CI.
+
+The pilot does not complete the broader four-study set. Next: select and audit the remaining references using the same data contract, validate a reusable native construction, and resolve the Infinex blur defect before approving that recipe. No new native render or creative approval was produced by the library integration.
 
 These items mean the instructions and package exist. They do not establish generation quality, production cost or successful end-to-end execution in both clients.
 
