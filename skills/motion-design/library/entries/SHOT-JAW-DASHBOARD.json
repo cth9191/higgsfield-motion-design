@@ -1,0 +1,271 @@
+{
+  "id": "SHOT-JAW-DASHBOARD",
+  "clip": {
+    "asset_id": "shot-jaw-dashboard-preview",
+    "source_frames": [
+      259,
+      379
+    ],
+    "fps": 29.97002997002997,
+    "clock": "source-frames",
+    "note": "Source rate is nominal30000/1001fps; original presentation timestamps are linked. Most observed event windows come from0.5s samples and are approximate, not recovered keys. Preview uses selected decoded source frames and starts at zero."
+  },
+  "inspiration": {
+    "purpose": "The card-and-balances composition resolves into a bright dashboard, then directs attention through its asset list.",
+    "beats": [
+      "Bridge: dark card scene clears to bright UI",
+      "Dashboard: summary balances form",
+      "List: Assets heading and rows settle",
+      "Attention: view travels down asset list",
+      "Handoff: warm highlight and fast reframe"
+    ],
+    "use_when": [
+      "dashboard tour serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The asset-list reframe lands on a send/payment form.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "8.642–12.646 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "5 jobs:    scene bridge, summary reveal, row build, framing travel, cursor/highlight."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Bridge",
+      "events": [
+        {
+          "label": "Bridge: dark card scene clears to bright UI",
+          "frames": [
+            259,
+            280
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Dashboard",
+      "events": [
+        {
+          "label": "Dashboard: summary balances form",
+          "frames": [
+            276,
+            310
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "List",
+      "events": [
+        {
+          "label": "List: Assets heading and rows settle",
+          "frames": [
+            307,
+            336
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Attention",
+      "events": [
+        {
+          "label": "Attention: view travels down asset list",
+          "frames": [
+            333,
+            366
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Handoff",
+      "events": [
+        {
+          "label": "Handoff: warm highlight and fast reframe",
+          "frames": [
+            364,
+            379
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "The card-and-balances composition resolves into a bright dashboard, then directs attention through its asset list.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "8.650–9.350 s",
+                "Bridge: dark card scene clears to bright UI"
+              ],
+              [
+                "9.200–10.350 s",
+                "Dashboard: summary balances form"
+              ],
+              [
+                "10.250–11.200 s",
+                "List: Assets heading and rows settle"
+              ],
+              [
+                "11.100–12.200 s",
+                "Attention: view travels down asset list"
+              ],
+              [
+                "12.150–12.650 s",
+                "Handoff: warm highlight and fast reframe"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "5 jobs:    scene bridge, summary reveal, row build, framing travel, cursor/highlight.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "DASHBOARD_ROOT > summary cards / account card / Assets list\nASSET_ROWS > icon / currency / value / secondary label\nCURSOR_RING\nCAMERA_ROOT > screen-plane route / focus",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Use one high-resolution UI plane group with separate rows, then move the framing through it. The progression from balances to assets is a camera/layout attention route; avoid unrelated zooms that reset the reader’s position.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "High-key white studio treatment. Use a near-white background, large soft area lights, restrained contact shadow and a narrow edge reflection for dark product rims. Keep lime or accent emissions from washing out white UI text.",
+          "White-on-white cards require subtle shadow/reflection separation. During fast lateral movement, directional exposure blur can soften the UI; hold text sharp at target views. Colored cursor rings should remain distinguishable from blur halos.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "UI layout",
+                "Use stable margins and row anchors; animate clipped content instead of changing text layout every frame."
+              ],
+              [
+                "Scroll/framing",
+                "Choose camera translation or content scroll as the main source of movement and avoid double travel."
+              ],
+              [
+                "Focus",
+                "Constrain readable target rows to the focus plane; keep surrounding UI lower in hierarchy."
+              ],
+              [
+                "Cursor",
+                "Independent ring/selection indicator with its own timing."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The asset-list reframe lands on a send/payment form.",
+          "Increasing bloom on white UI will reduce hierarchy. A raster screenshot enlarged beyond its resolution will lose the precision the source relies on.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 29.97002997002997,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 120,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s frame samples; No switching / No waiting additionally inspected every3source frames. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-jaw-reference",
+    "study-jaw-overview-1",
+    "jaw-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-JAW-WALLET",
+    "SHOT-JAW-PAYMENT"
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "id": "SHOT-JAW-OPEN",
+  "clip": {
+    "asset_id": "shot-jaw-open-preview",
+    "source_frames": [
+      0,
+      103
+    ],
+    "fps": 29.97002997002997,
+    "clock": "source-frames",
+    "note": "Source rate is nominal30000/1001fps; original presentation timestamps are linked. Most observed event windows come from0.5s samples and are approximate, not recovered keys. Preview uses selected decoded source frames and starts at zero."
+  },
+  "inspiration": {
+    "purpose": "A small sentence opens into a colorful dimensional payment-card hero with currencies and graphic accents.",
+    "beats": [
+      "Environment: empty purple field",
+      "Copy: spend anything develops",
+      "Expansion: anywhere and light burst",
+      "Card: turns into face-on hero",
+      "Satellites:    currencies and accents spread"
+    ],
+    "use_when": [
+      "payment card hero serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The card persists while the busy hero environment collapses into a sparse track-like field.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "0.000–3.437 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "6 jobs:    sentence reveal, framing expansion, card turn, satellites, beam burst, secondary sparkle. Multiple repeated decorative instances; exact source count unknown."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Environment",
+      "events": [
+        {
+          "label": "Environment: empty purple field",
+          "frames": [
+            0,
+            13
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Copy",
+      "events": [
+        {
+          "label": "Copy: spend anything develops",
+          "frames": [
+            13,
+            36
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Expansion",
+      "events": [
+        {
+          "label": "Expansion: anywhere and light burst",
+          "frames": [
+            36,
+            55
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Card",
+      "events": [
+        {
+          "label": "Card: turns into face-on hero",
+          "frames": [
+            43,
+            79
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Satellites",
+      "events": [
+        {
+          "label": "Satellites:    currencies and accents spread",
+          "frames": [
+            48,
+            103
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "A small sentence opens into a colorful dimensional payment-card hero with currencies and graphic accents.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "0.000–0.450 s",
+                "Environment: empty purple field"
+              ],
+              [
+                "0.450–1.200 s",
+                "Copy: spend anything develops"
+              ],
+              [
+                "1.200–1.850 s",
+                "Expansion: anywhere and light burst"
+              ],
+              [
+                "1.450–2.650 s",
+                "Card: turns into face-on hero"
+              ],
+              [
+                "1.600–3.450 s",
+                "Satellites:    currencies and accents spread"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "6 jobs:    sentence reveal, framing expansion, card turn, satellites, beam burst, secondary sparkle. Multiple repeated decorative instances; exact source count unknown.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "STAGE > purple gradient / diagonal beam planes\nCOPY > spend / anything / anywhere\nCARD_ROOT > body / chip / mark\nSATELLITES > bitcoin / dollar / euro / globe / stars / lightning\nCAMERA / focus target",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "The sentence begins small, then the larger anywhere word and card take over. Keep the card’s rotation and travel independent; let peripheral symbols frame the hero instead of all crossing its face.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "Saturated purple/magenta studio treatment with warm diagonal light beams and soft bloom. Reconstruct with a separate low-frequency background gradient, colored area lights and controlled emissive beam planes; genuine volumetrics are an optional heavier alternative.",
+          "Bloom and soft colored light create the field, while rotating objects retain readable faces at selected poses. Use separate compositing controls for emission glow, depth softness and exposure blur.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Card",
+                "Thin beveled rectangle with independently shaded front/back; logo/chip stay attached."
+              ],
+              [
+                "Light burst",
+                "Layer broad diagonal emissive strips behind the hero with a gradient falloff."
+              ],
+              [
+                "Currency field",
+                "Use independent orbit offsets and depths; make the bitcoin/dollar/euro forms recognizable."
+              ],
+              [
+                "Copy",
+                "Keep anywhere behind the dimensional hero so occlusion reinforces depth."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The card persists while the busy hero environment collapses into a sparse track-like field.",
+          "A uniform full-frame glow can erase the chip and logo. Matching palette alone misses the small-to-large attention change.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 29.97002997002997,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 103,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s frame samples; No switching / No waiting additionally inspected every3source frames. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-jaw-reference",
+    "study-jaw-overview-1",
+    "jaw-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-JAW-TRACK"
+  ]
+}

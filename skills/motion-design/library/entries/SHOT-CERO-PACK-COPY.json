@@ -1,0 +1,248 @@
+{
+  "id": "SHOT-CERO-PACK-COPY",
+  "clip": {
+    "asset_id": "shot-cero-pack-copy-preview",
+    "source_frames": [
+      354,
+      507
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "Short serif statements and a lime package connect spending to a playful reward.",
+    "beats": [
+      "Copy: I just",
+      "Pack/copy: opened the packs",
+      "Confetti: for the upside",
+      "Next: phone begins entering"
+    ],
+    "use_when": [
+      "typography and prop serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The next phone rises while the celebration clears; the pack reappears inside its UI.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "5.900–8.450 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "5 jobs:    phrase changes, pack appearance, wrapper detail, confetti burst, phone pickup. Three text units."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Copy",
+      "events": [
+        {
+          "label": "Copy: I just",
+          "frames": [
+            354,
+            378
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Pack/copy",
+      "events": [
+        {
+          "label": "Pack/copy: opened the packs",
+          "frames": [
+            378,
+            432
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Confetti",
+      "events": [
+        {
+          "label": "Confetti: for the upside",
+          "frames": [
+            432,
+            492
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Next",
+      "events": [
+        {
+          "label": "Next: phone begins entering",
+          "frames": [
+            492,
+            507
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "Short serif statements and a lime package connect spending to a playful reward.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "5.900–6.300 s",
+                "Copy: I just"
+              ],
+              [
+                "6.300–7.200 s",
+                "Pack/copy: opened the packs"
+              ],
+              [
+                "7.200–8.200 s",
+                "Confetti: for the upside"
+              ],
+              [
+                "8.200–8.450 s",
+                "Next: phone begins entering"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "5 jobs:    phrase changes, pack appearance, wrapper detail, confetti burst, phone pickup. Three text units.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "COPY > short line / pack line / upside line\nPACK_ROOT > wrapper / folded strip\nCONFETTI > instanced colored planes\nPHONE_NEXT",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Use deliberate changes of framing and type size. The pack sits beside and overlaps the sentence; keep its silhouette from blocking the important words during the readable interval.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "High-key white studio treatment. Use a near-white background, large soft area lights, restrained contact shadow and a narrow edge reflection for dark product rims. Keep lime or accent emissions from washing out white UI text.",
+          "Confetti has depth spread and edge-of-frame cropping; a few near-camera pieces can soften while central copy stays sharp. Do not assign every particle identical blur or rotation.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Typography",
+                "Separate sentence units with fixed final baselines; animate reveal and global framing independently."
+              ],
+              [
+                "Pack",
+                "Use a thin beveled/deformed wrapper mesh with serrated ends; parent brand texture to geometry."
+              ],
+              [
+                "Confetti",
+                "Instance planes with deterministic seeds, varied depth and rotations; animate travel away from center."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The next phone rises while the celebration clears; the pack reappears inside its UI.",
+          "An equal-duration three-card slideshow would discard the asymmetric visual development. Avoid confetti over the center reading zone.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 60,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 153,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s samples, plus existing dense12samples/second sheets for coin/phone, pack/prizes, score/phone and credit panel. Other event boundaries are approximate to0.5s. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-cero-reference",
+    "study-cero-overview-1",
+    "cero-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-CERO-PAYMENTS-A",
+    "SHOT-CERO-PACK-PRIZES"
+  ]
+}

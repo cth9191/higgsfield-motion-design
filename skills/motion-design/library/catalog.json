@@ -1,0 +1,2157 @@
+{
+  "schema_version": 1,
+  "title": "Shot & technique library",
+  "studies": [
+    {
+      "id": "STUDY-INFINEX",
+      "title": "Infinex motion study",
+      "creator": "yb_visualz / supplied reference",
+      "source_url": "https://x.com/yb_visualz/status/2099185156099874852",
+      "source_asset": "infinex-reference",
+      "document": "library/studies/infinex.md",
+      "source_project": null,
+      "original_prompt": null,
+      "status": "Full-film shot coverage; exact local construction remains available through 8.8 s. Blur/text/motion defects remain open.",
+      "coverage": {
+        "fps": 60,
+        "frames": 1498,
+        "scope": "Entire film including the black tail. Existing overview and detailed shot entries are complementary."
+      }
+    },
+    {
+      "id": "STUDY-CERO",
+      "title": "Cero launch film",
+      "creator": "Cero / publisher; production artist unverified",
+      "source_url": "https://x.com/joinCero/status/2087953404190466515",
+      "source_asset": "study-cero-reference",
+      "document": "library/studies/cero.md",
+      "source_project": null,
+      "original_prompt": null,
+      "status": "Whole supplied film mapped, including footage edits and end card. Native reconstructions are proposals.",
+      "coverage": {
+        "fps": 60,
+        "frames": 2087,
+        "scope": "Full supplied reference; analytical units may overlap. Creative review is separate."
+      }
+    },
+    {
+      "id": "STUDY-JAW",
+      "title": "Jaw payment film / vedu_boi reference",
+      "creator": "Shared by vedu_boi; production credits unverified",
+      "source_url": "https://x.com/vedu_boi/status/2099511079412113752",
+      "source_asset": "study-jaw-reference",
+      "document": "library/studies/jaw.md",
+      "source_project": null,
+      "original_prompt": null,
+      "status": "Complete 33.801 s supplied film sampled. Original software and scene files unknown; Blender reconstruction plans are unrendered.",
+      "coverage": {
+        "fps": 29.97002997002997,
+        "frames": 1013,
+        "scope": "Full supplied reference; analytical units may overlap. Creative review is separate."
+      }
+    },
+    {
+      "id": "STUDY-ORDINARY-FOLK",
+      "title": "Ordinary Folk — Radial Delay",
+      "creator": "Ordinary Folk",
+      "source_url": "https://www.ordinaryfolk.co/play",
+      "source_asset": "study-ordinary-folk-reference",
+      "document": "library/studies/ordinary-folk-radial-delay.md",
+      "source_project": "ordinary-folk-aep",
+      "original_prompt": null,
+      "status": "Original project inspected; personal viewing render and independent scheduling primitive available. Creative application unreviewed.",
+      "coverage": {
+        "fps": 24,
+        "frames": 108,
+        "scope": "Full supplied reference; analytical units may overlap. Creative review is separate."
+      }
+    },
+    {
+      "id": "STUDY-BLENDER-CAMERA",
+      "title": "Bhumimov UI film and Blender camera study",
+      "creator": "JB / Bhumimov; local reconstruction by this workspace",
+      "source_url": "https://x.com/Bhumimov/status/2097367794312675749",
+      "source_asset": "study-blender-camera-reference",
+      "document": "library/studies/blender-camera.md",
+      "source_project": null,
+      "original_prompt": null,
+      "status": "Whole 8.5 s reference mapped; local V 02 and focused CR 008 camera A/B retain unresolved visual differences.",
+      "coverage": {
+        "fps": 30,
+        "frames": 255,
+        "scope": "Full supplied reference; analytical units may overlap. Creative review is separate."
+      }
+    }
+  ],
+  "assets": {
+    "infinex-reference": {
+      "label": "Full Infinex reference",
+      "kind": "video"
+    },
+    "infinex-phone-cards-preview": {
+      "label": "Phone to chain cards — source excerpt",
+      "kind": "video"
+    },
+    "infinex-defocus-preview": {
+      "label": "Outgoing focus transfer — source excerpt",
+      "kind": "video"
+    },
+    "infinex-copper-preview": {
+      "label": "Warm field and reflections — source excerpt",
+      "kind": "video"
+    },
+    "infinex-v05-aep": {
+      "label": "V05 editable After Effects project",
+      "kind": "native"
+    },
+    "infinex-v05-blend": {
+      "label": "V05 editable Blender scene",
+      "kind": "native"
+    },
+    "infinex-phone-curves": {
+      "label": "Sparse phone curve construction",
+      "kind": "code"
+    },
+    "infinex-native-build": {
+      "label": "Phone and card native scene script",
+      "kind": "code"
+    },
+    "infinex-v05-ae-script": {
+      "label": "AE timing and compositing construction",
+      "kind": "code"
+    },
+    "infinex-light-rig": {
+      "label": "Local Blender light and material setup",
+      "kind": "code"
+    },
+    "infinex-v05-review": {
+      "label": "V05 implementation and review notes",
+      "kind": "document"
+    },
+    "infinex-phone-study": {
+      "label": "Measured phone/card timing study",
+      "kind": "document"
+    },
+    "infinex-blur-failure": {
+      "label": "Reference versus rejected rectangular blur",
+      "kind": "image"
+    },
+    "infinex-v06-status": {
+      "label": "Pending V06 blur correction status",
+      "kind": "document"
+    },
+    "infinex-v05-comparison": {
+      "label": "Reference / V05 comparison (global 4.3–8.8s)",
+      "kind": "video"
+    },
+    "infinex-opening-preview": {
+      "label": "Opening emphasis — source excerpt",
+      "kind": "video"
+    },
+    "infinex-question-preview": {
+      "label": "Question and phone handoff — source excerpt",
+      "kind": "video"
+    },
+    "infinex-technical-study": {
+      "label": "Technical mechanisms and established controls",
+      "kind": "document"
+    },
+    "infinex-complexity-study": {
+      "label": "System counts and overlap analysis",
+      "kind": "document"
+    },
+    "infinex-opening-timing": {
+      "label": "Opening source timing and measurements",
+      "kind": "document"
+    },
+    "infinex-opening-aep": {
+      "label": "Liked opening glow-polish project",
+      "kind": "native"
+    },
+    "infinex-opening-build": {
+      "label": "Opening typography and padded fields",
+      "kind": "code"
+    },
+    "infinex-opening-scale": {
+      "label": "Opening scale and focus construction",
+      "kind": "code"
+    },
+    "infinex-opening-exit": {
+      "label": "Opening exit construction",
+      "kind": "code"
+    },
+    "infinex-opening-rays": {
+      "label": "Opening fill and ray construction",
+      "kind": "code"
+    },
+    "infinex-opening-glow": {
+      "label": "Final warm glow controls",
+      "kind": "code"
+    },
+    "infinex-opening-light": {
+      "label": "Animated opening light fields",
+      "kind": "code"
+    },
+    "infinex-opening-review": {
+      "label": "Opening glow-polish validation and scoped feedback",
+      "kind": "document"
+    },
+    "infinex-opening-comparison": {
+      "label": "Liked opening comparison — reference left",
+      "kind": "video"
+    },
+    "infinex-opening-mismatch": {
+      "label": "Easier focus mismatch and pending correction",
+      "kind": "document"
+    },
+    "infinex-opening-failure": {
+      "label": "Easier focus — reference versus current candidate",
+      "kind": "image"
+    },
+    "infinex-question-aep": {
+      "label": "Question soft-word-arrivals project",
+      "kind": "native"
+    },
+    "infinex-question-blend": {
+      "label": "Six coins and foreground phone scene",
+      "kind": "native"
+    },
+    "infinex-question-timing": {
+      "label": "Question source timing and handoff measurements",
+      "kind": "document"
+    },
+    "infinex-question-build": {
+      "label": "Question base shapes, hierarchy and environment",
+      "kind": "code"
+    },
+    "infinex-question-arrivals": {
+      "label": "Latest whole-word arrivals",
+      "kind": "code"
+    },
+    "infinex-question-spacing": {
+      "label": "Native kerning and range-selector construction",
+      "kind": "code"
+    },
+    "infinex-question-emphasis": {
+      "label": "Complicated character and color refinement",
+      "kind": "code"
+    },
+    "infinex-question-pullback": {
+      "label": "Long pullback Hermite waypoints",
+      "kind": "code"
+    },
+    "infinex-question-exit": {
+      "label": "Question exit scale and visible-layer fade",
+      "kind": "code"
+    },
+    "infinex-question-priority": {
+      "label": "Foreground compositing priority switch",
+      "kind": "code"
+    },
+    "infinex-question-review": {
+      "label": "Question soft-arrival validation",
+      "kind": "document"
+    },
+    "infinex-question-comparison": {
+      "label": "Question joined comparison — reference left",
+      "kind": "video"
+    },
+    "infinex-v04-ae-build": {
+      "label": "Wallet, discs, chains and confirmation base construction",
+      "kind": "code"
+    },
+    "infinex-v04-ae-polish": {
+      "label": "Wallet retirement and chain typography refinement",
+      "kind": "code"
+    },
+    "infinex-v05-ae-polish": {
+      "label": "V05 final blur multiplier — rejected result",
+      "kind": "code"
+    },
+    "infinex-v05-curve-data": {
+      "label": "Complete fitted phone controls and coefficients",
+      "kind": "document"
+    },
+    "infinex-v04-cards": {
+      "label": "Inherited card arrival and geometry construction",
+      "kind": "code"
+    },
+    "shot-inf-opening-poster": {
+      "label": "01 · Sentence becomes a selected benefit — reference still",
+      "kind": "image"
+    },
+    "shot-inf-question-poster": {
+      "label": "02 · A question develops inside a pullback — reference still",
+      "kind": "image"
+    },
+    "shot-inf-phone-cards-poster": {
+      "label": "03 · One phone, two explanatory roles — reference still",
+      "kind": "image"
+    },
+    "detail-inf-defocus-poster": {
+      "label": "Pass attention through focus — reference still",
+      "kind": "image"
+    },
+    "light-inf-copper-poster": {
+      "label": "A warm field, shaped reflections — reference still",
+      "kind": "image"
+    },
+    "shot-inf-wallets-preview": {
+      "label": "03a · Different Wallets — source excerpt",
+      "kind": "video"
+    },
+    "shot-inf-wallets-poster": {
+      "label": "03a · Different Wallets — extracted source frame",
+      "kind": "image"
+    },
+    "shot-inf-chain-cards-preview": {
+      "label": "03b · Separate chains fan from the phone — source excerpt",
+      "kind": "video"
+    },
+    "shot-inf-chain-cards-poster": {
+      "label": "03b · Separate chains fan from the phone — extracted source frame",
+      "kind": "image"
+    },
+    "shot-inf-confirmation-preview": {
+      "label": "04 · Endless Confirmation — source excerpt",
+      "kind": "video"
+    },
+    "shot-inf-confirmation-poster": {
+      "label": "04 · Endless Confirmation — extracted source frame",
+      "kind": "image"
+    },
+    "shot-inf-coin-preview": {
+      "label": "05 · The brand coin changes the claim — source excerpt",
+      "kind": "video"
+    },
+    "shot-inf-coin-poster": {
+      "label": "05 · The brand coin changes the claim — extracted source frame",
+      "kind": "image"
+    },
+    "shot-inf-fingerprint-preview": {
+      "label": "06 · Fingerprint scans and explains — source excerpt",
+      "kind": "video"
+    },
+    "shot-inf-fingerprint-poster": {
+      "label": "06 · Fingerprint scans and explains — extracted source frame",
+      "kind": "image"
+    },
+    "shot-inf-contrast-preview": {
+      "label": "07 · No Seed Phrases / No Chain Switching — source excerpt",
+      "kind": "video"
+    },
+    "shot-inf-contrast-poster": {
+      "label": "07 · No Seed Phrases / No Chain Switching — extracted source frame",
+      "kind": "image"
+    },
+    "shot-inf-ui-preview": {
+      "label": "08 · Seamless experience in a field of UI — source excerpt",
+      "kind": "video"
+    },
+    "shot-inf-ui-poster": {
+      "label": "08 · Seamless experience in a field of UI — extracted source frame",
+      "kind": "image"
+    },
+    "shot-inf-orbit-preview": {
+      "label": "09 · One orbital system, three feature visits — source excerpt",
+      "kind": "video"
+    },
+    "shot-inf-orbit-poster": {
+      "label": "09 · One orbital system, three feature visits — extracted source frame",
+      "kind": "image"
+    },
+    "shot-inf-closing-preview": {
+      "label": "10 · The selected benefit returns — source excerpt",
+      "kind": "video"
+    },
+    "shot-inf-closing-poster": {
+      "label": "10 · The selected benefit returns — extracted source frame",
+      "kind": "image"
+    },
+    "shot-inf-endcard-preview": {
+      "label": "11 · Wordmark and deliberate black tail — source excerpt",
+      "kind": "video"
+    },
+    "shot-inf-endcard-poster": {
+      "label": "11 · Wordmark and deliberate black tail — extracted source frame",
+      "kind": "image"
+    },
+    "study-cero-reference": {
+      "label": "Cero launch film — full source",
+      "kind": "video"
+    },
+    "shot-cero-toss-preview": {
+      "label": "01 · A tossed coin becomes a reward — source excerpt",
+      "kind": "video"
+    },
+    "shot-cero-toss-poster": {
+      "label": "01 · A tossed coin becomes a reward — extracted source frame",
+      "kind": "image"
+    },
+    "shot-cero-payments-a-preview": {
+      "label": "02 · Two payment contexts — source excerpt",
+      "kind": "video"
+    },
+    "shot-cero-payments-a-poster": {
+      "label": "02 · Two payment contexts — extracted source frame",
+      "kind": "image"
+    },
+    "shot-cero-pack-copy-preview": {
+      "label": "03 · A sentence introduces the pack — source excerpt",
+      "kind": "video"
+    },
+    "shot-cero-pack-copy-poster": {
+      "label": "03 · A sentence introduces the pack — extracted source frame",
+      "kind": "image"
+    },
+    "shot-cero-pack-prizes-preview": {
+      "label": "04 · A pack leaves the phone and reveals prizes — source excerpt",
+      "kind": "video"
+    },
+    "shot-cero-pack-prizes-poster": {
+      "label": "04 · A pack leaves the phone and reveals prizes — extracted source frame",
+      "kind": "image"
+    },
+    "shot-cero-jackpot-preview": {
+      "label": "05 · Jackpot type becomes a score screen — source excerpt",
+      "kind": "video"
+    },
+    "shot-cero-jackpot-poster": {
+      "label": "05 · Jackpot type becomes a score screen — extracted source frame",
+      "kind": "image"
+    },
+    "shot-cero-payments-b-preview": {
+      "label": "06 · Cafe and grocery payment inserts — source excerpt",
+      "kind": "video"
+    },
+    "shot-cero-payments-b-poster": {
+      "label": "06 · Cafe and grocery payment inserts — extracted source frame",
+      "kind": "image"
+    },
+    "shot-cero-salary-preview": {
+      "label": "07 · Salary notification becomes a multiplier wheel — source excerpt",
+      "kind": "video"
+    },
+    "shot-cero-salary-poster": {
+      "label": "07 · Salary notification becomes a multiplier wheel — extracted source frame",
+      "kind": "image"
+    },
+    "shot-cero-payments-c-preview": {
+      "label": "08 · Grocery and cinema proof beats — source excerpt",
+      "kind": "video"
+    },
+    "shot-cero-payments-c-poster": {
+      "label": "08 · Grocery and cinema proof beats — extracted source frame",
+      "kind": "image"
+    },
+    "shot-cero-score-preview": {
+      "label": "09 · Inputs assemble into a score, then a phone — source excerpt",
+      "kind": "video"
+    },
+    "shot-cero-score-poster": {
+      "label": "09 · Inputs assemble into a score, then a phone — extracted source frame",
+      "kind": "image"
+    },
+    "shot-cero-credit-preview": {
+      "label": "10 · A credit panel leaves its UI slot and returns — source excerpt",
+      "kind": "video"
+    },
+    "shot-cero-credit-poster": {
+      "label": "10 · A credit panel leaves its UI slot and returns — extracted source frame",
+      "kind": "image"
+    },
+    "shot-cero-mosaic-preview": {
+      "label": "11 · One purchase expands into many — source excerpt",
+      "kind": "video"
+    },
+    "shot-cero-mosaic-poster": {
+      "label": "11 · One purchase expands into many — extracted source frame",
+      "kind": "image"
+    },
+    "shot-cero-end-preview": {
+      "label": "12 · Coin, promise and wordmark — source excerpt",
+      "kind": "video"
+    },
+    "shot-cero-end-poster": {
+      "label": "12 · Coin, promise and wordmark — extracted source frame",
+      "kind": "image"
+    },
+    "study-jaw-reference": {
+      "label": "Jaw payment film / vedu_boi reference — full source",
+      "kind": "video"
+    },
+    "shot-jaw-open-preview": {
+      "label": "01 · Spend anything, anywhere — source excerpt",
+      "kind": "video"
+    },
+    "shot-jaw-open-poster": {
+      "label": "01 · Spend anything, anywhere — extracted source frame",
+      "kind": "image"
+    },
+    "shot-jaw-track-preview": {
+      "label": "02 · Card glides through rounded tracks — source excerpt",
+      "kind": "video"
+    },
+    "shot-jaw-track-poster": {
+      "label": "02 · Card glides through rounded tracks — extracted source frame",
+      "kind": "image"
+    },
+    "shot-jaw-wallet-preview": {
+      "label": "03 · A wallet organizes balances — source excerpt",
+      "kind": "video"
+    },
+    "shot-jaw-wallet-poster": {
+      "label": "03 · A wallet organizes balances — extracted source frame",
+      "kind": "image"
+    },
+    "shot-jaw-dashboard-preview": {
+      "label": "04 · Floating balances become the dashboard — source excerpt",
+      "kind": "video"
+    },
+    "shot-jaw-dashboard-poster": {
+      "label": "04 · Floating balances become the dashboard — extracted source frame",
+      "kind": "image"
+    },
+    "shot-jaw-payment-preview": {
+      "label": "05 · Enter an amount and choose a currency — source excerpt",
+      "kind": "video"
+    },
+    "shot-jaw-payment-poster": {
+      "label": "05 · Enter an amount and choose a currency — extracted source frame",
+      "kind": "image"
+    },
+    "shot-jaw-globe-preview": {
+      "label": "06 · A payment travels across the globe — source excerpt",
+      "kind": "video"
+    },
+    "shot-jaw-globe-poster": {
+      "label": "06 · A payment travels across the globe — extracted source frame",
+      "kind": "image"
+    },
+    "shot-jaw-objections-preview": {
+      "label": "07 · Short claims on the returning purple stage — source excerpt",
+      "kind": "video"
+    },
+    "shot-jaw-objections-poster": {
+      "label": "07 · Short claims on the returning purple stage — extracted source frame",
+      "kind": "image"
+    },
+    "shot-jaw-purchases-preview": {
+      "label": "08 · Coffee, groceries and flights around one phone — source excerpt",
+      "kind": "video"
+    },
+    "shot-jaw-purchases-poster": {
+      "label": "08 · Coffee, groceries and flights around one phone — extracted source frame",
+      "kind": "image"
+    },
+    "shot-jaw-account-preview": {
+      "label": "09 · Same account as a visual hinge — source excerpt",
+      "kind": "video"
+    },
+    "shot-jaw-account-poster": {
+      "label": "09 · Same account as a visual hinge — extracted source frame",
+      "kind": "image"
+    },
+    "shot-jaw-send-preview": {
+      "label": "10 · The send form repeats the transaction — source excerpt",
+      "kind": "video"
+    },
+    "shot-jaw-send-poster": {
+      "label": "10 · The send form repeats the transaction — extracted source frame",
+      "kind": "image"
+    },
+    "shot-jaw-notification-preview": {
+      "label": "11 · Payment confirmation becomes the final hero — source excerpt",
+      "kind": "video"
+    },
+    "shot-jaw-notification-poster": {
+      "label": "11 · Payment confirmation becomes the final hero — extracted source frame",
+      "kind": "image"
+    },
+    "shot-jaw-end-preview": {
+      "label": "12 · Monochrome logo and final promise — source excerpt",
+      "kind": "video"
+    },
+    "shot-jaw-end-poster": {
+      "label": "12 · Monochrome logo and final promise — extracted source frame",
+      "kind": "image"
+    },
+    "study-ordinary-folk-reference": {
+      "label": "Ordinary Folk — Radial Delay — full source",
+      "kind": "video"
+    },
+    "ordinary-folk-aep": {
+      "label": "Original Radial Delay AEP — personal educational use",
+      "kind": "native"
+    },
+    "ordinary-folk-inspection": {
+      "label": "Original project structured inspection",
+      "kind": "document"
+    },
+    "ordinary-folk-terms": {
+      "label": "Included Ordinary Folk use terms",
+      "kind": "document"
+    },
+    "ordinary-folk-pattern": {
+      "label": "Source analysis and independent application notes",
+      "kind": "document"
+    },
+    "ordinary-folk-independent": {
+      "label": "Independent spatial stagger module",
+      "kind": "code"
+    },
+    "rig-of-radial-preview": {
+      "label": "A grid disappears through spatially delayed master curves — source excerpt",
+      "kind": "video"
+    },
+    "rig-of-radial-poster": {
+      "label": "A grid disappears through spatially delayed master curves — extracted source frame",
+      "kind": "image"
+    },
+    "study-blender-camera-reference": {
+      "label": "Bhumimov UI film and Blender camera study — full source",
+      "kind": "video"
+    },
+    "camera-study-blend": {
+      "label": "Editable CR008 B Blender scene",
+      "kind": "native"
+    },
+    "camera-study-build": {
+      "label": "Exact CR008 camera-timing construction",
+      "kind": "code"
+    },
+    "camera-study-values": {
+      "label": "A/B camera coordinates per frame",
+      "kind": "document"
+    },
+    "camera-study-comparison": {
+      "label": "Reference versus B at normal speed",
+      "kind": "video"
+    },
+    "camera-study-ab": {
+      "label": "A versus B at normal speed",
+      "kind": "video"
+    },
+    "camera-study-review": {
+      "label": "Camera study scope and review",
+      "kind": "document"
+    },
+    "camera-study-frames": {
+      "label": "Reference/A/B diagnostic frames",
+      "kind": "image"
+    },
+    "camera-study-verification": {
+      "label": "Verified preserved channels and source hash",
+      "kind": "document"
+    },
+    "camera-v02-blend": {
+      "label": "Full editable V02 UI reconstruction",
+      "kind": "native"
+    },
+    "camera-v02-build": {
+      "label": "Exact full-sequence V02 construction",
+      "kind": "code"
+    },
+    "camera-v02-review": {
+      "label": "V02 failures, changes and review",
+      "kind": "document"
+    },
+    "camera-v02-video": {
+      "label": "V02 full 8.5s output",
+      "kind": "video"
+    },
+    "shot-camera-assembly-preview": {
+      "label": "01 · A logo lands and builds the prompt interface — source excerpt",
+      "kind": "video"
+    },
+    "shot-camera-assembly-poster": {
+      "label": "01 · A logo lands and builds the prompt interface — extracted source frame",
+      "kind": "image"
+    },
+    "shot-camera-sweep-preview": {
+      "label": "02 · Camera sweeps from the request to Send — source excerpt",
+      "kind": "video"
+    },
+    "shot-camera-sweep-poster": {
+      "label": "02 · Camera sweeps from the request to Send — extracted source frame",
+      "kind": "image"
+    },
+    "shot-camera-send-preview": {
+      "label": "03 · The send circle releases its arrow — source excerpt",
+      "kind": "video"
+    },
+    "shot-camera-send-poster": {
+      "label": "03 · The send circle releases its arrow — extracted source frame",
+      "kind": "image"
+    },
+    "shot-camera-result-preview": {
+      "label": "04 · Result card drops, opens and leaves — source excerpt",
+      "kind": "video"
+    },
+    "shot-camera-result-poster": {
+      "label": "04 · Result card drops, opens and leaves — extracted source frame",
+      "kind": "image"
+    },
+    "study-cero-overview-1": {
+      "label": "Cero launch film full-film samples 1",
+      "kind": "image"
+    },
+    "study-cero-overview-2": {
+      "label": "Cero launch film full-film samples 2",
+      "kind": "image"
+    },
+    "study-cero-overview-3": {
+      "label": "Cero launch film full-film samples 3",
+      "kind": "image"
+    },
+    "study-cero-overview-4": {
+      "label": "Cero launch film full-film samples 4",
+      "kind": "image"
+    },
+    "study-jaw-overview-1": {
+      "label": "Jaw payment film / vedu_boi reference full-film samples 1",
+      "kind": "image"
+    },
+    "study-jaw-overview-2": {
+      "label": "Jaw payment film / vedu_boi reference full-film samples 2",
+      "kind": "image"
+    },
+    "study-jaw-overview-3": {
+      "label": "Jaw payment film / vedu_boi reference full-film samples 3",
+      "kind": "image"
+    },
+    "study-jaw-overview-4": {
+      "label": "Jaw payment film / vedu_boi reference full-film samples 4",
+      "kind": "image"
+    },
+    "jaw-objections-dense": {
+      "label": "No switching / No waiting — every3source frames",
+      "kind": "image"
+    },
+    "cero-coin-dense": {
+      "label": "Coin/phone handoff — dense samples",
+      "kind": "image"
+    },
+    "cero-pack-dense": {
+      "label": "Phone/pack/prize handoff — dense samples",
+      "kind": "image"
+    },
+    "cero-score-dense": {
+      "label": "Score/phone handoff — dense samples",
+      "kind": "image"
+    },
+    "cero-credit-dense": {
+      "label": "Credit panel projection/docking — dense samples",
+      "kind": "image"
+    },
+    "infinex-full-phone-chain-handoff": {
+      "label": "Infinex phone chain handoff — inspected source samples",
+      "kind": "image"
+    },
+    "infinex-full-chain-confirmation-coin": {
+      "label": "Infinex chain confirmation coin — inspected source samples",
+      "kind": "image"
+    },
+    "infinex-full-coin-fingerprint": {
+      "label": "Infinex coin fingerprint — inspected source samples",
+      "kind": "image"
+    },
+    "infinex-full-fingerprint-contrast-ui": {
+      "label": "Infinex fingerprint contrast ui — inspected source samples",
+      "kind": "image"
+    },
+    "infinex-full-ui-orbit": {
+      "label": "Infinex ui orbit — inspected source samples",
+      "kind": "image"
+    },
+    "infinex-full-orbit-internal-cadence": {
+      "label": "Infinex orbit internal cadence — inspected source samples",
+      "kind": "image"
+    },
+    "infinex-full-orbit-closing": {
+      "label": "Infinex orbit closing — inspected source samples",
+      "kind": "image"
+    },
+    "infinex-full-closing-logo": {
+      "label": "Infinex closing logo — inspected source samples",
+      "kind": "image"
+    },
+    "infinex-full-ending-to-black": {
+      "label": "Infinex ending to black — inspected source samples",
+      "kind": "image"
+    },
+    "infinex-full-pacing": {
+      "label": "Full Infinex timing and boundary audit",
+      "kind": "document"
+    },
+    "jaw-source-pts": {
+      "label": "Jaw decoded source presentation timestamps",
+      "kind": "document"
+    },
+    "cero-source-pts": {
+      "label": "Cero decoded source presentation timestamps",
+      "kind": "document"
+    }
+  },
+  "entries": [
+    {
+      "id": "SHOT-INF-OPENING",
+      "title": "01 · Sentence becomes a selected benefit",
+      "summary": "Character reveal, prepared reframe, growing selection, accent rays and late retreat inside one claim.",
+      "kind": "shot",
+      "video_types": [
+        "kinetic-typography",
+        "product-launch",
+        "social-explainer"
+      ],
+      "story_jobs": [
+        "introduce-promise",
+        "emphasize-benefit"
+      ],
+      "tags": [
+        "opening",
+        "character-reveal",
+        "camera-reframe",
+        "selection",
+        "accent-rays",
+        "glow",
+        "overlap",
+        "exponential",
+        "easing"
+      ],
+      "tools": [
+        "After Effects"
+      ],
+      "review_state": "mixed",
+      "study_id": "STUDY-INFINEX",
+      "detail": "library/entries/SHOT-INF-OPENING.json",
+      "preview_asset": "infinex-opening-preview",
+      "poster_asset": "shot-inf-opening-poster",
+      "poster_source_frame": 90
+    },
+    {
+      "id": "SHOT-INF-QUESTION",
+      "title": "02 · A question develops inside a pullback",
+      "summary": "Seven overlapping word arrivals, a growing box, character emphasis, six coins and the foreground phone handoff.",
+      "kind": "shot",
+      "video_types": [
+        "kinetic-typography",
+        "product-launch",
+        "social-explainer"
+      ],
+      "story_jobs": [
+        "introduce-problem",
+        "develop-question",
+        "handoff-to-product"
+      ],
+      "tags": [
+        "question",
+        "whole-word-arrival",
+        "hermite",
+        "pullback",
+        "coins",
+        "box",
+        "character-reveal",
+        "reaction",
+        "foreground-handoff"
+      ],
+      "tools": [
+        "After Effects",
+        "Blender"
+      ],
+      "review_state": "mixed",
+      "study_id": "STUDY-INFINEX",
+      "detail": "library/entries/SHOT-INF-QUESTION.json",
+      "preview_asset": "infinex-question-preview",
+      "poster_asset": "shot-inf-question-poster",
+      "poster_source_frame": 222
+    },
+    {
+      "id": "SHOT-INF-PHONE-CARDS",
+      "title": "03 · One phone, two explanatory roles",
+      "summary": "Foreground phone arrival becomes a four-card layout, with full pose controls, typography and the confirmation handoff.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "product-demo"
+      ],
+      "story_jobs": [
+        "connect-concepts",
+        "show-options"
+      ],
+      "tags": [
+        "persistent-hero",
+        "phone",
+        "card-fan",
+        "bezier",
+        "stagger",
+        "foreground-handoff",
+        "confirmation",
+        "pose-projection",
+        "whole-word",
+        "hermite"
+      ],
+      "tools": [
+        "After Effects",
+        "Blender"
+      ],
+      "review_state": "mixed",
+      "study_id": "STUDY-INFINEX",
+      "detail": "library/entries/SHOT-INF-PHONE-CARDS.json",
+      "preview_asset": "infinex-phone-cards-preview",
+      "poster_asset": "shot-inf-phone-cards-poster",
+      "poster_source_frame": 378
+    },
+    {
+      "id": "DETAIL-INF-DEFOCUS",
+      "title": "Pass attention through focus",
+      "summary": "Outgoing assets retreat and soften while the next phrase resolves. Includes the rejected blur and pending repair.",
+      "kind": "technique",
+      "video_types": [
+        "product-launch",
+        "kinetic-typography"
+      ],
+      "story_jobs": [
+        "transfer-attention",
+        "connect-shots"
+      ],
+      "tags": [
+        "defocus",
+        "blur",
+        "exit",
+        "opacity",
+        "bounds",
+        "text",
+        "failure-example"
+      ],
+      "tools": [
+        "After Effects"
+      ],
+      "review_state": "rejected",
+      "study_id": "STUDY-INFINEX",
+      "detail": "library/entries/DETAIL-INF-DEFOCUS.json",
+      "preview_asset": "infinex-defocus-preview",
+      "poster_asset": "detail-inf-defocus-poster",
+      "poster_source_frame": 402
+    },
+    {
+      "id": "LIGHT-INF-COPPER",
+      "title": "A warm field, shaped reflections",
+      "summary": "Separate studio lights, moving ambience and graphic discs to support a clear product silhouette.",
+      "kind": "lighting",
+      "video_types": [
+        "product-launch",
+        "product-demo",
+        "cinematic-brand"
+      ],
+      "story_jobs": [
+        "establish-look",
+        "separate-product"
+      ],
+      "tags": [
+        "lighting",
+        "copper",
+        "studio",
+        "reflection",
+        "soft-area-light",
+        "environment"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "mixed",
+      "study_id": "STUDY-INFINEX",
+      "detail": "library/entries/LIGHT-INF-COPPER.json",
+      "preview_asset": "infinex-copper-preview",
+      "poster_asset": "light-inf-copper-poster",
+      "poster_source_frame": 324
+    },
+    {
+      "id": "SHOT-INF-WALLETS",
+      "title": "03a · Different Wallets",
+      "summary": "A phone arrives as a dimensional object while two words and expanding circles explain the first friction point.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "persistent-hero",
+        "wallet-friction"
+      ],
+      "tags": [
+        "persistent-hero",
+        "wallet-friction",
+        "smooth-tilt",
+        "overlap"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-INFINEX",
+      "detail": "library/entries/SHOT-INF-WALLETS.json",
+      "preview_asset": "shot-inf-wallets-preview",
+      "poster_asset": "shot-inf-wallets-poster",
+      "poster_source_frame": 323
+    },
+    {
+      "id": "SHOT-INF-CHAIN-CARDS",
+      "title": "03b · Separate chains fan from the phone",
+      "summary": "Four chain cards make fragmentation visible while the phone continues its movement from the wallet claim.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "card-fan",
+        "persistent-hero"
+      ],
+      "tags": [
+        "card-fan",
+        "persistent-hero",
+        "defocus",
+        "stagger"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-INFINEX",
+      "detail": "library/entries/SHOT-INF-CHAIN-CARDS.json",
+      "preview_asset": "shot-inf-chain-cards-preview",
+      "poster_asset": "shot-inf-chain-cards-poster",
+      "poster_source_frame": 403
+    },
+    {
+      "id": "SHOT-INF-CONFIRMATION",
+      "title": "04 · Endless Confirmation",
+      "summary": "A short two-word claim gains attention during the previous group’s soft exit, then yields to an oversized coin.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "two-word-reveal",
+        "reading-dwell"
+      ],
+      "tags": [
+        "two-word-reveal",
+        "reading-dwell",
+        "foreground-takeover",
+        "defocus"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-INFINEX",
+      "detail": "library/entries/SHOT-INF-CONFIRMATION.json",
+      "preview_asset": "shot-inf-confirmation-preview",
+      "poster_asset": "shot-inf-confirmation-poster",
+      "poster_source_frame": 461
+    },
+    {
+      "id": "SHOT-INF-COIN",
+      "title": "05 · The brand coin changes the claim",
+      "summary": "An oversized turning brand coin becomes a small badge between the words of the answer.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "hero-to-badge",
+        "match-cut"
+      ],
+      "tags": [
+        "hero-to-badge",
+        "match-cut",
+        "coin-rotation"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-INFINEX",
+      "detail": "library/entries/SHOT-INF-COIN.json",
+      "preview_asset": "shot-inf-coin-preview",
+      "poster_asset": "shot-inf-coin-poster",
+      "poster_source_frame": 560
+    },
+    {
+      "id": "SHOT-INF-FINGERPRINT",
+      "title": "06 · Fingerprint scans and explains",
+      "summary": "A central fingerprint turns frontal, receives a scan, then makes room for a three-item explanation.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "scan-reveal",
+        "feature-list"
+      ],
+      "tags": [
+        "scan-reveal",
+        "feature-list",
+        "wipe"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-INFINEX",
+      "detail": "library/entries/SHOT-INF-FINGERPRINT.json",
+      "preview_asset": "shot-inf-fingerprint-preview",
+      "poster_asset": "shot-inf-fingerprint-poster",
+      "poster_source_frame": 708
+    },
+    {
+      "id": "SHOT-INF-CONTRAST",
+      "title": "07 · No Seed Phrases / No Chain Switching",
+      "summary": "Two short negative claims use a bold palette inversion to give the middle of the film a different rhythm.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "palette-inversion",
+        "negative-claim"
+      ],
+      "tags": [
+        "palette-inversion",
+        "negative-claim",
+        "reading-dwell"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-INFINEX",
+      "detail": "library/entries/SHOT-INF-CONTRAST.json",
+      "preview_asset": "shot-inf-contrast-preview",
+      "poster_asset": "shot-inf-contrast-poster",
+      "poster_source_frame": 830
+    },
+    {
+      "id": "SHOT-INF-UI",
+      "title": "08 · Seamless experience in a field of UI",
+      "summary": "Oversized typography reduces into a field of interface panels, then rushes forward while the next system assembles behind it.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "ui-field",
+        "depth-rush"
+      ],
+      "tags": [
+        "ui-field",
+        "depth-rush",
+        "overlapping-assembly"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-INFINEX",
+      "detail": "library/entries/SHOT-INF-UI.json",
+      "preview_asset": "shot-inf-ui-preview",
+      "poster_asset": "shot-inf-ui-poster",
+      "poster_source_frame": 945
+    },
+    {
+      "id": "SHOT-INF-ORBIT",
+      "title": "09 · One orbital system, three feature visits",
+      "summary": "One connected system supports Trade, Manage, and Move Assets through successive attention shifts rather than separate feature cards.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "orbit-system",
+        "continuous-camera"
+      ],
+      "tags": [
+        "orbit-system",
+        "continuous-camera",
+        "feature-tour",
+        "light-sweep"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-INFINEX",
+      "detail": "library/entries/SHOT-INF-ORBIT.json",
+      "preview_asset": "shot-inf-orbit-preview",
+      "poster_asset": "shot-inf-orbit-poster",
+      "poster_source_frame": 1145
+    },
+    {
+      "id": "SHOT-INF-CLOSING",
+      "title": "10 · The selected benefit returns",
+      "summary": "The opening selection motif returns as the resolved promise, giving the film a visual callback.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "selection-highlight",
+        "visual-callback"
+      ],
+      "tags": [
+        "selection-highlight",
+        "visual-callback",
+        "type-resolve"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-INFINEX",
+      "detail": "library/entries/SHOT-INF-CLOSING.json",
+      "preview_asset": "shot-inf-closing-preview",
+      "poster_asset": "shot-inf-closing-poster",
+      "poster_source_frame": 1333
+    },
+    {
+      "id": "SHOT-INF-ENDCARD",
+      "title": "11 · Wordmark and deliberate black tail",
+      "summary": "The film stops explaining and gives the brand a simple hold before a clean black ending.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "brand-hold",
+        "black-tail"
+      ],
+      "tags": [
+        "brand-hold",
+        "black-tail",
+        "clean-ending"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-INFINEX",
+      "detail": "library/entries/SHOT-INF-ENDCARD.json",
+      "preview_asset": "shot-inf-endcard-preview",
+      "poster_asset": "shot-inf-endcard-poster",
+      "poster_source_frame": 1450
+    },
+    {
+      "id": "SHOT-CERO-TOSS",
+      "title": "01 · A tossed coin becomes a reward",
+      "summary": "A first-person coin toss supplies an object that carries the film from everyday footage into product UI.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "object-continuity",
+        "live-action-to-ui"
+      ],
+      "tags": [
+        "object-continuity",
+        "live-action-to-ui",
+        "coin",
+        "ribbon"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-CERO",
+      "detail": "library/entries/SHOT-CERO-TOSS.json",
+      "preview_asset": "shot-cero-toss-preview",
+      "poster_asset": "shot-cero-toss-poster",
+      "poster_source_frame": 158
+    },
+    {
+      "id": "SHOT-CERO-PAYMENTS-A",
+      "title": "02 · Two payment contexts",
+      "summary": "Two first-person payment shots ground the graphic reward in recognizable everyday behavior.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "payment-montage",
+        "live-action-proof"
+      ],
+      "tags": [
+        "payment-montage",
+        "live-action-proof",
+        "screen-replacement"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-CERO",
+      "detail": "library/entries/SHOT-CERO-PAYMENTS-A.json",
+      "preview_asset": "shot-cero-payments-a-preview",
+      "poster_asset": "shot-cero-payments-a-poster",
+      "poster_source_frame": 319
+    },
+    {
+      "id": "SHOT-CERO-PACK-COPY",
+      "title": "03 · A sentence introduces the pack",
+      "summary": "Short serif statements and a lime package connect spending to a playful reward.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "typography-and-prop",
+        "particle-framing"
+      ],
+      "tags": [
+        "typography-and-prop",
+        "particle-framing",
+        "reward-setup"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-CERO",
+      "detail": "library/entries/SHOT-CERO-PACK-COPY.json",
+      "preview_asset": "shot-cero-pack-copy-preview",
+      "poster_asset": "shot-cero-pack-copy-poster",
+      "poster_source_frame": 446
+    },
+    {
+      "id": "SHOT-CERO-PACK-PRIZES",
+      "title": "04 · A pack leaves the phone and reveals prizes",
+      "summary": "The reward pack escapes its screen, becomes a dimensional hero, and opens a field of prizes before yielding to a ticket.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "object-detachment",
+        "radial-prizes"
+      ],
+      "tags": [
+        "object-detachment",
+        "radial-prizes",
+        "overlapping-settle"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-CERO",
+      "detail": "library/entries/SHOT-CERO-PACK-PRIZES.json",
+      "preview_asset": "shot-cero-pack-prizes-preview",
+      "poster_asset": "shot-cero-pack-prizes-poster",
+      "poster_source_frame": 609
+    },
+    {
+      "id": "SHOT-CERO-JACKPOT",
+      "title": "05 · Jackpot type becomes a score screen",
+      "summary": "A large dimensional amount receives a brief hero moment before the phone score becomes the next focus.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "dimensional-type",
+        "rolling-digits"
+      ],
+      "tags": [
+        "dimensional-type",
+        "rolling-digits",
+        "score-arc"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-CERO",
+      "detail": "library/entries/SHOT-CERO-JACKPOT.json",
+      "preview_asset": "shot-cero-jackpot-preview",
+      "poster_asset": "shot-cero-jackpot-poster",
+      "poster_source_frame": 775
+    },
+    {
+      "id": "SHOT-CERO-PAYMENTS-B",
+      "title": "06 · Cafe and grocery payment inserts",
+      "summary": "Two quick payment inserts reinforce the repeated everyday action between reward explanations.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "payment-montage",
+        "context-repeat"
+      ],
+      "tags": [
+        "payment-montage",
+        "context-repeat",
+        "screen-replacement"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-CERO",
+      "detail": "library/entries/SHOT-CERO-PAYMENTS-B.json",
+      "preview_asset": "shot-cero-payments-b-preview",
+      "poster_asset": "shot-cero-payments-b-poster",
+      "poster_source_frame": 884
+    },
+    {
+      "id": "SHOT-CERO-SALARY",
+      "title": "07 · Salary notification becomes a multiplier wheel",
+      "summary": "An incoming salary notification becomes a wheel whose result changes the displayed amount.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "notification-to-diagram",
+        "multiplier-wheel"
+      ],
+      "tags": [
+        "notification-to-diagram",
+        "multiplier-wheel",
+        "rolling-digits"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-CERO",
+      "detail": "library/entries/SHOT-CERO-SALARY.json",
+      "preview_asset": "shot-cero-salary-preview",
+      "poster_asset": "shot-cero-salary-poster",
+      "poster_source_frame": 1063
+    },
+    {
+      "id": "SHOT-CERO-PAYMENTS-C",
+      "title": "08 · Grocery and cinema proof beats",
+      "summary": "Two short point-of-sale shots keep the second reward mechanic connected to spending.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "payment-montage",
+        "context-props"
+      ],
+      "tags": [
+        "payment-montage",
+        "context-props",
+        "use-case-proof"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-CERO",
+      "detail": "library/entries/SHOT-CERO-PAYMENTS-C.json",
+      "preview_asset": "shot-cero-payments-c-preview",
+      "poster_asset": "shot-cero-payments-c-poster",
+      "poster_source_frame": 1196
+    },
+    {
+      "id": "SHOT-CERO-SCORE",
+      "title": "09 · Inputs assemble into a score, then a phone",
+      "summary": "Individual score factors are explained, then arranged around an aggregate score that returns to the product screen.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "diagram-to-ui",
+        "score-aggregation"
+      ],
+      "tags": [
+        "diagram-to-ui",
+        "score-aggregation",
+        "masked-digits",
+        "persistent-hero"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-CERO",
+      "detail": "library/entries/SHOT-CERO-SCORE.json",
+      "preview_asset": "shot-cero-score-preview",
+      "poster_asset": "shot-cero-score-poster",
+      "poster_source_frame": 1383
+    },
+    {
+      "id": "SHOT-CERO-CREDIT",
+      "title": "10 · A credit panel leaves its UI slot and returns",
+      "summary": "A locked panel moves beyond the phone boundary, changes state in the foreground, then docks with a readable value.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "ui-extraction",
+        "state-change"
+      ],
+      "tags": [
+        "ui-extraction",
+        "state-change",
+        "dock-return",
+        "material-sweep"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-CERO",
+      "detail": "library/entries/SHOT-CERO-CREDIT.json",
+      "preview_asset": "shot-cero-credit-preview",
+      "poster_asset": "shot-cero-credit-poster",
+      "poster_source_frame": 1564
+    },
+    {
+      "id": "SHOT-CERO-MOSAIC",
+      "title": "11 · One purchase expands into many",
+      "summary": "A last payment shot becomes a circular tile, then a field of repeated purchase moments.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "footage-mosaic",
+        "instance-multiplication"
+      ],
+      "tags": [
+        "footage-mosaic",
+        "instance-multiplication",
+        "circular-mask"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-CERO",
+      "detail": "library/entries/SHOT-CERO-MOSAIC.json",
+      "preview_asset": "shot-cero-mosaic-preview",
+      "poster_asset": "shot-cero-mosaic-poster",
+      "poster_source_frame": 1742
+    },
+    {
+      "id": "SHOT-CERO-END",
+      "title": "12 · Coin, promise and wordmark",
+      "summary": "A quiet three-step closing moves from the brand coin to a plain-language promise and final wordmark.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "brand-resolution",
+        "quiet-ending"
+      ],
+      "tags": [
+        "brand-resolution",
+        "quiet-ending",
+        "wordmark"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-CERO",
+      "detail": "library/entries/SHOT-CERO-END.json",
+      "preview_asset": "shot-cero-end-preview",
+      "poster_asset": "shot-cero-end-poster",
+      "poster_source_frame": 1981
+    },
+    {
+      "id": "SHOT-JAW-OPEN",
+      "title": "01 · Spend anything, anywhere",
+      "summary": "A small sentence opens into a colorful dimensional payment-card hero with currencies and graphic accents.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "payment-card-hero",
+        "scale-contrast"
+      ],
+      "tags": [
+        "payment-card-hero",
+        "scale-contrast",
+        "colored-studio",
+        "occlusion"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-JAW",
+      "detail": "library/entries/SHOT-JAW-OPEN.json",
+      "preview_asset": "shot-jaw-open-preview",
+      "poster_asset": "shot-jaw-open-poster",
+      "poster_source_frame": 62
+    },
+    {
+      "id": "SHOT-JAW-TRACK",
+      "title": "02 · Card glides through rounded tracks",
+      "summary": "The hero card moves through nested rounded contours, creating a quieter transitional space before the wallet explanation.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "persistent-card",
+        "contour-field"
+      ],
+      "tags": [
+        "persistent-card",
+        "contour-field",
+        "edge-on-handoff"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-JAW",
+      "detail": "library/entries/SHOT-JAW-TRACK.json",
+      "preview_asset": "shot-jaw-track-preview",
+      "poster_asset": "shot-jaw-track-poster",
+      "poster_source_frame": 134
+    },
+    {
+      "id": "SHOT-JAW-WALLET",
+      "title": "03 · A wallet organizes balances",
+      "summary": "A dimensional wallet presents multiple asset rows, then opens back into a payment-card composition.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "wallet-explainer",
+        "ui-row-continuity"
+      ],
+      "tags": [
+        "wallet-explainer",
+        "ui-row-continuity",
+        "hinge",
+        "material-change"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-JAW",
+      "detail": "library/entries/SHOT-JAW-WALLET.json",
+      "preview_asset": "shot-jaw-wallet-preview",
+      "poster_asset": "shot-jaw-wallet-poster",
+      "poster_source_frame": 219
+    },
+    {
+      "id": "SHOT-JAW-DASHBOARD",
+      "title": "04 · Floating balances become the dashboard",
+      "summary": "The card-and-balances composition resolves into a bright dashboard, then directs attention through its asset list.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "dashboard-tour",
+        "ui-continuity"
+      ],
+      "tags": [
+        "dashboard-tour",
+        "ui-continuity",
+        "white-studio",
+        "attention-route"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-JAW",
+      "detail": "library/entries/SHOT-JAW-DASHBOARD.json",
+      "preview_asset": "shot-jaw-dashboard-preview",
+      "poster_asset": "shot-jaw-dashboard-poster",
+      "poster_source_frame": 331
+    },
+    {
+      "id": "SHOT-JAW-PAYMENT",
+      "title": "05 · Enter an amount and choose a currency",
+      "summary": "A payment form makes a concrete transaction readable through amount entry, currency choice, and processing.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "payment-ui",
+        "dropdown-focus"
+      ],
+      "tags": [
+        "payment-ui",
+        "dropdown-focus",
+        "masked-digits",
+        "processing"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-JAW",
+      "detail": "library/entries/SHOT-JAW-PAYMENT.json",
+      "preview_asset": "shot-jaw-payment-preview",
+      "poster_asset": "shot-jaw-payment-poster",
+      "poster_source_frame": 444
+    },
+    {
+      "id": "SHOT-JAW-GLOBE",
+      "title": "06 · A payment travels across the globe",
+      "summary": "A globe and floating notification turn a successful payment into a geographic explanation.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "globe-payment",
+        "billboard-label"
+      ],
+      "tags": [
+        "globe-payment",
+        "billboard-label",
+        "glass-notification"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-JAW",
+      "detail": "library/entries/SHOT-JAW-GLOBE.json",
+      "preview_asset": "shot-jaw-globe-preview",
+      "poster_asset": "shot-jaw-globe-poster",
+      "poster_source_frame": 547
+    },
+    {
+      "id": "SHOT-JAW-OBJECTIONS",
+      "title": "07 · Short claims on the returning purple stage",
+      "summary": "A rapid typographic bridge returns the film to the card’s visual world before everyday purchase examples.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "kinetic-type",
+        "directional-softness"
+      ],
+      "tags": [
+        "kinetic-type",
+        "directional-softness",
+        "color-callback"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-JAW",
+      "detail": "library/entries/SHOT-JAW-OBJECTIONS.json",
+      "preview_asset": "shot-jaw-objections-preview",
+      "poster_asset": "shot-jaw-objections-poster",
+      "poster_source_frame": 621
+    },
+    {
+      "id": "SHOT-JAW-PURCHASES",
+      "title": "08 · Coffee, groceries and flights around one phone",
+      "summary": "One phone supports three purchase categories while a colorful ribbon threads around it.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "ribbon-occlusion",
+        "purchase-categories"
+      ],
+      "tags": [
+        "ribbon-occlusion",
+        "purchase-categories",
+        "persistent-phone",
+        "selective-blur"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-JAW",
+      "detail": "library/entries/SHOT-JAW-PURCHASES.json",
+      "preview_asset": "shot-jaw-purchases-preview",
+      "poster_asset": "shot-jaw-purchases-poster",
+      "poster_source_frame": 691
+    },
+    {
+      "id": "SHOT-JAW-ACCOUNT",
+      "title": "09 · Same account as a visual hinge",
+      "summary": "A tiny account symbol turns a two-word statement into the next payment form’s focal anchor.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "icon-handoff",
+        "two-word-layout"
+      ],
+      "tags": [
+        "icon-handoff",
+        "two-word-layout",
+        "semantic-continuity"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-JAW",
+      "detail": "library/entries/SHOT-JAW-ACCOUNT.json",
+      "preview_asset": "shot-jaw-account-preview",
+      "poster_asset": "shot-jaw-account-poster",
+      "poster_source_frame": 754
+    },
+    {
+      "id": "SHOT-JAW-SEND",
+      "title": "10 · The send form repeats the transaction",
+      "summary": "The familiar form returns with an amount and selected payment asset, reinforcing that one account supports the action.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "repeated-ui",
+        "amount-entry"
+      ],
+      "tags": [
+        "repeated-ui",
+        "amount-entry",
+        "state-reuse"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-JAW",
+      "detail": "library/entries/SHOT-JAW-SEND.json",
+      "preview_asset": "shot-jaw-send-preview",
+      "poster_asset": "shot-jaw-send-poster",
+      "poster_source_frame": 810
+    },
+    {
+      "id": "SHOT-JAW-NOTIFICATION",
+      "title": "11 · Payment confirmation becomes the final hero",
+      "summary": "A glass-like notification inherits the colored currency world and becomes large enough to read the completed payment.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "glass-panel",
+        "notification-hero"
+      ],
+      "tags": [
+        "glass-panel",
+        "notification-hero",
+        "colored-studio",
+        "camera-push"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-JAW",
+      "detail": "library/entries/SHOT-JAW-NOTIFICATION.json",
+      "preview_asset": "shot-jaw-notification-preview",
+      "poster_asset": "shot-jaw-notification-poster",
+      "poster_source_frame": 891
+    },
+    {
+      "id": "SHOT-JAW-END",
+      "title": "12 · Monochrome logo and final promise",
+      "summary": "White mark and four-point stars on charcoal close the colorful film with a restrained final line.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "monochrome-ending",
+        "brand-hold"
+      ],
+      "tags": [
+        "monochrome-ending",
+        "brand-hold",
+        "tagline-reveal"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-JAW",
+      "detail": "library/entries/SHOT-JAW-END.json",
+      "preview_asset": "shot-jaw-end-preview",
+      "poster_asset": "shot-jaw-end-poster",
+      "poster_source_frame": 978
+    },
+    {
+      "id": "RIG-OF-RADIAL",
+      "title": "A grid disappears through spatially delayed master curves",
+      "summary": "One control rig schedules 48 squares by their distance from an off-center control, with independent shrink and flickering opacity.",
+      "kind": "technique",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "spatial-stagger",
+        "master-curve"
+      ],
+      "tags": [
+        "spatial-stagger",
+        "master-curve",
+        "reciprocal-delay",
+        "stable-random"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-ORDINARY-FOLK",
+      "detail": "library/entries/RIG-OF-RADIAL.json",
+      "preview_asset": "rig-of-radial-preview",
+      "poster_asset": "rig-of-radial-poster",
+      "poster_source_frame": 65
+    },
+    {
+      "id": "SHOT-CAMERA-ASSEMBLY",
+      "title": "01 · A logo lands and builds the prompt interface",
+      "summary": "The interface is constructed in parts around an arriving logo rather than appearing as a finished panel.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "component-assembly",
+        "logo-handoff"
+      ],
+      "tags": [
+        "component-assembly",
+        "logo-handoff",
+        "ui-reveal"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-BLENDER-CAMERA",
+      "detail": "library/entries/SHOT-CAMERA-ASSEMBLY.json",
+      "preview_asset": "shot-camera-assembly-preview",
+      "poster_asset": "shot-camera-assembly-poster",
+      "poster_source_frame": 30
+    },
+    {
+      "id": "SHOT-CAMERA-SWEEP",
+      "title": "02 · Camera sweeps from the request to Send",
+      "summary": "An oblique close-up resolves focus, then a lateral sweep moves attention along the request toward the circular send control.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "asymmetric-camera",
+        "pass-through-tangents"
+      ],
+      "tags": [
+        "asymmetric-camera",
+        "pass-through-tangents",
+        "camera-timing",
+        "matched-ab"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-BLENDER-CAMERA",
+      "detail": "library/entries/SHOT-CAMERA-SWEEP.json",
+      "preview_asset": "shot-camera-sweep-preview",
+      "poster_asset": "shot-camera-sweep-poster",
+      "poster_source_frame": 94
+    },
+    {
+      "id": "SHOT-CAMERA-SEND",
+      "title": "03 · The send circle releases its arrow",
+      "summary": "The circular control survives the interface dissolve, then arrow and disc separate to launch the result.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "persistent-control",
+        "split-object-launch"
+      ],
+      "tags": [
+        "persistent-control",
+        "split-object-launch",
+        "hidden-camera-reset"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-BLENDER-CAMERA",
+      "detail": "library/entries/SHOT-CAMERA-SEND.json",
+      "preview_asset": "shot-camera-send-preview",
+      "poster_asset": "shot-camera-send-poster",
+      "poster_source_frame": 142
+    },
+    {
+      "id": "SHOT-CAMERA-RESULT",
+      "title": "04 · Result card drops, opens and leaves",
+      "summary": "A full-sized result card descends from above, hinges aside for a summary, then anticipates an upward exit.",
+      "kind": "shot",
+      "video_types": [
+        "product-launch",
+        "brand-kinetic",
+        "ui-explainer"
+      ],
+      "story_jobs": [
+        "card-drop",
+        "opposing-hinges"
+      ],
+      "tags": [
+        "card-drop",
+        "opposing-hinges",
+        "anticipation",
+        "accelerating-exit"
+      ],
+      "tools": [
+        "Blender",
+        "After Effects"
+      ],
+      "review_state": "pending",
+      "study_id": "STUDY-BLENDER-CAMERA",
+      "detail": "library/entries/SHOT-CAMERA-RESULT.json",
+      "preview_asset": "shot-camera-result-preview",
+      "poster_asset": "shot-camera-result-poster",
+      "poster_source_frame": 216
+    }
+  ]
+}

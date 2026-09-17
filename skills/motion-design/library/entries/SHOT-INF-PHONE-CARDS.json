@@ -1,0 +1,1379 @@
+{
+  "id": "SHOT-INF-PHONE-CARDS",
+  "clip": {
+    "asset_id": "infinex-phone-cards-preview",
+    "source_frames": [
+      263,
+      438
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Excerpt starts at global 4.3833s; player time starts at zero. Source exposure times are observations, not recovered keys."
+  },
+  "inspiration": {
+    "purpose": "Keep a recognizable product object present while the explanation changes from wallets to separate chains.",
+    "beats": [
+      "The phone rises large from the foreground and reduces into a readable view.",
+      "Wallet words and expanding background discs arrive during the phone settle.",
+      "The caption retires as the same phone turns into the left anchor.",
+      "Four chain cards emerge behind it; supporting words keep arriving after card four.",
+      "The group retreats and softens as the next phrase gains attention."
+    ],
+    "use_when": [
+      "A persistent hero can connect two product concepts.",
+      "Options, accounts or components should feel related to one object."
+    ],
+    "attention": "Phone → wallet phrase → phone/card relationship → incoming confirmation copy.",
+    "meta": [
+      {
+        "label": "Core mechanism",
+        "value": "One persistent hero; independent explanatory layers"
+      },
+      {
+        "label": "Repeated instances",
+        "value": "Four cards; exposure samples roughly 0.10s apart"
+      },
+      {
+        "label": "Counting note",
+        "value": "Visible jobs and instances, not original source-layer counts"
+      },
+      {
+        "label": "Coordinated jobs",
+        "value": "Seven groups here: hero pose, wallet copy, graphic discs, card arrivals, chain explanation, exit focus/opacity, incoming phrase. This groups behaviors, not source layers."
+      },
+      {
+        "label": "Native structure",
+        "value": "One persistent phone, four cards, seven subtitle words, two incoming words; original layer count unknown"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "hero",
+      "label": "Phone",
+      "events": [
+        {
+          "label": "Foreground arrival",
+          "frames": [
+            263,
+            294
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "Turn into next role",
+          "frames": [
+            342,
+            357
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "Shared retreat",
+          "frames": [
+            384,
+            429
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "copy",
+      "label": "Copy",
+      "events": [
+        {
+          "label": "Wallet reading interval",
+          "frames": [
+            324,
+            342
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "Wallet caption retirement",
+          "frames": [
+            342,
+            352
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "Chain heading",
+          "frames": [
+            356,
+            414
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "cards",
+      "label": "Card exposure",
+      "events": [
+        {
+          "label": "ETH exposed",
+          "frames": [
+            356,
+            357
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "SOL exposed",
+          "frames": [
+            362,
+            363
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "POL exposed",
+          "frames": [
+            368,
+            369
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "BNB exposed",
+          "frames": [
+            374,
+            375
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "label": "Next phrase",
+      "events": [
+        {
+          "label": "Endless arrival",
+          "frames": [
+            413,
+            429
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "Confirmation begins",
+          "frames": [
+            431,
+            438
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Measured reference behavior and inspected local authoring scripts are listed separately below. All times are global seconds at 60fps; screen coordinates are normalized to 1280×720, x right and y down. Original software, project, font and exact source curves are unknown. This is the full documented breakdown of the current study, not a recovered source rig. The preview ends at 7.30s. The confirmation continuation through 8.28s is documented below and visible in the linked 4.3–8.8s comparison.",
+    "sections": [
+      {
+        "title": "Measured shot beats and timing precision",
+        "items": [
+          "The same phone persists from foreground arrival to wallet view and left anchor of the chain-card layout. Exposure samples do not establish when a hidden card began moving.",
+          "The dense phone/card audit samples every 2 frames, caption/exit audit every 3 frames. First Different and phone entry have separate consecutive-frame checks. Distinguish measured onsets, bracketed clear exposure and authored local controls."
+        ],
+        "tables": [
+          {
+            "caption": "Reference landmarks",
+            "columns": [
+              "Global time (s)",
+              "Observed behavior"
+            ],
+            "rows": [
+              [
+                4.383333333333334,
+                "Phone first visible; previous question still present"
+              ],
+              [
+                4.833333333333333,
+                "Different first visible during the phone settle"
+              ],
+              [
+                "5.00–5.15",
+                "Outer disc expands"
+              ],
+              [
+                "5.20–5.35",
+                "Wallets becomes visible with inner disc"
+              ],
+              [
+                "5.40–5.65",
+                "Both words clear while phone keeps changing pose"
+              ],
+              [
+                "5.70–5.8667",
+                "Wallet text retires and phone turns"
+              ],
+              [
+                5.933333333333334,
+                "ETH clearly exposed"
+              ],
+              [
+                6.033333333333333,
+                "SOL clearly exposed"
+              ],
+              [
+                6.133333333333334,
+                "POL clearly exposed"
+              ],
+              [
+                6.233333333333333,
+                "BNB clearly exposed"
+              ],
+              [
+                "6.2333–6.45",
+                "Four cards present; sentence still develops"
+              ],
+              [
+                "6.50–6.75",
+                "Old heading/cards soften"
+              ],
+              [
+                6.883333333333334,
+                "Endless arrival"
+              ],
+              [
+                7.183333333333334,
+                "Confirmation begins"
+              ],
+              [
+                "8.0667 onward",
+                "Brand coin takes foreground priority"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Rig, coordinate system and compositing hierarchy",
+        "items": [
+          "One Blender phone root retains its geometry/materials and unit scale [1,1,1]. Four card roots have independent arrivals and a shared native outgoing depth translation. AE words remain independent of the object perspective.",
+          "The camera is at [0,−14,0], rotated π/2 about X, with 50mm lens and 36mm sensor; native screen conversion uses F=1280×50/36. Camera/framing language in the study describes apparent screen motion unless a native camera control is explicitly named.",
+          "AE comp is “03-05 | Exit blur and confirmation pullback | V05”. Its header null uses pivot [640,360]. The Blender footage already recedes; do not scale the full composite to imitate that retreat again."
+        ],
+        "code": [
+          {
+            "label": "Current layer / object relationships",
+            "text": "Blender\n  PHONE / measured foreground handoff — persistent native object\n  V04 CARD 0..3 — separate local arrivals, shared exit depth\n  Native perspective camera — animated focus distance\nAE\n  S06 brand coin foreground — above later copy from 8.0667\n  S05 Endless + Confirmation — above retiring asset pass\n  V05 phone/cards footage — global 263–437, then out at 7.30s\n  S04 shared header retreat — heading + seven explanatory words\n  S03 wallet captions and separate graphic discs\n  Independently animated environment fields",
+            "basis": "local-implementation"
+          }
+        ]
+      },
+      {
+        "title": "Phone entrance: complete fitted controls",
+        "items": [
+          "The entrance uses target upper-rim y, apparent width and pitch. V05 removes the earlier 1060→1110 width reversal. These are authored reconstruction targets informed by measurements, not original source property values.",
+          "SciPy CubicSpline fits each channel with explicit endpoint derivatives. The generated coefficient file is linked. Internal C2 continuity applies to the fitted scalar curves, not automatically to the complete projected shot or every join."
+        ],
+        "code": [
+          {
+            "label": "Entrance projection; pitch p in radians",
+            "text": "dTop = F × 2.02 / targetWidth\nlocalY = −sin(p) × 2.115 + 0.115 × cos(p)\nlocalZ =  cos(p) × 2.115 + 0.115 × sin(p)\nposition = [0, −14 + dTop − localY,\n            (360 − targetTop) × dTop/F − localZ]\nrotation = [p,0,0]; scale = [1,1,1]",
+            "basis": "local-implementation"
+          }
+        ],
+        "tables": [
+          {
+            "caption": "Entrance targets",
+            "columns": [
+              "Global time (s)",
+              "Top y (px)",
+              "Width (px)",
+              "Pitch (degrees)"
+            ],
+            "rows": [
+              [
+                4.383333333333334,
+                644,
+                1110,
+                74
+              ],
+              [
+                4.45,
+                554,
+                1050,
+                58
+              ],
+              [
+                4.55,
+                394,
+                930,
+                37
+              ],
+              [
+                4.65,
+                247,
+                805,
+                21
+              ],
+              [
+                4.75,
+                142,
+                675,
+                10
+              ],
+              [
+                4.85,
+                87,
+                570,
+                4
+              ],
+              [
+                4.95,
+                63,
+                515,
+                1
+              ],
+              [
+                5.1,
+                55,
+                481,
+                -1
+              ],
+              [
+                5.3,
+                56,
+                468,
+                -2
+              ]
+            ],
+            "basis": "local-implementation"
+          },
+          {
+            "caption": "Spline boundary derivatives",
+            "columns": [
+              "Channel",
+              "Start slope",
+              "End slope",
+              "Units"
+            ],
+            "rows": [
+              [
+                "entrance_top",
+                -1050,
+                0,
+                "px/s"
+              ],
+              [
+                "entrance_width",
+                -700,
+                -30,
+                "px/s"
+              ],
+              [
+                "entrance_pitch",
+                -240,
+                -3,
+                "degrees/s"
+              ],
+              [
+                "x",
+                0,
+                0,
+                "px/s"
+              ],
+              [
+                "top",
+                0,
+                0,
+                "px/s"
+              ],
+              [
+                "depth",
+                0.6,
+                1.2,
+                "scene units/s"
+              ],
+              [
+                "pitch",
+                -3,
+                0,
+                "degrees/s"
+              ],
+              [
+                "yaw",
+                0,
+                -3,
+                "degrees/s"
+              ],
+              [
+                "roll",
+                0,
+                0,
+                "degrees/s"
+              ]
+            ],
+            "basis": "local-implementation"
+          }
+        ]
+      },
+      {
+        "title": "Phone turn: path, rotation order and native handles",
+        "items": [
+          "The turn’s upright Z rotation and shot-horizontal X tilt are constructed in ZXY order, then converted to native XYZ keys. There is no extra authored roll; coupled XYZ components do not mean an additional roll control exists.",
+          "The top of all eight transformed phone bounding corners is fitted to the requested screen top, avoiding the unwanted dip. Native corners span ±1.01 on X, ±0.115 on Y and ±2.115 on Z.",
+          "At 5.30s, the initial depth is solved from entrance geometry to preserve the handoff. After 6.40s the end pose is retained while the common depth retreat takes over.",
+          "Phone keys at each frame use FREE Bézier handles with slopes estimated from neighboring keyed values: ±1/3 frame horizontally, ±velocity/3 vertically. Dense card exit keys remain LINEAR samples of a nonlinear route. Changing only the interpolation label does not fix a bad path or apparent-size reversal."
+        ],
+        "code": [
+          {
+            "label": "Turn projection and handle construction",
+            "text": "rotation = Euler([pitch,0,yaw], order=\"ZXY\").toMatrix().toEuler(\"XYZ\")\nworldX = (targetX − 640) × depth / F\nworldY = −14 + depth\nworldZ = min((360 − targetTop) × (depth + corner.y)/F − corner.z\n             for each rotated corner)\nvelocity = (nextValue − previousValue)/(nextFrame − previousFrame)\nleftHandle  = [frame − 1/3, value − velocity/3]\nrightHandle = [frame + 1/3, value + velocity/3]",
+            "basis": "local-implementation"
+          }
+        ],
+        "tables": [
+          {
+            "caption": "Turn targets",
+            "columns": [
+              "Time (s)",
+              "Center x (px)",
+              "Top y (px)",
+              "Depth (scene units)",
+              "Pitch (deg)",
+              "Yaw (deg)"
+            ],
+            "rows": [
+              [
+                5.3,
+                640,
+                56,
+                7.484571959348021,
+                -2,
+                0
+              ],
+              [
+                5.45,
+                633,
+                50,
+                7.95,
+                -4,
+                -2
+              ],
+              [
+                5.6,
+                612,
+                50,
+                8.1,
+                -6,
+                -10
+              ],
+              [
+                5.75,
+                559,
+                66,
+                8.25,
+                -9,
+                -25
+              ],
+              [
+                5.9,
+                448,
+                126,
+                9.05,
+                -12,
+                -52
+              ],
+              [
+                6.05,
+                356,
+                264,
+                11.3,
+                -12,
+                -67
+              ],
+              [
+                6.2,
+                335,
+                306,
+                12.3,
+                -10,
+                -73
+              ],
+              [
+                6.4,
+                335,
+                308,
+                12.65,
+                -8,
+                -75
+              ]
+            ],
+            "basis": "local-implementation"
+          }
+        ]
+      },
+      {
+        "title": "Wallet words and independently expanding discs",
+        "items": [
+          "Different enters at 4.8333333s with a 12px horizontal cubic-out settle over 0.27s, opacity over 0.09s and Gaussian 8→0 over 0.15s. Its baseline also rises 15px from y405 over 5.00–5.30.",
+          "Wallets enters at 5.1833333s at x926, with a 20px lower-to-baseline rise toward y400 over 0.27s, opacity 0.12s and Gaussian 7→0 over 0.15s. The native text remains editable, SegoeUI-Light 50px, fixed tracking −25.",
+          "Both captions multiply by (1−S((t−5.55)/0.28)) in the polished candidate; their out-points are 5.98s. These are local retirement times, not the measured reference bounds.",
+          "The outer and inner discs are 900px native ellipses with separate 1950px target diameter curves. They are graphic shapes behind the hero, not glow. Both local opacities begin retiring at 5.38 over 0.27s."
+        ],
+        "code": [
+          {
+            "label": "Common curve definitions",
+            "text": "u = clamp(u, 0, 1)\nO(u) = 1 − (1 − u)^3             # cubic-out; fast start, long tail\nS(u) = 6u^5 − 15u^4 + 10u^3     # smootherstep; quiet ends\na = globalTime − onset          # local age in seconds",
+            "basis": "local-implementation"
+          },
+          {
+            "label": "Polished disc construction",
+            "text": "outerDiameter = 1950 × (1 − exp(−max(0,t−4.93)/0.18))\ninnerDiameter = 1950 × (1 − exp(−max(0,t−5.10)/0.21))\nscalePercent = diameter / 9  # 900px source ellipse\nouterOpacity = 85S((t−4.93)/0.075) × (1−S((t−5.38)/0.27))\ninnerOpacity = 55S((t−5.10)/0.09) × (1−S((t−5.38)/0.27))\nouterRGB = [0.55,0.22,0.13]; innerRGB = [0.89,0.29,0.12]",
+            "basis": "local-implementation"
+          }
+        ]
+      },
+      {
+        "title": "Four cards: geometry, arrival and overlap",
+        "items": [
+          "Each native card is a 1.70×2.80×0.064 rounded backing with corner radius 0.13; the inset is 1.47×1.94×0.016 with radius 0.09. Chain marks and labels are native geometry/text. The backing uses metallic 0.16 / roughness 0.30; inset 0.03 / 0.40; ink 0.05 / 0.28. Dimensions use the local Blender scene scale.",
+          "Authored onset is 5.9166667+i×0.10s with cubic-out travel over 0.26s. At each new onset the preceding arrival has ~0.16s remaining. This authored schedule is not the same claim as the measured clear-exposure frames 356,362,368,374.",
+          "V05 inherits these local arrivals up to the final settles, then replaces the old independent screen rescaling with common depth translation. Do not apply the V04 squared retreat again on top of V05."
+        ],
+        "code": [
+          {
+            "label": "Inherited card arrival before V05 common retreat",
+            "text": "p = O((t − (5.9166667 + i×0.10))/0.26)\ntargetX = 465 + 175i; targetY = 554 − 4i\nscreenX = targetX − 130(1−p)\nscreenY = targetY + 140(1−p)\ndepth = 12.3 + 0.13i\nrotationDegrees = [2(1−p), −11p, −88 + 58p]\n# Native projection uses F and camera offset above.\n# Before onset the card is moved out of view; scale stays [1,1,1].",
+            "basis": "local-implementation"
+          }
+        ]
+      },
+      {
+        "title": "Chain heading and seven subtitle words",
+        "items": [
+          "Different Chains uses native SegoeUI-Semibold 70px with fixed tracking −25, centered. Its cubic-out entrance runs from 5.9333333 over 0.26s: position [640,158−148(1−O(age/0.26))]. Opacity resolves over 0.07s before multiplying the outgoing envelope.",
+          "The subtitle is “Separate crypto networks that shouldn’t feel separate”, seven independently animated native ArialMT words, 40px / tracking −25. Prefix metrics preserve spacing, centered around x640 with local baseline y212.",
+          "Each word has a 12px rise over 0.16s, opacity 0.06s and initial Gaussian 3 resolving over 0.10s. Outgoing Gaussian and opacity are added/multiplied independently. Their parent follows the retreat ratios below while Blender footage uses native depth."
+        ],
+        "tables": [
+          {
+            "caption": "Local subtitle starts",
+            "columns": [
+              "Word",
+              "Global onset (s)"
+            ],
+            "rows": [
+              [
+                "Separate",
+                5.92
+              ],
+              [
+                "crypto",
+                5.98
+              ],
+              [
+                "networks",
+                6.055
+              ],
+              [
+                "that",
+                6.15
+              ],
+              [
+                "shouldn’t",
+                6.25
+              ],
+              [
+                "feel",
+                6.35
+              ],
+              [
+                "separate",
+                6.45
+              ]
+            ],
+            "basis": "local-implementation"
+          }
+        ]
+      },
+      {
+        "title": "Shared retreat, outgoing defocus and opacity",
+        "items": [
+          "For each native object, common depth offset is 12.5×(1/ratio−1). The phone holds its 6.40s pose; cards retain their last local settles through frame 389 before holding. Native focus distance becomes 12.6+offset during the exit.",
+          "The AE heading null uses 100×ratio, while the actual asset pass uses the Blender depth translation. This aligns their projected retirement without double-scaling the asset footage.",
+          "V05 increases the Gaussian envelope by 1.5 after the first revision; the final controls are listed below. These values reproduce a rejected candidate with rectangular clipping. The visible defect is established; the exact live effect cause remains unverified.",
+          "V06 proposes checking Repeat Edge Pixels and using a padded full-frame text precomp if needed. It has not rendered. Raising blur alone did not fix the clipped boundary. Separate defocus from temporal motion blur and physical DOF."
+        ],
+        "tables": [
+          {
+            "caption": "Common retreat controls",
+            "columns": [
+              "Global time (s)",
+              "Projected ratio"
+            ],
+            "rows": [
+              [
+                6.4,
+                1
+              ],
+              [
+                6.45,
+                0.985
+              ],
+              [
+                6.5,
+                0.975
+              ],
+              [
+                6.55,
+                0.96
+              ],
+              [
+                6.6,
+                0.942
+              ],
+              [
+                6.65,
+                0.923
+              ],
+              [
+                6.7,
+                0.9
+              ],
+              [
+                6.75,
+                0.866
+              ],
+              [
+                6.8,
+                0.827
+              ],
+              [
+                6.85,
+                0.775
+              ],
+              [
+                6.9,
+                0.729
+              ],
+              [
+                6.95,
+                0.69
+              ],
+              [
+                7.0,
+                0.656
+              ],
+              [
+                7.05,
+                0.63
+              ],
+              [
+                7.1,
+                0.61
+              ],
+              [
+                7.15,
+                0.59
+              ],
+              [
+                7.3,
+                0.55
+              ]
+            ],
+            "basis": "local-implementation"
+          },
+          {
+            "caption": "Rejected V05 blur and opacity controls",
+            "columns": [
+              "Control",
+              "Global time (s)",
+              "Value"
+            ],
+            "rows": [
+              [
+                "Gaussian",
+                6.4,
+                0.0
+              ],
+              [
+                "Gaussian",
+                6.46,
+                1.5
+              ],
+              [
+                "Gaussian",
+                6.52,
+                7.5
+              ],
+              [
+                "Gaussian",
+                6.6,
+                13.5
+              ],
+              [
+                "Gaussian",
+                6.7,
+                18.0
+              ],
+              [
+                "Gaussian",
+                6.8,
+                22.5
+              ],
+              [
+                "Gaussian",
+                6.9,
+                28.5
+              ],
+              [
+                "Gaussian",
+                7.05,
+                37.5
+              ],
+              [
+                "Gaussian",
+                7.3,
+                45.0
+              ],
+              [
+                "Opacity (%)",
+                6.4,
+                100
+              ],
+              [
+                "Opacity (%)",
+                6.72,
+                100
+              ],
+              [
+                "Opacity (%)",
+                6.78,
+                83
+              ],
+              [
+                "Opacity (%)",
+                6.85,
+                50
+              ],
+              [
+                "Opacity (%)",
+                6.9,
+                32
+              ],
+              [
+                "Opacity (%)",
+                6.95,
+                21
+              ],
+              [
+                "Opacity (%)",
+                7.0,
+                11
+              ],
+              [
+                "Opacity (%)",
+                7.05,
+                4
+              ],
+              [
+                "Opacity (%)",
+                7.13,
+                0
+              ],
+              [
+                "Opacity (%)",
+                7.3,
+                0
+              ]
+            ],
+            "basis": "local-implementation"
+          }
+        ]
+      },
+      {
+        "title": "Endless / Confirmation: complete continuation controls",
+        "items": [
+          "The incoming words arrive whole; dense samples do not support a character cascade. Endless enters large, low and left, then shrinks and travels up/right with a long tail. Confirmation has its own larger rise inside the same width/height progression.",
+          "Both local words use ArialMT 67px, tracking −25, with anchors at each measured sourceRect top-left. Independent x/y scale fits measured ink proportions; this approximates the source font, not an identification.",
+          "The continuation below reaches 8.28s, outside the main phone/cards preview; use the joined comparison link to see the whole handoff. At 8.0667 the inherited brand-coin footage begins above the copy with opacity 100 and no added outgoing Gaussian.",
+          "H below is the same clamped-time Hermite interpolation used in the script, with neighboring secant slopes at both endpoints; opacity clamps to [0,100] and blur to nonnegative values."
+        ],
+        "code": [
+          {
+            "label": "Shared framing and separate local word arrival",
+            "text": "Endless onset = 6.8833333; Confirmation onset = 7.1833333\nEndless position = [X(t),Y(t)]\nConfirmation position = [X(t)+W(t)+20W(t)/223, Y(t)+rise(t)]\nEndless scale = [100W(t)/nativeWidth,100Height(t)/nativeHeight]\nConfirmation scaleX = 100W(t)×(381/223)/nativeWidth\nopacity = 100S((t−onset)/0.06) × (1−S((t−8.10)/0.17))\nGaussian = 7(1−O((t−onset)/0.12)) + 13S((t−8.075)/0.18)",
+            "basis": "local-implementation"
+          }
+        ],
+        "tables": [
+          {
+            "caption": "Endless left-edge controls",
+            "columns": [
+              "Global time (s)",
+              "x (px)"
+            ],
+            "rows": [
+              [
+                6.8833333,
+                200
+              ],
+              [
+                6.9,
+                218
+              ],
+              [
+                6.95,
+                254
+              ],
+              [
+                7,
+                275
+              ],
+              [
+                7.05,
+                288
+              ],
+              [
+                7.1,
+                298
+              ],
+              [
+                7.15,
+                304
+              ],
+              [
+                7.2,
+                309
+              ],
+              [
+                7.3,
+                316
+              ],
+              [
+                7.4,
+                320
+              ],
+              [
+                7.5,
+                322
+              ],
+              [
+                7.6,
+                324
+              ],
+              [
+                7.8,
+                329
+              ],
+              [
+                8.1,
+                331
+              ],
+              [
+                8.28,
+                332
+              ]
+            ],
+            "basis": "local-implementation"
+          },
+          {
+            "caption": "Endless top-edge controls",
+            "columns": [
+              "Global time (s)",
+              "y (px)"
+            ],
+            "rows": [
+              [
+                6.8833333,
+                410
+              ],
+              [
+                6.9,
+                377
+              ],
+              [
+                6.95,
+                351
+              ],
+              [
+                7,
+                343
+              ],
+              [
+                7.05,
+                338
+              ],
+              [
+                7.1,
+                334
+              ],
+              [
+                7.15,
+                332
+              ],
+              [
+                7.2,
+                331
+              ],
+              [
+                7.3,
+                329
+              ],
+              [
+                7.4,
+                328
+              ],
+              [
+                7.6,
+                328
+              ],
+              [
+                7.8,
+                329
+              ],
+              [
+                8.28,
+                329
+              ]
+            ],
+            "basis": "local-implementation"
+          },
+          {
+            "caption": "Shared width controls",
+            "columns": [
+              "Global time (s)",
+              "Width (px)"
+            ],
+            "rows": [
+              [
+                6.8833333,
+                326
+              ],
+              [
+                6.9,
+                300
+              ],
+              [
+                6.95,
+                276
+              ],
+              [
+                7,
+                261
+              ],
+              [
+                7.05,
+                252
+              ],
+              [
+                7.1,
+                244
+              ],
+              [
+                7.15,
+                240
+              ],
+              [
+                7.2,
+                237
+              ],
+              [
+                7.3,
+                232
+              ],
+              [
+                7.4,
+                229
+              ],
+              [
+                7.6,
+                226
+              ],
+              [
+                7.8,
+                223
+              ],
+              [
+                8.1,
+                221
+              ],
+              [
+                8.28,
+                220
+              ]
+            ],
+            "basis": "local-implementation"
+          },
+          {
+            "caption": "Shared height controls",
+            "columns": [
+              "Global time (s)",
+              "Height (px)"
+            ],
+            "rows": [
+              [
+                6.8833333,
+                73
+              ],
+              [
+                6.9,
+                67
+              ],
+              [
+                6.95,
+                61
+              ],
+              [
+                7,
+                58
+              ],
+              [
+                7.05,
+                56
+              ],
+              [
+                7.1,
+                55
+              ],
+              [
+                7.15,
+                54
+              ],
+              [
+                7.2,
+                53
+              ],
+              [
+                7.3,
+                52
+              ],
+              [
+                7.4,
+                51
+              ],
+              [
+                7.6,
+                51
+              ],
+              [
+                7.8,
+                50
+              ],
+              [
+                8.1,
+                49.5
+              ],
+              [
+                8.28,
+                49
+              ]
+            ],
+            "basis": "local-implementation"
+          },
+          {
+            "caption": "Confirmation independent rise",
+            "columns": [
+              "Global time (s)",
+              "Offset (px)"
+            ],
+            "rows": [
+              [
+                7.1833333,
+                65
+              ],
+              [
+                7.2,
+                44
+              ],
+              [
+                7.2166667,
+                34
+              ],
+              [
+                7.25,
+                23
+              ],
+              [
+                7.3,
+                15
+              ],
+              [
+                7.35,
+                11
+              ],
+              [
+                7.4,
+                8
+              ],
+              [
+                7.5,
+                4
+              ],
+              [
+                7.6,
+                1
+              ],
+              [
+                7.8,
+                0
+              ],
+              [
+                8.28,
+                0
+              ]
+            ],
+            "basis": "local-implementation"
+          }
+        ]
+      },
+      {
+        "title": "Lighting, material continuity and rendering",
+        "items": [
+          "The scene inherits the separately authored studio rig below: broad warm fields in AE, shaped physical highlights in Blender, and two expanding graphic discs. Keep those systems independent. The source’s actual lighting environment is unknown.",
+          "Lights aim at [0,0,0], except the cool phone key toward [0,−6,−1]. The native camera remains 50mm/36mm/f8 with animated focus; Standard view transform and exposure −0.15 are local settings.",
+          "Phone geometry, metal edge, screen and illustrative wallet texture are retained from the prior scene. Card materials are listed in the card section. No claim is made that these material values match an original creator rig."
+        ],
+        "tables": [
+          {
+            "caption": "Native object lighting — local Blender scene",
+            "columns": [
+              "Light",
+              "Position (scene units)",
+              "Energy (W)",
+              "Rectangle (scene units)",
+              "RGB"
+            ],
+            "rows": [
+              [
+                "Gold reflection strip",
+                [
+                  5,
+                  -5,
+                  2
+                ],
+                650,
+                [
+                  0.65,
+                  7
+                ],
+                [
+                  1,
+                  0.79,
+                  0.31
+                ]
+              ],
+              [
+                "Overhead reflection",
+                [
+                  -1,
+                  -4,
+                  6
+                ],
+                850,
+                [
+                  7,
+                  0.75
+                ],
+                [
+                  1,
+                  0.81,
+                  0.56
+                ]
+              ],
+              [
+                "Copper flank",
+                [
+                  -6,
+                  1,
+                  1
+                ],
+                800,
+                [
+                  4,
+                  5
+                ],
+                [
+                  1,
+                  0.23,
+                  0.07
+                ]
+              ],
+              [
+                "Cool phone key",
+                [
+                  -3,
+                  -8,
+                  6
+                ],
+                750,
+                [
+                  4,
+                  3
+                ],
+                [
+                  0.57,
+                  0.83,
+                  1
+                ]
+              ],
+              [
+                "Quiet front fill",
+                [
+                  0,
+                  -9,
+                  -2
+                ],
+                170,
+                [
+                  5,
+                  5
+                ],
+                [
+                  1,
+                  0.9,
+                  0.74
+                ]
+              ],
+              [
+                "Rear rim",
+                [
+                  3,
+                  5,
+                  4
+                ],
+                700,
+                [
+                  3,
+                  5
+                ],
+                [
+                  1,
+                  0.4,
+                  0.15
+                ]
+              ]
+            ],
+            "basis": "local-implementation"
+          }
+        ]
+      },
+      {
+        "title": "Files, cache discipline and adaptation checks",
+        "items": [
+          "V05 final native output is 175 straight-alpha RGBA PNG frames, global 263–437 inclusive, at 1280×720/60fps. Use sequence-03-05-v05/blender/renders-final. The sibling renders folder is an earlier iteration and produced stale-cache confusion when overwritten. Import the final pass as a fresh footage item, conform to 60fps and start at 263/60.",
+          "The later brand-coin handle uses the inherited V04 pass, not frames from the 175-frame V05 phone sequence. AE footage motion blur is disabled to retain the baked native blur; native text uses AE motion blur.",
+          "fit_phone_curves.py depends on NumPy/SciPy; the native extension depends on the V04 .blend, the generated coefficient JSON and helper definitions in the earlier scene builder. One-time JSX scripts expect specific source-project names. Inspect and adapt them; do not blindly rerun them on V05.",
+          "Compare the complete 4.3–8.8s join, not only settled poses. Track phone silhouette/top, apparent scale and orientation together; verify card exposure order, late subtitle readability, softness before fade, long-tail Endless movement, Confirmation rise and full outgoing disappearance.",
+          "Before calling a blur correction reusable, inspect 6.55, 6.70, 6.85, 6.95, 7.20 and 8.15s plus normal-speed playback. No hard blur rectangle may appear, and incoming words must remain the clear reading target. No such corrected render exists yet."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Card exposure samples",
+        "value": [
+          356,
+          362,
+          368,
+          374
+        ],
+        "unit": "source frames at 60fps",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Native final footage",
+        "value": [
+          263,
+          437
+        ],
+        "unit": "inclusive global frames at 60fps",
+        "basis": "local-implementation"
+      },
+      {
+        "name": "Composite size",
+        "value": [
+          1280,
+          720
+        ],
+        "unit": "pixels",
+        "basis": "local-implementation"
+      },
+      {
+        "name": "Footage alpha",
+        "value": "RGBA, straight",
+        "unit": "PNG interpretation",
+        "basis": "local-implementation"
+      },
+      {
+        "name": "Asset AE motion blur",
+        "value": "off; rendered blur retained",
+        "unit": "layer switch",
+        "basis": "local-implementation"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Phone/card candidate V05",
+        "tool": "Blender",
+        "status": "rendered",
+        "asset_ids": [
+          "infinex-v05-blend",
+          "infinex-phone-curves",
+          "infinex-native-build"
+        ]
+      },
+      {
+        "label": "Joined composition V05",
+        "tool": "After Effects",
+        "status": "rendered",
+        "asset_ids": [
+          "infinex-v05-aep",
+          "infinex-v05-ae-script",
+          "infinex-v05-comparison"
+        ]
+      },
+      {
+        "label": "Inherited caption/disc/card construction",
+        "tool": "After Effects / Blender",
+        "status": "rendered",
+        "asset_ids": [
+          "infinex-v04-ae-build",
+          "infinex-v04-ae-polish",
+          "infinex-v04-cards"
+        ]
+      },
+      {
+        "label": "Exact current controls and rejected blur multiplier",
+        "tool": "After Effects / Blender",
+        "status": "rendered",
+        "asset_ids": [
+          "infinex-v05-curve-data",
+          "infinex-v05-ae-polish"
+        ]
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "inspection": "Dense reference and encoded frame samples; no new continuous playback or audio review is claimed by this library integration.",
+    "state": "mixed",
+    "scope": "Asset finish received positive feedback. V05 phone/type motion remains under review; outgoing blur was explicitly rejected.",
+    "limitations": [
+      "Original rig, font and exact source curves are unavailable.",
+      "V05 type blur clips at rectangular layer bounds.",
+      "The revised film ends at 8.8s; it is not a full 25s reconstruction."
+    ]
+  },
+  "evidence_assets": [
+    "infinex-phone-study",
+    "infinex-v05-review",
+    "infinex-blur-failure",
+    "infinex-technical-study",
+    "infinex-v06-status",
+    "infinex-full-pacing"
+  ],
+  "related_ids": [
+    "SHOT-INF-QUESTION",
+    "DETAIL-INF-DEFOCUS",
+    "LIGHT-INF-COPPER"
+  ]
+}

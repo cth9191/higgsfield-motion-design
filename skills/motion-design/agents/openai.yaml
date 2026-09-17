@@ -1,4 +1,4 @@
 interface:
   display_name: "Motion Design"
-  short_description: "Browse motion presets and create your own video"
-  default_prompt: "Use $motion-design to show me motion-graphics styles with playable examples, then help me adapt one for my project."
+  short_description: "Explore motion references, techniques and film presets"
+  default_prompt: "Use $motion-design to find relevant motion references, explain how they work, and help me adapt one for my project."

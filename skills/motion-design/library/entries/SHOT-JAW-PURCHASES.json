@@ -1,0 +1,271 @@
+{
+  "id": "SHOT-JAW-PURCHASES",
+  "clip": {
+    "asset_id": "shot-jaw-purchases-preview",
+    "source_frames": [
+      643,
+      724
+    ],
+    "fps": 29.97002997002997,
+    "clock": "source-frames",
+    "note": "Source rate is nominal30000/1001fps; original presentation timestamps are linked. Most observed event windows come from0.5s samples and are approximate, not recovered keys. Preview uses selected decoded source frames and starts at zero."
+  },
+  "inspiration": {
+    "purpose": "One phone supports three purchase categories while a colorful ribbon threads around it.",
+    "beats": [
+      "Phone/ribbon: enter together",
+      "Example 1: coffee card",
+      "Example 2: groceries joins",
+      "Example 3: flights completes spread",
+      "Exit: phone and ribbon reframe out"
+    ],
+    "use_when": [
+      "ribbon occlusion serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The phone retreats under a short Same account statement.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "21.455–24.157 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "6 jobs:    phone arrival, ribbon travel, gradient/softness, three-card spread, headings, exit. Three purchase categories."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Phone/ribbon",
+      "events": [
+        {
+          "label": "Phone/ribbon: enter together",
+          "frames": [
+            643,
+            664
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Example1",
+      "events": [
+        {
+          "label": "Example 1: coffee card",
+          "frames": [
+            656,
+            676
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Example2",
+      "events": [
+        {
+          "label": "Example 2: groceries joins",
+          "frames": [
+            673,
+            691
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Example3",
+      "events": [
+        {
+          "label": "Example 3: flights completes spread",
+          "frames": [
+            689,
+            709
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Exit",
+      "events": [
+        {
+          "label": "Exit: phone and ribbon reframe out",
+          "frames": [
+            707,
+            724
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "One phone supports three purchase categories while a colorful ribbon threads around it.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "21.450–22.150 s",
+                "Phone/ribbon: enter together"
+              ],
+              [
+                "21.900–22.550 s",
+                "Example 1: coffee card"
+              ],
+              [
+                "22.450–23.050 s",
+                "Example 2: groceries joins"
+              ],
+              [
+                "23.000–23.650 s",
+                "Example 3: flights completes spread"
+              ],
+              [
+                "23.600–24.150 s",
+                "Exit: phone and ribbon reframe out"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "6 jobs:    phone arrival, ribbon travel, gradient/softness, three-card spread, headings, exit. Three purchase categories.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "PHONE_ROOT > body / screen / category heading\nPURCHASES > coffee / grocery / flight cards\nRIBBON_CURVE > gradient material / front-back depth\nLABELS > small lime badges",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Keep one phone root and three independent category cards. Fan the examples in front of its screen while the ribbon traverses both front and back. The phone and ribbon can have different settling lengths.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "High-key white studio treatment. Use a near-white background, large soft area lights, restrained contact shadow and a narrow edge reflection for dark product rims. Keep lime or accent emissions from washing out white UI text.",
+          "The ribbon is intentionally much softer than the phone and cards. Use its own material/glow and depth/focus treatment, with correct occlusion; do not blur the entire phone pass. Warm-to-magenta color can vary along curve length.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Ribbon mesh",
+                "Use a beveled curve or swept profile; animate path progress and control twist to avoid edge flips."
+              ],
+              [
+                "Occlusion",
+                "Place curve points both behind and in front of the phone; test depth at every crossing."
+              ],
+              [
+                "Examples",
+                "Three planes with separated content and labels, each with its own arrival and final slot."
+              ],
+              [
+                "Category copy",
+                "Coordinate heading replacement with the relevant card’s attention interval."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The phone retreats under a short Same account statement.",
+          "A ribbon composited entirely above the phone looks pasted on. Identical blur radii on the ribbon and text erase the layered hierarchy.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 29.97002997002997,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 81,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s frame samples; No switching / No waiting additionally inspected every3source frames. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-jaw-reference",
+    "study-jaw-overview-3",
+    "jaw-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-JAW-OBJECTIONS",
+    "SHOT-JAW-ACCOUNT"
+  ]
+}

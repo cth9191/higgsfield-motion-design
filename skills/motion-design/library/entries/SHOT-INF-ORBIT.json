@@ -1,0 +1,292 @@
+{
+  "id": "SHOT-INF-ORBIT",
+  "clip": {
+    "asset_id": "shot-inf-orbit-preview",
+    "source_frames": [
+      966,
+      1265
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "One connected system supports Trade, Manage, and Move Assets through successive attention shifts rather than separate feature cards.",
+    "beats": [
+      "Assembly: disc, rings and nodes",
+      "Secondary: light sweep continues",
+      "Visit 1: Trade favored",
+      "Visit 2: Manage favored",
+      "Visit 3: Move Assets favored",
+      "Exit: disc flips and system pulls back"
+    ],
+    "use_when": [
+      "orbit system serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "A verified replacement at21.0667s takes the connected diagram into large closing type.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "16.100–21.083 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "6 jobs:    assembly, node presentation, camera travel, focus hierarchy, light sweep, disc/pullback exit. Three feature visits inside one roughly 5 s sequence."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Assembly",
+      "events": [
+        {
+          "label": "Assembly: disc, rings and nodes",
+          "frames": [
+            966,
+            996
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Secondary",
+      "events": [
+        {
+          "label": "Secondary: light sweep continues",
+          "frames": [
+            981,
+            1254
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Visit 1",
+      "events": [
+        {
+          "label": "Visit 1: Trade favored",
+          "frames": [
+            1044,
+            1077
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Visit 2",
+      "events": [
+        {
+          "label": "Visit 2: Manage favored",
+          "frames": [
+            1080,
+            1122
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Visit 3",
+      "events": [
+        {
+          "label": "Visit 3: Move Assets favored",
+          "frames": [
+            1128,
+            1194
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-6",
+      "label": "Exit",
+      "events": [
+        {
+          "label": "Exit: disc flips and system pulls back",
+          "frames": [
+            1200,
+            1264
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "One connected system supports Trade, Manage, and Move Assets through successive attention shifts rather than separate feature cards.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "16.100–16.600 s",
+                "Assembly: disc, rings and nodes"
+              ],
+              [
+                "16.350–20.900 s",
+                "Secondary: light sweep continues"
+              ],
+              [
+                "17.400–17.950 s",
+                "Visit 1: Trade favored"
+              ],
+              [
+                "18.000–18.700 s",
+                "Visit 2: Manage favored"
+              ],
+              [
+                "18.800–19.900 s",
+                "Visit 3: Move Assets favored"
+              ],
+              [
+                "20.000–21.067 s",
+                "Exit: disc flips and system pulls back"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "6 jobs:    assembly, node presentation, camera travel, focus hierarchy, light sweep, disc/pullback exit. Three feature visits inside one roughly 5 s sequence.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "SYSTEM_ROOT\n  central-disc > mark / bevel\n  orbit-curves > stroke / sweep mask\n  feature-nodes > Trade / Manage / Move Assets\nCAMERA_ROOT > position / aim target / focus\nBACKGROUND",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Plan a single spatial layout and a camera route through three attention targets. Use pass-through positions during travel and slower segments near each label. The observed visits do not establish the exact first appearance of each label or a recovered camera spline.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "Warm abstract studio field: a defocused copper/orange environment with broad soft reflections on dark objects. Proposed rig: large rectangular key, warm rim and low fill, with a separate background gradient so copy contrast can be controlled without changing the phone material. This is a descriptive treatment, not an identified HDRI.",
+          "Keep the selected node sufficiently sharp while peripheral rings can soften. A luminous sweep travels independently of camera position; it must continue during the disc flip. Use emission plus restrained compositing glow, not exposure blur as a substitute.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Orbit curves",
+                "Use beveled curves or AE shape strokes; parameterize sweep location separately from stroke reveal."
+              ],
+              [
+                "Node layout",
+                "Place three labeled targets in the same coordinate system. Keep unselected nodes present."
+              ],
+              [
+                "Camera path",
+                "Author target-to-target transitions about 17.4–17.6,18.0–18.2 and 18.8–19.1 s, then compare screen-space speed."
+              ],
+              [
+                "Disc exit",
+                "Animate local rotation separately from system root pullback."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "A verified replacement at 21.0667 s takes the connected diagram into large closing type.",
+          "Three isolated precomps with independent zooms can break the connected spatial explanation. A smooth path that never gives labels an attention interval also fails.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 60,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 299,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Full-film sampled overview; dense evidence where linked. This is frame-based analysis, not continuous playback or sound review.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "infinex-reference",
+    "infinex-full-ui-orbit",
+    "infinex-full-orbit-internal-cadence",
+    "infinex-full-orbit-closing",
+    "infinex-full-pacing"
+  ],
+  "related_ids": [
+    "SHOT-INF-CLOSING",
+    "SHOT-INF-UI"
+  ]
+}

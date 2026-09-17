@@ -1,0 +1,248 @@
+{
+  "id": "SHOT-JAW-SEND",
+  "clip": {
+    "asset_id": "shot-jaw-send-preview",
+    "source_frames": [
+      772,
+      836
+    ],
+    "fps": 29.97002997002997,
+    "clock": "source-frames",
+    "note": "Source rate is nominal30000/1001fps; original presentation timestamps are linked. Most observed event windows come from0.5s samples and are approximate, not recovered keys. Preview uses selected decoded source frames and starts at zero."
+  },
+  "inspiration": {
+    "purpose": "The familiar form returns with an amount and selected payment asset, reinforcing that one account supports the action.",
+    "beats": [
+      "Recipient: form and avatar arrive",
+      "Amount: counts toward 100",
+      "Read: pay-withBitcoin and recipient",
+      "Exit: form shifts/softens into notification scene"
+    ],
+    "use_when": [
+      "repeated ui serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The repeated form becomes a successful-payment notification in the saturated hero environment.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "25.759–27.895 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "4 jobs:    form arrival, numeric roll, readable state, transition departure."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Recipient",
+      "events": [
+        {
+          "label": "Recipient: form and avatar arrive",
+          "frames": [
+            772,
+            790
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Amount",
+      "events": [
+        {
+          "label": "Amount: counts toward 100",
+          "frames": [
+            785,
+            808
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Read",
+      "events": [
+        {
+          "label": "Read: pay-withBitcoin and recipient",
+          "frames": [
+            800,
+            820
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Exit",
+      "events": [
+        {
+          "label": "Exit: form shifts/softens into notification scene",
+          "frames": [
+            817,
+            836
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "The familiar form returns with an amount and selected payment asset, reinforcing that one account supports the action.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "25.750–26.350 s",
+                "Recipient: form and avatar arrive"
+              ],
+              [
+                "26.200–26.950 s",
+                "Amount: counts toward 100"
+              ],
+              [
+                "26.700–27.350 s",
+                "Read: pay-withBitcoin and recipient"
+              ],
+              [
+                "27.250–27.900 s",
+                "Exit: form shifts/softens into notification scene"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "4 jobs:    form arrival, numeric roll, readable state, transition departure.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "FORM_ROOT > recipient / amount / USD label / pay selector\nAMOUNT > currency symbol / masked columns\nTRANSITION_ROOT\nNOTIFICATION_NEXT",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Reuse the earlier form layout and controls so the viewer recognizes it. Keep amount updates independent from the global arrival. The outgoing framing is brief and can carry a faster motion envelope than the readable center.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "High-key white studio treatment. Use a near-white background, large soft area lights, restrained contact shadow and a narrow edge reflection for dark product rims. Keep lime or accent emissions from washing out white UI text.",
+          "Defocus is strongest around travel, with a sharper settled amount. Mask digit movement rather than fading between entire screenshots. Keep the recipient block aligned during the scale change.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Form reuse",
+                "Share a layout prefab with the earlier payment shot; swap only intended state/content."
+              ],
+              [
+                "Value",
+                "Use editable numbers and a fixed symbol; finish at 100 in the source example."
+              ],
+              [
+                "Exit",
+                "Tie final form motion to the next notification’s incoming direction."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The repeated form becomes a successful-payment notification in the saturated hero environment.",
+          "Two independently rebuilt forms can drift in spacing and identity. Do not alter actual product claims just to match reference numbers.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 29.97002997002997,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 64,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s frame samples; No switching / No waiting additionally inspected every3source frames. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-jaw-reference",
+    "study-jaw-overview-3",
+    "jaw-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-JAW-ACCOUNT",
+    "SHOT-JAW-NOTIFICATION"
+  ]
+}

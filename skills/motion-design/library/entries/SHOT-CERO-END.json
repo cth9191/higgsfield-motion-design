@@ -1,0 +1,247 @@
+{
+  "id": "SHOT-CERO-END",
+  "clip": {
+    "asset_id": "shot-cero-end-preview",
+    "source_frames": [
+      1821,
+      2087
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "A quiet three-step closing moves from the brand coin to a plain-language promise and final wordmark.",
+    "beats": [
+      "Coin: central brand mark",
+      "Promise: The upside of spending",
+      "Wordmark: letters/colors resolve",
+      "Hold: settled brand"
+    ],
+    "use_when": [
+      "brand resolution serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The film ends on a stable brand against white.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "30.350–34.783 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "4 jobs:    coin presentation, promise reveal, glyph/color resolve, final hold."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Coin",
+      "events": [
+        {
+          "label": "Coin: central brand mark",
+          "frames": [
+            1821,
+            1863
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Promise",
+      "events": [
+        {
+          "label": "Promise: The upside of spending",
+          "frames": [
+            1863,
+            1932
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Wordmark",
+      "events": [
+        {
+          "label": "Wordmark: letters/colors resolve",
+          "frames": [
+            1932,
+            1977
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Hold",
+      "events": [
+        {
+          "label": "Hold: settled brand",
+          "frames": [
+            1977,
+            2087
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "A quiet three-step closing moves from the brand coin to a plain-language promise and final wordmark.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "30.350–31.050 s",
+                "Coin: central brand mark"
+              ],
+              [
+                "31.050–32.200 s",
+                "Promise: The upside of spending"
+              ],
+              [
+                "32.200–32.950 s",
+                "Wordmark: letters/colors resolve"
+              ],
+              [
+                "32.950–34.783 s",
+                "Hold: settled brand"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "4 jobs:    coin presentation, promise reveal, glyph/color resolve, final hold.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "COIN_ROOT\nPROMISE > full line\nWORDMARK > individually controlled glyphs\nRAYS / WHITE_FIELD",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Reduce motion density as the film ends. The wordmark’s letter/color resolution is short; hold the completed logo rather than continuing a decorative orbit.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "High-key white studio treatment. Use a near-white background, large soft area lights, restrained contact shadow and a narrow edge reflection for dark product rims. Keep lime or accent emissions from washing out white UI text.",
+          "Any transition softness resolves before the final hold. Keep the clean serif wordmark edge intact and avoid bloom that changes letter counters.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Wordmark",
+                "Use accurate vector geometry and baseline alignment; animate selected glyphs rather than distorting the entire logo."
+              ],
+              [
+                "Promise",
+                "Keep a stable final line and brief readable interval."
+              ],
+              [
+                "Tail",
+                "Retain the end hold through frame 2086."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The film ends on a stable brand against white.",
+          "Do not rush the settled wordmark to make all three closing beats equal duration. Source branding is study material, not an asset for an unrelated client.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 60,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 266,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s samples, plus existing dense12samples/second sheets for coin/phone, pack/prizes, score/phone and credit panel. Other event boundaries are approximate to0.5s. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-cero-reference",
+    "study-cero-overview-4",
+    "cero-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-CERO-MOSAIC"
+  ]
+}

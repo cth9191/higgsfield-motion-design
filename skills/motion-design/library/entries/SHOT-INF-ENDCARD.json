@@ -1,0 +1,229 @@
+{
+  "id": "SHOT-INF-ENDCARD",
+  "clip": {
+    "asset_id": "shot-inf-endcard-preview",
+    "source_frames": [
+      1378,
+      1498
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "The film stops explaining and gives the brand a simple hold before a clean black ending.",
+    "beats": [
+      "Brand: white wordmark becomes orange",
+      "Hold: subtle environment variation",
+      "Ending: black tail"
+    ],
+    "use_when": [
+      "brand hold serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The black tail is part of the source delivery and completes whole-film coverage.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "22.967–24.967 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "3 jobs:    color change, brand hold, cut to black. One logo."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Brand",
+      "events": [
+        {
+          "label": "Brand: white wordmark becomes orange",
+          "frames": [
+            1378,
+            1395
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Hold",
+      "events": [
+        {
+          "label": "Hold: subtle environment variation",
+          "frames": [
+            1395,
+            1463
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Ending",
+      "events": [
+        {
+          "label": "Ending: black tail",
+          "frames": [
+            1463,
+            1498
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "The film stops explaining and gives the brand a simple hold before a clean black ending.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "22.967–23.250 s",
+                "Brand: white wordmark becomes orange"
+              ],
+              [
+                "23.250–24.383 s",
+                "Hold: subtle environment variation"
+              ],
+              [
+                "24.383–24.967 s",
+                "Ending: black tail"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "3 jobs:    color change, brand hold, cut to black. One logo.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "WORDMARK > vector/text asset\nBACKGROUND > warm field\nEND_BLACK > full-frame cover or edit boundary",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Keep the wordmark essentially stable and let the environment retain subtle life. This endpoint does not need another camera move.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "Warm abstract studio field: a defocused copper/orange environment with broad soft reflections on dark objects. Proposed rig: large rectangular key, warm rim and low fill, with a separate background gradient so copy contrast can be controlled without changing the phone material. This is a descriptive treatment, not an identified HDRI.",
+          "Keep the brand edges legible during the hold. The black tail begins at an inspected cut boundary; do not accidentally add a long blur/fade tail.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Color",
+                "Separate wordmark color change from opacity."
+              ],
+              [
+                "End frame",
+                "Cut active picture at frame 1463 (24.3833 s at 60 fps)."
+              ],
+              [
+                "Tail",
+                "Retain decoded source frames 1463–1497 as black, rather than stretching the logo to the file end."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The black tail is part of the source delivery and completes whole-film coverage.",
+          "Do not report 25 s of active picture; the final approximately 0.58 s of decoded video is black.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 60,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 120,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Full-film sampled overview; dense evidence where linked. This is frame-based analysis, not continuous playback or sound review.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "infinex-reference",
+    "infinex-full-closing-logo",
+    "infinex-full-ending-to-black",
+    "infinex-full-pacing"
+  ],
+  "related_ids": [
+    "SHOT-INF-CLOSING"
+  ]
+}

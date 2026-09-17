@@ -1,0 +1,291 @@
+{
+  "id": "SHOT-CERO-SCORE",
+  "clip": {
+    "asset_id": "shot-cero-score-preview",
+    "source_frames": [
+      1221,
+      1491
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "Individual score factors are explained, then arranged around an aggregate score that returns to the product screen.",
+    "beats": [
+      "Factor 1: Cash held",
+      "Factor 2: On-chain Wallets",
+      "Factor 3: Bank accounts",
+      "Factor 4: Socials",
+      "Aggregate: six factors around rolling 1000",
+      "Dock: diagram reduces into phone"
+    ],
+    "use_when": [
+      "diagram to ui serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The docked score leaves the credit panel in position for a foreground explanation.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "20.350–24.850 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "7 jobs:    solo factor changes, icon arcs, increments, wide assembly, score roll, arc fill, phone docking. Six factors in the aggregate."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Factor1",
+      "events": [
+        {
+          "label": "Factor 1: Cash held",
+          "frames": [
+            1221,
+            1263
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Factor2",
+      "events": [
+        {
+          "label": "Factor 2: On-chain Wallets",
+          "frames": [
+            1263,
+            1296
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Factor3",
+      "events": [
+        {
+          "label": "Factor 3: Bank accounts",
+          "frames": [
+            1296,
+            1329
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Factor4",
+      "events": [
+        {
+          "label": "Factor 4: Socials",
+          "frames": [
+            1329,
+            1359
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Aggregate",
+      "events": [
+        {
+          "label": "Aggregate: six factors around rolling 1000",
+          "frames": [
+            1359,
+            1422
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-6",
+      "label": "Dock",
+      "events": [
+        {
+          "label": "Dock: diagram reduces into phone",
+          "frames": [
+            1422,
+            1491
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "Individual score factors are explained, then arranged around an aggregate score that returns to the product screen.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "20.350–21.050 s",
+                "Factor 1: Cash held"
+              ],
+              [
+                "21.050–21.600 s",
+                "Factor 2: On-chain Wallets"
+              ],
+              [
+                "21.600–22.150 s",
+                "Factor 3: Bank accounts"
+              ],
+              [
+                "22.150–22.650 s",
+                "Factor 4: Socials"
+              ],
+              [
+                "22.650–23.700 s",
+                "Aggregate: six factors around rolling 1000"
+              ],
+              [
+                "23.700–24.850 s",
+                "Dock: diagram reduces into phone"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "7 jobs:    solo factor changes, icon arcs, increments, wide assembly, score roll, arc fill, phone docking. Six factors in the aggregate.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "FACTORS > icon / arc / label / description / increment badge\nSCORE_ROOT > radial ticks / masked digit columns\nDIAGRAM_ROOT\nPHONE_ROOT > shell / UI anchor for score",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "The first four featured factors are replaced in one central explanatory slot, then the wide diagram includes six factors. Reconstruct the score-to-phone move by keeping the score geometry persistent and changing its parent transform into the UI slot.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "High-key white studio treatment. Use a near-white background, large soft area lights, restrained contact shadow and a narrow edge reflection for dark product rims. Keep lime or accent emissions from washing out white UI text.",
+          "Digits roll inside masks while tick progress changes independently. The diagram-to-phone move benefits from controlled depth softness on peripherals, while the central 1000 remains recognizable.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Factor modules",
+                "Six reusable modules; first four get solo attention. Preserve icon color mapping."
+              ],
+              [
+                "Increment badges",
+                "Animate independently of arc fill; do not copy financial values into a new product without its real data."
+              ],
+              [
+                "Aggregate",
+                "Use six spatial slots around the same arc and one central number group."
+              ],
+              [
+                "Docking",
+                "Match the projected arc bounds with its final phone screen location before completing the handoff."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The docked score leaves the credit panel in position for a foreground explanation.",
+          "Replacing the diagram with an unrelated static phone screenshot loses object identity. Digit and tick endings should agree even when their interior timing differs.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 60,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 270,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s samples, plus existing dense12samples/second sheets for coin/phone, pack/prizes, score/phone and credit panel. Other event boundaries are approximate to0.5s. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-cero-reference",
+    "study-cero-overview-3",
+    "cero-score-dense",
+    "cero-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-CERO-CREDIT",
+    "SHOT-CERO-PAYMENTS-C"
+  ]
+}

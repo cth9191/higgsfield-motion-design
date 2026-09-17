@@ -1,0 +1,271 @@
+{
+  "id": "SHOT-JAW-WALLET",
+  "clip": {
+    "asset_id": "shot-jaw-wallet-preview",
+    "source_frames": [
+      151,
+      264
+    ],
+    "fps": 29.97002997002997,
+    "clock": "source-frames",
+    "note": "Source rate is nominal30000/1001fps; original presentation timestamps are linked. Most observed event windows come from0.5s samples and are approximate, not recovered keys. Preview uses selected decoded source frames and starts at zero."
+  },
+  "inspiration": {
+    "purpose": "A dimensional wallet presents multiple asset rows, then opens back into a payment-card composition.",
+    "beats": [
+      "Wallet: arrives on white",
+      "Balances:    rows and coins populate",
+      "Emphasis:    individual balance rows highlight",
+      "Opening: wallet parts spread",
+      "Card: becomes central hero with rows around it"
+    ],
+    "use_when": [
+      "wallet explainer serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The floating balance rows become the raw material for a full dashboard reveal.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "5.038–8.809 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "6 jobs:    wallet arrival, row stagger, coin rotation, row emphasis, flap opening, card handoff. At least four visible balance rows."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Wallet",
+      "events": [
+        {
+          "label": "Wallet: arrives on white",
+          "frames": [
+            151,
+            171
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Balances",
+      "events": [
+        {
+          "label": "Balances:    rows and coins populate",
+          "frames": [
+            165,
+            198
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Emphasis",
+      "events": [
+        {
+          "label": "Emphasis:    individual balance rows highlight",
+          "frames": [
+            195,
+            217
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Opening",
+      "events": [
+        {
+          "label": "Opening: wallet parts spread",
+          "frames": [
+            216,
+            243
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Card",
+      "events": [
+        {
+          "label": "Card: becomes central hero with rows around it",
+          "frames": [
+            234,
+            264
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "A dimensional wallet presents multiple asset rows, then opens back into a payment-card composition.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "5.050–5.700 s",
+                "Wallet: arrives on white"
+              ],
+              [
+                "5.500–6.600 s",
+                "Balances:    rows and coins populate"
+              ],
+              [
+                "6.500–7.250 s",
+                "Emphasis:    individual balance rows highlight"
+              ],
+              [
+                "7.200–8.100 s",
+                "Opening: wallet parts spread"
+              ],
+              [
+                "7.800–8.800 s",
+                "Card: becomes central hero with rows around it"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "6 jobs:    wallet arrival, row stagger, coin rotation, row emphasis, flap opening, card handoff. At least four visible balance rows.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "WALLET_ROOT > front flap / rear flap / hinge\nBALANCE_ROWS > USD / BTC / ETH / additional row\nCOINS > separate spins\nCARD_ROOT\nROW_HIGHLIGHTS > warm masks",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Build the wallet with actual hinged surfaces and preserve the balance rows as independent planes. Their movement should remain coherent when the wallet opens. The later dark card layout is a reframing/state change, not proof of an identical source rig.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "High-key white studio treatment. Use a near-white background, large soft area lights, restrained contact shadow and a narrow edge reflection for dark product rims. Keep lime or accent emissions from washing out white UI text.",
+          "Soft white-stage reflections define the dark wallet edges. The later dark field needs a separate exposure/material balance. Use a narrow highlight on each selected row; do not wash out its numbers.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Wallet hinge",
+                "Place flap pivots at the fold line and constrain rows to their own layout root."
+              ],
+              [
+                "Balance cards",
+                "Separate icons, labels and amounts; use a consistent corner radius."
+              ],
+              [
+                "Emphasis",
+                "Animate a warm rounded highlight mask under the chosen row."
+              ],
+              [
+                "Transform continuity",
+                "Keep row identities when moving from above-wallet slots into around-card slots."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The floating balance rows become the raw material for a full dashboard reveal.",
+          "Scaling the whole wallet to simulate opening will flatten the folding action. Text must remain legible while its plane tips.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 29.97002997002997,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 113,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s frame samples; No switching / No waiting additionally inspected every3source frames. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-jaw-reference",
+    "study-jaw-overview-1",
+    "jaw-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-JAW-TRACK",
+    "SHOT-JAW-DASHBOARD"
+  ]
+}

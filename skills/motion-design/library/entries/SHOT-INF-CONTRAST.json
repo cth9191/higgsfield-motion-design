@@ -1,0 +1,267 @@
+{
+  "id": "SHOT-INF-CONTRAST",
+  "clip": {
+    "asset_id": "shot-inf-contrast-preview",
+    "source_frames": [
+      750,
+      884
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "Two short negative claims use a bold palette inversion to give the middle of the film a different rhythm.",
+    "beats": [
+      "Orange field: wipe and first claim",
+      "Read: No Seed Phrases",
+      "Inversion: pale field and second claim",
+      "Read: No Chain Switching",
+      "Exit: line reduces and dims"
+    ],
+    "use_when": [
+      "palette inversion serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "Oversized UI/type replaces the dimmed claim at source frame883.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "12.500–14.733 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "4 jobs:    wipe completion, first claim, palette/copy replacement, second-claim retreat. Two semantic claims."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Orange field",
+      "events": [
+        {
+          "label": "Orange field: wipe and first claim",
+          "frames": [
+            750,
+            780
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Read",
+      "events": [
+        {
+          "label": "Read: No Seed Phrases",
+          "frames": [
+            780,
+            798
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Inversion",
+      "events": [
+        {
+          "label": "Inversion: pale field and second claim",
+          "frames": [
+            798,
+            816
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Read",
+      "events": [
+        {
+          "label": "Read: No Chain Switching",
+          "frames": [
+            816,
+            864
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Exit",
+      "events": [
+        {
+          "label": "Exit: line reduces and dims",
+          "frames": [
+            864,
+            883
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "Two short negative claims use a bold palette inversion to give the middle of the film a different rhythm.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "12.500–13.000 s",
+                "Orange field: wipe and first claim"
+              ],
+              [
+                "13.000–13.300 s",
+                "Read: No Seed Phrases"
+              ],
+              [
+                "13.300–13.600 s",
+                "Inversion: pale field and second claim"
+              ],
+              [
+                "13.600–14.400 s",
+                "Read: No Chain Switching"
+              ],
+              [
+                "14.400–14.717 s",
+                "Exit: line reduces and dims"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "4 jobs:    wipe completion, first claim, palette/copy replacement, second-claim retreat. Two semantic claims.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "FIELD > orange / pale background\nCLAIM_A > three words\nCLAIM_B > three words\nCLAIM_ROOT > scale / opacity\nINCOMING_UI",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "This passage can be built on an orthographic text plane; do not add perspective merely because adjacent scenes use 3 D. Keep the short second claim stable longer than its entrance.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "Graphic color fields with very little dimensional shading. Match the orange/pale contrast first; these are designed fields, not a reason to add a studio HDRI.",
+          "The orange-to-pale change has intermediate blended colors and overlapping copy. Treat it as a brief transition, not a proven one-frame cut. The later replacement at 14.7167 s is a verified boundary.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Copy groups",
+                "Keep each sentence separate and preserve its own anchor during scaling."
+              ],
+              [
+                "Background",
+                "Animate the color/cover transition separately from the words."
+              ],
+              [
+                "Exit",
+                "Reduce scale and opacity before the next oversized UI/type replaces the composition."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "Oversized UI/type replaces the dimmed claim at source frame 883.",
+          "Equal entrance/hold/exit durations would lose the relatively long second reading interval. Avoid adding character bounce that is unsupported by the source.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 60,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 134,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Full-film sampled overview; dense evidence where linked. This is frame-based analysis, not continuous playback or sound review.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "infinex-reference",
+    "infinex-full-fingerprint-contrast-ui",
+    "infinex-full-pacing"
+  ],
+  "related_ids": [
+    "SHOT-INF-UI",
+    "SHOT-INF-FINGERPRINT"
+  ]
+}

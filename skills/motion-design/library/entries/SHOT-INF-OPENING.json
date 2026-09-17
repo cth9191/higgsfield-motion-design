@@ -1,0 +1,492 @@
+{
+  "id": "SHOT-INF-OPENING",
+  "clip": {
+    "asset_id": "infinex-opening-preview",
+    "source_frames": [
+      0,
+      132
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Core message: frames 0–122 / 0–2.05s. The 2.20s excerpt includes the next environment and first coin as a handoff handle."
+  },
+  "inspiration": {
+    "purpose": "Make one sentence develop into a selected benefit, with several mechanisms sustaining the same attention target.",
+    "beats": [
+      "Letters arrive while the whole sentence settles from a larger view.",
+      "The early warm halo retires before the sentence finishes.",
+      "A small accelerating preparation leads to the sharp 1.25s reframe; final letters keep resolving.",
+      "Selection and three rays develop during the lateral settle.",
+      "A late retreat carries the readable word to the 2.05s foreground clear."
+    ],
+    "use_when": [
+      "A short promise needs one clear emphasis.",
+      "A simple message should stay active through coordinated detail rather than added copy."
+    ],
+    "attention": "Sentence → easier → selected easier → next environment. The reframing develops the existing claim.",
+    "meta": [
+      {
+        "label": "Message / framing",
+        "value": "One claim; 1.25s wide view plus 0.80s close emphasis"
+      },
+      {
+        "label": "System count",
+        "value": "Eight grouped systems; twelve actions under the finer documented grouping"
+      },
+      {
+        "label": "Overlap",
+        "value": "Roughly 3–4 grouped systems at busy moments; not source layer counts"
+      },
+      {
+        "label": "Exposure",
+        "value": "Easier clear about 1.33–2.033s (~0.70s), while the composition keeps developing"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "letters",
+      "label": "Character reveal",
+      "events": [
+        {
+          "label": "Progressive reveal / final sharpening",
+          "frames": [
+            1,
+            81
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "framing",
+      "label": "Shared framing",
+      "events": [
+        {
+          "label": "Entrance settle and diminishing tail",
+          "frames": [
+            0,
+            60
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "Accelerating preparation",
+          "frames": [
+            68,
+            75
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "Sharp reframe",
+          "frames": [
+            75,
+            76
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "Decelerating follow-through",
+          "frames": [
+            75,
+            108
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "Late retreat",
+          "frames": [
+            105,
+            123
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "glow",
+      "label": "Warm color / halo",
+      "events": [
+        {
+          "label": "Warm beginning returns to white",
+          "frames": [
+            1,
+            23
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "selection",
+      "label": "Selection",
+      "events": [
+        {
+          "label": "Fill, rails and handles grow",
+          "frames": [
+            75,
+            109
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "rays",
+      "label": "Three accent rays",
+      "events": [
+        {
+          "label": "Quick growth",
+          "frames": [
+            88,
+            94
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "Outward travel and contraction",
+          "frames": [
+            93,
+            104
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "environment",
+      "label": "Environment",
+      "events": [
+        {
+          "label": "Broad field movement",
+          "frames": [
+            0,
+            123
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "Next environment / coin handle",
+          "frames": [
+            123,
+            132
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Measured reference behavior and inspected local authoring scripts are listed separately below. All times are global seconds at 60fps; screen coordinates are normalized to 1280×720, x right and y down. Original software, project, font and exact source curves are unknown. This is the full documented breakdown of the current study, not a recovered source rig.",
+    "sections": [
+      {
+        "title": "Source timing and measured motion",
+        "items": [
+          "The core opening is 123 frames. Frame 75 contains a large delivered-frame change; this does not prove an editorial cut, stepped key, or physical camera. Approximate blur/settle boundaries are softer than that exact frame boundary.",
+          "Thresholded screen-space bounds vary around 1–3px with glow and compression. Screen bounds combine all local/parent transforms and are not native Scale values."
+        ],
+        "tables": [
+          {
+            "caption": "Reference landmarks",
+            "columns": [
+              "Global time (s)",
+              "Measured behavior"
+            ],
+            "rows": [
+              [
+                0.02,
+                "Sentence begins"
+              ],
+              [
+                0.37,
+                "Initial color/halo largely retired"
+              ],
+              [
+                "0.8–1.0",
+                "Entrance effectively settled"
+              ],
+              [
+                "1.13–1.233",
+                "Small accelerating preparation"
+              ],
+              [
+                1.25,
+                "Sharp reframe; text band about 56→84px"
+              ],
+              [
+                "1.267–1.35",
+                "Final r appears then sharpens"
+              ],
+              [
+                "1.467–1.733",
+                "Rays grow, move and contract"
+              ],
+              [
+                1.75,
+                "Late retreat starts"
+              ],
+              [
+                1.8,
+                "Selection width peaks"
+              ],
+              [
+                2.033,
+                "Last visible foreground frame"
+              ],
+              [
+                2.05,
+                "Opening foreground gone"
+              ]
+            ],
+            "basis": "measured-reference"
+          },
+          {
+            "caption": "Focus and selection samples",
+            "columns": [
+              "Time (s)",
+              "Word right edge (px)",
+              "Rail separation (px)"
+            ],
+            "rows": [
+              [
+                1.4,
+                839,
+                169
+              ],
+              [
+                1.5,
+                807,
+                203.5
+              ],
+              [
+                1.6,
+                788,
+                225.5
+              ],
+              [
+                1.7,
+                777,
+                237
+              ],
+              [
+                1.8,
+                "not measured here",
+                243
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Native hierarchy and coordinates",
+        "items": [
+          "AE uses a shared 2D null for camera-like framing. Letters, selection and rays remain independently editable below it; environmental fields have their own clocks. There is no recovered source camera.",
+          "The local font is Segoe UI Light, 54px with fixed tracking −25. The supplied sentence spelling is preserved for reference study. Prefix widths use sourceRectAtTime with a sentinel to retain spaces, preventing reveal-driven recentering."
+        ],
+        "code": [
+          {
+            "label": "Construction hierarchy",
+            "text": "Output comp: 1280×720 / 60fps / 16bpc\n  FOCUS / sentence to easier\n    TYPE <index> / editable character\n    EASIER / fill + two rails + two handles\n    EASIER / three rays\n  ENV / independently moving padded light fields\n  ENV / warm charcoal base",
+            "basis": "local-implementation"
+          }
+        ]
+      },
+      {
+        "title": "Character arrival and shared entrance",
+        "items": [
+          "Character index includes spaces even though spaces get no visible layer. This local schedule resolves earlier than the measured final-letter tail: retain it as current implementation evidence, not the corrected timing.",
+          "Shared entrance scale settles from 170% toward 95%; the 0.215s constant is a decay time, not the whole move duration. Position compensates the focus anchor and glyph center, so scaling does not swing the line away from its intended edge."
+        ],
+        "code": [
+          {
+            "label": "Common curve definitions",
+            "text": "u = clamp(u, 0, 1)\nO(u) = 1 − (1 − u)^3             # cubic-out; fast start, long tail\nS(u) = 6u^5 − 15u^4 + 10u^3     # smootherstep; quiet ends\na = globalTime − onset          # local age in seconds",
+            "basis": "local-implementation"
+          },
+          {
+            "label": "Current character recipe",
+            "text": "onset(i) = 0.0295 × i − 0.035\nopacity = 100 × S((t − onset)/0.085)\nxOffset = 8 × (1 − O((t − onset)/0.12))\nGaussianBlur = 8 × (1 − O((t − onset)/0.11))",
+            "basis": "local-implementation"
+          },
+          {
+            "label": "Entrance before the later focus phase",
+            "text": "intro = 0.95 + (1.70 − 0.95) × exp(−max(0,t)/0.215)\n              × (1 − S((t − 0.70)/0.35))\nx = 220 − 250 × exp(−4.5t) + focusAnchorX × intro\ny = 354.5 − glyphCenterY × intro\nscale = 100 × intro",
+            "basis": "local-implementation"
+          }
+        ]
+      },
+      {
+        "title": "Focus move: current mismatch and correction",
+        "items": [
+          "The current focus blend uses cubic-out from 1.14–1.34s and targets 176% scale. Its separate lateral smootherstep runs 1.27–1.92s. It gets close too early, creates an early sideways smear, then accelerates again in the follow-through.",
+          "The source instead prepares gently, changes sharply at 1.25s and immediately decelerates laterally. Measured edge travel gives about 320→190→110px/s across successive 0.1s intervals from 1.4–1.7. Exact original Bézier handles are unavailable.",
+          "The documented correction is still a proposal: short accelerating preparation → sharp reframe at f75 → decelerating follow-through; final letters continue through ~1.33s and selection through ~1.80s. No revised native result is claimed."
+        ],
+        "code": [
+          {
+            "label": "Pending focus phase targets",
+            "text": "Preparation: about f68–74\nReframe: f75\nFinal letters: continue through about f80\nFollow-through + selection: continue toward f108\nKeep the liked glow, rays and late retreat.",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Selection geometry and late retreat",
+        "items": [
+          "The current local selection starts at 1.20s and reaches full authored width at 1.52s; that is the known early endpoint, not the measured 1.25–1.80s reference interval.",
+          "Fill is (wordWidth+8)×53px at 52% opacity. Rails are 2.3×76px and handles 7×16px. Geometry uses the word-left anchor; the moving right rail/handle follows width progress. Retiming must preserve that alignment.",
+          "Exit scale multiplies the shared framing with an accelerating reduction from 1.75s. Foreground layers end at 2.05s; the source does not use a long opening-text crossfade."
+        ],
+        "code": [
+          {
+            "label": "Current selection and late exit",
+            "text": "selectionProgress = O((t − 1.20)/0.32)\nfillScaleX = 100 × selectionProgress\nrightRailX = wordLeft − 4 + (wordWidth + 8) × selectionProgress\nexitMultiplier = 1 − 0.10 × clamp((t − 1.75)/0.29,0,1)^2.3\n# Keep word-center compensation when applying the exit multiplier.",
+            "basis": "local-implementation"
+          }
+        ]
+      },
+      {
+        "title": "Ray geometry, travel and contraction",
+        "items": [
+          "Three rays share a 1.465s onset at −7°, 28° and 51°. Each is a 4.4×32px rectangle, anchored near its outer-tip construction. They travel outward while contracting into short dashes; an opacity-only fade loses the gesture.",
+          "Their ~0.275s local lifecycle occurs inside ongoing selection and framing. Three instances count as one accent system."
+        ],
+        "code": [
+          {
+            "label": "Final ray lifecycle",
+            "text": "g = O((t − 1.465)/0.075)\nb = exp(−(max(0,t − 1.55)/0.063)^1.9)\nscale = [100, 100 × g × b]\noutwardTravel = 2 × g + 36 × (1 − b)\ndirection = [sin(angle), −cos(angle)]\nposition = base + direction × outwardTravel\nopacity = 100 × S((t − 1.465)/0.018)\n              × (1 − S((t − 1.685)/0.045))\noutPoint = 1.74",
+            "basis": "local-implementation"
+          }
+        ]
+      },
+      {
+        "title": "Fill color, bloom and moving environment",
+        "items": [
+          "Native Fill Color animators replace the earlier invalid text-style expression. The first eleven indexed characters receive the warm pulse, returning toward off-white by ~0.37s. Earlier additive blurred duplicates are disabled in the glow-polish result.",
+          "The final glow pair has a 7px core and 26px halo, intensities 0.32p and 0.65p. Both follow the warm color; they are not the background light field.",
+          "Separate 2560×2160 padded AE ellipse sources feed the 1280×720 comp. Largest blur and transform need inspection after adapting dimensions; finite precomp bounds caused earlier rectangular artifacts."
+        ],
+        "code": [
+          {
+            "label": "Warm highlight envelope",
+            "text": "p = (0.35 + 0.65 × S((t − 0.015)/0.12))\n      × (1 − S((t − 0.23)/0.13))\nq = S((t − 0.055)/0.16)\nglowRGBA = [1, 0.34 + 0.52q, 0.14 + 0.06q, 1]\ncoreIntensity = 0.32p; haloIntensity = 0.65p",
+            "basis": "local-implementation"
+          },
+          {
+            "label": "Moving field controls",
+            "text": "broadPosition = [825 − 130S(t/2.1), 470 − 65S(t/2.1)]\nbroadRotation = −6 + 12S(t/2.1)\np = S(t/1.4); q = S((t − 1.3)/0.8)\nupperPosition = [720 − 650p, 230 − 300p + 65q]\nupperOpacity = 46 + 16S(t/1.2) + 34S((t − 1.13)/0.27)\nupperScale = 190 + 14S(t/1.9)\nr = S((t − 0.85)/1.25)\nrimPosition = [1410 − 260r, 920 − 240r]\nrimOpacity = 96S((t − 1.05)/0.42)",
+            "basis": "local-implementation"
+          }
+        ]
+      },
+      {
+        "title": "Files, versions and reproduction order",
+        "items": [
+          "Use Opening-v02-glow-polish.aep as the liked glow/accent baseline. The later soft-word-arrivals joined AEP contains the documented scale/exit candidate and current easier mismatch; these versions are not interchangeable approvals.",
+          "Inspect the linked build → light → type/ray → glow → scale → exit scripts as construction history. They contain project-name guards, absolute workspace paths and one-time mutations; adapt controls into a versioned project instead of running the chain against whatever is open.",
+          "Local output is 1280×720 at 60fps, with native type motion blur, 100° AE shutter and 12 samples/frame. Broad smearing cannot be repaired by turning up blur when the speed curve is wrong.",
+          "For adaptation, recompute prefix widths and the easier anchor for the new font/copy. Adjust reveal duration, selection bounds and accent origin together. Compare the complete 0–2.2s passage and inspect f74/f75, final-letter resolution, selection growth and the exit boundary."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Core message",
+        "value": 123,
+        "unit": "source frames at 60fps",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Grouped systems / finer actions",
+        "value": [
+          8,
+          12
+        ],
+        "unit": "analytical counts; defined grouping",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Local AE output",
+        "value": [
+          1280,
+          720,
+          60
+        ],
+        "unit": "width px / height px / fps",
+        "basis": "local-implementation"
+      },
+      {
+        "name": "Native type motion blur",
+        "value": [
+          100,
+          12
+        ],
+        "unit": "shutter degrees / samples per frame",
+        "basis": "local-implementation"
+      },
+      {
+        "name": "Local fonts",
+        "value": "SegoeUI-Light; tracking −25; size 54",
+        "unit": "font / AE tracking / local px",
+        "basis": "local-implementation"
+      },
+      {
+        "name": "Original camera, font and easing",
+        "value": "Unknown",
+        "unit": "source project unavailable",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Liked glow/accent baseline",
+        "tool": "After Effects",
+        "status": "rendered",
+        "asset_ids": [
+          "infinex-opening-aep",
+          "infinex-opening-comparison",
+          "infinex-opening-review"
+        ]
+      },
+      {
+        "label": "Current joined candidate; easier correction pending",
+        "tool": "After Effects",
+        "status": "rendered",
+        "asset_ids": [
+          "infinex-question-aep",
+          "infinex-opening-build",
+          "infinex-opening-scale",
+          "infinex-opening-exit",
+          "infinex-opening-rays",
+          "infinex-opening-glow",
+          "infinex-opening-light"
+        ]
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "mixed",
+    "scope": "Glow-polish direction received positive feedback. Later focus/selection timing remains mismatched and uncorrected; no blanket shot approval.",
+    "inspection": "Decoded reference frames, saved authoring scripts and previous encoded checks; this documentation expansion creates no native render and establishes no new continuous-motion or audio approval.",
+    "limitations": [
+      "Original project, software, source font and exact handles are unknown.",
+      "Current easier push is early; selection finishes early; final-letter overlap needs correction.",
+      "Continuous perceptual quality and audio are not established by frame sheets."
+    ]
+  },
+  "evidence_assets": [
+    "infinex-opening-timing",
+    "infinex-complexity-study",
+    "infinex-opening-mismatch",
+    "infinex-opening-failure",
+    "infinex-technical-study",
+    "infinex-full-pacing"
+  ],
+  "related_ids": [
+    "SHOT-INF-QUESTION",
+    "LIGHT-INF-COPPER"
+  ]
+}

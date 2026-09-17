@@ -1,0 +1,349 @@
+{
+  "id": "SHOT-CAMERA-SWEEP",
+  "clip": {
+    "asset_id": "shot-camera-sweep-preview",
+    "source_frames": [
+      40,
+      130
+    ],
+    "fps": 30,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "An oblique close-up resolves focus, then a lateral sweep moves attention along the request toward the circular send control.",
+    "beats": [
+      "Macro: short viewpoint transition",
+      "Focus:    settles onto request",
+      "Travel: lateral movement toward circle",
+      "Arrival: send button favored",
+      "Handoff: interface dissolves around button"
+    ],
+    "use_when": [
+      "asymmetric camera serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The circle holds attention while the rest of the interface disappears.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "1.333–4.333 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "4 interacting jobs:    camera travel, focus resolve, UI dissolve, button isolation. CR 008 changes exactly 3 location channels;283 other animation curves were verified unchanged."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Macro",
+      "events": [
+        {
+          "label": "Macro: short viewpoint transition",
+          "frames": [
+            46,
+            48
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Focus",
+      "events": [
+        {
+          "label": "Focus:    settles onto request",
+          "frames": [
+            48,
+            66
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Travel",
+      "events": [
+        {
+          "label": "Travel: lateral movement toward circle",
+          "frames": [
+            66,
+            96
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Arrival",
+      "events": [
+        {
+          "label": "Arrival: send button favored",
+          "frames": [
+            96,
+            108
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Handoff",
+      "events": [
+        {
+          "label": "Handoff: interface dissolves around button",
+          "frames": [
+            106,
+            130
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Exact local B camera settings and original-path preservation are documented; source camera parameters remain unknown.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "An oblique close-up resolves focus, then a lateral sweep moves attention along the request toward the circular send control.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "1.533–1.600 s",
+                "Macro: short viewpoint transition"
+              ],
+              [
+                "1.600–2.200 s",
+                "Focus:    settles onto request"
+              ],
+              [
+                "2.200–3.200 s",
+                "Travel: lateral movement toward circle"
+              ],
+              [
+                "3.200–3.600 s",
+                "Arrival: send button favored"
+              ],
+              [
+                "3.550–4.333 s",
+                "Handoff: interface dissolves around button"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "4 interacting jobs:    camera travel, focus resolve, UI dissolve, button isolation. CR 008 changes exactly 3 location channels;283 other animation curves were verified unchanged.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "SCENE\n  UI_ROOT > request / heading / pills\n  SEND_ROOT > disc / arrow\n  CAMERA > locationXYZ / orientation / lens / DOF\n  FOCUS_TARGET\nCR008_B changes only camera locationXYZ",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "The local B study preserves the original V 02 path and changes its travel timing only. Monotone cubic Hermite interpolation defines scalar progress; interior control points are pass-throughs. This differs from easing every segment independently to zero velocity.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "Low-key neutral studio: charcoal field, a broad gray overhead reflection and bright grazing edges. Use large soft sources and bevels; do not raise ambient illumination until dark UI panels lose separation.",
+          "The reference shows stronger sweep blur than the local comparison. B holds aperture, lens, focus and shutter unchanged to isolate camera-location timing. It does not fix the reference mismatch in blur or perspective.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Path",
+                "Sample the original monotonic-X camera polyline between source scene frames 67 and 92."
+              ],
+              [
+                "Progress",
+                "Normalize X travel, evaluate new scalar timing, then interpolate along the saved polyline."
+              ],
+              [
+                "Bake",
+                "Modify only camera location at Blender frames 68–96; preserve other channels."
+              ],
+              [
+                "Review",
+                "Compare normal-speed A/B first, then reference/B; no winning version selected."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The circle holds attention while the rest of the interface disappears.",
+          "A mathematical continuity check does not prove a pleasing projected path. B arrives five rendered frames later, so inspect whether it weakens the button handoff.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      },
+      {
+        "title": "Exact CR008 B timing and preservation",
+        "items": [
+          "B uses t=(sceneFrame−1)/30; the library excerpt uses zero-based source frames 40–129. Both denote 1.3333–4.3333 s.",
+          "The original path is resampled by normalized X, not constant arc length. Interior tangents are weighted harmonic means of neighboring secants; endpoint slopes are zero. The result is baked at 30 fps with linear interpolation between samples."
+        ],
+        "tables": [
+          {
+            "caption": "B travel nodes",
+            "columns": [
+              "Time(s)",
+              "Progress(0–1)",
+              "Slope(1/s)"
+            ],
+            "rows": [
+              [
+                2.2,
+                0.0,
+                0.0
+              ],
+              [
+                2.4,
+                0.04,
+                0.37842778793418685
+              ],
+              [
+                2.533333333333333,
+                0.27,
+                1.9240384615384623
+              ],
+              [
+                2.6666666666666665,
+                0.56,
+                1.8280155642023328
+              ],
+              [
+                2.8333333333333335,
+                0.82,
+                1.0462042742887114
+              ],
+              [
+                3.033333333333333,
+                0.975,
+                0.24630818619582656
+              ],
+              [
+                3.2,
+                1.0,
+                0.0
+              ]
+            ],
+            "basis": "local-implementation"
+          }
+        ],
+        "code": [
+          {
+            "label": "Hermite segment used for travel",
+            "text": "u = (t - t0) / (t1 - t0)\nh = t1 - t0\np = (2*u**3 - 3*u**2 + 1)*p0 \\\n  + (u**3 - 2*u**2 + u)*h*m0 \\\n  + (-2*u**3 + 3*u**2)*p1 \\\n  + (u**3 - u**2)*h*m1\n# Sample the preserved camera polyline using p.\n# Tangents at interior nodes are nonzero unless a monotonicity break requires zero.",
+            "basis": "local-implementation"
+          }
+        ]
+      },
+      {
+        "title": "A/B controls, render and limits",
+        "items": [
+          "A retains the V 02 symmetric quintic travel around 2.333–3.030 s. B begins gradual pickup at 2.2 s and finishes at 3.2 s. No overshoot or new shake.",
+          "Both previews are 960×476,30 fps,90 frames. Existing render times:   A 42.35 s,B 41.97 s; diagnostic stills 4.46 s. These are render timings, not total labor.",
+          "Original V 02 hash, location values outside the edit interval and 283 non-location animation curves were verified unchanged. B was built in Blender 5.1.2."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 30,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 90,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "CR008 B timing experiment",
+        "tool": "Blender",
+        "status": "tested",
+        "asset_ids": [
+          "camera-study-blend",
+          "camera-study-build",
+          "camera-study-values",
+          "camera-study-comparison",
+          "camera-study-ab",
+          "camera-study-verification"
+        ]
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "One rendered camera-timing comparison; visual preference pending. Source blur, typography and perspective differences remain.",
+    "inspection": "Source and matched rendered frame sheet inspected; existing90-frame A/B and270-frame comparisons fully decoded. Normal-speed creative preference pending.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-blender-camera-reference",
+    "camera-study-review",
+    "camera-study-frames",
+    "camera-study-verification"
+  ],
+  "related_ids": [
+    "SHOT-CAMERA-ASSEMBLY",
+    "SHOT-CAMERA-SEND"
+  ]
+}

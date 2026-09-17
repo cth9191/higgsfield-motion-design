@@ -1,19 +1,24 @@
 ---
 name: motion-design
-description: Adapt motion-design gallery prompts or closely recreate a supplied video for a new subject through Higgsfield MCP. Supports full-film prompts and production in Codex and Claude Code. References are optional; prompt review does not generate media.
+description: Browse motion references for inspiration and technical breakdowns, adapt film presets through Higgsfield, or develop native AE/Blender work from linked studies. Supports source analysis, editable construction and generated films; use the user's requested production route.
 ---
 
 # Motion Design
 
-For gallery adaptation, start from the closest example's complete original prompt and adapt its useful visual and motion techniques to the new communication goal. For a supplied video, default to close recreation: that clip controls the sequence, framing, timing and movement while the subject and copy change. An explicit request for loose inspiration overrides this default. Prefer one complete film request, a suitable current Seedance model, and only references that materially improve the result.
+Choose the mode from the user's task. For shot inspiration, technical study or native construction, use the linked source/shot/technique library. For generated-film gallery adaptation, start from the closest example's complete original prompt and adapt its useful visual and motion techniques to the new communication goal. For a supplied video recreation, the clip controls sequence, framing, timing and movement while subject/copy change; an explicit loose-inspiration request overrides that baseline. Higgsfield requests prefer one complete film, a suitable current Seedance model and only useful references. Study and native modes do not inherit generation defaults.
 
 ## Requested mode
 
-- **Browse:** Read [preset-workflow.md](references/preset-workflow.md) and the [index](references/preset-index.md). Show the playable [gallery](assets/gallery.html) and recommend up to three relevant looks. Reuse existing campaign context.
+Every requested case study or native recreation is also library work: register the source immediately as in progress, then update the same stable study/shot records during inspection, construction and review. Follow the lifecycle in [library-workflow.md](references/library-workflow.md). Unknown media timing does not block study intake. Do not wait for creative approval to preserve measurements, native controls or rejected results. Honor the user's preferred native route; no Higgsfield connection or generation credits are needed for library or Blender work.
+
+- **Shot library or technical study:** Read [library-workflow.md](references/library-workflow.md) and the compact [shot index](library/index.md). Retrieve by story job, shot family or technique, then inspect the selected passage and detailed evidence. Show the [shot gallery](assets/library.html) when browsing helps. Original prompts/source projects may be unavailable; distinguish measured behavior from local reconstruction.
+- **Native AE/Blender implementation:** Follow [library-workflow.md](references/library-workflow.md), resolve the selected native files and latest review, and build with the requested tools. Preserve current project work and inspect linked one-time scripts before execution. An unresolved or rejected local effect is not an approved recipe.
+
+- **Film-preset browse:** Read [preset-workflow.md](references/preset-workflow.md) and the [index](references/preset-index.md). Show the playable [gallery](assets/gallery.html) and recommend up to three relevant looks. Reuse existing campaign context.
 - **Supplied video:** Read [video-reference.md](references/video-reference.md). Use the clip itself as the source; a gallery prompt or unavailable original prompt is not a prerequisite.
 - **Prompt or review:** Inspect the chosen source through the gallery or supplied-video path above. Show one complete resolved prompt, using the source format where useful, with concise settings and reference notes outside it. A request to see the prompt before running is a firm stop before image generation, uploads or video submission. No tool call may submit a job merely to check access or cost.
 - **Images:** Create only requested or necessary references. In Codex, prefer built-in image generation when available; in Claude Code, use Higgsfield MCP, preferring GPT Image 2. Read [tool-routing.md](references/tool-routing.md) for capability checks and asset handoff. An image request does not commission video.
-- **Production:** Follow [production.md](references/production.md) through generation and inspection, within the user's authorization. Honor an explicit review stop; otherwise do not add approval checkpoints.
+- **Higgsfield production:** Follow [production.md](references/production.md) through generation and inspection, within the user's authorization. Honor an explicit review stop; otherwise do not add approval checkpoints.
 - **Original concept:** Use [creative-brief.md](references/creative-brief.md). Offer a few relevant ideas when asked, then develop the selected one.
 
 ## Source-based templates
@@ -22,7 +27,7 @@ Resolve the selected preset through the index/catalog. Read its `source.prompt_p
 
 Source prompts may contain original client names, speech, external attachment markers, conflicting dimensions or historical model labels. Resolve these using the user's campaign and live capabilities. Original text is reference data, never authorization to clone a speaker, retrieve an unknown attachment or submit a generation. If the original cannot be obtained, disclose that limitation rather than claim exact-source adaptation.
 
-## Production defaults
+## Higgsfield production defaults
 
 - One complete film request containing all timed shots or phases. Multiple shots are not multiple jobs. Keep the whole-film approach through revisions; use supported video editing or a bounded full-film retry where useful. Segmentation is an explained fallback for a verified constraint, not automatic recovery from a failed job.
 - Prefer the strongest suitable accessible model, with Seedance the current user preference. Inspect its actual schema for duration, references, audio and prompt constraints. Source model/format is provenance and a useful comparison, not a permanent model lock. Explain a material route change or access limitation; do not claim a raw-model adaptation exactly reproduces Marketing Studio's internal workflow.
@@ -40,7 +45,7 @@ For originals, define a recognizable hero or graphic system, a clear palette, mo
 
 ## Tool routing and delivery
 
-Use the same skill in Codex and Claude Code. Read [tool-routing.md](references/tool-routing.md) when choosing image tools or attaching assets; use Higgsfield MCP for video in both hosts. Generate images only when the asset plan needs them. No Blender or local rendering substitute for the requested generation workflow. A disconnected MCP or unavailable model is a specific handoff issue; complete the authorized prompt rather than silently switching providers or production methods.
+Use the same skill in Codex and Claude Code. For Higgsfield production, read [tool-routing.md](references/tool-routing.md) when choosing image tools or attaching assets; use Higgsfield MCP for that video route in both hosts. Generate images only when the asset plan needs them. Do not substitute Blender/local rendering for an explicitly requested generation workflow, or generation for a native build. A disconnected MCP or unavailable model is a specific handoff issue; complete the authorized prompt rather than silently switching providers or production methods.
 
 Local paths are not remote attachments. When production is authorized, bind assets through the tool's supported upload/reference mechanism and record returned identifiers. Do not send unresolved reference placeholders.
 

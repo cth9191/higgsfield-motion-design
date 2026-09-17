@@ -1,0 +1,307 @@
+{
+  "id": "SHOT-CAMERA-RESULT",
+  "clip": {
+    "asset_id": "shot-camera-result-preview",
+    "source_frames": [
+      157,
+      255
+    ],
+    "fps": 30,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "A full-sized result card descends from above, hinges aside for a summary, then anticipates an upward exit.",
+    "beats": [
+      "Card: descends and settles",
+      "Summary: arrives as card hinges",
+      "Read: result pair holds",
+      "Anticipation: group dips",
+      "Exit: group accelerates upward"
+    ],
+    "use_when": [
+      "card drop serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "Both result components leave together under one root, completing the8.5s sequence.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "5.233–8.500 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "5 jobs:    card drop, card hinge, summary reveal/turn, reading hold, anticipated exit."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Card",
+      "events": [
+        {
+          "label": "Card: descends and settles",
+          "frames": [
+            157,
+            183
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Summary",
+      "events": [
+        {
+          "label": "Summary: arrives as card hinges",
+          "frames": [
+            181,
+            208
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Read",
+      "events": [
+        {
+          "label": "Read: result pair holds",
+          "frames": [
+            208,
+            215
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Anticipation",
+      "events": [
+        {
+          "label": "Anticipation: group dips",
+          "frames": [
+            215,
+            228
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Exit",
+      "events": [
+        {
+          "label": "Exit: group accelerates upward",
+          "frames": [
+            228,
+            255
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "A full-sized result card descends from above, hinges aside for a summary, then anticipates an upward exit.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "5.230–6.100 s",
+                "Card: descends and settles"
+              ],
+              [
+                "6.040–6.950 s",
+                "Summary: arrives as card hinges"
+              ],
+              [
+                "6.950–7.170 s",
+                "Read: result pair holds"
+              ],
+              [
+                "7.170–7.600 s",
+                "Anticipation: group dips"
+              ],
+              [
+                "7.600–8.500 s",
+                "Exit: group accelerates upward"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "5 jobs:    card drop, card hinge, summary reveal/turn, reading hold, anticipated exit.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "RESULT_ROOT > global anticipation/exit\n  CARD_ROOT > match card / flags / labels\n  SUMMARY_ROOT > editable text plane / opacity\nCAMERA",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Use opposing Y rotations for card and summary to make room without losing their relationship. Keep the card near full size on entry; a small panel scaling from below was a rejected approximation. Exit anticipation and upward acceleration share one parent root.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "Low-key neutral studio: charcoal field, a broad gray overhead reflection and bright grazing edges. Use large soft sources and bevels; do not raise ambient illumination until dark UI panels lose separation.",
+          "Keep text sharp during the paired reading pose and allow motion softness during the rapid exit. Broad soft reflections should define card curvature without creating a bright highlight over match details.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Drop",
+                "Author a fast early descent with a longer final settle, then freeze the vertical landing before hinge movement dominates."
+              ],
+              [
+                "Hinge",
+                "Card turns one way; summary turns the other. Parent both to the exit root."
+              ],
+              [
+                "Summary",
+                "Separate opacity from position and rotation so it becomes readable while still settling."
+              ],
+              [
+                "Exit",
+                "Brief negativeY anticipation, then accelerating positiveY travel; preserve baseline relationship."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "Both result components leave together under one root, completing the 8.5 s sequence.",
+          "A continuous slow upward drift omits the anticipation. Do not change the sports facts for a commercial video without checking current content; here they are only source-study artwork.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      },
+      {
+        "title": "Existing local V02 controls",
+        "items": [
+          "These are our authored reconstruction controls, not recovered Bhumimov settings. Full construction script and native scene are attached. Times use t=(BlenderFrame−1)/30. Baked keys use linear interpolation between authored samples."
+        ],
+        "tables": [
+          {
+            "caption": "Authored V02 values",
+            "columns": [
+              "Component",
+              "Time/value relationship"
+            ],
+            "rows": [
+              [
+                "Card dropY",
+                "5.23 s:   16;5.30:8.4;5.367:4.1;5.5:2.35;5.8:1.1;6.10:0.05"
+              ],
+              [
+                "Card hinge",
+                "6.1–6.95 s;X 0→−3.3 scene units;Y rotation 0→25 deg;scale 1.37→1.12"
+              ],
+              [
+                "Summary",
+                "6.08–6.93 s;X 13.5→6.2;Y rotation 0→−22 deg;opacity 6.04–6.35 s"
+              ],
+              [
+                "Exit rootY",
+                "7.17 s:   0;7.43:−0.68;7.6:−0.53;7.8:0;8.0:1.8;8.167:5.7;8.33:12;8.5:18"
+              ]
+            ],
+            "basis": "local-implementation"
+          }
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 30,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 98,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "V02 full native reconstruction; creative review pending",
+        "tool": "Blender",
+        "status": "rendered",
+        "asset_ids": [
+          "camera-v02-blend",
+          "camera-v02-build",
+          "camera-v02-video",
+          "camera-v02-review"
+        ]
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Source observations plus existing local V02 construction. V01 was rejected; V02 is technically rendered, not user-approved.",
+    "inspection": "Full-film sampled overview; dense evidence where linked. This is frame-based analysis, not continuous playback or sound review.",
+    "limitations": [
+      "Original source rig and curves unavailable.",
+      "V01 was rejected for missing the reference choreography.",
+      "Typography, perspective, shading and timing differences remain; technical validation does not establish fidelity."
+    ]
+  },
+  "evidence_assets": [
+    "study-blender-camera-reference"
+  ],
+  "related_ids": [
+    "SHOT-CAMERA-SEND"
+  ]
+}

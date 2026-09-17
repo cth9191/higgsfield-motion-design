@@ -1,0 +1,252 @@
+{
+  "id": "SHOT-CERO-JACKPOT",
+  "clip": {
+    "asset_id": "shot-cero-jackpot-preview",
+    "source_frames": [
+      681,
+      837
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "A large dimensional amount receives a brief hero moment before the phone score becomes the next focus.",
+    "beats": [
+      "Amount: separated digits converge",
+      "Read: jackpot holds over rays",
+      "Phone: enters as amount clears",
+      "Score: number and arc increase"
+    ],
+    "use_when": [
+      "dimensional type serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The score screen cuts back to payment footage after its feature reveal.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "11.350–13.950 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "5 jobs:    digit assembly, dimensional light, rays, phone framing, score/arc fill."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Amount",
+      "events": [
+        {
+          "label": "Amount: separated digits converge",
+          "frames": [
+            681,
+            714
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Read",
+      "events": [
+        {
+          "label": "Read: jackpot holds over rays",
+          "frames": [
+            714,
+            759
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Phone",
+      "events": [
+        {
+          "label": "Phone: enters as amount clears",
+          "frames": [
+            759,
+            792
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Score",
+      "events": [
+        {
+          "label": "Score: number and arc increase",
+          "frames": [
+            786,
+            837
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "A large dimensional amount receives a brief hero moment before the phone score becomes the next focus.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "11.350–11.900 s",
+                "Amount: separated digits converge"
+              ],
+              [
+                "11.900–12.650 s",
+                "Read: jackpot holds over rays"
+              ],
+              [
+                "12.650–13.200 s",
+                "Phone: enters as amount clears"
+              ],
+              [
+                "13.100–13.950 s",
+                "Score: number and arc increase"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "5 jobs:    digit assembly, dimensional light, rays, phone framing, score/arc fill.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "JACKPOT > label / individually extruded digits\nRAYS\nPHONE > score arc / digit display / UI panels",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Control the amount as a full text group with individual digit offsets, then let the phone replace its visual weight. The score rise is a separate action from phone framing.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "High-key white studio treatment. Use a near-white background, large soft area lights, restrained contact shadow and a narrow edge reflection for dark product rims. Keep lime or accent emissions from washing out white UI text.",
+          "Dimensional letters need soft highlight gradients and dark side faces for depth. Blur should fall during the amount hold; keep the phone score sharp as it becomes the focal content.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Amount",
+                "Separate digits for rolling/settling; use consistent bevel and extrusion depth."
+              ],
+              [
+                "Rays",
+                "Radial wedges parented behind the hero, with independent intensity."
+              ],
+              [
+                "Score arc",
+                "Repeated ticks with a progress mask or per-tick material threshold."
+              ],
+              [
+                "Score digits",
+                "Use masked columns or explicit number updates; synchronize endpoint with arc, not necessarily all intermediate rates."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The score screen cuts back to payment footage after its feature reveal.",
+          "A flat lime text plane loses the dimensional amount. A score that jumps to its final value before the arc fills feels disconnected.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 60,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 156,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s samples, plus existing dense12samples/second sheets for coin/phone, pack/prizes, score/phone and credit panel. Other event boundaries are approximate to0.5s. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-cero-reference",
+    "study-cero-overview-2",
+    "cero-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-CERO-PACK-PRIZES",
+    "SHOT-CERO-PAYMENTS-B"
+  ]
+}

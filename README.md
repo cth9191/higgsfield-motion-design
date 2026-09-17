@@ -7,7 +7,7 @@
 
 <p align="center">
   Turn a product, website or idea into a complete motion film.<br />
-  Choose a look. Adapt the prompt. Generate with Higgsfield.
+  Study a shot. Explore its construction. Build natively or generate with Higgsfield.
 </p>
 
 <p align="center">
@@ -111,7 +111,7 @@ Choose a look, select Codex or Claude Code, add your brief and copy the request 
 
 ## Quick start
 
-Install the same skill in either app, then connect your own Higgsfield account for media generation. Browsing and prompt drafting work before you connect.
+Install the same skill in either app. Reference studies and native implementation browsing need no generation connection. Connect your own Higgsfield account when you want generated media.
 
 ### Codex
 
@@ -190,6 +190,8 @@ You can also ask for reference images alone. Requesting images does not commissi
 
 ## How it works
 
+Choose the route from the task: explore references, build in After Effects/Blender, or generate a film. The [shot library workflow](skills/motion-design/references/library-workflow.md) covers inspiration and native work; the sequence below applies to Higgsfield film generation.
+
 **Choose → Adapt → Generate → Review**
 
 The skill starts from the closest example's **complete original prompt** and the takeaway your viewer should leave with. It retains the source's effective visual and motion techniques while adapting scenes, sequence, timing and transitions to your subject. The resolved timed sequence is submitted as **one complete film** through Higgsfield MCP.
@@ -208,7 +210,27 @@ New campaigns generally target **15 seconds · 16:9 · music + effects**, withou
 
 ## Under the hood
 
-The package includes ten source examples, archived prompts with verified hashes, separate adaptation guides, a playable gallery and production review guidance. Both apps use the same skill folder.
+The package includes ten film presets, archived prompts with verified hashes, adaptation guides, and a separate shot and technique library. Both apps use the same complete skill folder.
+
+### Shot studies and technical breakdowns
+
+The library has **five complete source timelines and 44 entries**: Infinex, Cero, Jaw/vedu_boi, Ordinary Folk's Radial Delay, and the Bhumimov UI/Blender camera study. Browse by source, video type, story purpose, technique or implementation tool. Each shot has inspiration and technical views covering event timing, component counts, hierarchy, camera, typography, lighting, focus, transitions, construction controls and failures. Exact original or local controls are included where available; proposed recreations are labeled. Section links make deeper pages navigable.
+
+```sh
+python skills/motion-design/scripts/serve_library.py
+```
+
+Open [Shots & techniques](http://127.0.0.1:8766/assets/library.html). Text and timing diagrams work immediately. Source clips and native files stay in a separate workspace; connect them with the [local asset setup](docs/setup.md#5-browse-shots-and-technical-breakdowns). The original ten-preset gallery is available from the same navigation.
+
+For an assistant, start with the [compact index](skills/motion-design/library/index.md), then load only the selected record. For example:
+
+```text
+Find the Infinex phone-to-cards passage for a product launch.
+Explain the staging and timing, then show the Blender/After Effects
+construction and unresolved review notes.
+```
+
+Every interval of the five supplied references is covered, including montage inserts and end holds. Analysis is based on recorded source/frame inspection; it does not recover unknown original projects or establish continuous motion/audio quality. The Infinex V05 blur reconstruction remains rejected; V06 is pending. Register each new study immediately with `scripts/intake_study.py`, then update the same record during analysis, native construction and review. Blender and AE work need no generation connection or Seedance credits.
 
 <details>
 <summary><strong>Project status & validation</strong></summary>
@@ -226,9 +248,11 @@ Edit `skills/motion-design/`, then rebuild:
 
 ```sh
 python skills/motion-design/scripts/build_gallery.py
+python skills/motion-design/scripts/build_library.py
+python -m unittest discover -s skills/motion-design/scripts/tests -v
 ```
 
-Python 3.10+ is needed only for the builder or serving the gallery. The builder checks preset IDs, linked recipes/templates, timeline coverage and archived source hashes, then refreshes the gallery and index. Commit generated changes with source edits; GitHub Actions repeats the check.
+Python 3.10+ is needed only for builders, tests or serving the gallery. The preset builder checks IDs, linked recipes/templates, timeline coverage and archived source hashes. The study builder validates relationships, source-frame intervals, asset IDs, parameter provenance and review consistency. Commit generated changes with source edits; GitHub Actions repeats the checks. See the [data contract](skills/motion-design/library/schema.md) and [library validation](docs/library-validation.md).
 
 Keep original source prompts immutable. Update adaptation guides and workflow instructions for behavior changes. The catalog/template version tracks the source library; README and host-routing edits do not rewrite its provenance. Installed copies are separate from the repo: update the complete skill folder, including references and gallery, and preserve local customizations.
 

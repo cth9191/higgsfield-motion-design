@@ -1,0 +1,252 @@
+{
+  "id": "SHOT-JAW-NOTIFICATION",
+  "clip": {
+    "asset_id": "shot-jaw-notification-preview",
+    "source_frames": [
+      832,
+      931
+    ],
+    "fps": 29.97002997002997,
+    "clock": "source-frames",
+    "note": "Source rate is nominal30000/1001fps; original presentation timestamps are linked. Most observed event windows come from0.5s samples and are approximate, not recovered keys. Preview uses selected decoded source frames and starts at zero."
+  },
+  "inspiration": {
+    "purpose": "A glass-like notification inherits the colored currency world and becomes large enough to read the completed payment.",
+    "beats": [
+      "Scene: notification and currencies assemble",
+      "Move: camera favors notification",
+      "Read: credited amount and bank-account message",
+      "Clear: notification yields to monochrome brand"
+    ],
+    "use_when": [
+      "glass panel serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "A decisive change to a dark monochrome end card reduces complexity.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "27.761–31.064 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "5 jobs:    notification arrival, satellites, beam movement, camera push, readability hold."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Scene",
+      "events": [
+        {
+          "label": "Scene: notification and currencies assemble",
+          "frames": [
+            832,
+            850
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Move",
+      "events": [
+        {
+          "label": "Move: camera favors notification",
+          "frames": [
+            847,
+            874
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Read",
+      "events": [
+        {
+          "label": "Read: credited amount and bank-account message",
+          "frames": [
+            869,
+            916
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Clear",
+      "events": [
+        {
+          "label": "Clear: notification yields to monochrome brand",
+          "frames": [
+            916,
+            931
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "A glass-like notification inherits the colored currency world and becomes large enough to read the completed payment.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "27.750–28.350 s",
+                "Scene: notification and currencies assemble"
+              ],
+              [
+                "28.250–29.150 s",
+                "Move: camera favors notification"
+              ],
+              [
+                "29.000–30.550 s",
+                "Read: credited amount and bank-account message"
+              ],
+              [
+                "30.550–31.050 s",
+                "Clear: notification yields to monochrome brand"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "5 jobs:    notification arrival, satellites, beam movement, camera push, readability hold.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "PURPLE_STAGE > beams / gradient\nNOTIFICATION_ROOT > rounded glass / app icon / title / amount / message\nSATELLITES > currencies / stars / globe\nCAMERA / focus target",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Start with the notification among the currencies, then move the framing toward it while maintaining the panel’s readable orientation. Avoid a camera orbit that turns the words oblique at their most important moment.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "Saturated purple/magenta studio treatment with warm diagonal light beams and soft bloom. Reconstruct with a separate low-frequency background gradient, colored area lights and controlled emissive beam planes; genuine volumetrics are an optional heavier alternative.",
+          "The glass panel picks up orange/purple color while preserving bright text. Use selective background defocus and broad reflections, not full transparency that lets light beams interfere with words.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Glass",
+                "Control transmission/roughness and backing tint; reserve a stable text contrast zone."
+              ],
+              [
+                "Camera",
+                "Track panel center and projected width through the push; hold a readable target view."
+              ],
+              [
+                "Satellites",
+                "Keep large foreground currencies off the key notification text."
+              ],
+              [
+                "Message",
+                "Use source text only for study; do not assert this transaction occurred."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "A decisive change to a dark monochrome end card reduces complexity.",
+          "A screen-space blur on the entire composite makes the notification illegible. Render foreground panel and background separately when compositing control is needed.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 29.97002997002997,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 99,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s frame samples; No switching / No waiting additionally inspected every3source frames. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-jaw-reference",
+    "study-jaw-overview-3",
+    "jaw-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-JAW-SEND",
+    "SHOT-JAW-END"
+  ]
+}

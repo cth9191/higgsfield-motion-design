@@ -1,0 +1,271 @@
+{
+  "id": "SHOT-CERO-TOSS",
+  "clip": {
+    "asset_id": "shot-cero-toss-preview",
+    "source_frames": [
+      0,
+      264
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "A first-person coin toss supplies an object that carries the film from everyday footage into product UI.",
+    "beats": [
+      "Hand: releases coin",
+      "Coin: travels upward through street view",
+      "Handoff: coin grows into graphic stage",
+      "UI: phone and 100% reward resolve",
+      "Detail: push to transaction; value becomes free"
+    ],
+    "use_when": [
+      "object continuity serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The transaction close-up makes the benefit legible before real-world tap-to-pay footage returns.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "0.000–4.400 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "6 jobs:    hand/plate action, coin flight, scene replacement, phone arrival, ribbon, transaction-value change. One coin becomes the reward focus."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Hand",
+      "events": [
+        {
+          "label": "Hand: releases coin",
+          "frames": [
+            0,
+            36
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Coin",
+      "events": [
+        {
+          "label": "Coin: travels upward through street view",
+          "frames": [
+            30,
+            108
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Handoff",
+      "events": [
+        {
+          "label": "Handoff: coin grows into graphic stage",
+          "frames": [
+            108,
+            150
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "UI",
+      "events": [
+        {
+          "label": "UI: phone and 100% reward resolve",
+          "frames": [
+            150,
+            195
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Detail",
+      "events": [
+        {
+          "label": "Detail: push to transaction; value becomes free",
+          "frames": [
+            195,
+            264
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "A first-person coin toss supplies an object that carries the film from everyday footage into product UI.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "0.000–0.600 s",
+                "Hand: releases coin"
+              ],
+              [
+                "0.500–1.800 s",
+                "Coin: travels upward through street view"
+              ],
+              [
+                "1.800–2.500 s",
+                "Handoff: coin grows into graphic stage"
+              ],
+              [
+                "2.500–3.250 s",
+                "UI: phone and 100% reward resolve"
+              ],
+              [
+                "3.250–4.400 s",
+                "Detail: push to transaction; value becomes free"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "6 jobs:    hand/plate action, coin flight, scene replacement, phone arrival, ribbon, transaction-value change. One coin becomes the reward focus.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "FOOTAGE_PLATE > street / hand\nCOIN_ROOT > mesh / two face marks\nPHONE_ROOT > frame / screen / reward\nRIBBON > rear and front segments\nTRANSACTION > logo / amount / free badge",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "The toss uses large apparent depth change. Track coin center, projected diameter and face orientation at the plate-to-UI handoff. Once in UI, push toward the transaction row; preserve the coin as the reward badge rather than spawning an unrelated disc.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "High-key white studio treatment. Use a near-white background, large soft area lights, restrained contact shadow and a narrow edge reflection for dark product rims. Keep lime or accent emissions from washing out white UI text.",
+          "Motion blur belongs to the rotating/translating coin; the phone UI is selectively softened behind the reward. Keep the highlighted transaction clear. A background blur can be composited separately from exposure blur.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Plate preparation",
+                "Use owned or licensed live footage; solve or manually track the coin trajectory in screen space."
+              ],
+              [
+                "Identity handoff",
+                "Match center/diameter/rotation across plate and dimensional coin before replacing the background."
+              ],
+              [
+                "Ribbon",
+                "Use a curve with bevel or flat strip mesh, with correct front/back occlusion around the phone."
+              ],
+              [
+                "Amount",
+                "Keep amount text separately editable; mask rolling or replacing digits inside the row."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The transaction close-up makes the benefit legible before real-world tap-to-pay footage returns.",
+          "A coin that teleports to the center or changes diameter at the graphic handoff breaks the connection. Live-action capture is a separate dependency; a pure Blender substitute changes the style.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 60,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 264,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s samples, plus existing dense12samples/second sheets for coin/phone, pack/prizes, score/phone and credit panel. Other event boundaries are approximate to0.5s. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-cero-reference",
+    "study-cero-overview-1",
+    "cero-coin-dense",
+    "cero-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-CERO-PAYMENTS-A"
+  ]
+}

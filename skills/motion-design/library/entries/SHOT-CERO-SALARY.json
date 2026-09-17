@@ -1,0 +1,271 @@
+{
+  "id": "SHOT-CERO-SALARY",
+  "clip": {
+    "asset_id": "shot-cero-salary-preview",
+    "source_frames": [
+      915,
+      1161
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "An incoming salary notification becomes a wheel whose result changes the displayed amount.",
+    "beats": [
+      "Notification: salary message on macro phone",
+      "Wheel: enters large and resolves",
+      "Wheel: readable 2 x result",
+      "Amount: rolls from 3200 toward 6400",
+      "Join: return to payment context"
+    ],
+    "use_when": [
+      "notification to diagram serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "Another pair of real-world purchases separates the salary mechanic from the score explanation.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "15.250–19.350 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "6 jobs:    notification, wheel arrival, rotation, pointer/result, amount roll, framing. One wheel with repeated sectors."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Notification",
+      "events": [
+        {
+          "label": "Notification: salary message on macro phone",
+          "frames": [
+            915,
+            972
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Wheel",
+      "events": [
+        {
+          "label": "Wheel: enters large and resolves",
+          "frames": [
+            972,
+            1026
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Wheel",
+      "events": [
+        {
+          "label": "Wheel: readable 2 x result",
+          "frames": [
+            1026,
+            1065
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Amount",
+      "events": [
+        {
+          "label": "Amount: rolls from 3200 toward 6400",
+          "frames": [
+            1065,
+            1146
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Join",
+      "events": [
+        {
+          "label": "Join: return to payment context",
+          "frames": [
+            1146,
+            1161
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "An incoming salary notification becomes a wheel whose result changes the displayed amount.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "15.250–16.200 s",
+                "Notification: salary message on macro phone"
+              ],
+              [
+                "16.200–17.100 s",
+                "Wheel: enters large and resolves"
+              ],
+              [
+                "17.100–17.750 s",
+                "Wheel: readable 2 x result"
+              ],
+              [
+                "17.750–19.100 s",
+                "Amount: rolls from 3200 toward 6400"
+              ],
+              [
+                "19.100–19.350 s",
+                "Join: return to payment context"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "6 jobs:    notification, wheel arrival, rotation, pointer/result, amount roll, framing. One wheel with repeated sectors.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "PHONE_MACRO > rounded shell / lockscreen / notification\nWHEEL_ROOT > segments / rim nodes / pointer / result label\nSALARY_CENTER > label / masked number columns\nCAMERA",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Move from a tightly cropped phone to a large wheel, then vary framing around its center. Keep the pointer’s coordinate system independent of the rotating segment group so the selected result is legible.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "High-key white studio treatment. Use a near-white background, large soft area lights, restrained contact shadow and a narrow edge reflection for dark product rims. Keep lime or accent emissions from washing out white UI text.",
+          "The wheel can be soft during fast rotation but must resolve before the multiplier/result read. Mask digit columns within the center disc; do not blur the complete amount panel to fake rolling numbers.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Wheel",
+                "Build radial colored sectors and a fixed pointer. Key total rotation as one continuous value."
+              ],
+              [
+                "Amount",
+                "Animate masked digit columns with delayed carries and a stable currency symbol."
+              ],
+              [
+                "Scale",
+                "Author wheel scale/framing separately from rotation; use a quieter result interval."
+              ],
+              [
+                "Content",
+                "Source amounts are visual study content, not financial claims to reuse."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "Another pair of real-world purchases separates the salary mechanic from the score explanation.",
+          "A random spin with a sudden end snap weakens the result. The multiplier must agree with the final displayed amount.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 60,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 246,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s samples, plus existing dense12samples/second sheets for coin/phone, pack/prizes, score/phone and credit panel. Other event boundaries are approximate to0.5s. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-cero-reference",
+    "study-cero-overview-2",
+    "cero-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-CERO-PAYMENTS-B",
+    "SHOT-CERO-PAYMENTS-C"
+  ]
+}

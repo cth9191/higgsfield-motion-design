@@ -1,0 +1,717 @@
+{
+  "schema_version": 1,
+  "roots": {
+    "study-workspace": "/path/to/shot-studio",
+    "world-cup-workspace": "/path/to/world-cup-study"
+  },
+  "bindings": {
+    "infinex-reference": {
+      "root": "study-workspace",
+      "path": "research/references/yb-2099185156099874852/reference.mp4"
+    },
+    "infinex-phone-cards-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-PHONE-CARDS.mp4"
+    },
+    "infinex-defocus-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/DETAIL-INF-DEFOCUS.mp4"
+    },
+    "infinex-copper-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/LIGHT-INF-COPPER.mp4"
+    },
+    "infinex-v05-aep": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v05/Infinex-Scenes03-05-v05.aep"
+    },
+    "infinex-v05-blend": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v05/blender/Infinex-Scenes03-05-v05.blend"
+    },
+    "infinex-phone-curves": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v05/fit_phone_curves.py"
+    },
+    "infinex-native-build": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v05/blender/build_extension.py"
+    },
+    "infinex-v05-ae-script": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v05/revise_existing.jsx"
+    },
+    "infinex-light-rig": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/blender/build_scene.py"
+    },
+    "infinex-v05-review": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v05/REVIEW.md"
+    },
+    "infinex-phone-study": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/timing-study/phone-chain/PHONE-CHAIN-STUDY.md"
+    },
+    "infinex-blur-failure": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v06/review/blur-boundary-evidence.jpg"
+    },
+    "infinex-v06-status": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v06/README.md"
+    },
+    "infinex-v05-comparison": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v05/renders/Infinex-Scenes03-05-v05-Focused-Comparison.mp4"
+    },
+    "infinex-opening-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-OPENING.mp4"
+    },
+    "infinex-question-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-QUESTION.mp4"
+    },
+    "infinex-technical-study": {
+      "root": "study-workspace",
+      "path": "research/patterns/infinex-technical-mechanisms.md"
+    },
+    "infinex-complexity-study": {
+      "root": "study-workspace",
+      "path": "research/patterns/infinex-shot-complexity.md"
+    },
+    "infinex-opening-timing": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/timing-study/OPENING-TIMING.md"
+    },
+    "infinex-opening-aep": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/opening-v02/Opening-v02-glow-polish.aep"
+    },
+    "infinex-opening-build": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/opening-v02/build_opening.jsx"
+    },
+    "infinex-opening-scale": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/opening-v02/add_scale_settle_existing.jsx"
+    },
+    "infinex-opening-exit": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/opening-v02/add_exit_handoff_existing.jsx"
+    },
+    "infinex-opening-rays": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/opening-v02/polish_type_accents_existing.jsx"
+    },
+    "infinex-opening-glow": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/opening-v02/tune_warm_glow_existing.jsx"
+    },
+    "infinex-opening-light": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/opening-v02/animate_lighting_existing.jsx"
+    },
+    "infinex-opening-review": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/opening-v02/VALIDATION-glow-polish.json"
+    },
+    "infinex-opening-comparison": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/opening-v02/renders/Infinex-Opening-v02-glow-polish-Comparison.mp4"
+    },
+    "infinex-opening-mismatch": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/review/easier-camera-audit/AUDIT.md"
+    },
+    "infinex-opening-failure": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/review/easier-camera-audit/focus-comparison.jpg"
+    },
+    "infinex-question-aep": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/Infinex-Sequence02-v03-soft-word-arrivals.aep"
+    },
+    "infinex-question-blend": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/blender/Infinex-Sequence-02-v03.blend"
+    },
+    "infinex-question-timing": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/timing-study/second-shot/SECOND-SHOT-TIMING.md"
+    },
+    "infinex-question-build": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/build_type_existing.jsx"
+    },
+    "infinex-question-arrivals": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/soften_word_arrivals_existing.jsx"
+    },
+    "infinex-question-spacing": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/restore_spacing_existing.jsx"
+    },
+    "infinex-question-emphasis": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/refine_complicated_existing.jsx"
+    },
+    "infinex-question-pullback": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/lengthen_pullback_existing.jsx"
+    },
+    "infinex-question-exit": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/refine_exit_zoom_existing.jsx"
+    },
+    "infinex-question-priority": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/fix_type_priority_existing.jsx"
+    },
+    "infinex-question-review": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/VALIDATION-soft-word-arrivals.json"
+    },
+    "infinex-question-comparison": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/renders/Infinex-Sequence02-v03-soft-word-arrivals-Comparison.mp4"
+    },
+    "infinex-v04-ae-build": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v04/build_existing.jsx"
+    },
+    "infinex-v04-ae-polish": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v04/polish_existing.jsx"
+    },
+    "infinex-v05-ae-polish": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v05/polish_existing.jsx"
+    },
+    "infinex-v05-curve-data": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v05/blender/phone-curves.json"
+    },
+    "infinex-v04-cards": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v04/blender/build_extension.py"
+    },
+    "shot-inf-opening-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-OPENING-poster.jpg"
+    },
+    "shot-inf-question-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-QUESTION-poster.jpg"
+    },
+    "shot-inf-phone-cards-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-PHONE-CARDS-poster.jpg"
+    },
+    "detail-inf-defocus-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/DETAIL-INF-DEFOCUS-poster.jpg"
+    },
+    "light-inf-copper-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/LIGHT-INF-COPPER-poster.jpg"
+    },
+    "shot-inf-wallets-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-WALLETS.mp4"
+    },
+    "shot-inf-wallets-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-WALLETS-poster.jpg"
+    },
+    "shot-inf-chain-cards-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-CHAIN-CARDS.mp4"
+    },
+    "shot-inf-chain-cards-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-CHAIN-CARDS-poster.jpg"
+    },
+    "shot-inf-confirmation-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-CONFIRMATION.mp4"
+    },
+    "shot-inf-confirmation-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-CONFIRMATION-poster.jpg"
+    },
+    "shot-inf-coin-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-COIN.mp4"
+    },
+    "shot-inf-coin-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-COIN-poster.jpg"
+    },
+    "shot-inf-fingerprint-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-FINGERPRINT.mp4"
+    },
+    "shot-inf-fingerprint-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-FINGERPRINT-poster.jpg"
+    },
+    "shot-inf-contrast-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-CONTRAST.mp4"
+    },
+    "shot-inf-contrast-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-CONTRAST-poster.jpg"
+    },
+    "shot-inf-ui-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-UI.mp4"
+    },
+    "shot-inf-ui-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-UI-poster.jpg"
+    },
+    "shot-inf-orbit-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-ORBIT.mp4"
+    },
+    "shot-inf-orbit-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-ORBIT-poster.jpg"
+    },
+    "shot-inf-closing-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-CLOSING.mp4"
+    },
+    "shot-inf-closing-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-CLOSING-poster.jpg"
+    },
+    "shot-inf-endcard-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-ENDCARD.mp4"
+    },
+    "shot-inf-endcard-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-ENDCARD-poster.jpg"
+    },
+    "study-cero-reference": {
+      "root": "study-workspace",
+      "path": "research/references/cero-2087953404190466515/reference.mp4"
+    },
+    "shot-cero-toss-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-TOSS.mp4"
+    },
+    "shot-cero-toss-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-TOSS-poster.jpg"
+    },
+    "shot-cero-payments-a-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-PAYMENTS-A.mp4"
+    },
+    "shot-cero-payments-a-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-PAYMENTS-A-poster.jpg"
+    },
+    "shot-cero-pack-copy-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-PACK-COPY.mp4"
+    },
+    "shot-cero-pack-copy-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-PACK-COPY-poster.jpg"
+    },
+    "shot-cero-pack-prizes-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-PACK-PRIZES.mp4"
+    },
+    "shot-cero-pack-prizes-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-PACK-PRIZES-poster.jpg"
+    },
+    "shot-cero-jackpot-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-JACKPOT.mp4"
+    },
+    "shot-cero-jackpot-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-JACKPOT-poster.jpg"
+    },
+    "shot-cero-payments-b-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-PAYMENTS-B.mp4"
+    },
+    "shot-cero-payments-b-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-PAYMENTS-B-poster.jpg"
+    },
+    "shot-cero-salary-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-SALARY.mp4"
+    },
+    "shot-cero-salary-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-SALARY-poster.jpg"
+    },
+    "shot-cero-payments-c-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-PAYMENTS-C.mp4"
+    },
+    "shot-cero-payments-c-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-PAYMENTS-C-poster.jpg"
+    },
+    "shot-cero-score-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-SCORE.mp4"
+    },
+    "shot-cero-score-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-SCORE-poster.jpg"
+    },
+    "shot-cero-credit-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-CREDIT.mp4"
+    },
+    "shot-cero-credit-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-CREDIT-poster.jpg"
+    },
+    "shot-cero-mosaic-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-MOSAIC.mp4"
+    },
+    "shot-cero-mosaic-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-MOSAIC-poster.jpg"
+    },
+    "shot-cero-end-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-END.mp4"
+    },
+    "shot-cero-end-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CERO-END-poster.jpg"
+    },
+    "study-jaw-reference": {
+      "root": "study-workspace",
+      "path": "research/references/vedu-2099511079412113752/reference.mp4"
+    },
+    "shot-jaw-open-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-OPEN.mp4"
+    },
+    "shot-jaw-open-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-OPEN-poster.jpg"
+    },
+    "shot-jaw-track-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-TRACK.mp4"
+    },
+    "shot-jaw-track-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-TRACK-poster.jpg"
+    },
+    "shot-jaw-wallet-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-WALLET.mp4"
+    },
+    "shot-jaw-wallet-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-WALLET-poster.jpg"
+    },
+    "shot-jaw-dashboard-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-DASHBOARD.mp4"
+    },
+    "shot-jaw-dashboard-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-DASHBOARD-poster.jpg"
+    },
+    "shot-jaw-payment-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-PAYMENT.mp4"
+    },
+    "shot-jaw-payment-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-PAYMENT-poster.jpg"
+    },
+    "shot-jaw-globe-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-GLOBE.mp4"
+    },
+    "shot-jaw-globe-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-GLOBE-poster.jpg"
+    },
+    "shot-jaw-objections-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-OBJECTIONS.mp4"
+    },
+    "shot-jaw-objections-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-OBJECTIONS-poster.jpg"
+    },
+    "shot-jaw-purchases-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-PURCHASES.mp4"
+    },
+    "shot-jaw-purchases-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-PURCHASES-poster.jpg"
+    },
+    "shot-jaw-account-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-ACCOUNT.mp4"
+    },
+    "shot-jaw-account-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-ACCOUNT-poster.jpg"
+    },
+    "shot-jaw-send-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-SEND.mp4"
+    },
+    "shot-jaw-send-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-SEND-poster.jpg"
+    },
+    "shot-jaw-notification-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-NOTIFICATION.mp4"
+    },
+    "shot-jaw-notification-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-NOTIFICATION-poster.jpg"
+    },
+    "shot-jaw-end-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-END.mp4"
+    },
+    "shot-jaw-end-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-JAW-END-poster.jpg"
+    },
+    "study-ordinary-folk-reference": {
+      "root": "study-workspace",
+      "path": "research/references/ordinary-folk-radial-delay/source-study.mp4"
+    },
+    "ordinary-folk-aep": {
+      "root": "study-workspace",
+      "path": "research/references/ordinary-folk-radial-delay/Play_RadialDelay/Play_RadialDelay.aep"
+    },
+    "ordinary-folk-inspection": {
+      "root": "study-workspace",
+      "path": "research/references/ordinary-folk-radial-delay/project-inspection.json"
+    },
+    "ordinary-folk-terms": {
+      "root": "study-workspace",
+      "path": "research/references/ordinary-folk-radial-delay/terms.txt"
+    },
+    "ordinary-folk-pattern": {
+      "root": "study-workspace",
+      "path": "research/patterns/ordinary-folk-radial-delay.md"
+    },
+    "ordinary-folk-independent": {
+      "root": "study-workspace",
+      "path": "research/patterns/spatial-stagger.mjs"
+    },
+    "rig-of-radial-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/RIG-OF-RADIAL.mp4"
+    },
+    "rig-of-radial-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/RIG-OF-RADIAL-poster.jpg"
+    },
+    "study-blender-camera-reference": {
+      "root": "study-workspace",
+      "path": "research/references/bhumimov-2097367794312675749/reference.mp4"
+    },
+    "camera-study-blend": {
+      "root": "study-workspace",
+      "path": "animation-lab/camera-sweep-2026-09-09/Camera-Sweep-B.blend"
+    },
+    "camera-study-build": {
+      "root": "study-workspace",
+      "path": "animation-lab/camera-sweep-2026-09-09/build_study.py"
+    },
+    "camera-study-values": {
+      "root": "study-workspace",
+      "path": "animation-lab/camera-sweep-2026-09-09/camera-samples.csv"
+    },
+    "camera-study-comparison": {
+      "root": "study-workspace",
+      "path": "animation-lab/camera-sweep-2026-09-09/Reference-vs-B-normal.mp4"
+    },
+    "camera-study-ab": {
+      "root": "study-workspace",
+      "path": "animation-lab/camera-sweep-2026-09-09/Camera-Sweep-AB-normal.mp4"
+    },
+    "camera-study-review": {
+      "root": "study-workspace",
+      "path": "animation-lab/camera-sweep-2026-09-09/README.md"
+    },
+    "camera-study-frames": {
+      "root": "study-workspace",
+      "path": "animation-lab/camera-sweep-2026-09-09/frame-review.jpg"
+    },
+    "camera-study-verification": {
+      "root": "study-workspace",
+      "path": "animation-lab/camera-sweep-2026-09-09/build-verification.json"
+    },
+    "camera-v02-blend": {
+      "root": "world-cup-workspace",
+      "path": "World-Cup-Motion-v02.blend"
+    },
+    "camera-v02-build": {
+      "root": "world-cup-workspace",
+      "path": "revise_motion_v02.py"
+    },
+    "camera-v02-review": {
+      "root": "world-cup-workspace",
+      "path": "MOTION-v02.md"
+    },
+    "camera-v02-video": {
+      "root": "world-cup-workspace",
+      "path": "World-Cup-Motion-v02.mp4"
+    },
+    "shot-camera-assembly-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CAMERA-ASSEMBLY.mp4"
+    },
+    "shot-camera-assembly-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CAMERA-ASSEMBLY-poster.jpg"
+    },
+    "shot-camera-sweep-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CAMERA-SWEEP.mp4"
+    },
+    "shot-camera-sweep-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CAMERA-SWEEP-poster.jpg"
+    },
+    "shot-camera-send-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CAMERA-SEND.mp4"
+    },
+    "shot-camera-send-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CAMERA-SEND-poster.jpg"
+    },
+    "shot-camera-result-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CAMERA-RESULT.mp4"
+    },
+    "shot-camera-result-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-CAMERA-RESULT-poster.jpg"
+    },
+    "study-cero-overview-1": {
+      "root": "study-workspace",
+      "path": "research/references/cero-2087953404190466515/full-study/overview-1.jpg"
+    },
+    "study-cero-overview-2": {
+      "root": "study-workspace",
+      "path": "research/references/cero-2087953404190466515/full-study/overview-2.jpg"
+    },
+    "study-cero-overview-3": {
+      "root": "study-workspace",
+      "path": "research/references/cero-2087953404190466515/full-study/overview-3.jpg"
+    },
+    "study-cero-overview-4": {
+      "root": "study-workspace",
+      "path": "research/references/cero-2087953404190466515/full-study/overview-4.jpg"
+    },
+    "study-jaw-overview-1": {
+      "root": "study-workspace",
+      "path": "research/references/vedu-2099511079412113752/full-study/overview-1.jpg"
+    },
+    "study-jaw-overview-2": {
+      "root": "study-workspace",
+      "path": "research/references/vedu-2099511079412113752/full-study/overview-2.jpg"
+    },
+    "study-jaw-overview-3": {
+      "root": "study-workspace",
+      "path": "research/references/vedu-2099511079412113752/full-study/overview-3.jpg"
+    },
+    "study-jaw-overview-4": {
+      "root": "study-workspace",
+      "path": "research/references/vedu-2099511079412113752/full-study/overview-4.jpg"
+    },
+    "jaw-objections-dense": {
+      "root": "study-workspace",
+      "path": "research/references/vedu-2099511079412113752/full-study/objections-dense.jpg"
+    },
+    "cero-coin-dense": {
+      "root": "study-workspace",
+      "path": "research/references/cero-2087953404190466515/phone-reveal.jpg"
+    },
+    "cero-pack-dense": {
+      "root": "study-workspace",
+      "path": "research/references/cero-2087953404190466515/pack-to-prizes.jpg"
+    },
+    "cero-score-dense": {
+      "root": "study-workspace",
+      "path": "research/references/cero-2087953404190466515/score-to-phone.jpg"
+    },
+    "cero-credit-dense": {
+      "root": "study-workspace",
+      "path": "research/references/cero-2087953404190466515/credit-reveal.jpg"
+    },
+    "infinex-full-phone-chain-handoff": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/timing-study/full-film/phone-chain-handoff.jpg"
+    },
+    "infinex-full-chain-confirmation-coin": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/timing-study/full-film/chain-confirmation-coin.jpg"
+    },
+    "infinex-full-coin-fingerprint": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/timing-study/full-film/coin-fingerprint.jpg"
+    },
+    "infinex-full-fingerprint-contrast-ui": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/timing-study/full-film/fingerprint-contrast-ui.jpg"
+    },
+    "infinex-full-ui-orbit": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/timing-study/full-film/ui-orbit.jpg"
+    },
+    "infinex-full-orbit-internal-cadence": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/timing-study/full-film/orbit-internal-cadence.jpg"
+    },
+    "infinex-full-orbit-closing": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/timing-study/full-film/orbit-closing.jpg"
+    },
+    "infinex-full-closing-logo": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/timing-study/full-film/closing-logo.jpg"
+    },
+    "infinex-full-ending-to-black": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/timing-study/full-film/ending-to-black.jpg"
+    },
+    "infinex-full-pacing": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/timing-study/full-film/FULL-FILM-PACING.md"
+    },
+    "jaw-source-pts": {
+      "root": "study-workspace",
+      "path": "research/references/vedu-2099511079412113752/full-study/source-frame-times.json"
+    },
+    "cero-source-pts": {
+      "root": "study-workspace",
+      "path": "research/references/cero-2087953404190466515/full-study/source-frame-times.json"
+    }
+  }
+}

@@ -18,5 +18,9 @@ jobs:
           python-version: "3.13"
       - name: Validate sources, templates and gallery
         run: python skills/motion-design/scripts/build_gallery.py
+      - name: Validate shot studies and retrieval index
+        run: python skills/motion-design/scripts/build_library.py
+      - name: Test catalog behavior and local media delivery
+        run: python -m unittest discover -s skills/motion-design/scripts/tests -v
       - name: Check generated files are current
-        run: git diff --exit-code -- skills/motion-design/assets/gallery.html skills/motion-design/references/preset-index.md
+        run: git diff --exit-code -- skills/motion-design/assets/gallery.html skills/motion-design/references/preset-index.md skills/motion-design/assets/library-index.js skills/motion-design/library/index.md
