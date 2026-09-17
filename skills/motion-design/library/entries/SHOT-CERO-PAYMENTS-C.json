@@ -1,0 +1,210 @@
+{
+  "id": "SHOT-CERO-PAYMENTS-C",
+  "clip": {
+    "asset_id": "shot-cero-payments-c-preview",
+    "source_frames": [
+      1155,
+      1224
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "Two short point-of-sale shots keep the second reward mechanic connected to spending.",
+    "beats": [
+      "Footage 1: grocery bags and terminal",
+      "Footage 2: cinema popcorn payment"
+    ],
+    "use_when": [
+      "payment montage serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The montage yields to a clean icon-and-label score explanation.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "19.250–20.400 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "Two footage shots; foreground props, phone and counter action are separate visible groups."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Footage1",
+      "events": [
+        {
+          "label": "Footage 1: grocery bags and terminal",
+          "frames": [
+            1155,
+            1191
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Footage2",
+      "events": [
+        {
+          "label": "Footage 2: cinema popcorn payment",
+          "frames": [
+            1191,
+            1224
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "Two short point-of-sale shots keep the second reward mechanic connected to spending.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "19.250–19.850 s",
+                "Footage 1: grocery bags and terminal"
+              ],
+              [
+                "19.850–20.400 s",
+                "Footage 2: cinema popcorn payment"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "Two footage shots; foreground props, phone and counter action are separate visible groups.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "EDIT > grocery-bag plate / cinema plate\nPHONE_SCREEN_INSERT > perspective / hand matte\nCOLOR",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Maintain first-person phone presentation, then cut to a different context rather than animating every background change.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "Natural shop lighting and warmer cinema practicals; preserve local exposure and contrast.",
+          "Retain natural plate motion softness and screen readability at the contact beat; do not apply a graphic defocus transition over the entire payment action.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Phone insert",
+                "Track per shot; do not reuse a transform from the previous environment."
+              ],
+              [
+                "Foreground",
+                "Keep bags/popcorn as recognisable context props."
+              ],
+              [
+                "Timing",
+                "Prioritize the readable payment gesture in the brief windows."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The montage yields to a clean icon-and-label score explanation.",
+          "Calling the montage one continuous shot would misdescribe the source. Exact source cut frames need a dedicated every-frame boundary check.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 60,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 69,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s samples, plus existing dense12samples/second sheets for coin/phone, pack/prizes, score/phone and credit panel. Other event boundaries are approximate to0.5s. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-cero-reference",
+    "study-cero-overview-2",
+    "cero-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-CERO-SALARY",
+    "SHOT-CERO-SCORE"
+  ]
+}

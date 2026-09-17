@@ -1,0 +1,271 @@
+{
+  "id": "SHOT-JAW-GLOBE",
+  "clip": {
+    "asset_id": "shot-jaw-globe-preview",
+    "source_frames": [
+      489,
+      586
+    ],
+    "fps": 29.97002997002997,
+    "clock": "source-frames",
+    "note": "Source rate is nominal30000/1001fps; original presentation timestamps are linked. Most observed event windows come from0.5s samples and are approximate, not recovered keys. Preview uses selected decoded source frames and starts at zero."
+  },
+  "inspiration": {
+    "purpose": "A globe and floating notification turn a successful payment into a geographic explanation.",
+    "beats": [
+      "Globe: rises and resolves from soft entrance",
+      "Success:    check and 0.00098 BTC appear",
+      "Notification: floats over rotating globe",
+      "Route: globe continues turning; markers update",
+      "Exit: return to purple field"
+    ],
+    "use_when": [
+      "globe payment serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The globe explanation clears before short objection-removal copy returns to the colored stage.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "16.316–19.553 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "6 jobs:    globe entrance, planet rotation, markers, notification movement, success state, exit."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Globe",
+      "events": [
+        {
+          "label": "Globe: rises and resolves from soft entrance",
+          "frames": [
+            489,
+            506
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Success",
+      "events": [
+        {
+          "label": "Success:    check and 0.00098 BTC appear",
+          "frames": [
+            500,
+            518
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Notification",
+      "events": [
+        {
+          "label": "Notification: floats over rotating globe",
+          "frames": [
+            514,
+            551
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Route",
+      "events": [
+        {
+          "label": "Route: globe continues turning; markers update",
+          "frames": [
+            545,
+            575
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Exit",
+      "events": [
+        {
+          "label": "Exit: return to purple field",
+          "frames": [
+            575,
+            586
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "A globe and floating notification turn a successful payment into a geographic explanation.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "16.300–16.900 s",
+                "Globe: rises and resolves from soft entrance"
+              ],
+              [
+                "16.700–17.300 s",
+                "Success:    check and 0.00098 BTC appear"
+              ],
+              [
+                "17.150–18.400 s",
+                "Notification: floats over rotating globe"
+              ],
+              [
+                "18.200–19.200 s",
+                "Route: globe continues turning; markers update"
+              ],
+              [
+                "19.200–19.550 s",
+                "Exit: return to purple field"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "6 jobs:    globe entrance, planet rotation, markers, notification movement, success state, exit.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "GLOBE_ROOT > textured sphere / atmosphere edge\nMARKERS > locations / currency symbols\nNOTIFICATION > logo / amount / glass panel\nSUCCESS_UI > check / amount / recipient\nCAMERA / focus",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Rotate the globe under a stable layout while the notification has its own shallow arc. Keep the success readout separate so it does not orbit away with the planet. Use plausible Earth texture orientation without claiming a physically measured route.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "High-key white studio treatment. Use a near-white background, large soft area lights, restrained contact shadow and a narrow edge reflection for dark product rims. Keep lime or accent emissions from washing out white UI text.",
+          "Globe entrance softness resolves as geographic texture becomes useful. The notification uses translucent/glass-like shading; preserve text contrast with a controlled backing rather than indiscriminate transparency.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Earth",
+                "UV sphere with appropriate map texture and broad light; use a separate atmosphere rim if needed."
+              ],
+              [
+                "Markers",
+                "Parent geographic anchors to the sphere, but let screen labels billboard separately."
+              ],
+              [
+                "Notification",
+                "Rounded plane/mesh with controlled transmission and readable foreground text."
+              ],
+              [
+                "Success",
+                "Use a stable right-hand readout and separate check-circle animation."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The globe explanation clears before short objection-removal copy returns to the colored stage.",
+          "A notification parented rigidly to the globe will rotate its text out of view. Excessively strong depth of field will obscure the geographic cue.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 29.97002997002997,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 97,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s frame samples; No switching / No waiting additionally inspected every3source frames. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-jaw-reference",
+    "study-jaw-overview-2",
+    "jaw-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-JAW-PAYMENT",
+    "SHOT-JAW-OBJECTIONS"
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "id": "SHOT-INF-COIN",
+  "clip": {
+    "asset_id": "shot-inf-coin-preview",
+    "source_frames": [
+      483,
+      612
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "An oversized turning brand coin becomes a small badge between the words of the answer.",
+    "beats": [
+      "Coin: foreground takeover",
+      "Answer: Changes / that and URL form",
+      "Scale: coin retreats to a badge",
+      "Hold: coin rotation and light continue",
+      "Join: thin fingerprint replaces coin"
+    ],
+    "use_when": [
+      "hero to badge serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "Coin and fingerprint share a central thin orientation across the cut-like replacement.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "8.050–10.200 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "5 jobs:    coin turn, size retreat, split answer copy, URL, matched replacement."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Coin",
+      "events": [
+        {
+          "label": "Coin: foreground takeover",
+          "frames": [
+            483,
+            504
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Answer",
+      "events": [
+        {
+          "label": "Answer: Changes / that and URL form",
+          "frames": [
+            501,
+            528
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Scale",
+      "events": [
+        {
+          "label": "Scale: coin retreats to a badge",
+          "frames": [
+            492,
+            540
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Hold",
+      "events": [
+        {
+          "label": "Hold: coin rotation and light continue",
+          "frames": [
+            540,
+            609
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Join",
+      "events": [
+        {
+          "label": "Join: thin fingerprint replaces coin",
+          "frames": [
+            609,
+            612
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "An oversized turning brand coin becomes a small badge between the words of the answer.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "8.050–8.400 s",
+                "Coin: foreground takeover"
+              ],
+              [
+                "8.350–8.800 s",
+                "Answer: Changes / that and URL form"
+              ],
+              [
+                "8.200–9.000 s",
+                "Scale: coin retreats to a badge"
+              ],
+              [
+                "9.000–10.150 s",
+                "Hold: coin rotation and light continue"
+              ],
+              [
+                "10.150–10.200 s",
+                "Join: thin fingerprint replaces coin"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "5 jobs:    coin turn, size retreat, split answer copy, URL, matched replacement.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "COIN_ROOT > cylinder / face marks / bevel\nANSWER > left word / right word / URL\nCAMERA / focus target\nFINGERPRINT_NEXT > matched screen anchor",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Reconstruct the quick large-to-small motion with a long controlled settle; avoid a constant-rate zoom. The background cannot alone prove whether the creator moved a camera or scaled the coin. Choose one cause for hero size and prevent doubled scale compensation.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "Warm abstract studio field: a defocused copper/orange environment with broad soft reflections on dark objects. Proposed rig: large rectangular key, warm rim and low fill, with a separate background gradient so copy contrast can be controlled without changing the phone material. This is a descriptive treatment, not an identified HDRI.",
+          "Use exposure blur for the rotating coin and depth softness only when it supports the retreat. The thin coin/fingerprint replacement at 10.15 s is a verified delivered-frame change, not evidence of a mesh morph.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Coin pivot",
+                "Center the rotating cylinder and parent face marks; use actual thickness for edge silhouette."
+              ],
+              [
+                "Answer spacing",
+                "Reserve a badge slot between words; keep URL independent and centered."
+              ],
+              [
+                "Landing",
+                "Match coin projected diameter and center before adding secondary reflection motion."
+              ],
+              [
+                "Matched join",
+                "Set next fingerprint edge-on at the same visual anchor; cut at source frame 609."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "Coin and fingerprint share a central thin orientation across the cut-like replacement.",
+          "A dissolve that shows both symbols simultaneously changes this join. Avoid spinning the badge so far that the mark never becomes readable.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 60,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 129,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Full-film sampled overview; dense evidence where linked. This is frame-based analysis, not continuous playback or sound review.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "infinex-reference",
+    "infinex-full-coin-fingerprint",
+    "infinex-full-pacing"
+  ],
+  "related_ids": [
+    "SHOT-INF-CONFIRMATION",
+    "SHOT-INF-FINGERPRINT"
+  ]
+}

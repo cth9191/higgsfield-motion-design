@@ -1,0 +1,251 @@
+{
+  "id": "SHOT-JAW-END",
+  "clip": {
+    "asset_id": "shot-jaw-end-preview",
+    "source_frames": [
+      926,
+      1013
+    ],
+    "fps": 29.97002997002997,
+    "clock": "source-frames",
+    "note": "Source rate is nominal30000/1001fps; original presentation timestamps are linked. Most observed event windows come from0.5s samples and are approximate, not recovered keys. Preview uses selected decoded source frames and starts at zero."
+  },
+  "inspiration": {
+    "purpose": "White mark and four-point stars on charcoal close the colorful film with a restrained final line.",
+    "beats": [
+      "Brand: large white mark settles",
+      "Accents:    four-point stars populate",
+      "Tagline: Buy anything. With anything. resolves",
+      "Hold: completed lockup"
+    ],
+    "use_when": [
+      "monochrome ending serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The completed lockup is the film’s final state.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "30.898–33.800 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "4 jobs:    mark arrival, star accents, tagline formation, final hold."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Brand",
+      "events": [
+        {
+          "label": "Brand: large white mark settles",
+          "frames": [
+            926,
+            944
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Accents",
+      "events": [
+        {
+          "label": "Accents:    four-point stars populate",
+          "frames": [
+            935,
+            961
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Tagline",
+      "events": [
+        {
+          "label": "Tagline: Buy anything. With anything. resolves",
+          "frames": [
+            953,
+            1000
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Hold",
+      "events": [
+        {
+          "label": "Hold: completed lockup",
+          "frames": [
+            1000,
+            1013
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "White mark and four-point stars on charcoal close the colorful film with a restrained final line.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "30.900–31.500 s",
+                "Brand: large white mark settles"
+              ],
+              [
+                "31.200–32.050 s",
+                "Accents:    four-point stars populate"
+              ],
+              [
+                "31.800–33.350 s",
+                "Tagline: Buy anything. With anything. resolves"
+              ],
+              [
+                "33.350–33.800 s",
+                "Hold: completed lockup"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "4 jobs:    mark arrival, star accents, tagline formation, final hold.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "DARK_FIELD\nBRAND_MARK > vector curves\nSTARS > separate four-point shapes\nTAGLINE > two phrase groups",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "A stable frontal graphic camera is sufficient. Keep accents subordinate to the logo and allocate the final short interval to completed copy.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "Flat white-on-charcoal graphic treatment. No dimensional lighting is required for the end card; use clean contrast and accurate vector edges.",
+          "Any transient color/softness on arriving tagline characters should resolve before the final lockup. Keep the final mark and stars crisp.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Logo",
+                "Use accurate vector geometry rather than font approximations."
+              ],
+              [
+                "Stars",
+                "Independent scale/position keys; maintain a small set of size relationships."
+              ],
+              [
+                "Tagline",
+                "Reveal two phrase units with fixed baseline and spacing."
+              ],
+              [
+                "Tail",
+                "Retain all 1013 decoded frames at 30000/1001 nominal rate; original container duration 33.801 s."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The completed lockup is the film’s final state.",
+          "Do not leave ongoing jitter or random motion on the final brand. Nominal-rate time may differ from stored presentation timestamps by fractions of a frame; the saved PTS table is the precise source clock.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 29.97002997002997,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 87,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s frame samples; No switching / No waiting additionally inspected every3source frames. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-jaw-reference",
+    "study-jaw-overview-4",
+    "jaw-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-JAW-NOTIFICATION"
+  ]
+}

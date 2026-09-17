@@ -18,6 +18,10 @@ The separate shot library begins with an [Infinex reference attributed to yb_vis
 
 The skill entrypoint, adaptation guides, preset navigation, gallery tooling, and workflow instructions were assembled to make these examples usable as a shared Codex and Claude Code skill. Adaptations are labeled separately from their originals.
 
+The expanded source library also documents [Cero's launch film](https://x.com/joinCero/status/2087953404190466515), [the Jaw film shared by vedu_boi](https://x.com/vedu_boi/status/2099511079412113752), [JB / Bhumimov's UI reference](https://x.com/Bhumimov/status/2097367794312675749), and [Ordinary Folk's Radial Delay project on Play](https://www.ordinaryfolk.co/play). A sharing account is not treated as verified production credit. Cero, Jaw and Infinex original scene files and software remain unverified. The Bhumimov Blender work is our local reconstruction, not the creator's original project.
+
+Ordinary Folk's downloaded project includes personal educational/noncommercial use terms. Its AEP, source artwork, copied expressions and personal viewing render remain outside the public package. The library describes factual source controls and a separately authored scheduling approach; it does not distribute the original project as a commercial template. All newly linked source clips, extracted frame sheets, posters and local native files remain in private asset roots.
+
 Attribution does not establish a license for third-party material. No repository-wide license has been applied to the combined package.
 
 ## README preview stills

@@ -1,0 +1,272 @@
+{
+  "id": "SHOT-CERO-PACK-PRIZES",
+  "clip": {
+    "asset_id": "shot-cero-pack-prizes-preview",
+    "source_frames": [
+      492,
+      687
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "The reward pack escapes its screen, becomes a dimensional hero, and opens a field of prizes before yielding to a ticket.",
+    "beats": [
+      "Phone: rises with pack in screen",
+      "Separation: phone tips away; pack remains",
+      "Pack: rotation reveals thin profile",
+      "Prizes:    fan around package",
+      "Ticket: crosses foreground into jackpot"
+    ],
+    "use_when": [
+      "object detachment serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The foreground ticket transfers its amount into the dimensional jackpot claim.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "8.200–11.450 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "6 jobs:    phone rise, phone tilt, pack release/spin, prize spread, rays, ticket takeover. At least five visible prize classes; exact particle count unmeasured."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Phone",
+      "events": [
+        {
+          "label": "Phone: rises with pack in screen",
+          "frames": [
+            492,
+            534
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Separation",
+      "events": [
+        {
+          "label": "Separation: phone tips away; pack remains",
+          "frames": [
+            531,
+            570
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Pack",
+      "events": [
+        {
+          "label": "Pack: rotation reveals thin profile",
+          "frames": [
+            570,
+            603
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Prizes",
+      "events": [
+        {
+          "label": "Prizes:    fan around package",
+          "frames": [
+            594,
+            642
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Ticket",
+      "events": [
+        {
+          "label": "Ticket: crosses foreground into jackpot",
+          "frames": [
+            642,
+            687
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "The reward pack escapes its screen, becomes a dimensional hero, and opens a field of prizes before yielding to a ticket.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "8.200–8.900 s",
+                "Phone: rises with pack in screen"
+              ],
+              [
+                "8.850–9.500 s",
+                "Separation: phone tips away; pack remains"
+              ],
+              [
+                "9.500–10.050 s",
+                "Pack: rotation reveals thin profile"
+              ],
+              [
+                "9.900–10.700 s",
+                "Prizes:    fan around package"
+              ],
+              [
+                "10.700–11.450 s",
+                "Ticket: crosses foreground into jackpot"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "6 jobs:    phone rise, phone tilt, pack release/spin, prize spread, rays, ticket takeover. At least five visible prize classes; exact particle count unmeasured.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "PHONE_ROOT > shell / screen / PACK_ANCHOR\nPACK_ROOT (reparent using world transform) > wrapper / logo\nPRIZES > car / ball / watch / electronics / banknotes\nRAYS > radial wedges\nTICKET_ROOT",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Preserve the pack’s world-space pose when it separates from the phone. Let phone pitch, pack rotation and prize spread overlap with different settles. Keep the central package recognizable through the thin orientation.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "High-key white studio treatment. Use a near-white background, large soft area lights, restrained contact shadow and a narrow edge reflection for dark product rims. Keep lime or accent emissions from washing out white UI text.",
+          "The pack’s fast spin can receive exposure blur while the surrounding prizes settle at different speeds. Layer the radial rays behind the objects. Keep ticket edges crisp enough to communicate a physical card.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Detachment",
+                "Bake or constrain the package to the screen first; release without a world-position jump."
+              ],
+              [
+                "Pack geometry",
+                "Provide front/back and crimped thickness, not one double-sided flat plane with impossible edges."
+              ],
+              [
+                "Prize spread",
+                "Give each class its own radial slot, rotation and delay; maintain depth ordering."
+              ],
+              [
+                "Ticket",
+                "Animate a new foreground plane through the prize field, with amount as editable text."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The foreground ticket transfers its amount into the dimensional jackpot claim.",
+          "If the phone fades before the pack has separated, the causal link is lost. Identical spring settings for car, paper money and pack remove differences in weight.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 60,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 195,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s samples, plus existing dense12samples/second sheets for coin/phone, pack/prizes, score/phone and credit panel. Other event boundaries are approximate to0.5s. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-cero-reference",
+    "study-cero-overview-1",
+    "cero-pack-dense",
+    "cero-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-CERO-JACKPOT",
+    "SHOT-CERO-PACK-COPY"
+  ]
+}

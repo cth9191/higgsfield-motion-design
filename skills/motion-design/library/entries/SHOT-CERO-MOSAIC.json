@@ -1,0 +1,248 @@
+{
+  "id": "SHOT-CERO-MOSAIC",
+  "clip": {
+    "asset_id": "shot-cero-mosaic-preview",
+    "source_frames": [
+      1611,
+      1830
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "A last payment shot becomes a circular tile, then a field of repeated purchase moments.",
+    "beats": [
+      "Footage: cafe payment close-up",
+      "Mask: four circular purchase windows",
+      "Field: circles multiply and fill frame",
+      "Clear: mosaic yields to brand coin"
+    ],
+    "use_when": [
+      "footage mosaic serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The many purchase moments resolve to the familiar lime brand coin.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "26.850–30.500 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "4 jobs:    payment action, circular masking, tile multiplication, field reframe/exit. Four initial windows; later count varies with cropping."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Footage",
+      "events": [
+        {
+          "label": "Footage: cafe payment close-up",
+          "frames": [
+            1611,
+            1668
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Mask",
+      "events": [
+        {
+          "label": "Mask: four circular purchase windows",
+          "frames": [
+            1668,
+            1707
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Field",
+      "events": [
+        {
+          "label": "Field: circles multiply and fill frame",
+          "frames": [
+            1707,
+            1809
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Clear",
+      "events": [
+        {
+          "label": "Clear: mosaic yields to brand coin",
+          "frames": [
+            1809,
+            1830
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "A last payment shot becomes a circular tile, then a field of repeated purchase moments.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "26.850–27.800 s",
+                "Footage: cafe payment close-up"
+              ],
+              [
+                "27.800–28.450 s",
+                "Mask: four circular purchase windows"
+              ],
+              [
+                "28.450–30.150 s",
+                "Field: circles multiply and fill frame"
+              ],
+              [
+                "30.150–30.500 s",
+                "Clear: mosaic yields to brand coin"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "4 jobs:    payment action, circular masking, tile multiplication, field reframe/exit. Four initial windows; later count varies with cropping.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "FOOTAGE_LIBRARY > earlier payment excerpts\nTILE_ROOT > circular masks / independent plate crops\nFIELD_ROOT > grid positions / scale / pan\nCOIN_NEXT",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Separate the movement inside each footage crop from the tile’s movement through the field. Use the layout root for the large reframe and per-tile transforms for staggered arrivals.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "White negative space connects the footage circles to the graphic chapters. Preserve each plate’s lighting inside its mask, then grade the collection for similar exposure.",
+          "Use clean antialiased circular mattes; do not blur tile boundaries as a substitute for antialiasing. Fast moving tiles can get exposure blur if their contents remain identifiable.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Masks",
+                "Clip each source shot into its own circle; anchor crops to the phone/hand action."
+              ],
+              [
+                "Layout",
+                "Start with four visible circles, then expand to a denser repeated field."
+              ],
+              [
+                "Variation",
+                "Offset footage playback times and crops; avoid accidentally showing the exact same frame in every tile."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The many purchase moments resolve to the familiar lime brand coin.",
+          "The source has a changing tile count; record four at the initial cluster, not a fabricated fixed count for the whole mosaic.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 60,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 219,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s samples, plus existing dense12samples/second sheets for coin/phone, pack/prizes, score/phone and credit panel. Other event boundaries are approximate to0.5s. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-cero-reference",
+    "study-cero-overview-3",
+    "cero-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-CERO-CREDIT",
+    "SHOT-CERO-END"
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "id": "SHOT-JAW-ACCOUNT",
+  "clip": {
+    "asset_id": "shot-jaw-account-preview",
+    "source_frames": [
+      718,
+      778
+    ],
+    "fps": 29.97002997002997,
+    "clock": "source-frames",
+    "note": "Source rate is nominal30000/1001fps; original presentation timestamps are linked. Most observed event windows come from0.5s samples and are approximate, not recovered keys. Preview uses selected decoded source frames and starts at zero."
+  },
+  "inspiration": {
+    "purpose": "A tiny account symbol turns a two-word statement into the next payment form’s focal anchor.",
+    "beats": [
+      "Copy: Same / account settle",
+      "Icon: colored account symbol between words",
+      "Travel: icon leaves phrase toward next scene",
+      "Form: begins appearing"
+    ],
+    "use_when": [
+      "icon handoff serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "A small icon supplies the transition cue into another concrete send action.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "23.957–25.959 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "4 jobs:    word settle, icon appearance, icon travel, next-form assembly."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Copy",
+      "events": [
+        {
+          "label": "Copy: Same / account settle",
+          "frames": [
+            718,
+            734
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Icon",
+      "events": [
+        {
+          "label": "Icon: colored account symbol between words",
+          "frames": [
+            730,
+            755
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Travel",
+      "events": [
+        {
+          "label": "Travel: icon leaves phrase toward next scene",
+          "frames": [
+            754,
+            772
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Form",
+      "events": [
+        {
+          "label": "Form: begins appearing",
+          "frames": [
+            770,
+            778
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "A tiny account symbol turns a two-word statement into the next payment form’s focal anchor.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "23.950–24.500 s",
+                "Copy: Same / account settle"
+              ],
+              [
+                "24.350–25.200 s",
+                "Icon: colored account symbol between words"
+              ],
+              [
+                "25.150–25.750 s",
+                "Travel: icon leaves phrase toward next scene"
+              ],
+              [
+                "25.700–25.950 s",
+                "Form: begins appearing"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "4 jobs:    word settle, icon appearance, icon travel, next-form assembly.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "COPY > Same / account\nACCOUNT_ICON > circular body / mark / glint\nNEXT_FORM > recipient avatar anchor",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Use the space between words as an explicit icon slot. Move the icon independently when it leaves, retaining a clear directional link to the next form instead of moving the entire phrase.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "High-key white studio treatment. Use a near-white background, large soft area lights, restrained contact shadow and a narrow edge reflection for dark product rims. Keep lime or accent emissions from washing out white UI text.",
+          "Keep text neutral and stable while the colored icon carries the highlight. Small glints can use restrained emission/glow, with focus softness only during travel.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Icon anchor",
+                "Create a shared screen-space landmark for phrase slot and outgoing trajectory."
+              ],
+              [
+                "Word layout",
+                "Lock word positions through the icon travel."
+              ],
+              [
+                "Next scene",
+                "Choose a clear recipient/avatar landing target and match size before introducing the full form."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "A small icon supplies the transition cue into another concrete send action.",
+          "The exact identity match to the next avatar is an inferred reconstruction, not recovered source rig. Avoid a bounce that repeatedly interrupts the simple statement.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 29.97002997002997,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 60,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s frame samples; No switching / No waiting additionally inspected every3source frames. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-jaw-reference",
+    "study-jaw-overview-3",
+    "jaw-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-JAW-PURCHASES",
+    "SHOT-JAW-SEND"
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "id": "SHOT-CAMERA-SEND",
+  "clip": {
+    "asset_id": "shot-camera-send-preview",
+    "source_frames": [
+      106,
+      165
+    ],
+    "fps": 30,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "The circular control survives the interface dissolve, then arrow and disc separate to launch the result.",
+    "beats": [
+      "Interface: disappears around circle",
+      "Arrow: becomes visible",
+      "Button: subtle tilt and held focus",
+      "Separation: arrow up; disc down",
+      "Result: card enters from above"
+    ],
+    "use_when": [
+      "persistent control serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The launched arrow and departing disc overlap the full-size card descending from above.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "3.533–5.500 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "5 jobs:    UI fade, arrow reveal, disc tilt, arrow/disc separation, incoming result."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Interface",
+      "events": [
+        {
+          "label": "Interface: disappears around circle",
+          "frames": [
+            106,
+            120
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Arrow",
+      "events": [
+        {
+          "label": "Arrow: becomes visible",
+          "frames": [
+            106,
+            118
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Button",
+      "events": [
+        {
+          "label": "Button: subtle tilt and held focus",
+          "frames": [
+            120,
+            151
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Separation",
+      "events": [
+        {
+          "label": "Separation: arrow up; disc down",
+          "frames": [
+            151,
+            162
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Result",
+      "events": [
+        {
+          "label": "Result: card enters from above",
+          "frames": [
+            158,
+            165
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "The circular control survives the interface dissolve, then arrow and disc separate to launch the result.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "3.550–4.000 s",
+                "Interface: disappears around circle"
+              ],
+              [
+                "3.500–3.950 s",
+                "Arrow: becomes visible"
+              ],
+              [
+                "4.000–5.020 s",
+                "Button: subtle tilt and held focus"
+              ],
+              [
+                "5.020–5.400 s",
+                "Separation: arrow up; disc down"
+              ],
+              [
+                "5.250–5.500 s",
+                "Result: card enters from above"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "5 jobs:    UI fade, arrow reveal, disc tilt, arrow/disc separation, incoming result.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "SEND_ROOT > disc / rim\nARROW > separate mesh and opacity\nUI_FADE\nRESULT_CARD_NEXT\nCAMERA_RESET hidden by sparse composition",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Preserve the send circle’s projected center/diameter while the camera resets behind the sparse composition. The arrow must be a child with an independent translation so its launch can separate from the disc.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "Low-key neutral studio: charcoal field, a broad gray overhead reflection and bright grazing edges. Use large soft sources and bevels; do not raise ambient illumination until dark UI panels lose separation.",
+          "The local V 02 final pass disabled exposure across the hidden camera reset to prevent a ghost trail. Blur from a discontinuous camera reset should not contaminate the stable button.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Button",
+                "Match its screen-space pose across the camera change."
+              ],
+              [
+                "Arrow",
+                "Animate local Y separately from parent; use its own alpha."
+              ],
+              [
+                "Disc",
+                "Retain a visible material edge, then fade during its downward departure."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The launched arrow and departing disc overlap the full-size card descending from above.",
+          "An early arrow or generic button pulse was a V 01 mismatch. The controlled separation, not a uniform shrink, drives the result reveal.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      },
+      {
+        "title": "Existing local V02 controls",
+        "items": [
+          "These are our authored reconstruction controls, not recovered Bhumimov settings. Full construction script and native scene are attached. Times use t=(BlenderFrame−1)/30. Baked keys use linear interpolation between authored samples."
+        ],
+        "tables": [
+          {
+            "caption": "Authored V02 values",
+            "columns": [
+              "Component",
+              "Time/value relationship"
+            ],
+            "rows": [
+              [
+                "UI opacity",
+                "1−ease(t,3.55,3.99)"
+              ],
+              [
+                "Arrow opacity",
+                "ease(t,3.5,3.90)×(1−ease(t,5.24,5.38))"
+              ],
+              [
+                "Arrow localY",
+                "5.02 s:   0;5.20:0.8;5.32:4.2;5.40:9"
+              ],
+              [
+                "Disc opacity",
+                "1−ease(t,5.25,5.4)"
+              ],
+              [
+                "Opacity type",
+                "Floating-point custom property; integer property previously snapped"
+              ]
+            ],
+            "basis": "local-implementation"
+          }
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 30,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 59,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "V02 full native reconstruction; creative review pending",
+        "tool": "Blender",
+        "status": "rendered",
+        "asset_ids": [
+          "camera-v02-blend",
+          "camera-v02-build",
+          "camera-v02-video",
+          "camera-v02-review"
+        ]
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Source observations plus existing local V02 construction. V01 was rejected; V02 is technically rendered, not user-approved.",
+    "inspection": "Full-film sampled overview; dense evidence where linked. This is frame-based analysis, not continuous playback or sound review.",
+    "limitations": [
+      "Original source rig and curves unavailable.",
+      "V01 was rejected for missing the reference choreography.",
+      "Typography, perspective, shading and timing differences remain; technical validation does not establish fidelity."
+    ]
+  },
+  "evidence_assets": [
+    "study-blender-camera-reference"
+  ],
+  "related_ids": [
+    "SHOT-CAMERA-SWEEP",
+    "SHOT-CAMERA-RESULT"
+  ]
+}

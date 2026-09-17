@@ -1,0 +1,290 @@
+{
+  "id": "SHOT-JAW-PAYMENT",
+  "clip": {
+    "asset_id": "shot-jaw-payment-preview",
+    "source_frames": [
+      373,
+      492
+    ],
+    "fps": 29.97002997002997,
+    "clock": "source-frames",
+    "note": "Source rate is nominal30000/1001fps; original presentation timestamps are linked. Most observed event windows come from0.5s samples and are approximate, not recovered keys. Preview uses selected decoded source frames and starts at zero."
+  },
+  "inspiration": {
+    "purpose": "A payment form makes a concrete transaction readable through amount entry, currency choice, and processing.",
+    "beats": [
+      "Form: recipient and fields arrive",
+      "Amount: rolls toward 100",
+      "Choice: payment selector opens",
+      "Menu: BTC, USD and CAD shown",
+      "Selection: form resolves",
+      "Processing: indicator and status"
+    ],
+    "use_when": [
+      "payment ui serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The processing state becomes payment success beside a globe.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "12.446–16.416 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "6 jobs:    form assembly, digits, toggle, menu, selection, processing. Three currency choices in the visible menu."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Form",
+      "events": [
+        {
+          "label": "Form: recipient and fields arrive",
+          "frames": [
+            373,
+            397
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Amount",
+      "events": [
+        {
+          "label": "Amount: rolls toward 100",
+          "frames": [
+            393,
+            421
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Choice",
+      "events": [
+        {
+          "label": "Choice: payment selector opens",
+          "frames": [
+            421,
+            438
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Menu",
+      "events": [
+        {
+          "label": "Menu: BTC, USD and CAD shown",
+          "frames": [
+            435,
+            456
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Selection",
+      "events": [
+        {
+          "label": "Selection: form resolves",
+          "frames": [
+            454,
+            471
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-6",
+      "label": "Processing",
+      "events": [
+        {
+          "label": "Processing: indicator and status",
+          "frames": [
+            471,
+            492
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "A payment form makes a concrete transaction readable through amount entry, currency choice, and processing.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "12.450–13.250 s",
+                "Form: recipient and fields arrive"
+              ],
+              [
+                "13.100–14.050 s",
+                "Amount: rolls toward 100"
+              ],
+              [
+                "14.050–14.600 s",
+                "Choice: payment selector opens"
+              ],
+              [
+                "14.500–15.200 s",
+                "Menu: BTC, USD and CAD shown"
+              ],
+              [
+                "15.150–15.700 s",
+                "Selection: form resolves"
+              ],
+              [
+                "15.700–16.400 s",
+                "Processing: indicator and status"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "6 jobs:    form assembly, digits, toggle, menu, selection, processing. Three currency choices in the visible menu.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "FORM_ROOT > recipient / amount / privacy toggle / pay selector\nMENU_ROOT > rounded body / three option rows / radio states\nCURSOR_RING\nPROCESSING > spinner / status copy",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Keep the selected field at the attention center through the close-up and dropdown. Animate menu scale from its attachment point, and move surrounding UI only as much as the reframe needs.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "High-key white studio treatment. Use a near-white background, large soft area lights, restrained contact shadow and a narrow edge reflection for dark product rims. Keep lime or accent emissions from washing out white UI text.",
+          "The background form softens when the payment menu is foregrounded. Isolate the menu from the background blur; its options must remain readable. Distinguish circular cursor rings from the processing spinner.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Amount",
+                "Masked digit columns or explicit numeric updates with a fixed currency symbol and baseline."
+              ],
+              [
+                "Dropdown",
+                "Separate container and options; animate clipping/scale from the pay field."
+              ],
+              [
+                "Radio state",
+                "One selected option with an explicit state transition."
+              ],
+              [
+                "Spinner",
+                "Animate rotation/progress independently of status text and global opacity."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The processing state becomes payment success beside a globe.",
+          "A dropdown that fades in as a flat screenshot cannot reproduce its spatial attachment. Do not blur the selected menu along with the inactive form.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 29.97002997002997,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 119,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s frame samples; No switching / No waiting additionally inspected every3source frames. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-jaw-reference",
+    "study-jaw-overview-2",
+    "jaw-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-JAW-DASHBOARD",
+    "SHOT-JAW-GLOBE"
+  ]
+}

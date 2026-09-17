@@ -125,7 +125,7 @@ Visit [the shot library](http://127.0.0.1:8766/assets/library.html). Search by s
 The packaged records work without local media. To connect existing source clips and native evidence:
 
 1. Copy `skills/motion-design/library/asset-map.example.json` to the ignored `work/library-assets.local.json` file; create `work/` if needed.
-2. Change the `study-workspace` root to your local study workspace. The example's relative paths describe the original Shot Studio workspace; adjust or remove bindings when your files differ. Use forward slashes in JSON paths.
+2. Change `study-workspace` to your local study workspace and, if connecting the full UI reconstruction, `world-cup-workspace` to that project folder. The example's relative paths describe the original workspaces; adjust or remove bindings when your files differ. Use forward slashes in JSON paths.
 3. Start the server with that manifest:
 
 ```sh

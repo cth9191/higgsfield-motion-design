@@ -1,0 +1,307 @@
+{
+  "id": "SHOT-CAMERA-ASSEMBLY",
+  "clip": {
+    "asset_id": "shot-camera-assembly-preview",
+    "source_frames": [
+      0,
+      50
+    ],
+    "fps": 30,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "The interface is constructed in parts around an arriving logo rather than appearing as a finished panel.",
+    "beats": [
+      "Logo: rises and lands large",
+      "Input: grows and levels",
+      "Suggestions:    buttons expand in sequence",
+      "Heading/input: copy resolves",
+      "Transition: rapid oblique macro"
+    ],
+    "use_when": [
+      "component assembly serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The fully formed interface is the same object seen in the oblique macro.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "0.000–1.667 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "6 jobs:    logo landing, field growth, heading, typing, three-button stagger, macro transition."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Logo",
+      "events": [
+        {
+          "label": "Logo: rises and lands large",
+          "frames": [
+            0,
+            16
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Input",
+      "events": [
+        {
+          "label": "Input: grows and levels",
+          "frames": [
+            15,
+            34
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Suggestions",
+      "events": [
+        {
+          "label": "Suggestions:    buttons expand in sequence",
+          "frames": [
+            22,
+            40
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Heading/input",
+      "events": [
+        {
+          "label": "Heading/input: copy resolves",
+          "frames": [
+            26,
+            46
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Transition",
+      "events": [
+        {
+          "label": "Transition: rapid oblique macro",
+          "frames": [
+            46,
+            50
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "The interface is constructed in parts around an arriving logo rather than appearing as a finished panel.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "0.000–0.550 s",
+                "Logo: rises and lands large"
+              ],
+              [
+                "0.500–1.150 s",
+                "Input: grows and levels"
+              ],
+              [
+                "0.750–1.350 s",
+                "Suggestions:    buttons expand in sequence"
+              ],
+              [
+                "0.850–1.550 s",
+                "Heading/input: copy resolves"
+              ],
+              [
+                "1.530–1.650 s",
+                "Transition: rapid oblique macro"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "6 jobs:    logo landing, field growth, heading, typing, three-button stagger, macro transition.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "UI_ROOT > input field / heading groups / typed prefixes\nLOGO_ROOT > vector mark\nPILLS >3independent groups\nSEND_DISC > blank circle\nCAMERA / focus target",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Keep the opening largely frontal. The short transition into macro changes the viewpoint deliberately; it should not become a continuous decorative orbit throughout the opening.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "Low-key neutral studio: charcoal field, a broad gray overhead reflection and bright grazing edges. Use large soft sources and bevels; do not raise ambient illumination until dark UI panels lose separation.",
+          "The oblique macro enters very soft and resolves into its focus plane. The logo and UI arrival need their own opacity groups; integer-valued opacity previously caused snapping and was corrected to a float.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Logo",
+                "Author a landing with a small settle and scale reduction into header position."
+              ],
+              [
+                "Field",
+                "Expand horizontally from a small extent with a short overshoot."
+              ],
+              [
+                "Suggestions",
+                "Three button groups with distinct start times and common final scale."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The fully formed interface is the same object seen in the oblique macro.",
+          "A single finished UI panel scaling up was the rejected V 01 behavior. The component order is the essential construction.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      },
+      {
+        "title": "Existing local V02 controls",
+        "items": [
+          "These are our authored reconstruction controls, not recovered Bhumimov settings. Full construction script and native scene are attached. Times use t=(BlenderFrame−1)/30. Baked keys use linear interpolation between authored samples."
+        ],
+        "tables": [
+          {
+            "caption": "Authored V02 values",
+            "columns": [
+              "Component",
+              "Time/value relationship"
+            ],
+            "rows": [
+              [
+                "Logo Y, scene units",
+                "0 s:   -4.7;0.18:-0.3;0.33:0.12;0.48:-0.1;0.8:-0.6;1.18:2.2"
+              ],
+              [
+                "Logo scale",
+                "0 s:   3.2;0.3:3;0.68:1.6;0.88:1.2;1.2:1.05"
+              ],
+              [
+                "Pill onset",
+                "Deep research 0.76 s;Create an image 0.90 s;Look something up 1.02 s"
+              ],
+              [
+                "Pill scale",
+                "onset:0.001;onset+0.17 s:   1.08;onset+0.31 s:   1"
+              ],
+              [
+                "Field extent",
+                "0.53 s:   0.001;0.66:0.58;0.84:1.10;1.13:1"
+              ]
+            ],
+            "basis": "local-implementation"
+          }
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 30,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 50,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "V02 full native reconstruction; creative review pending",
+        "tool": "Blender",
+        "status": "rendered",
+        "asset_ids": [
+          "camera-v02-blend",
+          "camera-v02-build",
+          "camera-v02-video",
+          "camera-v02-review"
+        ]
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Source observations plus existing local V02 construction. V01 was rejected; V02 is technically rendered, not user-approved.",
+    "inspection": "Full-film sampled overview; dense evidence where linked. This is frame-based analysis, not continuous playback or sound review.",
+    "limitations": [
+      "Original source rig and curves unavailable.",
+      "V01 was rejected for missing the reference choreography.",
+      "Typography, perspective, shading and timing differences remain; technical validation does not establish fidelity."
+    ]
+  },
+  "evidence_assets": [
+    "study-blender-camera-reference"
+  ],
+  "related_ids": [
+    "SHOT-CAMERA-SWEEP"
+  ]
+}

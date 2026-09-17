@@ -1,0 +1,400 @@
+{
+  "id": "RIG-OF-RADIAL",
+  "clip": {
+    "asset_id": "rig-of-radial-preview",
+    "source_frames": [
+      0,
+      108
+    ],
+    "fps": 24,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "One control rig schedules 48 squares by their distance from an off-center control, with independent shrink and flickering opacity.",
+    "beats": [
+      "Grid:48 squares initially visible",
+      "Master scale:100 to 0",
+      "Master opacity: multiple flicker keys",
+      "Instances:    delayed shrink/fade",
+      "Tail: empty background in late samples"
+    ],
+    "use_when": [
+      "spatial stagger serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "Spatial scheduling modulates when each square samples the same master animation; there is no narrative camera handoff.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "0.000–4.500 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "50 original source layers:   1 controller,48 squares,1 background.96 enabled square expressions:   2 per square. Two independent master property curves."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Original AEP inspected; exact master keys and hierarchy below."
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Grid",
+      "events": [
+        {
+          "label": "Grid:48 squares initially visible",
+          "frames": [
+            0,
+            22
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Master scale",
+      "events": [
+        {
+          "label": "Master scale:100 to 0",
+          "frames": [
+            22,
+            44
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Master opacity",
+      "events": [
+        {
+          "label": "Master opacity: multiple flicker keys",
+          "frames": [
+            24,
+            46
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Instances",
+      "events": [
+        {
+          "label": "Instances:    delayed shrink/fade",
+          "frames": [
+            24,
+            72
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Tail",
+      "events": [
+        {
+          "label": "Tail: empty background in late samples",
+          "frames": [
+            72,
+            108
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Original-source controls and layer counts are verified from the local inspection export. General transfer recipe is separately authored and proposed.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "One control rig schedules 48 squares by their distance from an off-center control, with independent shrink and flickering opacity.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "0.000–0.900 s",
+                "Grid:48 squares initially visible"
+              ],
+              [
+                "0.917–1.833 s",
+                "Master scale:100 to 0"
+              ],
+              [
+                "1.000–1.917 s",
+                "Master opacity: multiple flicker keys"
+              ],
+              [
+                "1.000–3.000 s",
+                "Instances:    delayed shrink/fade"
+              ],
+              [
+                "3.000–4.500 s",
+                "Tail: empty background in late samples"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "50 original source layers:   1 controller,48 squares,1 background.96 enabled square expressions:   2 per square. Two independent master property curves.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "Radial Delay Rig (1500×1500,24fps,4.5s)\n  fade [invisible controller; opacity0]\n    scale / fader / delay / random sliders\n  square-1 … square-48 [Scale + Opacity expressions]\n  BG",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "This is a fixed graphic composition. The spatial controller changes per-square sample time rather than moving a camera. Moving the controller changes the distance field; it does not create an automatic outward wave.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "Flat outlined squares on a light background. Source evidence does not require a 3 D lighting rig; visual rhythm comes from shape size and opacity.",
+          "Flickering opacity is explicitly authored on the master fader. It should not be confused with motion blur, temporal aliasing or a generic soft fade. Preserve separate master curves when studying the original mechanism.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Source delay",
+                "50 in downloaded state; reciprocal distance mapping."
+              ],
+              [
+                "Source random",
+                "2 frames at 24 fps gives a nominal±0.083333 s jitter interval."
+              ],
+              [
+                "Controller position",
+                "[946.23379445076,527.793335050344,0] in source comp pixels."
+              ],
+              [
+                "Scale variant",
+                "Square 1 multiplies delay by frame duration; other scale expressions and opacity use the raw delay slider."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "Spatial scheduling modulates when each square samples the same master animation; there is no narrative camera handoff.",
+          "Zero distance is singular for reciprocal mapping. An independent reusable rig should define a clamp or alternate normalized mapping explicitly. Do not silently call the source a linear radial wave.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      },
+      {
+        "title": "Exact original master controls",
+        "items": [
+          "Values below come from the inspected AEP export, not a reconstructed guess. Sliders are unitless source controls; temporal speed is slider-units/second and influence is percent. The two scale-unit variants are preserved as an observed inconsistency."
+        ],
+        "tables": [
+          {
+            "caption": "Master keyframes and temporal ease",
+            "columns": [
+              "Property",
+              "Frame",
+              "Value",
+              "In speed",
+              "In influence%",
+              "Out speed",
+              "Out influence%"
+            ],
+            "rows": [
+              [
+                "/Effects/fader/Slider",
+                24,
+                100,
+                0,
+                16.666666667,
+                0,
+                83.2694931407201
+              ],
+              [
+                "/Effects/fader/Slider",
+                32,
+                33.2582244873047,
+                -236.989191948841,
+                35.6434545930588,
+                -236.98919194884,
+                28.0049331548536
+              ],
+              [
+                "/Effects/fader/Slider",
+                33,
+                100,
+                -154.835104547575,
+                39.1788918780795,
+                -154.835104547575,
+                26.745201419972
+              ],
+              [
+                "/Effects/fader/Slider",
+                36,
+                20.834300994873,
+                -317.063204407599,
+                40.5795240748931,
+                -317.0632044076,
+                30.9598192644353
+              ],
+              [
+                "/Effects/fader/Slider",
+                37,
+                55.1837120056152,
+                -170.614215103672,
+                35.7799073119003,
+                -170.614215103674,
+                23.4020642481305
+              ],
+              [
+                "/Effects/fader/Slider",
+                46,
+                0,
+                0,
+                44.5728922723105,
+                0,
+                16.666666667
+              ],
+              [
+                "/Effects/scale/Slider",
+                22,
+                100,
+                0,
+                16.666666667,
+                0,
+                78.5056703969052
+              ],
+              [
+                "/Effects/scale/Slider",
+                44,
+                0,
+                0,
+                100,
+                0,
+                16.666666667
+              ]
+            ],
+            "basis": "original-source"
+          }
+        ]
+      },
+      {
+        "title": "Scheduling math and Blender translation",
+        "items": [
+          "Conceptual paraphrase of the original mechanism: sample the master curve at current time minus a reciprocal-distance offset and stable random offset. Timeless seeded random sampling is used; do not assume changing frame evaluation should change the seed.",
+          "In Blender, calculate each element’s scheduled time, evaluate independently authored master scale/opacity curves at that time, and bake those results. A frame-by-frame bake should also support subframe interpolation for exposure blur.",
+          "The independent module uses bounded normalized inward/outward distance, stable element IDs and seconds. It intentionally differs from the original reciprocal mapping and flicker. Numeric checks have passed; no production shot is approved."
+        ],
+        "code": [
+          {
+            "label": "Independent schedule, deliberately different from source",
+            "text": "distance01 = clamp(distance / maximum_distance, 0, 1)\nphase = distance01 if direction == \"outward\" else 1 - distance01\nonset = start_seconds + phase * spread_seconds + stable_jitter(id)\nlocal_time = max(0, time_seconds - onset)\nscale = authored_scale_curve(local_time)\nopacity = authored_opacity_curve(local_time)\n# Define center behavior, clamp jitter and preserve an explicit final dwell.",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Source terms and reproducibility",
+        "items": [
+          "Original files are retained outside the shared repository for personal educational/noncommercial study under the included terms. Source artwork, project and copied expressions are not distributed with this library.",
+          "The downloaded archive SHA-256 is 2 dfd 5 d 631 f 13 be 9 b 1695 c 97 e 1 c 9 a 7 a 1 c 3 d 4496 afbea 5 ef 86593 d 355958 da 94 a 9. The collection report date 2019-10-21 is not asserted as publication date.",
+          "Inspection used AE 26.5 x 89 and reported no expression errors at inspection time; this is not exhaustive evaluation of all parameter settings."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 24,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 108,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Original educational source and inspection",
+        "tool": "After Effects",
+        "status": "tested",
+        "asset_ids": [
+          "ordinary-folk-aep",
+          "ordinary-folk-inspection",
+          "ordinary-folk-terms"
+        ]
+      },
+      {
+        "label": "Independent scheduler; numeric checks only",
+        "tool": "JavaScript / Blender scheduling",
+        "status": "tested",
+        "asset_ids": [
+          "ordinary-folk-independent",
+          "ordinary-folk-pattern"
+        ]
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Original AEP inspected through exported properties; nine render samples visually checked; render decoded. No full continuous playback or creative approval.",
+    "limitations": [
+      "Personal-use source is not a commercial template.",
+      "Numeric checks do not establish visual quality.",
+      "Independent scheduler changes the source mapping; production comparison and user preference remain pending."
+    ]
+  },
+  "evidence_assets": [
+    "study-ordinary-folk-reference",
+    "ordinary-folk-inspection",
+    "ordinary-folk-terms",
+    "ordinary-folk-pattern"
+  ],
+  "related_ids": []
+}

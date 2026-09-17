@@ -1,0 +1,250 @@
+{
+  "id": "SHOT-INF-CLOSING",
+  "clip": {
+    "asset_id": "shot-inf-closing-preview",
+    "source_frames": [
+      1264,
+      1379
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "The opening selection motif returns as the resolved promise, giving the film a visual callback.",
+    "beats": [
+      "Type: large soft arrival reduces",
+      "Selection: grows across way it should",
+      "Read: quieter held statement",
+      "Accent: brief copy-color changes"
+    ],
+    "use_when": [
+      "selection highlight serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "Closing sentence becomes the wordmark at22.9667s, source frame1378.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "21.067–22.983 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "4 jobs:    scale resolve, phrase selection, quiet read, late color accent."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Type",
+      "events": [
+        {
+          "label": "Type: large soft arrival reduces",
+          "frames": [
+            1264,
+            1293
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Selection",
+      "events": [
+        {
+          "label": "Selection: grows across way it should",
+          "frames": [
+            1272,
+            1299
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Read",
+      "events": [
+        {
+          "label": "Read: quieter held statement",
+          "frames": [
+            1299,
+            1359
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Accent",
+      "events": [
+        {
+          "label": "Accent: brief copy-color changes",
+          "frames": [
+            1359,
+            1378
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "The opening selection motif returns as the resolved promise, giving the film a visual callback.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "21.067–21.550 s",
+                "Type: large soft arrival reduces"
+              ],
+              [
+                "21.200–21.650 s",
+                "Selection: grows across way it should"
+              ],
+              [
+                "21.650–22.650 s",
+                "Read: quieter held statement"
+              ],
+              [
+                "22.650–22.967 s",
+                "Accent: brief copy-color changes"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "4 jobs:    scale resolve, phrase selection, quiet read, late color accent.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "CLOSING_ROOT > complete sentence\nSELECTION > rectangle mask / selected text duplicate\nBACKGROUND\nWORDMARK_NEXT",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Use a quick size retreat with a longer settle. Anchor the selection to the phrase geometry so the highlight travels with the copy. The text should not relayout while the selection widens.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "Warm abstract studio field: a defocused copper/orange environment with broad soft reflections on dark objects. Proposed rig: large rectangular key, warm rim and low fill, with a separate background gradient so copy contrast can be controlled without changing the phone material. This is a descriptive treatment, not an identified HDRI.",
+          "Designed arrival blur resolves with the initial scale change, then remains low for reading. Keep the highlight edge and selected glyph mask synchronized without forcing identical blur envelopes.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Selection",
+                "Measure the target phrase bounds; grow a rectangle from its leading edge with fixed padding."
+              ],
+              [
+                "Copy color",
+                "Use masked selected/unselected duplicates or a material mask; maintain exact glyph registration."
+              ],
+              [
+                "Hold",
+                "Allow approximately 1 s of relative quiet after the short arrival."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "Closing sentence becomes the wordmark at 22.9667 s, source frame 1378.",
+          "Rebuilding the closing as a new unrelated text style weakens the callback. Do not apply an opacity crossfade at the next exact replacement unless deliberately departing from source.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 60,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 115,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Full-film sampled overview; dense evidence where linked. This is frame-based analysis, not continuous playback or sound review.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "infinex-reference",
+    "infinex-full-orbit-closing",
+    "infinex-full-closing-logo",
+    "infinex-full-pacing"
+  ],
+  "related_ids": [
+    "SHOT-INF-OPENING",
+    "SHOT-INF-ENDCARD",
+    "SHOT-INF-ORBIT"
+  ]
+}

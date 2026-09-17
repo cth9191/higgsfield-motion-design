@@ -1,0 +1,274 @@
+{
+  "id": "SHOT-INF-CHAIN-CARDS",
+  "clip": {
+    "asset_id": "shot-inf-chain-cards-preview",
+    "source_frames": [
+      351,
+      438
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "Four chain cards make fragmentation visible while the phone continues its movement from the wallet claim.",
+    "beats": [
+      "Phone: turns and becomes left anchor",
+      "Cards:    four staggered arrivals",
+      "Copy: title and supporting words build",
+      "Exit: group retreats and loses focus",
+      "Incoming: Endless Confirmation begins"
+    ],
+    "use_when": [
+      "card fan serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "New words start before outgoing cards vanish; attention transfers through coexistence.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "5.850–7.300 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "7 jobs:    phone pose, four-card stagger, title, subtitle, depth retreat, focus loss, incoming phrase. Four cards are instances, not four different mechanisms."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Phone",
+      "events": [
+        {
+          "label": "Phone: turns and becomes left anchor",
+          "frames": [
+            351,
+            378
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Cards",
+      "events": [
+        {
+          "label": "Cards:    four staggered arrivals",
+          "frames": [
+            357,
+            381
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Copy",
+      "events": [
+        {
+          "label": "Copy: title and supporting words build",
+          "frames": [
+            360,
+            393
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Exit",
+      "events": [
+        {
+          "label": "Exit: group retreats and loses focus",
+          "frames": [
+            393,
+            426
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Incoming",
+      "events": [
+        {
+          "label": "Incoming: Endless Confirmation begins",
+          "frames": [
+            414,
+            438
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "Four chain cards make fragmentation visible while the phone continues its movement from the wallet claim.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "5.850–6.300 s",
+                "Phone: turns and becomes left anchor"
+              ],
+              [
+                "5.950–6.350 s",
+                "Cards:    four staggered arrivals"
+              ],
+              [
+                "6.000–6.550 s",
+                "Copy: title and supporting words build"
+              ],
+              [
+                "6.550–7.100 s",
+                "Exit: group retreats and loses focus"
+              ],
+              [
+                "6.900–7.300 s",
+                "Incoming: Endless Confirmation begins"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "7 jobs:    phone pose, four-card stagger, title, subtitle, depth retreat, focus loss, incoming phrase. Four cards are instances, not four different mechanisms.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "PHONE_ROOT > phone mesh / screen\nCARD_FAN > card-1 / card-2 / card-3 / card-4\nCHAIN_COPY > title / independently timed subtitle words\nEXIT_GROUP > isolated foreground pass\nCONFIRMATION > two word groups",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Use the continuing phone root for the bridge and individual fan slots for cards. A roughly 0.10 s visible spacing between card appearances does not mean every card has a 0.10 s animation duration. The card settle can overlap the next card onset.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "Warm abstract studio field: a defocused copper/orange environment with broad soft reflections on dark objects. Proposed rig: large rectangular key, warm rim and low fill, with a separate background gradient so copy contrast can be controlled without changing the phone material. This is a descriptive treatment, not an identified HDRI.",
+          "Defocus rises as the group retreats; opacity is a separate later envelope. Pad the isolated foreground pass before blur, blur color and alpha consistently, and inspect the full outer bounds. The rectangular translucent patch in V 05 is a recorded failure.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Card onset",
+                "Four distinct start times; preserve their occlusion order behind the phone."
+              ],
+              [
+                "Fan geometry",
+                "Individual position and orientation targets under one shared root; do not move the whole fan as one rigid reveal."
+              ],
+              [
+                "Subtitle",
+                "Reveal its seven local-build words independently; retain a stable baseline and readable final interval."
+              ],
+              [
+                "Exit composite",
+                "Render transparent foreground with overscan; compare premultiplication and blur bounds before reducing opacity."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "New words start before outgoing cards vanish; attention transfers through coexistence.",
+          "Do not hide a clipping defect with a faster fade or blur the orange background with the foreground group. The local V 06 corrective idea remains unverified.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 60,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 87,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Full-film sampled overview; dense evidence where linked. This is frame-based analysis, not continuous playback or sound review.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "infinex-reference",
+    "infinex-full-phone-chain-handoff",
+    "infinex-full-chain-confirmation-coin",
+    "infinex-full-pacing"
+  ],
+  "related_ids": [
+    "SHOT-INF-PHONE-CARDS",
+    "DETAIL-INF-DEFOCUS",
+    "SHOT-INF-CONFIRMATION",
+    "SHOT-INF-WALLETS"
+  ]
+}

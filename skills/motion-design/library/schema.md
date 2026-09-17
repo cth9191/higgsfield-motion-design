@@ -4,14 +4,14 @@
 
 ## Registry
 
-- `studies`: stable ID, title, attribution, HTTPS source URL, source asset ID and packaged study document. `source_project` and `original_prompt` may be null.
+- `studies`: stable ID, title, attribution, HTTPS source URL, source asset ID and packaged study document. `source_project` and `original_prompt` may be null. An in-progress intake study may have no shot entries and an unbound source asset; do not invent timing to register it. Optional `coverage` records inspected source FPS, total decoded frames and scope. Full-coverage tests verify that study entries leave no source-frame gaps.
 - `assets`: stable asset ID → label and kind (`video`, `image`, `document`, `native`, `code`). No machine-specific location belongs here.
 - `entries`: stable ID, study ID, title/summary, kind (`shot`, `technique`, `lighting`), video types, story jobs, tags, implementation tools, review state and detail path. The summary review state must match the detailed record.
   Optional `poster_asset` references a local image, with `poster_source_frame` documenting a representative frame inside the excerpt. Posters do not change playback start or the source/preview time mapping.
 
 ## Detail
 
-- `clip`: preview asset ID, explicit source-frame clock, integer FPS and half-open `[first,end)` source interval. Previews start at player time 0; map source events with `(sourceFrame-first)/fps`.
+- `clip`: preview asset ID, explicit source-frame clock, finite positive FPS (including fractional rates such as 30000/1001), and half-open `[first,end)` source interval. Previews start at player time 0; map source events with `(sourceFrame-first)/fps`. Retain original presentation timestamps when nominal-rate timing is approximate; do not claim a variable-rate source is exact constant-rate material.
 - `inspiration`: viewer purpose, action sequence, useful situations, attention and shot-level meta fields. Analytical system counts must state the grouping and never claim unknown source layer counts.
 - `tracks`: named animation tracks and labeled half-open frame intervals. Overlap is permitted both within and across tracks. Events must stay within the excerpt and carry their evidence basis.
 - `technical`: evidence statement, construction/reproduction sections, parameters with units and basis, implementations with tool/status/asset IDs. Do not label proposed code as rendered.

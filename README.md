@@ -214,7 +214,7 @@ The package includes ten film presets, archived prompts with verified hashes, ad
 
 ### Shot studies and technical breakdowns
 
-The Infinex study has three shot pages: **opening emphasis**, **question with coins**, and **phone → cards**. Two supporting entries cover **outgoing focus transfer** and **warm studio lighting**. Browse by video type, story purpose, technique or implementation tool. Each shot has an inspiration view and an inline technical breakdown: source timing, hierarchy, formulas, complete authored control tables, typography, lighting, compositing, native evidence and current review limits. Section links make the deeper pages navigable.
+The library has **five complete source timelines and 44 entries**: Infinex, Cero, Jaw/vedu_boi, Ordinary Folk's Radial Delay, and the Bhumimov UI/Blender camera study. Browse by source, video type, story purpose, technique or implementation tool. Each shot has inspiration and technical views covering event timing, component counts, hierarchy, camera, typography, lighting, focus, transitions, construction controls and failures. Exact original or local controls are included where available; proposed recreations are labeled. Section links make deeper pages navigable.
 
 ```sh
 python skills/motion-design/scripts/serve_library.py
@@ -230,7 +230,7 @@ Explain the staging and timing, then show the Blender/After Effects
 construction and unresolved review notes.
 ```
 
-This is one pilot study, not a completed agency library. Source observations, local implementation settings and untested proposals are labeled separately. The V05 blur reconstruction remains rejected; V06 is a pending correction, not an approved recipe.
+Every interval of the five supplied references is covered, including montage inserts and end holds. Analysis is based on recorded source/frame inspection; it does not recover unknown original projects or establish continuous motion/audio quality. The Infinex V05 blur reconstruction remains rejected; V06 is pending. Register each new study immediately with `scripts/intake_study.py`, then update the same record during analysis, native construction and review. Blender and AE work need no generation connection or Seedance credits.
 
 <details>
 <summary><strong>Project status & validation</strong></summary>
@@ -252,7 +252,7 @@ python skills/motion-design/scripts/build_library.py
 python -m unittest discover -s skills/motion-design/scripts/tests -v
 ```
 
-Python 3.10+ is needed only for builders, tests or serving the gallery. The preset builder checks IDs, linked recipes/templates, timeline coverage and archived source hashes. The study builder validates relationships, source-frame intervals, asset IDs, parameter provenance and review consistency. Commit generated changes with source edits; GitHub Actions repeats the checks. See the [data contract](skills/motion-design/library/schema.md) and [pilot validation](docs/library-validation.md).
+Python 3.10+ is needed only for builders, tests or serving the gallery. The preset builder checks IDs, linked recipes/templates, timeline coverage and archived source hashes. The study builder validates relationships, source-frame intervals, asset IDs, parameter provenance and review consistency. Commit generated changes with source edits; GitHub Actions repeats the checks. See the [data contract](skills/motion-design/library/schema.md) and [library validation](docs/library-validation.md).
 
 Keep original source prompts immutable. Update adaptation guides and workflow instructions for behavior changes. The catalog/template version tracks the source library; README and host-routing edits do not rewrite its provenance. Installed copies are separate from the repo: update the complete skill folder, including references and gallery, and preserve local customizations.
 

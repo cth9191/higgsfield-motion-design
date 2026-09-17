@@ -1,0 +1,272 @@
+{
+  "id": "SHOT-CERO-CREDIT",
+  "clip": {
+    "asset_id": "shot-cero-credit-preview",
+    "source_frames": [
+      1485,
+      1617
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "A locked panel moves beyond the phone boundary, changes state in the foreground, then docks with a readable value.",
+    "beats": [
+      "Panel: projects outside phone",
+      "Unlock: gray becomes lime",
+      "Dock: panel returns to interface",
+      "Values:    amount and bar fill",
+      "Cut: live payment resumes"
+    ],
+    "use_when": [
+      "ui extraction serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "Panel explanation completes before the next payment insert.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "24.750–26.950 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "6 jobs:    panel projection, material sweep, lock change, docking, value roll, bar fill."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Panel",
+      "events": [
+        {
+          "label": "Panel: projects outside phone",
+          "frames": [
+            1485,
+            1515
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Unlock",
+      "events": [
+        {
+          "label": "Unlock: gray becomes lime",
+          "frames": [
+            1509,
+            1536
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Dock",
+      "events": [
+        {
+          "label": "Dock: panel returns to interface",
+          "frames": [
+            1536,
+            1560
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Values",
+      "events": [
+        {
+          "label": "Values:    amount and bar fill",
+          "frames": [
+            1554,
+            1605
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Cut",
+      "events": [
+        {
+          "label": "Cut: live payment resumes",
+          "frames": [
+            1605,
+            1617
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "A locked panel moves beyond the phone boundary, changes state in the foreground, then docks with a readable value.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "24.750–25.250 s",
+                "Panel: projects outside phone"
+              ],
+              [
+                "25.150–25.600 s",
+                "Unlock: gray becomes lime"
+              ],
+              [
+                "25.600–26.000 s",
+                "Dock: panel returns to interface"
+              ],
+              [
+                "25.900–26.750 s",
+                "Values:    amount and bar fill"
+              ],
+              [
+                "26.750–26.950 s",
+                "Cut: live payment resumes"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "6 jobs:    panel projection, material sweep, lock change, docking, value roll, bar fill.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "PHONE_ROOT > shell / base UI / PANEL_SLOT\nCREDIT_PANEL > rounded body / title / lock / value / fill bar\nRAYS > rear layer",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Keep the panel as a single persistent object with expanded and docked transforms. It should overlap the phone edges while expanded, then align exactly to the screen slot. Do not scale the whole phone to simulate panel projection.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "High-key white studio treatment. Use a near-white background, large soft area lights, restrained contact shadow and a narrow edge reflection for dark product rims. Keep lime or accent emissions from washing out white UI text.",
+          "A soft lime material/glow change spreads across the panel while it moves. Keep the lock symbol sharp enough to read. Blur does not substitute for the material transition.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Expanded state",
+                "Increase panel width and depth independently from its height; preserve corner proportions."
+              ],
+              [
+                "Material change",
+                "Animate a gradient/mask from gray to lime, and switch the lock state at the focal moment."
+              ],
+              [
+                "Docked state",
+                "Match slot center, bounds and depth before swapping from 3 D to flatUI if needed."
+              ],
+              [
+                "Values",
+                "Reveal amount and progress after the state change, with an explicit final readable interval."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "Panel explanation completes before the next payment insert.",
+          "The panel must not shrink its text during docking so far that the readable value arrives prematurely. A pure dissolve cannot explain the expansion.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 60,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 132,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s samples, plus existing dense12samples/second sheets for coin/phone, pack/prizes, score/phone and credit panel. Other event boundaries are approximate to0.5s. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-cero-reference",
+    "study-cero-overview-3",
+    "cero-credit-dense",
+    "cero-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-CERO-SCORE",
+    "SHOT-CERO-MOSAIC"
+  ]
+}

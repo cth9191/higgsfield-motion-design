@@ -1,0 +1,210 @@
+{
+  "id": "SHOT-CERO-PAYMENTS-A",
+  "clip": {
+    "asset_id": "shot-cero-payments-a-preview",
+    "source_frames": [
+      261,
+      357
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "Two first-person payment shots ground the graphic reward in recognizable everyday behavior.",
+    "beats": [
+      "Footage 1: food-counter terminal and phone",
+      "Footage 2: outdoor/waterpark payment"
+    ],
+    "use_when": [
+      "payment montage serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "A direct change to white typography starts the pack explanation.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "4.350–5.950 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "3 jobs per insert: hand/phone action, terminal contact, screen content. Two footage shots."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Footage1",
+      "events": [
+        {
+          "label": "Footage 1: food-counter terminal and phone",
+          "frames": [
+            261,
+            309
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Footage2",
+      "events": [
+        {
+          "label": "Footage 2: outdoor/waterpark payment",
+          "frames": [
+            309,
+            357
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "Two first-person payment shots ground the graphic reward in recognizable everyday behavior.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "4.350–5.150 s",
+                "Footage 1: food-counter terminal and phone"
+              ],
+              [
+                "5.150–5.950 s",
+                "Footage 2: outdoor/waterpark payment"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "3 jobs per insert: hand/phone action, terminal contact, screen content. Two footage shots.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "EDIT\n  food-counter plate > tracked screen insert if required\n  outdoor-counter plate > tracked screen insert if required\nCOLOR_MATCH\nAUDIO_CONTACTS (not audited)",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Keep the point of view close to the user’s hand. Match the phone/terminal action rather than trying to force an unbroken virtual camera between locations.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "Natural daylight and practical environment lighting in supplied footage; a studio light rig alone cannot reproduce it. For a Blender alternative, rebuild the payment interaction with stylized props and accept a different visual treatment.",
+          "Preserve plate shutter characteristics when adding a screen insert. Track corner pin plus occlusion by fingers; use local grain/softness matching rather than a blanket Gaussian blur.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Coverage",
+                "Two distinct environments and edits; source tool chain and footage provenance unknown."
+              ],
+              [
+                "Screen insert",
+                "Planar tracking plus hand holdout, matched exposure and perspective."
+              ],
+              [
+                "Cut timing",
+                "Keep tap action and product screen recognizable within each short shot."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "A direct change to white typography starts the pack explanation.",
+          "Do not describe this as a continuous camera transition. Replacing the footage with generic product floats removes the everyday-use proof.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 60,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 96,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s samples, plus existing dense12samples/second sheets for coin/phone, pack/prizes, score/phone and credit panel. Other event boundaries are approximate to0.5s. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-cero-reference",
+    "study-cero-overview-1",
+    "cero-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-CERO-TOSS",
+    "SHOT-CERO-PACK-COPY"
+  ]
+}

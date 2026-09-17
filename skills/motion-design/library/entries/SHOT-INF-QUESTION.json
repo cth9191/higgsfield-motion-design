@@ -1314,7 +1314,8 @@
     "infinex-question-timing",
     "infinex-question-review",
     "infinex-technical-study",
-    "infinex-complexity-study"
+    "infinex-complexity-study",
+    "infinex-full-pacing"
   ],
   "related_ids": [
     "SHOT-INF-OPENING",

@@ -14,6 +14,7 @@ import urllib.request
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from library_core import ROOT, inside, load_bindings, load_library, search
 from serve_library import byte_range, make_handler
+from intake_study import register
 
 
 class CatalogTests(unittest.TestCase):
@@ -71,14 +72,33 @@ class CatalogTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'provenance/units'):
             load_library(self.root)
 
-    def test_three_shots_have_inline_technical_evidence(self):
+    def test_every_shot_has_inline_technical_evidence(self):
         shots=[x for x in self.catalog['entries'] if x['kind']=='shot']
-        self.assertEqual({x['id'] for x in shots},{'SHOT-INF-OPENING','SHOT-INF-QUESTION','SHOT-INF-PHONE-CARDS'})
+        self.assertTrue({'SHOT-INF-OPENING','SHOT-INF-QUESTION','SHOT-INF-PHONE-CARDS'}.issubset({x['id'] for x in shots}))
         for shot in shots:
             technical=self.entries[shot['id']]['technical']
             self.assertTrue(any(s.get('code') for s in technical['sections']))
             self.assertTrue(any(s.get('tables') for s in technical['sections']))
             self.assertTrue(technical['implementations'])
+
+    def test_full_source_coverage_has_no_undocumented_frames(self):
+        for study in self.catalog['studies']:
+            coverage=study.get('coverage')
+            if not coverage:
+                continue  # Intake studies may not yet have inspected media.
+            intervals=sorted(self.entries[s['id']]['clip']['source_frames'] for s in self.catalog['entries'] if s['study_id']==study['id'])
+            reached=0
+            for first,end in intervals:
+                self.assertLessEqual(first,reached,study['id']+' has a coverage gap')
+                reached=max(reached,end)
+            self.assertEqual(reached,coverage['frames'],study['id'])
+
+    def test_fractional_fps_is_supported_but_nonfinite_is_rejected(self):
+        self.assertAlmostEqual(self.entries['SHOT-JAW-OPEN']['clip']['fps'],30000/1001)
+        for value in [0,-1,True,float('inf'),float('nan')]:
+            self.write_entry('SHOT-JAW-OPEN',lambda x:x['clip'].update(fps=value))
+            with self.assertRaisesRegex(ValueError,'invalid FPS'):
+                load_library(self.root)
 
     def test_technical_table_requires_provenance(self):
         self.write_entry('SHOT-INF-OPENING',lambda x:x['technical']['sections'][0]['tables'][0].update(basis='assumed-source'))
@@ -117,6 +137,18 @@ class CatalogTests(unittest.TestCase):
         target=self.root/'bindings.json';target.write_text(json.dumps(manifest),encoding='utf-8')
         binding=load_bindings(target,self.catalog)
         self.assertFalse(binding['infinex-reference'].is_file())
+
+    def test_intake_preserves_unknowns_and_refuses_overwrite(self):
+        study=register('STUDY-NEW','A new source','https://example.com/film',root=self.root)
+        catalog,entries=load_library(self.root)
+        self.assertEqual(len(entries),len(self.entries))
+        self.assertNotIn('coverage',study)
+        self.assertIsNone(study['source_project'])
+        self.assertIn('In progress',study['status'])
+        before=(self.root/'library/catalog.json').read_bytes()
+        with self.assertRaisesRegex(ValueError,'already exists'):
+            register('STUDY-NEW','Replacement','https://example.com/other',root=self.root)
+        self.assertEqual(before,(self.root/'library/catalog.json').read_bytes())
 
 
 class DeliveryTests(unittest.TestCase):

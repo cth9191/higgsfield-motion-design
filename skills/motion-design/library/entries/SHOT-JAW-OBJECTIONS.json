@@ -1,0 +1,249 @@
+{
+  "id": "SHOT-JAW-OBJECTIONS",
+  "clip": {
+    "asset_id": "shot-jaw-objections-preview",
+    "source_frames": [
+      580,
+      649
+    ],
+    "fps": 29.97002997002997,
+    "clock": "source-frames",
+    "note": "Source rate is nominal30000/1001fps; original presentation timestamps are linked. Most observed event windows come from0.5s samples and are approximate, not recovered keys. Preview uses selected decoded source frames and starts at zero."
+  },
+  "inspiration": {
+    "purpose": "A rapid typographic bridge returns the film to the card’s visual world before everyday purchase examples.",
+    "beats": [
+      "Reset: purple environment returns",
+      "Copy/card: No switching resolves",
+      "Type: No waiting resolves",
+      "Bridge: bright phone scene takes over"
+    ],
+    "use_when": [
+      "kinetic type serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The bright phone stage begins while the outgoing typographic bridge finishes.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "19.353–21.655 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "4 jobs:    field reset, card, glyph travel/resolve, bright-stage transition."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Reset",
+      "events": [
+        {
+          "label": "Reset: purple environment returns",
+          "frames": [
+            580,
+            595
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Copy/card",
+      "events": [
+        {
+          "label": "Copy/card: No switching resolves",
+          "frames": [
+            592,
+            617
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Type",
+      "events": [
+        {
+          "label": "Type: No waiting resolves",
+          "frames": [
+            617,
+            641
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Bridge",
+      "events": [
+        {
+          "label": "Bridge: bright phone scene takes over",
+          "frames": [
+            634,
+            649
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "A rapid typographic bridge returns the film to the card’s visual world before everyday purchase examples.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "19.350–19.850 s",
+                "Reset: purple environment returns"
+              ],
+              [
+                "19.750–20.600 s",
+                "Copy/card: No switching resolves"
+              ],
+              [
+                "20.600–21.400 s",
+                "Type: No waiting resolves"
+              ],
+              [
+                "21.150–21.650 s",
+                "Bridge: bright phone scene takes over"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "4 jobs:    field reset, card, glyph travel/resolve, bright-stage transition.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "PURPLE_STAGE\nCLAIMS > individually controlled words/glyphs\nCARD_ROOT\nTRANSITION_FIELD\nPHONE_NEXT",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Treat typography as independently controlled glyph groups, with a card retaining product identity. Dense three-frame sampling reveals scrambled intermediate glyphs resolving into No switching and No waiting; those transitional glyphs are not separate readable claims.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "Saturated purple/magenta studio treatment with warm diagonal light beams and soft bloom. Reconstruct with a separate low-frequency background gradient, colored area lights and controlled emissive beam planes; genuine volumetrics are an optional heavier alternative.",
+          "Strong directional softness on moving letters contrasts with readable settled glyphs. Use exposure blur for travel and a separate focus envelope where letters dissolve; keep the underlying colored field broad and low frequency.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Glyphs",
+                "Build character objects or text animators with stable final kerning; animate transform offsets without reflow."
+              ],
+              [
+                "Timing",
+                "Inspect denser source frames before locking exact per-character onset values."
+              ],
+              [
+                "Transition",
+                "Match the bright-stage arrival to phone silhouette rather than making an arbitrary blank gap."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The bright phone stage begins while the outgoing typographic bridge finishes.",
+          "A uniform whole-line fade misses the visible character scrambling and travel. Use stable final glyph positions with a separate temporary character-substitution channel, then remove that channel before the reading beat.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 29.97002997002997,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 69,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s frame samples; No switching / No waiting additionally inspected every3source frames. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-jaw-reference",
+    "study-jaw-overview-2",
+    "jaw-objections-dense",
+    "jaw-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-JAW-GLOBE",
+    "SHOT-JAW-PURCHASES"
+  ]
+}

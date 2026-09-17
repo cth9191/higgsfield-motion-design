@@ -9,6 +9,8 @@ Choose the mode from the user's task. For shot inspiration, technical study or n
 
 ## Requested mode
 
+Every requested case study or native recreation is also library work: register the source immediately as in progress, then update the same stable study/shot records during inspection, construction and review. Follow the lifecycle in [library-workflow.md](references/library-workflow.md). Unknown media timing does not block study intake. Do not wait for creative approval to preserve measurements, native controls or rejected results. Honor the user's preferred native route; no Higgsfield connection or generation credits are needed for library or Blender work.
+
 - **Shot library or technical study:** Read [library-workflow.md](references/library-workflow.md) and the compact [shot index](library/index.md). Retrieve by story job, shot family or technique, then inspect the selected passage and detailed evidence. Show the [shot gallery](assets/library.html) when browsing helps. Original prompts/source projects may be unavailable; distinguish measured behavior from local reconstruction.
 - **Native AE/Blender implementation:** Follow [library-workflow.md](references/library-workflow.md), resolve the selected native files and latest review, and build with the requested tools. Preserve current project work and inspect linked one-time scripts before execution. An unresolved or rejected local effect is not an approved recipe.
 

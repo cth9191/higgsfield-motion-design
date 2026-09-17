@@ -59,7 +59,7 @@ function media(container, assetId, title, sourceUrl, posterId) {
   };
   const asset = assetState[assetId];
   if (!asset?.available) { fallback(); return; }
-  const video = node('video', {controls:'', playsinline:'', preload:'metadata', 'aria-label':title});
+  const video = node('video', {controls:'', playsinline:'', preload:container.id==='detail-media'?'metadata':'none', 'aria-label':title});
   video.muted = true;
   video.src = asset.url;
   if (assetState[posterId]?.available) video.poster=assetState[posterId].url;
@@ -73,6 +73,7 @@ function renderCards() {
   const visible = catalog.entries.filter(item => {
     const text = JSON.stringify(item).toLowerCase().replaceAll('-', ' ').replaceAll('_', ' ');
     return terms.every(term => text.includes(term)) &&
+      (!$('study').value || item.study_id === $('study').value) &&
       (!$('video-type').value || item.video_types.includes($('video-type').value)) &&
       (!$('kind').value || item.kind === $('kind').value) &&
       (!$('tool').value || item.tools.includes($('tool').value));
@@ -224,7 +225,14 @@ for (const [id,field] of [['video-type','video_types'],['tool','tools']]) {
   for (const value of [...new Set(catalog.entries.flatMap(item=>item[field]))].sort()) $(id).append(node('option',{value},human(value)));
 }
 $('filter-form').addEventListener('submit',event=>event.preventDefault());
-for (const id of ['search','video-type','kind','tool']) $(id).addEventListener('input',renderCards);
+for (const study of catalog.studies) {
+  $('study').append(node('option',{value:study.id},study.title));
+  const strip=node('div',{class:'study-strip'}),copy=node('div');
+  copy.append(node('p',{class:'eyebrow'},'Full source study'),node('h2',{},study.title),node('p',{},study.status));
+  strip.append(copy,node('a',{class:'button secondary',href:'../'+study.document},'Read the study ↗'));
+  $('study-guides').append(strip);
+}
+for (const id of ['search','study','video-type','kind','tool']) $(id).addEventListener('input',renderCards);
 $('filter-form').addEventListener('reset',()=>setTimeout(renderCards,0));
 $('back').addEventListener('click',()=>{location.hash='';});
 for (const view of ['inspiration','technical']) {
@@ -239,6 +247,6 @@ window.addEventListener('hashchange',route);
 (async function init(){
   try {const response=await fetch('/api/assets');if(response.ok) Object.assign(assetState,await response.json());} catch {}
   const shots=catalog.entries.filter(entry=>entry.kind==='shot').length;
-  $('catalog-count').textContent=shots+' shot entries · '+(catalog.entries.length-shots)+' supporting details';
+  $('catalog-count').textContent=catalog.studies.length+' studies · '+shots+' shot entries · '+(catalog.entries.length-shots)+' supporting details';
   renderCards();await route();
 })();

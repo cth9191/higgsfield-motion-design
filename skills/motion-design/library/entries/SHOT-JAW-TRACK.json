@@ -1,0 +1,248 @@
+{
+  "id": "SHOT-JAW-TRACK",
+  "clip": {
+    "asset_id": "shot-jaw-track-preview",
+    "source_frames": [
+      99,
+      157
+    ],
+    "fps": 29.97002997002997,
+    "clock": "source-frames",
+    "note": "Source rate is nominal30000/1001fps; original presentation timestamps are linked. Most observed event windows come from0.5s samples and are approximate, not recovered keys. Preview uses selected decoded source frames and starts at zero."
+  },
+  "inspiration": {
+    "purpose": "The hero card moves through nested rounded contours, creating a quieter transitional space before the wallet explanation.",
+    "beats": [
+      "Contours:    nested rounded tracks appear",
+      "Card: travels and turns edge-on",
+      "Retreat: contours and satellites clear",
+      "Wallet: second object joins card"
+    ],
+    "use_when": [
+      "persistent card serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The wallet and card arrive together as the background moves toward a white product stage.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "3.303–5.239 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "5 jobs:    contour assembly, card translation, card turn, accent light, wallet pickup."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Contours",
+      "events": [
+        {
+          "label": "Contours:    nested rounded tracks appear",
+          "frames": [
+            99,
+            115
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Card",
+      "events": [
+        {
+          "label": "Card: travels and turns edge-on",
+          "frames": [
+            106,
+            135
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Retreat",
+      "events": [
+        {
+          "label": "Retreat: contours and satellites clear",
+          "frames": [
+            132,
+            151
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Wallet",
+      "events": [
+        {
+          "label": "Wallet: second object joins card",
+          "frames": [
+            148,
+            157
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "The hero card moves through nested rounded contours, creating a quieter transitional space before the wallet explanation.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "3.300–3.850 s",
+                "Contours:    nested rounded tracks appear"
+              ],
+              [
+                "3.550–4.500 s",
+                "Card: travels and turns edge-on"
+              ],
+              [
+                "4.400–5.050 s",
+                "Retreat: contours and satellites clear"
+              ],
+              [
+                "4.950–5.250 s",
+                "Wallet: second object joins card"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "5 jobs:    contour assembly, card translation, card turn, accent light, wallet pickup.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "TRACK_ROOT > nested rounded-rectangle curves\nCARD_ROOT > continuous hero geometry\nWALLET_NEXT > folded body\nLIGHT_ACCENT > purple underside\nCAMERA",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Use the same card with a smooth bank/rotation, not a cut to an unrelated white plane. Animate track framing separately from card travel. The increasingly edge-on pose bridges the transition to a wallet object.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "Low-key neutral studio: charcoal field, a broad gray overhead reflection and bright grazing edges. Use large soft sources and bevels; do not raise ambient illumination until dark UI panels lose separation.",
+          "Purple underlighting separates the thin card from black. Maintain enough thickness and reflection to read its profile; soften rapid travel but keep the track lines thin and stable.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Tracks",
+                "Create nested beveled curves from one rounded rectangle with scaled offsets."
+              ],
+              [
+                "Pose",
+                "Use a centered pivot and separately keyed roll/pitch; inspect silhouette at the thinnest angle."
+              ],
+              [
+                "Handoff",
+                "Carry the card world transform into the next stage, then introduce wallet geometry nearby."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The wallet and card arrive together as the background moves toward a white product stage.",
+          "Do not let the card pop out of existence when it becomes edge-on. A single flat plane needs explicit front/back behavior to avoid that defect.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 29.97002997002997,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 58,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Whole film inspected as labeled0.5s frame samples; No switching / No waiting additionally inspected every3source frames. Continuous playback and audio not reviewed.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "study-jaw-reference",
+    "study-jaw-overview-1",
+    "jaw-source-pts"
+  ],
+  "related_ids": [
+    "SHOT-JAW-OPEN",
+    "SHOT-JAW-WALLET"
+  ]
+}

@@ -1,5 +1,6 @@
 """Portable study catalog validation, retrieval and local asset resolution."""
 import json
+import math
 import re
 from pathlib import Path
 from urllib.parse import urlparse
@@ -76,7 +77,7 @@ def load_library(root=ROOT):
         frame_range(clip['source_frames'], key)
         if summary.get('poster_asset'):
             require(type(summary.get('poster_source_frame')) is int and clip['source_frames'][0] <= summary['poster_source_frame'] < clip['source_frames'][1], key + ': poster outside excerpt')
-        require(type(clip['fps']) is int and clip['fps'] > 0, key + ': invalid FPS')
+        require(type(clip['fps']) in (int, float) and math.isfinite(clip['fps']) and clip['fps'] > 0, key + ': invalid FPS')
         require(clip['asset_id'] in assets and assets[clip['asset_id']]['kind'] == 'video', key + ': preview missing')
         require(summary['preview_asset'] == clip['asset_id'], key + ': stale preview index')
         require(clip.get('clock') == 'source-frames', key + ': clock must be explicit')

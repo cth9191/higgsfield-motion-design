@@ -1,0 +1,272 @@
+{
+  "id": "SHOT-INF-WALLETS",
+  "clip": {
+    "asset_id": "shot-inf-wallets-preview",
+    "source_frames": [
+      263,
+      363
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "A phone arrives as a dimensional object while two words and expanding circles explain the first friction point.",
+    "beats": [
+      "Phone: rises large and settles upright",
+      "Copy: Different precedes Wallets",
+      "Discs:    expand behind the phone",
+      "Reading: claim holds while pose develops",
+      "Handoff: caption fades as phone turns"
+    ],
+    "use_when": [
+      "persistent hero serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "Question/coins remain behind the incoming phone; the same phone becomes the anchor for chain cards.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "4.383–6.050 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "5 jobs:    phone travel, phone tilt, two-word caption, disc expansion, outgoing caption. One persistent phone and two text units."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Phone",
+      "events": [
+        {
+          "label": "Phone: rises large and settles upright",
+          "frames": [
+            263,
+            294
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Copy",
+      "events": [
+        {
+          "label": "Copy: Different precedes Wallets",
+          "frames": [
+            294,
+            315
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Discs",
+      "events": [
+        {
+          "label": "Discs:    expand behind the phone",
+          "frames": [
+            300,
+            327
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Reading",
+      "events": [
+        {
+          "label": "Reading: claim holds while pose develops",
+          "frames": [
+            324,
+            342
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Handoff",
+      "events": [
+        {
+          "label": "Handoff: caption fades as phone turns",
+          "frames": [
+            342,
+            363
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "A phone arrives as a dimensional object while two words and expanding circles explain the first friction point.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "4.383–4.900 s",
+                "Phone: rises large and settles upright"
+              ],
+              [
+                "4.900–5.250 s",
+                "Copy: Different precedes Wallets"
+              ],
+              [
+                "5.000–5.450 s",
+                "Discs:    expand behind the phone"
+              ],
+              [
+                "5.400–5.700 s",
+                "Reading: claim holds while pose develops"
+              ],
+              [
+                "5.700–6.050 s",
+                "Handoff: caption fades as phone turns"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "5 jobs:    phone travel, phone tilt, two-word caption, disc expansion, outgoing caption. One persistent phone and two text units.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "WORLD\n  environment\n  PHONE_ROOT > bevel shell / screen / reflections\n  wallet-copy > Different / Wallets\n  rear-disc / front-accent\nCAMERA_ROOT > camera / focus target",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "The low foreground phone reduces into its readable pose in about half a second. Keep the pivot at the phone body center, and author tilt separately from its vertical rise. Continue orientation through the role change near 5.9 s; do not reset it at a scene boundary.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "Warm abstract studio field: a defocused copper/orange environment with broad soft reflections on dark objects. Proposed rig: large rectangular key, warm rim and low fill, with a separate background gradient so copy contrast can be controlled without changing the phone material. This is a descriptive treatment, not an identified HDRI.",
+          "Incoming phone softness should resolve before the readable screen interval. Its later departure into chain cards belongs to the same continuous pose; fading the full hero early would break that link.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Phone geometry",
+                "Use bevel thickness and a separate screen surface; hold the screen UVs fixed to the body."
+              ],
+              [
+                "Pose controls",
+                "Separate root translation from local pitch/yaw/roll; use sparse poses and pass-through tangents."
+              ],
+              [
+                "Word reveal",
+                "Two independently scheduled text groups, rather than one opacity ramp for the full caption."
+              ],
+              [
+                "Graphic circles",
+                "Place behind the hero; stagger radius from caption onset and keep their anchor fixed."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "Question/coins remain behind the incoming phone; the same phone becomes the anchor for chain cards.",
+          "Previous local feedback: phone tilt and all phone movement felt rough. A smooth scalar function on each pose segment can still create repeated stops; preserve velocity through intermediate orientations.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 60,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 100,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Full-film sampled overview; dense evidence where linked. This is frame-based analysis, not continuous playback or sound review.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "infinex-reference",
+    "infinex-full-phone-chain-handoff",
+    "infinex-full-pacing"
+  ],
+  "related_ids": [
+    "SHOT-INF-PHONE-CARDS",
+    "SHOT-INF-CHAIN-CARDS",
+    "LIGHT-INF-COPPER"
+  ]
+}

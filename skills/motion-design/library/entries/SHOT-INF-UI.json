@@ -1,0 +1,248 @@
+{
+  "id": "SHOT-INF-UI",
+  "clip": {
+    "asset_id": "shot-inf-ui-preview",
+    "source_frames": [
+      883,
+      987
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "Oversized typography reduces into a field of interface panels, then rushes forward while the next system assembles behind it.",
+    "beats": [
+      "Arrival: giant type reduces; UI populates",
+      "Read: central claim with peripheral panels",
+      "Exit: typography rushes toward viewer",
+      "Overlap: central disc and rings assemble"
+    ],
+    "use_when": [
+      "ui field serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "The next central disc takes attention while outgoing windows persist around the edges.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "14.717–16.450 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "5 jobs:    type arrival, panel population, reading, type rush, ring-system onset. Panel count varies with cropping; original layer count unknown."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Arrival",
+      "events": [
+        {
+          "label": "Arrival: giant type reduces; UI populates",
+          "frames": [
+            883,
+            918
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Read",
+      "events": [
+        {
+          "label": "Read: central claim with peripheral panels",
+          "frames": [
+            918,
+            954
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Exit",
+      "events": [
+        {
+          "label": "Exit: typography rushes toward viewer",
+          "frames": [
+            954,
+            969
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Overlap",
+      "events": [
+        {
+          "label": "Overlap: central disc and rings assemble",
+          "frames": [
+            966,
+            987
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "Oversized typography reduces into a field of interface panels, then rushes forward while the next system assembles behind it.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "14.717–15.300 s",
+                "Arrival: giant type reduces; UI populates"
+              ],
+              [
+                "15.300–15.900 s",
+                "Read: central claim with peripheral panels"
+              ],
+              [
+                "15.900–16.150 s",
+                "Exit: typography rushes toward viewer"
+              ],
+              [
+                "16.100–16.450 s",
+                "Overlap: central disc and rings assemble"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "5 jobs:    type arrival, panel population, reading, type rush, ring-system onset. Panel count varies with cropping; original layer count unknown.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "CAMERA_ROOT\nTYPE_ROOT > seamless-experience claim\nUI_FIELD > independent window planes at several depths\nORBIT_ROOT > brand disc / rings / nodes\nBACKGROUND",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Animate central type and peripheral panels on related but distinct depth/scale paths. Use one visual center so the oversized arrival and exit read as intentional reframes. Camera movement cannot be uniquely recovered from the flat source.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "Warm abstract studio field: a defocused copper/orange environment with broad soft reflections on dark objects. Proposed rig: large rectangular key, warm rim and low fill, with a separate background gradient so copy contrast can be controlled without changing the phone material. This is a descriptive treatment, not an identified HDRI.",
+          "Outgoing type becomes oversized and soft. Allow it to extend outside the render border without clipping its blur; peripheral UI should remain visible as rings appear. Keep the new disc clearer than retiring windows.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Panel assets",
+                "Separate alpha-backed UI planes with readable representative content; use proper filtering at oblique angles."
+              ],
+              [
+                "Type depth",
+                "Move toward a chosen near-plane endpoint, or scale in 2 D consistently; avoid crossing the camera plane unpredictably."
+              ],
+              [
+                "System onset",
+                "Start brand disc around 16.1 s before UI finishes exiting."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "The next central disc takes attention while outgoing windows persist around the edges.",
+          "A blank beat between UI and system loses the transition. Uniform opacity on the whole scene would remove the lingering peripheral panels.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 60,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 104,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Full-film sampled overview; dense evidence where linked. This is frame-based analysis, not continuous playback or sound review.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "infinex-reference",
+    "infinex-full-ui-orbit",
+    "infinex-full-pacing"
+  ],
+  "related_ids": [
+    "SHOT-INF-ORBIT",
+    "SHOT-INF-CONTRAST"
+  ]
+}

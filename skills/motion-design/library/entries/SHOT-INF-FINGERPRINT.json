@@ -1,0 +1,295 @@
+{
+  "id": "SHOT-INF-FINGERPRINT",
+  "clip": {
+    "asset_id": "shot-inf-fingerprint-preview",
+    "source_frames": [
+      609,
+      774
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Zero-based decoded source frame interval, end exclusive. Event windows are approximate sampled observations. Preview resets its clock to zero; original source timing is retained."
+  },
+  "inspiration": {
+    "purpose": "A central fingerprint turns frontal, receives a scan, then makes room for a three-item explanation.",
+    "beats": [
+      "Fingerprint: thin profile opens",
+      "Brackets:    framing markers arrive",
+      "Scan: line travels downward and glows",
+      "Layout: reframe and three list items",
+      "Reading: list stays legible",
+      "Wipe: orange panel covers the scene"
+    ],
+    "use_when": [
+      "scan reveal serves the current story.",
+      "A native build needs editable choreography and reliable text."
+    ],
+    "attention": "Orange words begin while the orange panel is still covering the fingerprint/list.",
+    "meta": [
+      {
+        "label": "Source passage",
+        "value": "10.150–12.900 s"
+      },
+      {
+        "label": "Coordinated detail groups",
+        "value": "6 jobs:    rotation, brackets, scan, completion glow, three-item list, wipe. Three list items and one fingerprint hero."
+      },
+      {
+        "label": "Recovered original rig",
+        "value": "Unknown; reconstruction is labeled separately"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "event-1",
+      "label": "Fingerprint",
+      "events": [
+        {
+          "label": "Fingerprint: thin profile opens",
+          "frames": [
+            609,
+            639
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "label": "Brackets",
+      "events": [
+        {
+          "label": "Brackets:    framing markers arrive",
+          "frames": [
+            630,
+            648
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "label": "Scan",
+      "events": [
+        {
+          "label": "Scan: line travels downward and glows",
+          "frames": [
+            642,
+            675
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "label": "Layout",
+      "events": [
+        {
+          "label": "Layout: reframe and three list items",
+          "frames": [
+            681,
+            711
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "label": "Reading",
+      "events": [
+        {
+          "label": "Reading: list stays legible",
+          "frames": [
+            711,
+            744
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "event-6",
+      "label": "Wipe",
+      "events": [
+        {
+          "label": "Wipe: orange panel covers the scene",
+          "frames": [
+            750,
+            774
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Observed source frames plus proposed Blender/AE reconstruction. No original production settings are inferred as fact.",
+    "sections": [
+      {
+        "title": "Sequence, timing and attention",
+        "items": [
+          "A central fingerprint turns frontal, receives a scan, then makes room for a three-item explanation.",
+          "Times below delimit observed phases, not recovered keyframes. Overlaps are intentional."
+        ],
+        "tables": [
+          {
+            "caption": "Observed event windows",
+            "columns": [
+              "Source time",
+              "Visible event"
+            ],
+            "rows": [
+              [
+                "10.150–10.650 s",
+                "Fingerprint: thin profile opens"
+              ],
+              [
+                "10.500–10.800 s",
+                "Brackets:    framing markers arrive"
+              ],
+              [
+                "10.700–11.250 s",
+                "Scan: line travels downward and glows"
+              ],
+              [
+                "11.350–11.850 s",
+                "Layout: reframe and three list items"
+              ],
+              [
+                "11.850–12.400 s",
+                "Reading: list stays legible"
+              ],
+              [
+                "12.500–12.900 s",
+                "Wipe: orange panel covers the scene"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Scene structure and component count",
+        "items": [
+          "6 jobs:    rotation, brackets, scan, completion glow, three-item list, wipe. Three list items and one fingerprint hero.",
+          "These are visible functional groups or proposed construction objects, not a claim about the original layer count."
+        ],
+        "code": [
+          {
+            "label": "Proposed editable hierarchy",
+            "text": "FINGERPRINT_ROOT > vector ridges / scan mask / glow\nBRACKETS > four corner strokes\nLIST > item-1 / item-2 / item-3\nLAYOUT_ROOT\nWIPE > full-frame orange plane",
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Camera, movement and interpolation",
+        "items": [
+          "Separate fingerprint Y rotation from the later layout reframe. Once frontal, preserve sufficient face area to read the scan. Build list appearance while the parent composition is still settling rather than waiting for a full stop.",
+          "Use separate curves for position, orientation and scale. An intermediate pose should not force a full stop unless the reference visibly pauses. Judge the projected silhouette and screen velocity, not just whether handles are Bézier."
+        ]
+      },
+      {
+        "title": "Lighting, materials and focus",
+        "items": [
+          "Warm abstract studio field: a defocused copper/orange environment with broad soft reflections on dark objects. Proposed rig: large rectangular key, warm rim and low fill, with a separate background gradient so copy contrast can be controlled without changing the phone material. This is a descriptive treatment, not an identified HDRI.",
+          "A scan highlight is a localized moving mask on the fingerprint ridges. Keep a sharp base under a blurred glow duplicate; broad full-frame blur would destroy ridge information. The wipe should cover, not simply fade, the old field.",
+          "Lighting descriptions name the visible treatment and an inferred reconstruction. Original light powers, lens, aperture, shutter and compositing settings are unknown unless explicitly recorded below."
+        ]
+      },
+      {
+        "title": "Construction controls and implementation order",
+        "items": [
+          "Block the incoming and outgoing states first. Establish the main object trajectory, then schedule child actions and reading intervals. Add focus and exposure blur after the trajectory is intelligible. The following controls are a build plan, not measured source settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native construction controls",
+            "columns": [
+              "Control / component",
+              "Build instruction"
+            ],
+            "rows": [
+              [
+                "Ridges",
+                "Convert clean SVG paths to beveled curves or use an alpha texture at sufficient resolution."
+              ],
+              [
+                "Scan",
+                "Animate a narrow vertical-position band; multiply ridge visibility/emission by that band."
+              ],
+              [
+                "Brackets",
+                "Four stroke elements under one size control, with a delayed settle."
+              ],
+              [
+                "List",
+                "Three stable text rows with staggered onsets; do not bake them into the fingerprint texture."
+              ],
+              [
+                "Wipe",
+                "Move an orange rectangle from right to left beyond both frame edges."
+              ]
+            ],
+            "basis": "proposed"
+          }
+        ]
+      },
+      {
+        "title": "Transitions, failure modes and review",
+        "items": [
+          "Orange words begin while the orange panel is still covering the fingerprint/list.",
+          "Do not infer a biometric simulation from a decorative scan. A glow pulse must not erase the distinct scan direction or text contrast.",
+          "Review this excerpt with both adjacent joins at normal speed, then diagnose at half speed. Check first-visible frames, accidental stops, silhouette clipping, text readability and outgoing blur. A contact sheet does not establish perceptual smoothness or audio quality."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Reference rate",
+        "value": 60,
+        "unit": "frames/second",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Excerpt length",
+        "value": 165,
+        "unit": "decoded frames",
+        "basis": "measured-reference"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Editable reconstruction plan above; not rendered",
+        "tool": "Blender / After Effects",
+        "status": "proposed",
+        "asset_ids": []
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "pending",
+    "scope": "Documented reference analysis and native construction plan; no new production render or user acceptance.",
+    "inspection": "Full-film sampled overview; dense evidence where linked. This is frame-based analysis, not continuous playback or sound review.",
+    "limitations": [
+      "Exact original scene hierarchy and easing are unavailable.",
+      "Approximate event windows are not exact cut boundaries unless explicitly stated.",
+      "Proposed rig has not been rendered or compared here."
+    ]
+  },
+  "evidence_assets": [
+    "infinex-reference",
+    "infinex-full-coin-fingerprint",
+    "infinex-full-fingerprint-contrast-ui",
+    "infinex-full-pacing"
+  ],
+  "related_ids": [
+    "SHOT-INF-CONTRAST",
+    "SHOT-INF-COIN"
+  ]
+}

@@ -14,7 +14,7 @@ python scripts/build_library.py show DETAIL-INF-DEFOCUS
 
 Search by the story job, shot family, visual behavior and chosen tool. Open the selected detail JSON and its source study; do not load every entry to answer one shot question. For inspiration, inspect the actual passage and explain which action or relationship helps the new story. For technical work, read the controls, hierarchy, effect order, files and latest review before adapting them.
 
-The Infinex catalog has three shot entries (opening, question, phone/cards) plus supporting focus and lighting entries. Shot-level technical sections include formulas, measured tables and complete authored motion controls directly in the record. Use the section navigation in the technical view. A supporting technique entry does not substitute for the shot's complete choreography; keep the shot and its component mechanisms linked.
+The catalog covers the full supplied Infinex, Cero, Jaw/vedu_boi and Bhumimov UI films, plus Ordinary Folk's complete Radial Delay composition. Use the source-study filter to browse one film. Shot-level technical sections include event windows, component counts, proposed hierarchies, construction controls and relevant failures. Exact original controls are available for Radial Delay; exact local controls are available for the Infinex and Blender reconstructions. Use section navigation in the technical view. A supporting technique entry does not substitute for the shot's complete choreography; keep the shot and its component mechanisms linked.
 
 Keep four things separate: visible reference behavior; original source settings when available; our implementation; and untested proposals. A reference clip needs no original prompt. An attractive source does not make a rejected reconstruction a validated recipe. Use the recorded inspection scope; frame sheets cannot establish continuous motion or sound quality.
 
@@ -46,6 +46,23 @@ python skills/motion-design/scripts/serve_library.py --assets-file work/library-
 For an installed skill, run the same scripts from that skill folder and store the private manifest outside the package. The server binds only to loopback. It exposes explicit asset IDs, supports video byte ranges for seeking, and never opens AE/Blender or sends assets to a provider. Stop it with Ctrl+C when no longer needed.
 
 ## Add a study or result
+
+This is a standing part of every requested case study and recreation, not an optional cleanup step. Create an in-progress source record when work begins. Update the same IDs at evidence intake, shot analysis, first native build, comparison render and each meaningful review. The user's request to study or recreate already authorizes recording that work; do not add a separate permission pause for routine library updates.
+
+Register a source before its media or frame rate is known:
+
+```sh
+python scripts/intake_study.py --id STUDY-EXAMPLE --title "Example film" --source-url https://example.com/film
+python scripts/build_library.py
+```
+
+The intake helper creates a source study and an unbound media ID. It does not invent frames, prompts, software or shot descriptions. Add shot entries as soon as actual timing is established. Keep the record in progress if access prevents analysis and state the specific missing evidence. Registering a source is not completion of a full-breakdown request.
+
+For a full breakdown, inventory the entire supplied film, including quiet holds, repeated footage edits, transitions and its final tail. Give every interval an entry; use overlapping event tracks where actions coexist. Each shot needs the story job, attention handoff, visible instance/job count, incoming/readable/outgoing states, camera/object motion, typography, lighting/material/focus treatment, editable hierarchy, proposed or known controls, dependencies, failure modes and inspection limits. A count of functional jobs is not an original layer count. Whole-film coverage does not establish exact cut frames or original rig settings.
+
+At native build time, attach the exact versioned scene/script, geometry/assets/fonts, effect order, keyed values and units, render settings, output and source comparison. At review time, save timestamped user feedback, keep/reject reason and known regressions. Preserve rejected evidence and update the existing record; do not replace it with a falsely approved recipe. Reference-analysis completion, technical verification and creative acceptance are separate.
+
+For Blender construction, consult [native-study-construction.md](native-study-construction.md) and the selected record. Prefer the user's stated production route. A native build never inherits a Seedance default from the preset generation route.
 
 Follow [the data contract](../library/schema.md). Add a source study, select a passage with its incoming/outgoing context, then link shot and technique entries. Record overlapping event tracks rather than forcing independent actions into consecutive narrative phases. Keep units, source/preview clocks, exact provenance, dependencies and source-usage terms.
 
