@@ -214,7 +214,7 @@ The package includes ten film presets, archived prompts with verified hashes, ad
 
 ### Shot studies and technical breakdowns
 
-The first study connects three Infinex entries: **persistent phone and card staging**, **outgoing focus transfer**, and **warm studio lighting**. Browse by video type, story purpose, technique or implementation tool. Each entry has an inspiration view, technical controls with units and provenance, overlapping animation tracks, linked native evidence, and a review history.
+The Infinex study has three shot pages: **opening emphasis**, **question with coins**, and **phone → cards**. Two supporting entries cover **outgoing focus transfer** and **warm studio lighting**. Browse by video type, story purpose, technique or implementation tool. Each shot has an inspiration view and an inline technical breakdown: source timing, hierarchy, formulas, complete authored control tables, typography, lighting, compositing, native evidence and current review limits. Section links make the deeper pages navigable.
 
 ```sh
 python skills/motion-design/scripts/serve_library.py

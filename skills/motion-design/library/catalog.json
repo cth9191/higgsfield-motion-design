@@ -11,7 +11,7 @@
       "document": "library/studies/infinex.md",
       "source_project": null,
       "original_prompt": null,
-      "status": "Reference audited; local reconstruction through 8.8s, with unresolved defects."
+      "status": "Three documented shot breakdowns plus focus/lighting details; native reconstruction through 8.8s retains unresolved defects."
     }
   ],
   "assets": {
@@ -74,13 +74,237 @@
     "infinex-v05-comparison": {
       "label": "Reference / V05 comparison (global 4.3–8.8s)",
       "kind": "video"
+    },
+    "infinex-opening-preview": {
+      "label": "Opening emphasis — source excerpt",
+      "kind": "video"
+    },
+    "infinex-question-preview": {
+      "label": "Question and phone handoff — source excerpt",
+      "kind": "video"
+    },
+    "infinex-technical-study": {
+      "label": "Technical mechanisms and established controls",
+      "kind": "document"
+    },
+    "infinex-complexity-study": {
+      "label": "System counts and overlap analysis",
+      "kind": "document"
+    },
+    "infinex-opening-timing": {
+      "label": "Opening source timing and measurements",
+      "kind": "document"
+    },
+    "infinex-opening-aep": {
+      "label": "Liked opening glow-polish project",
+      "kind": "native"
+    },
+    "infinex-opening-build": {
+      "label": "Opening typography and padded fields",
+      "kind": "code"
+    },
+    "infinex-opening-scale": {
+      "label": "Opening scale and focus construction",
+      "kind": "code"
+    },
+    "infinex-opening-exit": {
+      "label": "Opening exit construction",
+      "kind": "code"
+    },
+    "infinex-opening-rays": {
+      "label": "Opening fill and ray construction",
+      "kind": "code"
+    },
+    "infinex-opening-glow": {
+      "label": "Final warm glow controls",
+      "kind": "code"
+    },
+    "infinex-opening-light": {
+      "label": "Animated opening light fields",
+      "kind": "code"
+    },
+    "infinex-opening-review": {
+      "label": "Opening glow-polish validation and scoped feedback",
+      "kind": "document"
+    },
+    "infinex-opening-comparison": {
+      "label": "Liked opening comparison — reference left",
+      "kind": "video"
+    },
+    "infinex-opening-mismatch": {
+      "label": "Easier focus mismatch and pending correction",
+      "kind": "document"
+    },
+    "infinex-opening-failure": {
+      "label": "Easier focus — reference versus current candidate",
+      "kind": "image"
+    },
+    "infinex-question-aep": {
+      "label": "Question soft-word-arrivals project",
+      "kind": "native"
+    },
+    "infinex-question-blend": {
+      "label": "Six coins and foreground phone scene",
+      "kind": "native"
+    },
+    "infinex-question-timing": {
+      "label": "Question source timing and handoff measurements",
+      "kind": "document"
+    },
+    "infinex-question-build": {
+      "label": "Question base shapes, hierarchy and environment",
+      "kind": "code"
+    },
+    "infinex-question-arrivals": {
+      "label": "Latest whole-word arrivals",
+      "kind": "code"
+    },
+    "infinex-question-spacing": {
+      "label": "Native kerning and range-selector construction",
+      "kind": "code"
+    },
+    "infinex-question-emphasis": {
+      "label": "Complicated character and color refinement",
+      "kind": "code"
+    },
+    "infinex-question-pullback": {
+      "label": "Long pullback Hermite waypoints",
+      "kind": "code"
+    },
+    "infinex-question-exit": {
+      "label": "Question exit scale and visible-layer fade",
+      "kind": "code"
+    },
+    "infinex-question-priority": {
+      "label": "Foreground compositing priority switch",
+      "kind": "code"
+    },
+    "infinex-question-review": {
+      "label": "Question soft-arrival validation",
+      "kind": "document"
+    },
+    "infinex-question-comparison": {
+      "label": "Question joined comparison — reference left",
+      "kind": "video"
+    },
+    "infinex-v04-ae-build": {
+      "label": "Wallet, discs, chains and confirmation base construction",
+      "kind": "code"
+    },
+    "infinex-v04-ae-polish": {
+      "label": "Wallet retirement and chain typography refinement",
+      "kind": "code"
+    },
+    "infinex-v05-ae-polish": {
+      "label": "V05 final blur multiplier — rejected result",
+      "kind": "code"
+    },
+    "infinex-v05-curve-data": {
+      "label": "Complete fitted phone controls and coefficients",
+      "kind": "document"
+    },
+    "infinex-v04-cards": {
+      "label": "Inherited card arrival and geometry construction",
+      "kind": "code"
+    },
+    "shot-inf-opening-poster": {
+      "label": "01 · Sentence becomes a selected benefit — reference still",
+      "kind": "image"
+    },
+    "shot-inf-question-poster": {
+      "label": "02 · A question develops inside a pullback — reference still",
+      "kind": "image"
+    },
+    "shot-inf-phone-cards-poster": {
+      "label": "03 · One phone, two explanatory roles — reference still",
+      "kind": "image"
+    },
+    "detail-inf-defocus-poster": {
+      "label": "Pass attention through focus — reference still",
+      "kind": "image"
+    },
+    "light-inf-copper-poster": {
+      "label": "A warm field, shaped reflections — reference still",
+      "kind": "image"
     }
   },
   "entries": [
     {
+      "id": "SHOT-INF-OPENING",
+      "title": "01 · Sentence becomes a selected benefit",
+      "summary": "Character reveal, prepared reframe, growing selection, accent rays and late retreat inside one claim.",
+      "kind": "shot",
+      "video_types": [
+        "kinetic-typography",
+        "product-launch",
+        "social-explainer"
+      ],
+      "story_jobs": [
+        "introduce-promise",
+        "emphasize-benefit"
+      ],
+      "tags": [
+        "opening",
+        "character-reveal",
+        "camera-reframe",
+        "selection",
+        "accent-rays",
+        "glow",
+        "overlap",
+        "exponential",
+        "easing"
+      ],
+      "tools": [
+        "After Effects"
+      ],
+      "review_state": "mixed",
+      "study_id": "STUDY-INFINEX",
+      "detail": "library/entries/SHOT-INF-OPENING.json",
+      "preview_asset": "infinex-opening-preview",
+      "poster_asset": "shot-inf-opening-poster",
+      "poster_source_frame": 90
+    },
+    {
+      "id": "SHOT-INF-QUESTION",
+      "title": "02 · A question develops inside a pullback",
+      "summary": "Seven overlapping word arrivals, a growing box, character emphasis, six coins and the foreground phone handoff.",
+      "kind": "shot",
+      "video_types": [
+        "kinetic-typography",
+        "product-launch",
+        "social-explainer"
+      ],
+      "story_jobs": [
+        "introduce-problem",
+        "develop-question",
+        "handoff-to-product"
+      ],
+      "tags": [
+        "question",
+        "whole-word-arrival",
+        "hermite",
+        "pullback",
+        "coins",
+        "box",
+        "character-reveal",
+        "reaction",
+        "foreground-handoff"
+      ],
+      "tools": [
+        "After Effects",
+        "Blender"
+      ],
+      "review_state": "mixed",
+      "study_id": "STUDY-INFINEX",
+      "detail": "library/entries/SHOT-INF-QUESTION.json",
+      "preview_asset": "infinex-question-preview",
+      "poster_asset": "shot-inf-question-poster",
+      "poster_source_frame": 222
+    },
+    {
       "id": "SHOT-INF-PHONE-CARDS",
-      "title": "One hero, a new role",
-      "summary": "A persistent phone turns into the anchor for a staggered card reveal.",
+      "title": "03 · One phone, two explanatory roles",
+      "summary": "Foreground phone arrival becomes a four-card layout, with full pose controls, typography and the confirmation handoff.",
       "kind": "shot",
       "video_types": [
         "product-launch",
@@ -96,7 +320,11 @@
         "card-fan",
         "bezier",
         "stagger",
-        "foreground-handoff"
+        "foreground-handoff",
+        "confirmation",
+        "pose-projection",
+        "whole-word",
+        "hermite"
       ],
       "tools": [
         "After Effects",
@@ -105,7 +333,9 @@
       "review_state": "mixed",
       "study_id": "STUDY-INFINEX",
       "detail": "library/entries/SHOT-INF-PHONE-CARDS.json",
-      "preview_asset": "infinex-phone-cards-preview"
+      "preview_asset": "infinex-phone-cards-preview",
+      "poster_asset": "shot-inf-phone-cards-poster",
+      "poster_source_frame": 378
     },
     {
       "id": "DETAIL-INF-DEFOCUS",
@@ -135,7 +365,9 @@
       "review_state": "rejected",
       "study_id": "STUDY-INFINEX",
       "detail": "library/entries/DETAIL-INF-DEFOCUS.json",
-      "preview_asset": "infinex-defocus-preview"
+      "preview_asset": "infinex-defocus-preview",
+      "poster_asset": "detail-inf-defocus-poster",
+      "poster_source_frame": 402
     },
     {
       "id": "LIGHT-INF-COPPER",
@@ -166,7 +398,9 @@
       "review_state": "mixed",
       "study_id": "STUDY-INFINEX",
       "detail": "library/entries/LIGHT-INF-COPPER.json",
-      "preview_asset": "infinex-copper-preview"
+      "preview_asset": "infinex-copper-preview",
+      "poster_asset": "light-inf-copper-poster",
+      "poster_source_frame": 324
     }
   ]
 }

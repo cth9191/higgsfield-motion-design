@@ -31,7 +31,7 @@ class CatalogTests(unittest.TestCase):
 
     def test_idea_and_technical_queries_retain_same_evidence(self):
         idea = search(self.catalog, 'persistent hero', video_type='product-launch')
-        native = search(self.catalog, 'phone', tool='Blender')
+        native = search(self.catalog, 'persistent hero', tool='Blender')
         self.assertEqual(idea[0]['id'], native[0]['id'])
         detail = self.entries[idea[0]['id']]
         self.assertEqual(detail['clip']['source_frames'], [263,438])
@@ -61,7 +61,7 @@ class CatalogTests(unittest.TestCase):
             load_library(self.root)
 
     def test_summary_cannot_silently_approve_rejected_detail(self):
-        self.catalog['entries'][1]['review_state']='approved'
+        next(x for x in self.catalog['entries'] if x['id']=='DETAIL-INF-DEFOCUS')['review_state']='approved'
         (self.root/'library/catalog.json').write_text(json.dumps(self.catalog),encoding='utf-8')
         with self.assertRaisesRegex(ValueError, 'stale review index'):
             load_library(self.root)
@@ -69,6 +69,25 @@ class CatalogTests(unittest.TestCase):
     def test_parameters_require_basis_and_units(self):
         self.write_entry('DETAIL-INF-DEFOCUS', lambda x:x['technical']['parameters'][0].update(basis='assumed-exact'))
         with self.assertRaisesRegex(ValueError, 'provenance/units'):
+            load_library(self.root)
+
+    def test_three_shots_have_inline_technical_evidence(self):
+        shots=[x for x in self.catalog['entries'] if x['kind']=='shot']
+        self.assertEqual({x['id'] for x in shots},{'SHOT-INF-OPENING','SHOT-INF-QUESTION','SHOT-INF-PHONE-CARDS'})
+        for shot in shots:
+            technical=self.entries[shot['id']]['technical']
+            self.assertTrue(any(s.get('code') for s in technical['sections']))
+            self.assertTrue(any(s.get('tables') for s in technical['sections']))
+            self.assertTrue(technical['implementations'])
+
+    def test_technical_table_requires_provenance(self):
+        self.write_entry('SHOT-INF-OPENING',lambda x:x['technical']['sections'][0]['tables'][0].update(basis='assumed-source'))
+        with self.assertRaisesRegex(ValueError,'table provenance'):
+            load_library(self.root)
+
+    def test_technical_table_rows_match_column_labels(self):
+        self.write_entry('SHOT-INF-OPENING',lambda x:x['technical']['sections'][0]['tables'][0]['rows'][0].append('unlabeled value'))
+        with self.assertRaisesRegex(ValueError,'column mismatch'):
             load_library(self.root)
 
     def test_card_preview_must_match_opened_excerpt(self):

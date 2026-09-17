@@ -14,6 +14,8 @@ python scripts/build_library.py show DETAIL-INF-DEFOCUS
 
 Search by the story job, shot family, visual behavior and chosen tool. Open the selected detail JSON and its source study; do not load every entry to answer one shot question. For inspiration, inspect the actual passage and explain which action or relationship helps the new story. For technical work, read the controls, hierarchy, effect order, files and latest review before adapting them.
 
+The Infinex catalog has three shot entries (opening, question, phone/cards) plus supporting focus and lighting entries. Shot-level technical sections include formulas, measured tables and complete authored motion controls directly in the record. Use the section navigation in the technical view. A supporting technique entry does not substitute for the shot's complete choreography; keep the shot and its component mechanisms linked.
+
 Keep four things separate: visible reference behavior; original source settings when available; our implementation; and untested proposals. A reference clip needs no original prompt. An attractive source does not make a rejected reconstruction a validated recipe. Use the recorded inspection scope; frame sheets cannot establish continuous motion or sound quality.
 
 ## Choose the production route from the task

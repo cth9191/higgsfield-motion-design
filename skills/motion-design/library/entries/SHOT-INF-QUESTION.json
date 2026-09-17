@@ -1,0 +1,1324 @@
+{
+  "id": "SHOT-INF-QUESTION",
+  "clip": {
+    "asset_id": "infinex-question-preview",
+    "source_frames": [
+      123,
+      288
+    ],
+    "fps": 60,
+    "clock": "source-frames",
+    "note": "Global 2.05–4.80s; question clears about 4.60s. The preview retains the overlapping phone entrance from frame 263 / 4.3833s."
+  },
+  "inspiration": {
+    "purpose": "Develop a question while framing and surrounding objects continue to move, then let the next hero take foreground priority.",
+    "beats": [
+      "The first coin leads the question by about 0.067s.",
+      "Whole words arrive quickly but keep settling as subsequent words begin.",
+      "An empty dotted box prepares the destination for complicated?.",
+      "Character emphasis and the reaction overlap the continuing pullback.",
+      "Coins clear the center; the question enlarges and dims while the phone enters over it."
+    ],
+    "use_when": [
+      "A line needs quick progression without abrupt individual word stops.",
+      "An emphasized answer can be prepared with a growing visual destination.",
+      "The next product object can cover the outgoing explanation."
+    ],
+    "attention": "Question → prepared empty box → complicated? and brief reaction → incoming phone.",
+    "meta": [
+      {
+        "label": "Message duration",
+        "value": "About 2.55s, from 2.05 until ~4.60; 2.75s excerpt with handoff"
+      },
+      {
+        "label": "Instances",
+        "value": "Seven word layers, six coins, twelve emphasis-character selectors, four box handles"
+      },
+      {
+        "label": "Overlap",
+        "value": "18-frame word rise versus 7–8-frame onset gaps: about 2–3 local rises at once"
+      },
+      {
+        "label": "Reading / handoff",
+        "value": "Question readable roughly 3.70–4.40; phone coexists with outgoing copy for ~0.20–0.22s"
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "words",
+      "label": "Reference word entries",
+      "events": [
+        {
+          "label": "So onset",
+          "frames": [
+            133,
+            134
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "why onset",
+          "frames": [
+            140,
+            141
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "does onset",
+          "frames": [
+            148,
+            149
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "it onset",
+          "frames": [
+            156,
+            157
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "still onset",
+          "frames": [
+            163,
+            164
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "feels onset",
+          "frames": [
+            171,
+            172
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "so onset",
+          "frames": [
+            178,
+            179
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "settles",
+      "label": "Local word rise",
+      "events": [
+        {
+          "label": "So local settle",
+          "frames": [
+            133,
+            151
+          ],
+          "basis": "local-implementation"
+        },
+        {
+          "label": "why local settle",
+          "frames": [
+            140,
+            158
+          ],
+          "basis": "local-implementation"
+        },
+        {
+          "label": "does local settle",
+          "frames": [
+            148,
+            166
+          ],
+          "basis": "local-implementation"
+        },
+        {
+          "label": "it local settle",
+          "frames": [
+            156,
+            174
+          ],
+          "basis": "local-implementation"
+        },
+        {
+          "label": "still local settle",
+          "frames": [
+            163,
+            181
+          ],
+          "basis": "local-implementation"
+        },
+        {
+          "label": "feels local settle",
+          "frames": [
+            171,
+            189
+          ],
+          "basis": "local-implementation"
+        },
+        {
+          "label": "so local settle",
+          "frames": [
+            178,
+            196
+          ],
+          "basis": "local-implementation"
+        }
+      ]
+    },
+    {
+      "id": "pullback",
+      "label": "Shared local framing",
+      "events": [
+        {
+          "label": "Long pullback",
+          "frames": [
+            123,
+            234
+          ],
+          "basis": "local-implementation"
+        },
+        {
+          "label": "Accelerating exit push",
+          "frames": [
+            234,
+            282
+          ],
+          "basis": "local-implementation"
+        }
+      ]
+    },
+    {
+      "id": "box",
+      "label": "Box / emphasis",
+      "events": [
+        {
+          "label": "Box begins and grows",
+          "frames": [
+            186,
+            219
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "Complicated reveal",
+          "frames": [
+            199,
+            225
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "Reaction arrival",
+          "frames": [
+            216,
+            222
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "label": "Reading exposure",
+      "events": [
+        {
+          "label": "Completed question readable",
+          "frames": [
+            222,
+            264
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    },
+    {
+      "id": "handoff",
+      "label": "Phone / old text",
+      "events": [
+        {
+          "label": "Phone foreground entrance",
+          "frames": [
+            263,
+            288
+          ],
+          "basis": "measured-reference"
+        },
+        {
+          "label": "Old text fades and is occluded",
+          "frames": [
+            267,
+            276
+          ],
+          "basis": "measured-reference"
+        }
+      ]
+    }
+  ],
+  "technical": {
+    "basis": "Measured reference behavior and inspected local authoring scripts are listed separately below. All times are global seconds at 60fps; screen coordinates are normalized to 1280×720, x right and y down. Original software, project, font and exact source curves are unknown. This is the full documented breakdown of the current study, not a recovered source rig.",
+    "sections": [
+      {
+        "title": "Source event map and precision",
+        "items": [
+          "Dense decoded frames establish whole-word question entrances. The earlier per-character description was superseded. Font and original easing are not identified.",
+          "Coin detection before f263 can contaminate phone bounds; the phone is absent at f262 and visually confirmed from f263. Faint text onset and low-opacity bounds depend on thresholds."
+        ],
+        "tables": [
+          {
+            "caption": "Reference events",
+            "columns": [
+              "Time (s)",
+              "Visible action"
+            ],
+            "rows": [
+              [
+                2.05,
+                "Environment changes"
+              ],
+              [
+                2.15,
+                "First coin visible"
+              ],
+              [
+                2.2166667,
+                "First So faintly visible"
+              ],
+              [
+                "3.00–3.08",
+                "Final so resolves"
+              ],
+              [
+                "3.10–3.133",
+                "Dotted box begins"
+              ],
+              [
+                "3.333–3.75",
+                "Complicated? reveals"
+              ],
+              [
+                "3.60–3.65",
+                "Reaction joins"
+              ],
+              [
+                "3.70–4.40",
+                "Readable question; coins keep moving"
+              ],
+              [
+                "4.20–4.45",
+                "Outgoing enlargement strengthens"
+              ],
+              [
+                4.3833333,
+                "First foreground phone rim"
+              ],
+              [
+                "4.45–4.60",
+                "Old type fades/occludes"
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Hierarchy, pivots and native typography",
+        "items": [
+          "Long framing, late exit and local word motion are different transform levels. Their combined projection is the visible motion; a 25px local offset grows in screen space when its parent is enlarged.",
+          "The heading uses SegoeUI-Light 48px and fixed tracking −25. Prefix widths plus a sentinel preserve word spacing. It is not an animated tracking reveal. The source phrase spelling is retained as reference copy.",
+          "Blender coins and phone stay outside the type parent stack because their rendered motion already includes recession."
+        ],
+        "code": [
+          {
+            "label": "Current native type hierarchy",
+            "text": "S02 CTRL / long camera pullback — pivot [639,333]\n  S02 CTRL / shared exit push — pivot [639,360]\n    Question layout — [640 − phraseWidth/2,325]\n      Seven native words — local rise, opacity, Gaussian sharpening\n    Dotted box + four handles\n    Complicated? — one native word, twelve selectors\n    Reaction face — editable vector precomp\nBlender asset footage — separate from this transform stack",
+            "basis": "local-implementation"
+          }
+        ]
+      },
+      {
+        "title": "Whole-word onset cadence and overlapping settle",
+        "items": [
+          "The onsets are retained from measured reference timing. Latest local rises last 0.30s, sharpening 0.15s and opacity 0.05s. A longer settle does not mean a longer delay before the next word.",
+          "The previous 0.15s rise and 0.105s sharpening were lengthened without changing cadence. Two or three words can still be mid-rise together; all contribute to one phrase."
+        ],
+        "code": [
+          {
+            "label": "Common curve definitions",
+            "text": "u = clamp(u, 0, 1)\nO(u) = 1 − (1 − u)^3             # cubic-out; fast start, long tail\nS(u) = 6u^5 − 15u^4 + 10u^3     # smootherstep; quiet ends\na = globalTime − onset          # local age in seconds",
+            "basis": "local-implementation"
+          },
+          {
+            "label": "Latest per-word controls",
+            "text": "a = t − wordOnset\nyOffset = 25 × (1 − O(a/0.30))\nGaussianBlur = 6 × (1 − O(a/0.15))\nopacity = 100 × S(a/0.05) × exitEnvelope",
+            "basis": "local-implementation"
+          }
+        ],
+        "tables": [
+          {
+            "caption": "Measured onsets retained in the local implementation",
+            "columns": [
+              "Word / instance",
+              "Global onset (s)",
+              "Source frame"
+            ],
+            "rows": [
+              [
+                "1. So",
+                2.2166667,
+                133
+              ],
+              [
+                "2. why",
+                2.3333333,
+                140
+              ],
+              [
+                "3. does",
+                2.4666667,
+                148
+              ],
+              [
+                "4. it",
+                2.6,
+                156
+              ],
+              [
+                "5. still",
+                2.7166667,
+                163
+              ],
+              [
+                "6. feels",
+                2.85,
+                171
+              ],
+              [
+                "7. so",
+                2.9666667,
+                178
+              ]
+            ],
+            "basis": "measured-reference"
+          }
+        ]
+      },
+      {
+        "title": "Long shared pullback: complete local controls",
+        "items": [
+          "The completed heading measures about 531px wide at 3.10s and 487px at 3.90s, near horizontal center 639–640. The parent keeps shrinking during box, emphasis and reaction arrival.",
+          "The analytical fit xLeft ≈ 397−190 exp(−(t−2.2167)/0.407) has ~2.5px RMS error on selected samples. The 0.407s value is a fitted decay constant. The implemented rig uses the waypoints below instead.",
+          "A continuous Hermite curve is not automatically monotonic for arbitrary controls. Recheck speed and overshoot after adapting the content."
+        ],
+        "code": [
+          {
+            "label": "Cubic Hermite interpolation used for framing",
+            "text": "h = t1 − t0; u = clamp((t − t0)/h, 0, 1)\nH = (2u^3 − 3u^2 + 1)y0 + (u^3 − 2u^2 + u)h m0\n  + (−2u^3 + 3u^2)y1 + (u^3 − u^2)h m1\nInterior slope m(i) = (y[i+1] − y[i−1]) / (t[i+1] − t[i−1])\nPullback: first slope = first secant; final slope = 0\nExit: first slope = 0; final slope = last secant\nClamp time outside the authored controls. Check adapted curves for overshoot.",
+            "basis": "local-implementation"
+          }
+        ],
+        "tables": [
+          {
+            "caption": "Long camera-like pullback waypoints",
+            "columns": [
+              "Global time (s)",
+              "Native scale (%)"
+            ],
+            "rows": [
+              [
+                2.05,
+                215
+              ],
+              [
+                2.2166667,
+                184
+              ],
+              [
+                2.3333333,
+                161
+              ],
+              [
+                2.5,
+                139
+              ],
+              [
+                2.7,
+                123
+              ],
+              [
+                2.9,
+                116
+              ],
+              [
+                3.1,
+                110
+              ],
+              [
+                3.3,
+                106.5
+              ],
+              [
+                3.5,
+                103
+              ],
+              [
+                3.7,
+                100.8
+              ],
+              [
+                3.9,
+                100
+              ]
+            ],
+            "basis": "local-implementation"
+          }
+        ]
+      },
+      {
+        "title": "Box geometry, character emphasis and color",
+        "items": [
+          "The dotted box begins at 3.10s. Width grows to 510px over 0.55s, height to 96px over 0.20s, both cubic-out. Position advances by half the changing dimensions from local top-left [383,346], so the origin stays fixed.",
+          "Stroke is 1.65px with dash/gap 8/7px. Four 9×9px handles follow the same width/height curves. The parent continues pulling the whole result back.",
+          "Complicated? is one editable ArialMT word at 74px, tracking −30, local base [470,414]. Twelve range selectors use zero smoothness so each intended character is isolated while native kerning stays intact.",
+          "Each character starts at 3.3166667 + index×0.02955s: opacity 0.035s, horizontal 16px settle 0.095s, text blur 6 resolving over 0.09s. A separate inherited shared 60px word slide uses cubic-out from 3.3333333 over 0.30s.",
+          "Fill and both glows mix green [0.20,1,0.68]→gold [1,0.90,0.17] from 3.43 over 0.18s, then orange [0.965,0.39,0.22] from 3.62 over 0.15s. The 7/28px glow pair uses intensities 0.35/0.75 times (1−S((t−3.60)/0.19)). These are local RGB/effect values, not recovered source settings."
+        ],
+        "code": [
+          {
+            "label": "Box growth and character controls",
+            "text": "w = 510 × O((t − 3.10)/0.55)\nh = 96 × O((t − 3.10)/0.20)\nboxCenter = [383 + w/2, 346 + h/2]\nhandle(corner) = [383 + cornerX × w, 346 + cornerY × h]\na = t − (3.3166667 + characterIndex × 0.02955)\ncharacterOpacity = 100 × S(a/0.035)\ncharacterOffset = [16 × (1 − O(a/0.095)),0,0]\ncharacterTextBlur = [6,6] × (1 − O(a/0.09))",
+            "basis": "local-implementation"
+          }
+        ]
+      },
+      {
+        "title": "Reaction construction and timing",
+        "items": [
+          "The reaction is an editable 160×160 vector precomp, not an emoji glyph. It combines face ellipses, two spiral strokes and a wavy mouth; this avoids font substitution changing its shape.",
+          "At 3.60s it approaches x420 from 24px left over 0.12s cubic-out, at local y391. Scale is 50×(1+0.25exp(−age/0.075))%; opacity resolves over 0.06s and Gaussian blur 7 sharpens over 0.09s. It inherits the common exit envelope.",
+          "It overlaps the last ~0.1s of emphasis revelation. It is a supporting reaction, not a separate reading task."
+        ]
+      },
+      {
+        "title": "Six coins, projection, materials and lighting",
+        "items": [
+          "Each native coin has thickness, recessed faces, bevels and raised symbols on both sides. Metallic/roughness pairs are 0.88/0.22 on the copper rim, 0.76/0.27 on the inset and 1.0/0.13 on the polished waist. The six independent trajectories are in the linked native scene builder.",
+          "A 50mm camera with 36mm sensor converts screen routes and diameter targets into native 3D motion. Coins enlarge and move outward during exit; earlier diameter-driven scale also changes, so the whole shot does not use fixed physical scale.",
+          "Native dense keys sample nonlinear paths at 60fps with LINEAR interpolation between samples to avoid added overshoot. This does not imply constant-speed authored motion. DOF uses f/8 and an animated focus distance.",
+          "Object lights below aim toward [0,0,0], except the cool phone key at [0,−6,−1]. Scene units, exposure and geometry must be retained together when reproducing their appearance. Standard view transform, exposure −0.15, EEVEE 32 render samples and shutter fraction 0.24 are local settings."
+        ],
+        "tables": [
+          {
+            "caption": "Native object lighting — local Blender scene",
+            "columns": [
+              "Light",
+              "Position (scene units)",
+              "Energy (W)",
+              "Rectangle (scene units)",
+              "RGB"
+            ],
+            "rows": [
+              [
+                "Gold reflection strip",
+                [
+                  5,
+                  -5,
+                  2
+                ],
+                650,
+                [
+                  0.65,
+                  7
+                ],
+                [
+                  1,
+                  0.79,
+                  0.31
+                ]
+              ],
+              [
+                "Overhead reflection",
+                [
+                  -1,
+                  -4,
+                  6
+                ],
+                850,
+                [
+                  7,
+                  0.75
+                ],
+                [
+                  1,
+                  0.81,
+                  0.56
+                ]
+              ],
+              [
+                "Copper flank",
+                [
+                  -6,
+                  1,
+                  1
+                ],
+                800,
+                [
+                  4,
+                  5
+                ],
+                [
+                  1,
+                  0.23,
+                  0.07
+                ]
+              ],
+              [
+                "Cool phone key",
+                [
+                  -3,
+                  -8,
+                  6
+                ],
+                750,
+                [
+                  4,
+                  3
+                ],
+                [
+                  0.57,
+                  0.83,
+                  1
+                ]
+              ],
+              [
+                "Quiet front fill",
+                [
+                  0,
+                  -9,
+                  -2
+                ],
+                170,
+                [
+                  5,
+                  5
+                ],
+                [
+                  1,
+                  0.9,
+                  0.74
+                ]
+              ],
+              [
+                "Rear rim",
+                [
+                  3,
+                  5,
+                  4
+                ],
+                700,
+                [
+                  3,
+                  5
+                ],
+                [
+                  1,
+                  0.4,
+                  0.15
+                ]
+              ]
+            ],
+            "basis": "local-implementation"
+          },
+          {
+            "caption": "Coin 1 — complete authored screen route",
+            "columns": [
+              "Global time (s)",
+              "Screen x (px)",
+              "Screen y (px)",
+              "Unforeshortened diameter (px)"
+            ],
+            "rows": [
+              [
+                2.05,
+                1500,
+                950,
+                350
+              ],
+              [
+                2.2667,
+                1390,
+                790,
+                325
+              ],
+              [
+                2.3,
+                970,
+                670,
+                310
+              ],
+              [
+                2.4,
+                690,
+                775,
+                290
+              ],
+              [
+                2.5,
+                474,
+                776,
+                270
+              ],
+              [
+                2.6,
+                337,
+                702,
+                245
+              ],
+              [
+                2.8,
+                260,
+                518,
+                215
+              ],
+              [
+                3.1,
+                345,
+                288,
+                185
+              ],
+              [
+                3.4,
+                500,
+                155,
+                180
+              ],
+              [
+                3.8,
+                696,
+                97,
+                178
+              ],
+              [
+                4.22,
+                883,
+                151,
+                180
+              ]
+            ],
+            "basis": "local-implementation"
+          },
+          {
+            "caption": "Coin 2 — complete authored screen route",
+            "columns": [
+              "Global time (s)",
+              "Screen x (px)",
+              "Screen y (px)",
+              "Unforeshortened diameter (px)"
+            ],
+            "rows": [
+              [
+                2.05,
+                1700,
+                620,
+                480
+              ],
+              [
+                2.1333,
+                1510,
+                610,
+                470
+              ],
+              [
+                2.15,
+                1210,
+                610,
+                450
+              ],
+              [
+                2.2,
+                740,
+                825,
+                315
+              ],
+              [
+                2.3,
+                400,
+                790,
+                300
+              ],
+              [
+                2.4,
+                247,
+                662,
+                260
+              ],
+              [
+                2.5,
+                224,
+                504,
+                238
+              ],
+              [
+                2.6,
+                266,
+                376,
+                220
+              ],
+              [
+                2.8,
+                410,
+                205,
+                195
+              ],
+              [
+                3.1,
+                640,
+                100,
+                185
+              ],
+              [
+                3.4,
+                820,
+                100,
+                180
+              ],
+              [
+                3.8,
+                957,
+                191,
+                183
+              ],
+              [
+                4.22,
+                1000,
+                340,
+                180
+              ]
+            ],
+            "basis": "local-implementation"
+          },
+          {
+            "caption": "Coin 3 — complete authored screen route",
+            "columns": [
+              "Global time (s)",
+              "Screen x (px)",
+              "Screen y (px)",
+              "Unforeshortened diameter (px)"
+            ],
+            "rows": [
+              [
+                2.05,
+                1250,
+                -450,
+                310
+              ],
+              [
+                2.7,
+                1190,
+                -240,
+                260
+              ],
+              [
+                2.8,
+                1000,
+                -80,
+                220
+              ],
+              [
+                3.1,
+                935,
+                134,
+                200
+              ],
+              [
+                3.4,
+                1005,
+                282,
+                200
+              ],
+              [
+                3.8,
+                942,
+                475,
+                200
+              ],
+              [
+                4.22,
+                770,
+                590,
+                195
+              ]
+            ],
+            "basis": "local-implementation"
+          },
+          {
+            "caption": "Coin 4 — complete authored screen route",
+            "columns": [
+              "Global time (s)",
+              "Screen x (px)",
+              "Screen y (px)",
+              "Unforeshortened diameter (px)"
+            ],
+            "rows": [
+              [
+                2.05,
+                1600,
+                -120,
+                300
+              ],
+              [
+                2.63,
+                1450,
+                130,
+                280
+              ],
+              [
+                2.8,
+                1020,
+                190,
+                230
+              ],
+              [
+                3.1,
+                991,
+                420,
+                215
+              ],
+              [
+                3.4,
+                830,
+                590,
+                190
+              ],
+              [
+                3.8,
+                585,
+                670,
+                190
+              ],
+              [
+                4.22,
+                405,
+                565,
+                190
+              ]
+            ],
+            "basis": "local-implementation"
+          },
+          {
+            "caption": "Coin 5 — complete authored screen route",
+            "columns": [
+              "Global time (s)",
+              "Screen x (px)",
+              "Screen y (px)",
+              "Unforeshortened diameter (px)"
+            ],
+            "rows": [
+              [
+                2.05,
+                1620,
+                570,
+                340
+              ],
+              [
+                2.5333,
+                1450,
+                560,
+                300
+              ],
+              [
+                2.6,
+                1073,
+                326,
+                255
+              ],
+              [
+                2.8,
+                940,
+                546,
+                235
+              ],
+              [
+                3.1,
+                647,
+                681,
+                205
+              ],
+              [
+                3.4,
+                440,
+                654,
+                190
+              ],
+              [
+                3.8,
+                324,
+                520,
+                185
+              ],
+              [
+                4.22,
+                352,
+                348,
+                185
+              ]
+            ],
+            "basis": "local-implementation"
+          },
+          {
+            "caption": "Coin 6 — complete authored screen route",
+            "columns": [
+              "Global time (s)",
+              "Screen x (px)",
+              "Screen y (px)",
+              "Unforeshortened diameter (px)"
+            ],
+            "rows": [
+              [
+                2.05,
+                1510,
+                900,
+                340
+              ],
+              [
+                2.4333,
+                1380,
+                800,
+                310
+              ],
+              [
+                2.5,
+                924,
+                615,
+                280
+              ],
+              [
+                2.6,
+                754,
+                706,
+                255
+              ],
+              [
+                2.8,
+                482,
+                716,
+                240
+              ],
+              [
+                3.1,
+                309,
+                558,
+                200
+              ],
+              [
+                3.4,
+                322,
+                388,
+                185
+              ],
+              [
+                3.8,
+                428,
+                238,
+                175
+              ],
+              [
+                4.22,
+                610,
+                155,
+                178
+              ]
+            ],
+            "basis": "local-implementation"
+          }
+        ],
+        "code": [
+          {
+            "label": "Native projection and coin exit",
+            "text": "F = 1280 × 50 / 36\npush = clamp((t − 4.22)/0.42,0,1)^2\nx = 640 + (routeX − 640) × (1 + 2.8push)\ny = 360 + (routeY − 360) × (1 + 2.8push)\nworldY = baseDepth − 4.2push\nworldX = (x − 640) × (14 + baseDepth) / F\nworldZ = (360 − y) × (14 + baseDepth) / F\nuniformScale = diameter × (14 + baseDepth) / (F × 1.24)\n# The projection uses the original depth for x/z conversion;\n# changing worldY supplies additional perspective enlargement.\n# Base depths by coin: −0.35, 0.35, 0.10, −0.55, −0.15, 0.60.\n# Existing rotations and their full formulas remain in the native builder.",
+            "basis": "local-implementation"
+          }
+        ]
+      },
+      {
+        "title": "Animated background fields",
+        "items": [
+          "The AE warm-charcoal base is RGB [0.075,0.070,0.067]. Copper atmosphere, traveling key, dark upper-right pocket and low copper return are separate blurred ellipse sources. They support the same reading target as the object lights but are not physical illumination.",
+          "The question source precomps are 1280×1080, with ellipses at half nominal dimensions, then displayed at 200%; blur is set at half the nominal amount. Do not confuse those local precomp dimensions with the opening’s 2560×2160 padded sources."
+        ],
+        "tables": [
+          {
+            "caption": "Question background fields",
+            "columns": [
+              "Layer",
+              "Nominal ellipse (px)",
+              "Nominal blur",
+              "Opacity / motion"
+            ],
+            "rows": [
+              [
+                "Copper atmosphere",
+                [
+                  1700,
+                  1250
+                ],
+                360,
+                "75→47 from 4.32 over 0.55s; position [825,490]→[680,595] over 2.4s from 2.05"
+              ],
+              [
+                "Traveling warm key",
+                [
+                  920,
+                  990
+                ],
+                280,
+                "52+13S((t−2.7)/0.8)−43S((t−4.3)/0.65); [290,225]→[205,595] over 2.30s"
+              ],
+              [
+                "Dark upper-right pocket",
+                [
+                  1150,
+                  1120
+                ],
+                300,
+                "95%; [1230,70]→[1060,25] over 2.8s"
+              ],
+              [
+                "Low copper return",
+                [
+                  1220,
+                  780
+                ],
+                310,
+                "45+20S((t−2.5)/1.4)−15S((t−4.5)/0.6)"
+              ]
+            ],
+            "basis": "local-implementation"
+          }
+        ]
+      },
+      {
+        "title": "Exit push, fade and foreground priority",
+        "items": [
+          "The exit uses enlargement, unlike the opening’s retreat. The parent pivot is [639,360]; the scale values below keep growing underneath the phone.",
+          "Visible word, box, emphasis and reaction layers multiply opacity by exp(−max(0,t−4.45)/0.083). A null’s opacity is not the sole fade control; the visible children receive the envelope. Their local out-points extend to 4.67s.",
+          "At frame 263 / 4.3833s the same imported Blender pass is split into disjoint visibility ranges: outgoing coin pass behind type, continuing phone pass above type. This changes occlusion priority without showing two phones simultaneously.",
+          "The phone arrives while the question remains; no extra shared scale retreat is applied to the complete composite."
+        ],
+        "tables": [
+          {
+            "caption": "Late exit scale waypoints",
+            "columns": [
+              "Global time (s)",
+              "Native scale (%)"
+            ],
+            "rows": [
+              [
+                3.9,
+                100
+              ],
+              [
+                4.0,
+                100.4
+              ],
+              [
+                4.05,
+                101.19
+              ],
+              [
+                4.1,
+                101.99
+              ],
+              [
+                4.15,
+                103.48
+              ],
+              [
+                4.2,
+                105.56
+              ],
+              [
+                4.25,
+                108.74
+              ],
+              [
+                4.3,
+                113.11
+              ],
+              [
+                4.35,
+                119.64
+              ],
+              [
+                4.4,
+                128.5
+              ],
+              [
+                4.45,
+                136.35
+              ],
+              [
+                4.5,
+                143.4
+              ],
+              [
+                4.55,
+                149.2
+              ],
+              [
+                4.6,
+                154
+              ],
+              [
+                4.65,
+                158
+              ],
+              [
+                4.7,
+                162
+              ]
+            ],
+            "basis": "local-implementation"
+          }
+        ]
+      },
+      {
+        "title": "Output, dependencies and acceptance",
+        "items": [
+          "Use Infinex-Sequence02-v03-soft-word-arrivals.aep and the native Blender scene. AE comp: “02 | Question, coins and phone handoff | V03”. The 5.3s joined comparison has 318 frames; it is a partial reconstruction.",
+          "The asset sequence covers global frames 123–317, straight-alpha RGBA PNG at 1280×720/60fps. Conform the import to 60fps and align sequence start to frame 123, not frame zero. Blender footage keeps its baked blur; AE native text uses the comp’s 100°/12-sample motion blur.",
+          "Read the build, spacing, emphasis, long-pullback, soft-arrival, exit and priority scripts in version order; early formulas are superseded by the later refinements listed on this page. Scripts are one-time construction evidence with project guards. Fonts, textures and source image sequences must resolve before opening renders.",
+          "For new copy, remeasure prefix widths, parent center, box bounds and emphasis placement. Compare continuous heading retreat, unchanged onset rhythm with longer settles, native spacing, reaction overlap and phone occlusion. Review both the 2.05s incoming join and 4.38–4.67s exit. The easier mismatch in the inherited opening remains separate and unresolved."
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "name": "Question starts",
+        "value": [
+          2.2166667,
+          2.3333333,
+          2.4666667,
+          2.6,
+          2.7166667,
+          2.85,
+          2.9666667
+        ],
+        "unit": "global seconds; 60fps source",
+        "basis": "measured-reference"
+      },
+      {
+        "name": "Local word rise / sharpen / opacity",
+        "value": [
+          0.3,
+          0.15,
+          0.05
+        ],
+        "unit": "seconds",
+        "basis": "local-implementation"
+      },
+      {
+        "name": "Question type",
+        "value": "SegoeUI-Light 48; tracking −25",
+        "unit": "font / local px / AE tracking",
+        "basis": "local-implementation"
+      },
+      {
+        "name": "Emphasis type",
+        "value": "ArialMT 74; tracking −30",
+        "unit": "font / local px / AE tracking",
+        "basis": "local-implementation"
+      },
+      {
+        "name": "Camera",
+        "value": [
+          50,
+          36,
+          8
+        ],
+        "unit": "lens mm / sensor mm / f-number",
+        "basis": "local-implementation"
+      },
+      {
+        "name": "Render contract",
+        "value": [
+          1280,
+          720,
+          60
+        ],
+        "unit": "width px / height px / fps",
+        "basis": "local-implementation"
+      },
+      {
+        "name": "Native motion blur",
+        "value": [
+          0.24,
+          100,
+          12
+        ],
+        "unit": "Blender shutter fraction / AE shutter degrees / AE samples",
+        "basis": "local-implementation"
+      }
+    ],
+    "implementations": [
+      {
+        "label": "Latest soft-arrival candidate",
+        "tool": "After Effects",
+        "status": "rendered",
+        "asset_ids": [
+          "infinex-question-aep",
+          "infinex-question-comparison",
+          "infinex-question-review"
+        ]
+      },
+      {
+        "label": "Type hierarchy and current refinements",
+        "tool": "After Effects",
+        "status": "rendered",
+        "asset_ids": [
+          "infinex-question-build",
+          "infinex-question-spacing",
+          "infinex-question-arrivals",
+          "infinex-question-emphasis",
+          "infinex-question-pullback",
+          "infinex-question-exit",
+          "infinex-question-priority"
+        ]
+      },
+      {
+        "label": "Native coin and phone assets",
+        "tool": "Blender",
+        "status": "rendered",
+        "asset_ids": [
+          "infinex-question-blend",
+          "infinex-light-rig"
+        ]
+      }
+    ]
+  },
+  "review": {
+    "date": "2026-09-16",
+    "state": "mixed",
+    "scope": "The local asset finish received positive feedback. The latest soft-word-arrival candidate rendered and passed expression/encoding checks; continuous-motion approval remains pending.",
+    "inspection": "Decoded reference frames, saved authoring scripts and previous encoded checks; this documentation expansion creates no native render and establishes no new continuous-motion or audio approval.",
+    "limitations": [
+      "Original typeface, rig and exact easing are unknown.",
+      "Phone UI is illustrative; matching material appearance does not prove source construction.",
+      "Readability exposure is measured, not a viewer comprehension test."
+    ]
+  },
+  "evidence_assets": [
+    "infinex-question-timing",
+    "infinex-question-review",
+    "infinex-technical-study",
+    "infinex-complexity-study"
+  ],
+  "related_ids": [
+    "SHOT-INF-OPENING",
+    "SHOT-INF-PHONE-CARDS",
+    "LIGHT-INF-COPPER"
+  ]
+}

@@ -65,6 +65,8 @@ def load_library(root=ROOT):
         require(summary['study_id'] in studies, key + ': unknown study')
         require(summary['kind'] in KINDS, key + ': unknown kind')
         require(summary['review_state'] in STATES, key + ': unknown review state')
+        if summary.get('poster_asset'):
+            require(summary['poster_asset'] in assets and assets[summary['poster_asset']]['kind']=='image', key + ': poster missing')
         for field in ('title', 'summary', 'video_types', 'story_jobs', 'tags', 'tools'):
             require(bool(summary[field]), key + ': missing ' + field)
         entry = read_json(inside(root, summary['detail']))
@@ -72,12 +74,22 @@ def load_library(root=ROOT):
         require(entry['review']['state'] == summary['review_state'], key + ': stale review index')
         clip = entry['clip']
         frame_range(clip['source_frames'], key)
+        if summary.get('poster_asset'):
+            require(type(summary.get('poster_source_frame')) is int and clip['source_frames'][0] <= summary['poster_source_frame'] < clip['source_frames'][1], key + ': poster outside excerpt')
         require(type(clip['fps']) is int and clip['fps'] > 0, key + ': invalid FPS')
         require(clip['asset_id'] in assets and assets[clip['asset_id']]['kind'] == 'video', key + ': preview missing')
         require(summary['preview_asset'] == clip['asset_id'], key + ': stale preview index')
         require(clip.get('clock') == 'source-frames', key + ': clock must be explicit')
         require(bool(entry['inspiration']['purpose']) and bool(entry['inspiration']['beats']), key + ': inspiration missing')
         require(bool(entry['technical']['sections']), key + ': technical breakdown missing')
+        for section in entry['technical']['sections']:
+            require(bool(section['title']) and bool(section['items']), key + ': empty technical section')
+            for block in section.get('code', []):
+                require(block['basis'] in BASIS and bool(block['label']) and bool(block['text']), key + ': code evidence missing')
+            for table in section.get('tables', []):
+                require(table['basis'] in BASIS and bool(table['caption']), key + ': table provenance missing')
+                require(bool(table['columns']) and bool(table['rows']), key + ': empty technical table')
+                require(all(isinstance(row,list) and len(row)==len(table['columns']) for row in table['rows']), key + ': technical table column mismatch')
         for parameter in entry['technical']['parameters']:
             require(parameter['basis'] in BASIS and bool(parameter['unit']), key + ': parameter provenance/units missing')
         track_ids = set()

@@ -23,9 +23,25 @@ function list(items, ordered=false) {
   return element;
 }
 function displayValue(value) {
-  if (Array.isArray(value)) return value.join(', ');
+  if (Array.isArray(value)) return value.map(displayValue).join(', ');
+  if (typeof value === 'number') return value.toLocaleString('en-US',{useGrouping:false,maximumFractionDigits:7});
   if (value !== null && typeof value === 'object') return Object.entries(value).map(([key, item]) => key + ': ' + displayValue(item)).join('\n');
   return String(value);
+}
+function detailTable(data) {
+  const wrap=node('div',{class:'data-table-wrap',tabindex:'0','aria-label':data.caption});
+  const table=node('table',{class:'data-table'});
+  table.append(node('caption',{},data.caption+' · '+human(data.basis)));
+  const head=node('thead'),row=node('tr');
+  for (const column of data.columns) row.append(node('th',{scope:'col'},column));
+  head.append(row);table.append(head);
+  const body=node('tbody');
+  for (const cells of data.rows) {
+    const row=node('tr');
+    for (const cell of cells) row.append(node('td',{},displayValue(cell)));
+    body.append(row);
+  }
+  table.append(body);wrap.append(table);return wrap;
 }
 function pauseAll() { document.querySelectorAll('video').forEach(video => video.pause()); }
 function assetLink(id) {
@@ -33,7 +49,7 @@ function assetLink(id) {
   return asset?.available ? node('a', {class:'asset-link', href:asset.url, target:'_blank', rel:'noopener'}, asset.label + ' ↗') :
     node('span', {class:'asset-link unavailable'}, (asset?.label || id) + ' · not connected');
 }
-function media(container, assetId, title, sourceUrl) {
+function media(container, assetId, title, sourceUrl, posterId) {
   container.replaceChildren();
   const fallback = () => {
     const box = node('div', {class:'media-fallback'});
@@ -46,6 +62,7 @@ function media(container, assetId, title, sourceUrl) {
   const video = node('video', {controls:'', playsinline:'', preload:'metadata', 'aria-label':title});
   video.muted = true;
   video.src = asset.url;
+  if (assetState[posterId]?.available) video.poster=assetState[posterId].url;
   video.addEventListener('error', fallback, {once:true});
   video.addEventListener('play', () => document.querySelectorAll('video').forEach(other => { if (other !== video) other.pause(); }));
   container.append(video);
@@ -64,7 +81,7 @@ function renderCards() {
   for (const item of visible) {
     const card = node('article', {class:'card', 'data-entry':item.id});
     const visual = node('div', {class:'card-media'});
-    media(visual, item.preview_asset, item.title + ' reference preview', studies.get(item.study_id).source_url);
+    media(visual, item.preview_asset, item.title + ' reference preview', studies.get(item.study_id).source_url, item.poster_asset);
     const bottom = node('div', {class:'card-bottom'});
     const link = node('a', {class:'card-link', href:'#' + item.id + '/inspiration'}, 'Explore the breakdown →');
     link.addEventListener('click', () => { lastOpener = link; });
@@ -120,7 +137,7 @@ function renderEntry(summary, entry, view) {
   $('entry-kind').textContent = studies.get(summary.study_id).title + ' / ' + summary.kind;
   $('entry-review').className = 'badge ' + summary.review_state;
   $('entry-review').textContent = reviewLabels[summary.review_state];
-  media($('detail-media'), entry.clip.asset_id, summary.title + ' source excerpt', studies.get(summary.study_id).source_url);
+  media($('detail-media'), entry.clip.asset_id, summary.title + ' source excerpt', studies.get(summary.study_id).source_url, summary.poster_asset);
   const [first,end] = entry.clip.source_frames;
   $('clip-caption').textContent = `${(first/entry.clip.fps).toFixed(3)}–${(end/entry.clip.fps).toFixed(3)}s in source · ${entry.clip.fps}fps · excerpt player starts at 0`;
   $('source-link').href = studies.get(summary.study_id).source_url;
@@ -130,7 +147,24 @@ function renderEntry(summary, entry, view) {
   const inspiration = $('panel-inspiration'); inspiration.replaceChildren();
   inspiration.append(node('p',{},entry.inspiration.purpose),node('h3',{},'How the shot develops'),list(entry.inspiration.beats,true),node('h3',{},'Where it helps'),list(entry.inspiration.use_when),node('h3',{},'Attention handoff'),node('p',{},entry.inspiration.attention));
   const technical = $('panel-technical'); technical.replaceChildren(node('p',{class:'basis'},entry.technical.basis));
-  for (const section of entry.technical.sections) technical.append(node('h3',{},section.title),list(section.items));
+  const contents=node('nav',{class:'technical-contents','aria-label':'Technical sections'});
+  contents.append(node('strong',{},'In this breakdown'));
+  for (const [index,section] of entry.technical.sections.entries()) {
+    const id='technical-section-'+index;
+    const jump=node('button',{type:'button'},section.title);
+    jump.addEventListener('click',()=>$(id).scrollIntoView({block:'start'}));
+    contents.append(jump);
+  }
+  technical.append(contents);
+  for (const [index,section] of entry.technical.sections.entries()) {
+    technical.append(node('h3',{id:'technical-section-'+index},section.title),list(section.items));
+    for (const block of section.code || []) {
+      technical.append(node('p',{class:'small'},block.label+' · '+human(block.basis)));
+      const pre=node('pre',{class:'technical-code',tabindex:'0','aria-label':block.label});
+      pre.append(node('code',{},block.text));technical.append(pre);
+    }
+    for (const table of section.tables || []) technical.append(detailTable(table));
+  }
   technical.append(node('h3',{},'Recorded controls'));
   const table=node('table',{class:'parameter-table'}), head=node('thead'), header=node('tr');
   for (const text of ['Control','Value / units']) header.append(node('th',{scope:'col'},text));
@@ -204,6 +238,7 @@ for (const view of ['inspiration','technical']) {
 window.addEventListener('hashchange',route);
 (async function init(){
   try {const response=await fetch('/api/assets');if(response.ok) Object.assign(assetState,await response.json());} catch {}
-  $('catalog-count').textContent=catalog.studies.length+' source '+(catalog.studies.length===1?'study':'studies')+' · '+catalog.entries.length+' connected entries';
+  const shots=catalog.entries.filter(entry=>entry.kind==='shot').length;
+  $('catalog-count').textContent=shots+' shot entries · '+(catalog.entries.length-shots)+' supporting details';
   renderCards();await route();
 })();

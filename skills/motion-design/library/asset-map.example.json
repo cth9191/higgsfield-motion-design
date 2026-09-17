@@ -63,6 +63,158 @@
     "infinex-v05-comparison": {
       "root": "study-workspace",
       "path": "projects/infinex-reference-study/sequence-03-05-v05/renders/Infinex-Scenes03-05-v05-Focused-Comparison.mp4"
+    },
+    "infinex-opening-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-OPENING.mp4"
+    },
+    "infinex-question-preview": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-QUESTION.mp4"
+    },
+    "infinex-technical-study": {
+      "root": "study-workspace",
+      "path": "research/patterns/infinex-technical-mechanisms.md"
+    },
+    "infinex-complexity-study": {
+      "root": "study-workspace",
+      "path": "research/patterns/infinex-shot-complexity.md"
+    },
+    "infinex-opening-timing": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/timing-study/OPENING-TIMING.md"
+    },
+    "infinex-opening-aep": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/opening-v02/Opening-v02-glow-polish.aep"
+    },
+    "infinex-opening-build": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/opening-v02/build_opening.jsx"
+    },
+    "infinex-opening-scale": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/opening-v02/add_scale_settle_existing.jsx"
+    },
+    "infinex-opening-exit": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/opening-v02/add_exit_handoff_existing.jsx"
+    },
+    "infinex-opening-rays": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/opening-v02/polish_type_accents_existing.jsx"
+    },
+    "infinex-opening-glow": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/opening-v02/tune_warm_glow_existing.jsx"
+    },
+    "infinex-opening-light": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/opening-v02/animate_lighting_existing.jsx"
+    },
+    "infinex-opening-review": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/opening-v02/VALIDATION-glow-polish.json"
+    },
+    "infinex-opening-comparison": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/opening-v02/renders/Infinex-Opening-v02-glow-polish-Comparison.mp4"
+    },
+    "infinex-opening-mismatch": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/review/easier-camera-audit/AUDIT.md"
+    },
+    "infinex-opening-failure": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/review/easier-camera-audit/focus-comparison.jpg"
+    },
+    "infinex-question-aep": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/Infinex-Sequence02-v03-soft-word-arrivals.aep"
+    },
+    "infinex-question-blend": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/blender/Infinex-Sequence-02-v03.blend"
+    },
+    "infinex-question-timing": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/timing-study/second-shot/SECOND-SHOT-TIMING.md"
+    },
+    "infinex-question-build": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/build_type_existing.jsx"
+    },
+    "infinex-question-arrivals": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/soften_word_arrivals_existing.jsx"
+    },
+    "infinex-question-spacing": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/restore_spacing_existing.jsx"
+    },
+    "infinex-question-emphasis": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/refine_complicated_existing.jsx"
+    },
+    "infinex-question-pullback": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/lengthen_pullback_existing.jsx"
+    },
+    "infinex-question-exit": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/refine_exit_zoom_existing.jsx"
+    },
+    "infinex-question-priority": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/fix_type_priority_existing.jsx"
+    },
+    "infinex-question-review": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/VALIDATION-soft-word-arrivals.json"
+    },
+    "infinex-question-comparison": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-02-v03/renders/Infinex-Sequence02-v03-soft-word-arrivals-Comparison.mp4"
+    },
+    "infinex-v04-ae-build": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v04/build_existing.jsx"
+    },
+    "infinex-v04-ae-polish": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v04/polish_existing.jsx"
+    },
+    "infinex-v05-ae-polish": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v05/polish_existing.jsx"
+    },
+    "infinex-v05-curve-data": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v05/blender/phone-curves.json"
+    },
+    "infinex-v04-cards": {
+      "root": "study-workspace",
+      "path": "projects/infinex-reference-study/sequence-03-05-v04/blender/build_extension.py"
+    },
+    "shot-inf-opening-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-OPENING-poster.jpg"
+    },
+    "shot-inf-question-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-QUESTION-poster.jpg"
+    },
+    "shot-inf-phone-cards-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/SHOT-INF-PHONE-CARDS-poster.jpg"
+    },
+    "detail-inf-defocus-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/DETAIL-INF-DEFOCUS-poster.jpg"
+    },
+    "light-inf-copper-poster": {
+      "root": "study-workspace",
+      "path": "research/library/previews/LIGHT-INF-COPPER-poster.jpg"
     }
   }
 }

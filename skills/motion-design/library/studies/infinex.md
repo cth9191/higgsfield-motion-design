@@ -27,13 +27,15 @@ The opening promise becomes a question, then concrete wallet/chain/confirmation 
 
 Ranges overlap deliberately. They are visual units, not a recovered edit list. Source screen motion can suggest a speed profile without revealing the original Bézier handles or camera rig.
 
-## Three linked pilot entries
+## Three shot entries and two supporting details
 
+- [01 · Opening emphasis](../entries/SHOT-INF-OPENING.json): character arrival, entrance settle, focus mismatch, selection, ray lifecycle, warm bloom, animated field and late exit.
+- [02 · Question and coins](../entries/SHOT-INF-QUESTION.json): word cadence versus settling, full pullback/exit waypoints, box geometry, native character emphasis, reaction, six coin routes, light rig and phone occlusion.
 - [Persistent phone → card group](../entries/SHOT-INF-PHONE-CARDS.json): staging, rotation order, independent text, stagger and shared retreat.
 - [Focus transfer](../entries/DETAIL-INF-DEFOCUS.json): outgoing softness/opacity, incoming copy and a retained rejected implementation.
 - [Warm field and shaped reflections](../entries/LIGHT-INF-COPPER.json): background field, object illumination, typography glow and graphic discs as separate systems.
 
-Open them through the [gallery](../../assets/library.html), or retrieve the detail JSON from the CLI. Each includes source frames, overlapping event tracks, explicitly labeled local settings, native asset IDs and current review limits.
+Open them through the [gallery](../../assets/library.html), or retrieve the detail JSON from the CLI. The three shot pages now contain the full documented technical breakdown inline, including formulas and authored control tables; native files and deeper audit artifacts remain linked. “Full documented” describes the available study and local construction, not recovered original project settings. Unknown source details and unrendered corrections stay explicit. The phone page also documents the following confirmation handoff through 8.28s; its main source excerpt ends at 7.30s and its joined comparison covers 4.3–8.8s.
 
 ## Timing and complexity
 
